@@ -1,0 +1,22 @@
+{
+    "index_version": 4,
+    "reference_gfa": [
+        "/home/robaina/Documents/Proyecto_rodopsina/Data/DokdoniaMED134"
+    ],
+    "sampling_type": "dense",
+    "k": 31,
+    "num_kmers": 2885427,
+    "num_contigs": 4048,
+    "seq_length": 3006867,
+    "have_ref_seq": true,
+    "have_edge_vec": false,
+    "SeqHash": "5cc372f9df71590c45d4eb858bef99c1516968650c4e231791802d59d98368a3",
+    "NameHash": "7655bd50048421fe6e39d9bf3cfc0ce2febf5d290b3b9605938486c292f892c5",
+    "SeqHash512": "6a87633cbdbd98ffe8347fec2c24322fb56153d86769ca43449e4d85cc10abf008af4df41364ccd83859ab0454ffed4b9e79e57f2564dfcf5b9975d947bc8077",
+    "NameHash512": "d1dda0c782360804f5f6f8219b04b46abeb6ffa372eeab046094dac2cfc32e22334a8b47c0c8f597869598071f0a2a4e79023c96704c809d2eb5dc2dd31377e8",
+    "DecoySeqHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "DecoyNameHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "num_decoys": 0,
+    "first_decoy_index": 18446744073709551615,
+    "keep_duplicates": false
+}

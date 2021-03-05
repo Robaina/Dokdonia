@@ -1,0 +1,16 @@
+*.fasta
+*.fa
+*.gbk
+*.gff
+*.gtf
+*.gz
+*.xml
+*.log
+*.bin
+*.sbgn
+*.pdf
+*.reads
+*.files
+*.array
+*.reads
+*.tab

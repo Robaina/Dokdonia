@@ -1,0 +1,32 @@
+PR possible provides alternative to respiration under starvation  conditions in P. ubique (low Dissolved Organic Compounds)
+
+González showed increased PEPc CO2 fixation under light  in PR-containing Polaribacter sp. MED152.
+
+Kimura et al. transcriptomics light/dark in MED134, increased expression in TCA, glycolysis.
+
+Alanine one of the most abundant aas in sea water and able to sustain growth on native sea water bacteria.
+
+They propose that PR regulation depends on both light and the nature of the dissolved organic compunds (DOC)
+
+Can bacteria have epigenetic modifications too? thinking of memory to temperature, acclimation of the bacteria studied by Laura.
+
+González observed increased anaplerotic CO2 fixation under light in MED134, this is bicarbonate + PEP -> Oxaloacetate + Pi, ATP required for PEP, ATP generated through pmf, hence the connection to PR. 
+
+In this study, authors observed a larger fraction of carbon in cell matter coming from bicarbonate fixation (up to 25% under light and yeat - peptone extract)
+
+Again observed higher expression of PR genes under light and both Ala and yeast- peptone (YEP)
+
+Observed increase in gene expression of 2-oxoglutarate dehydrogenase but not of isocitrate dehydrogenase.
+
+Some interesting expression patterns in Glyoxylate shunt (Figure 3!)
+
+PR. Isocitrate lyase, malate synthase found in marine bacterial metagenomes with proportions: 54%, 43% and 78%.
+
+They discovered that MED134 functions as a facultative double mixotroph: uses both light and organic matter as energy source and both bicarbonate and organic matter as carbon source.
+
+
+
+
+
+
+

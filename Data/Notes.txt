@@ -1,0 +1,8 @@
+Dataset of Laura
+
+Metadata: /usr/gonzalez/transcriptomes/correspondenciaLauraAlonso.txt
+(L es light, D es darkness; primera columna es temp)
+Orignal data: /usr/gonzalez/transcriptomes/LauraDokdoniaReads
+Cleaned data: /usr/gonzalez/transcriptomes/LauraDokdoniaReadsCleaned
+
+Python script used to clean original data: clean.py
