@@ -15,3 +15,5 @@
 *.reads
 *.tab
 *.sam
+*.vcf
+*.summary
