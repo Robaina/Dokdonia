@@ -2,7 +2,6 @@
 *.fa
 *.gbk
 *.gff
-*.gtf
 *.gz
 *.xml
 *.log
