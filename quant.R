@@ -36,7 +36,7 @@ function getDataIDs() {
        conditions <- c(conditions, strsplit(file, forward_pattern)[[1]])
     }
   }
-  return conditions
+  return(conditions)
 }
 
 function alignSequences(conditions) {
