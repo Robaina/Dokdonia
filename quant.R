@@ -1,21 +1,20 @@
-"
-This script computes reads from cleaned Fastaq files. It follows the workflow
-described in: http://www.compbio.dundee.ac.uk/user/pschofield/Projects/teaching_pg/workshops/biocNGS.html
+# This script computes reads from cleaned Fastaq files. It follows the workflow
+# described in: http://www.compbio.dundee.ac.uk/user/pschofield/Projects/teaching_pg/workshops/biocNGS.html
+#
+# Rsubread publication: The R package Rsubread is easier, faster, cheaper and better for alignment and quantification of RNA sequencing reads
+#
+# A few notes:
+# 1. Run script through 'ssh: nohup Rscript quant.R &' to let process continue
+#    after ending remote session. Terminal output logged in nohup.out.
+# 2. buildIndex cannot handle very large fils, that's why I'm not using the
+#    annotated fasta file in the server
+# 3. Grant all permissions to workdir: 'sudo chmod -R a+rwx /path/to/folder'
+# 4. An additional workflow based in Rsubread can be found at: http://monashbioinformaticsplatform.github.io/RNAseq-DE-analysis-with-R/RNAseq_DE_analysis_with_R.html
+# 5. Alignment can be parallelized with 'BiocParallel' following directions in the
+#    first workflow.
+#
+# Semidán Robaina Estévez, March 2021.
 
-Rsubread publication: The R package Rsubread is easier, faster, cheaper and better for alignment and quantification of RNA sequencing reads
-
-A few notes:
-1. Run script through 'ssh: nohup Rscript quant.R &' to let process continue
-   after ending remote session. Terminal output logged in nohup.out.
-2. buildIndex cannot handle very large fils, that's why I'm not using the
-   annotated fasta file in the server
-3. Grant all permissions to workdir: 'sudo chmod -R a+rwx /path/to/folder'
-4. An additional workflow based in Rsubread can be found at: http://monashbioinformaticsplatform.github.io/RNAseq-DE-analysis-with-R/RNAseq_DE_analysis_with_R.html
-5. Alignment can be parallelized with 'BiocParallel' following directions in the
-   first workflow.
-
-Semidán Robaina Estévez, March 2021.
-"
 library(Rsubread)
 
 rm(list=ls())
