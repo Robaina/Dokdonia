@@ -63,7 +63,7 @@ countReads <- function() {
   print("Counting reads that match overlap exons and grouping exons by gene_id")
   fcLim <- featureCounts(files=bamFiles,
     GTF.featureType="exon", GTF.attrType="gene_id",
-    annot.ext=Annotated_GTF, isGTFAnnotationFile=TRUE)
+    annot.ext=file.path(Annotated_GTF), isGTFAnnotationFile=TRUE)
   setwd(curdir)
   print("Saving results")
   knitr::kable(fcLim$stat) # Print stats
