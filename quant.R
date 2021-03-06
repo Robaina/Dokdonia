@@ -26,7 +26,7 @@ RSUBREAD_INDEX_PATH <- "/Data/ref_data"
 RSUBREAD_INDEX_BASE <- "MED134"
 forward_pattern <- "_1.fastq.gz"
 reverses_pattern <- "_2.fastq.gz"
-BAM_OUTPUT_PATH <- file.path("/Data/BAM_files", "")
+BAM_OUTPUT_PATH <- "/Data/BAM_files"
 
 getDataIDs <- function() {
   files <- dir(RNAseqDATADIR)
