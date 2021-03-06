@@ -28,7 +28,7 @@ forward_pattern <- "_1.fastq.gz"
 reverses_pattern <- "_2.fastq.gz"
 BAM_OUTPUT_PATH <- file.path("Data/BAM_files", "")
 
-function getDataIDs() {
+getDataIDs <- function() {
   files <- dir(RNAseqDATADIR)
   conditions <- vector()
   for (file in files) {
@@ -39,7 +39,7 @@ function getDataIDs() {
   return(conditions)
 }
 
-function alignSequences(conditions) {
+alignSequences <- function(conditions) {
   # This loop can be parallelized, see above publication
   for (condition in conditions) {
     print(paste0("Aligning condition: ", condition))
@@ -55,7 +55,7 @@ function alignSequences(conditions) {
   }
 }
 
-function countReads() {
+countReads <- function() {
   bamFiles <- list.files(BAM_OUTPUT_PATH)
   curdir <- getwd()
   setwd(BAM_OUTPUT_PATH)
