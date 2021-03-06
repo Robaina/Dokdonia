@@ -21,7 +21,7 @@ rm(list=ls())
 RNAseqDATADIR <- "/Data/LauraDokdoniaReadsCleaned"
 fastq_files <- dir(RNAseqDATADIR)
 REF_GENOME <- "/Data/DokdoniaMED134_full.fasta"
-Annotated_GTF <- "/Data/DokdoniaMED134.gtf"
+Annotated_GTF <- "/Data/DokdoniaMED134.gff"
 RSUBREAD_INDEX_PATH <- "/Data/ref_data"
 RSUBREAD_INDEX_BASE <- "MED134"
 forward_pattern <- "_1.fastq.gz"
@@ -60,7 +60,7 @@ countReads <- function() {
   curdir <- getwd()
   setwd(file.path(curdir, BAM_OUTPUT_PATH))
   print("Counting reads that match overlap exons and grouping exons by gene_id")
-  fcLim <- featureCounts(files = bamFiles,
+  fcLim <- featureCounts(files=bamFiles,
     GTF.featureType="exon", GTF.attrType="gene_id",
     annot.ext=Annotated_GTF, isGTFAnnotationFile=TRUE)
   setwd(curdir)
