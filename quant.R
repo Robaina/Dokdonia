@@ -58,7 +58,7 @@ alignSequences <- function(conditions) {
 countReads <- function() {
   bamFiles <- list.files(BAM_OUTPUT_PATH)
   curdir <- getwd()
-  setwd(BAM_OUTPUT_PATH)
+  setwd(file.path(curdir, BAM_OUTPUT_PATH))
   print("Counting reads that match overlap exons and grouping exons by gene_id")
   fcLim <- featureCounts(files = bamFiles,
     GTF.featureType="exon", GTF.attrType="gene_id",
