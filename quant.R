@@ -10,8 +10,8 @@
 #    annotated fasta file in the server
 # 3. Grant all permissions to workdir: 'sudo chmod -R a+rwx /path/to/folder'
 # 4. An additional workflow based in Rsubread can be found at: http://monashbioinformaticsplatform.github.io/RNAseq-DE-analysis-with-R/RNAseq_DE_analysis_with_R.html
-# 5. Alignment can be parallelized with 'BiocParallel' following directions in the
-#    first workflow.
+# 5. Alignment can be parallelized with 'BiocParallel' following directions in the first workflow.
+# 6. featureCounts options: https://rdrr.io/bioc/Rsubread/man/featureCounts.html
 #
 # Semidán Robaina Estévez, March 2021.
 
@@ -21,7 +21,7 @@ rm(list=ls())
 RNAseqDATADIR <- "Data/LauraDokdoniaReadsCleaned"
 fastq_files <- dir(RNAseqDATADIR)
 REF_GENOME <- "Data/DokdoniaMED134_full.fasta"
-Annotated_GTF <- "Data/DokdoniaMED134.gtf"
+Annotated_GTF <- "Data/DokdoniaMED134.gff"
 RSUBREAD_INDEX_PATH <- "Data/ref_data"
 RSUBREAD_INDEX_BASE <- "MED134"
 forward_pattern <- "_1.fastq.gz"
@@ -64,7 +64,8 @@ countReads <- function() {
     GTF.featureType="exon", GTF.attrType="gene_id",
     annot.ext=file.path(curdir, Annotated_GTF),
     isGTFAnnotationFile=TRUE,
-    isPairedEnd=TRUE)
+    isPairedEnd=TRUE,
+    nthreads=8)
   setwd(curdir)
   print("Saving results")
   knitr::kable(fcLim$stat) # Print stats
