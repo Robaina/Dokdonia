@@ -26,7 +26,7 @@ RSUBREAD_INDEX_PATH <- "/Data/ref_data"
 RSUBREAD_INDEX_BASE <- "MED134"
 forward_pattern <- "_1.fastq.gz"
 reverses_pattern <- "_2.fastq.gz"
-BAM_OUTPUT_PATH <- "/Data/BAM_files"
+BAM_OUTPUT_PATH <- "Data/BAM_files"
 
 getDataIDs <- function() {
   files <- dir(RNAseqDATADIR)
@@ -67,7 +67,7 @@ countReads <- function() {
   setwd(curdir)
   print("Saving results")
   knitr::kable(fcLim$stat) # Print stats
-  save(fcLim, file="/Data/LauraDokdoniaCounts.RData")
+  save(fcLim, file="Data/LauraDokdoniaCounts.RData")
 }
 
 # buildindex(basename=file.path(RSUBREAD_INDEX_PATH, RSUBREAD_INDEX_BASE), reference=REF_GENOME)
