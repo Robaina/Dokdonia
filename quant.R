@@ -18,11 +18,11 @@
 library(Rsubread)
 
 rm(list=ls())
-RNAseqDATADIR <- "/Data/LauraDokdoniaReadsCleaned"
+RNAseqDATADIR <- "Data/LauraDokdoniaReadsCleaned"
 fastq_files <- dir(RNAseqDATADIR)
-REF_GENOME <- "/Data/DokdoniaMED134_full.fasta"
-Annotated_GTF <- "/Data/DokdoniaMED134.gff"
-RSUBREAD_INDEX_PATH <- "/Data/ref_data"
+REF_GENOME <- "Data/DokdoniaMED134_full.fasta"
+Annotated_GTF <- "Data/DokdoniaMED134.gff"
+RSUBREAD_INDEX_PATH <- "Data/ref_data"
 RSUBREAD_INDEX_BASE <- "MED134"
 forward_pattern <- "_1.fastq.gz"
 reverses_pattern <- "_2.fastq.gz"
