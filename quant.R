@@ -56,7 +56,7 @@ alignSequences <- function(conditions) {
 }
 
 countReads <- function() {
-  bamFiles <- list.files(BAM_OUTPUT_PATH, pattern=".*bam$")
+  bamFiles <- list.files(BAM_OUTPUT_PATH, pattern=".*sam$")
   print(bamFiles)
   curdir <- getwd()
   setwd(file.path(curdir, BAM_OUTPUT_PATH))
