@@ -59,12 +59,12 @@ function countReads() {
   bamFiles <- list.files(BAM_OUTPUT_PATH)
   curdir <- getwd()
   setwd(BAM_OUTPUT_PATH)
-  # Counting reads that match overlap exons and grouping exons by gene_id
+  print("Counting reads that match overlap exons and grouping exons by gene_id")
   fcLim <- featureCounts(files = bamFiles,
     GTF.featureType="exon", GTF.attrType="gene_id",
     annot.ext=Annotated_GTF, isGTFAnnotationFile=TRUE)
   setwd(curdir)
-
+  print("Saving results")
   knitr::kable(fcLim$stat) # Print stats
   save(fcLim, file="LauraDokdoniaCounts.RData")
 }
