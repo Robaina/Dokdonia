@@ -1,0 +1,80 @@
+ [1] "D_10_R1.sam"    "D_10_R2.sam"    "D_10_R3.sam"    "D_18_R1.sam"   
+ [5] "D_18_R2.sam"    "D_18_R3_T1.sam" "D_18_R3.sam"    "D_18_R4.sam"   
+ [9] "D_25_R1.sam"    "D_25_R2.sam"    "D_25_R3.sam"    "D_34_R1.sam"   
+[13] "D_34_R2_T1.sam" "D_34_R2.sam"    "D_34_R3.sam"    "D_34_R4.sam"   
+[17] "L_10_R1.sam"    "L_10_R2.sam"    "L_10_R3.sam"    "L_18_R1.sam"   
+[21] "L_18_R2.sam"    "L_18_R3.sam"    "L_18_R4.sam"    "L_25_R1.sam"   
+[25] "L_25_R2.sam"    "L_25_R3.sam"    "L_34_R1.sam"    "L_34_R2.sam"   
+[29] "L_34_R3.sam"    "L_34_R4_T1.sam" "L_34_R4_T2.sam" "L_34_R4_T3.sam"
+[33] "L_34_R4.sam"   
+[1] "Counting reads that match overlap exons and grouping exons by gene_id"
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+       Rsubread 2.4.2
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 33 SAM files                                     ||
+||                                                                            ||
+||                           D_10_R1.sam                                      ||
+||                           D_10_R2.sam                                      ||
+||                           D_10_R3.sam                                      ||
+||                           D_18_R1.sam                                      ||
+||                           D_18_R2.sam                                      ||
+||                           D_18_R3_T1.sam                                   ||
+||                           D_18_R3.sam                                      ||
+||                           D_18_R4.sam                                      ||
+||                           D_25_R1.sam                                      ||
+||                           D_25_R2.sam                                      ||
+||                           D_25_R3.sam                                      ||
+||                           D_34_R1.sam                                      ||
+||                           D_34_R2_T1.sam                                   ||
+||                           D_34_R2.sam                                      ||
+||                           D_34_R3.sam                                      ||
+||                           D_34_R4.sam                                      ||
+||                           L_10_R1.sam                                      ||
+||                           L_10_R2.sam                                      ||
+||                           L_10_R3.sam                                      ||
+||                           L_18_R1.sam                                      ||
+||                           L_18_R2.sam                                      ||
+||                           L_18_R3.sam                                      ||
+||                           L_18_R4.sam                                      ||
+||                           L_25_R1.sam                                      ||
+||                           L_25_R2.sam                                      ||
+||                           L_25_R3.sam                                      ||
+||                           L_34_R1.sam                                      ||
+||                           L_34_R2.sam                                      ||
+||                           L_34_R3.sam                                      ||
+||                           L_34_R4_T1.sam                                   ||
+||                           L_34_R4_T2.sam                                   ||
+||                           L_34_R4_T3.sam                                   ||
+||                           L_34_R4.sam                                      ||
+||                                                                            ||
+||              Paired-end : no                                               ||
+||        Count read pairs : no                                               ||
+||              Annotation : DokdoniaMED134.gtf (GTF)                         ||
+||      Dir for temp files : .                                                ||
+||                 Threads : 1                                                ||
+||                   Level : meta-feature level                               ||
+||      Multimapping reads : counted                                          ||
+|| Multi-overlapping reads : not counted                                      ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\============================================================================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file DokdoniaMED134.gtf ...                                ||
+||    Features : 2886                                                         ||
+||    Meta-features : 2886                                                    ||
+||    Chromosomes/contigs : 1                                                 ||
+||                                                                            ||
+|| Process SAM file D_10_R1.sam...                                            ||
+ERROR: Paired-end reads were detected in single-end read library : /home/robaina/Documents/Proyecto_rodopsina/Data/BAM_files/D_10_R1.sam
+No counts were generated.
+Execution halted
