@@ -59,6 +59,7 @@ p_status = pipe.wait(); out, err = pipe.communicate()
 print ("salmon index -t " + fnt_filename+" -i " + fnt_filename[:fnt_filename.find(".")])
 os.system("salmon index -t " + fnt_filename+" -i " + fnt_filename[:fnt_filename.find(".")])
 
+# Select only files with "_1" pattern (Jose said data appear to be single-end not paired-end...)
 dirList = os.listdir(ppath)
 ffiles = []
 for fname in dirList:
@@ -75,12 +76,12 @@ for i in range(len(ffiles)):
 	a = ffiles[i].replace("1.fastq.gz", "")
 
 	# Paired-end:
-	print("salmon quant -i ./" + fnt_filename[:fnt_filename.find(".")] + " -l A -1 " + ppath+ffiles[i] + " -2 " + ppath + ffiles[i].replace(ppatern1, ppatern2) + " -p 3 --gcBias --validateMappings -o ./quants/" + a)
-	os.system("salmon quant -i ./" + fnt_filename[:fnt_filename.find(".")] + " -l A -1 " + ppath + ffiles[i] + " -2 " + ppath + ffiles[i].replace(ppatern1, ppatern2) + " -p 3 --gcBias --validateMappings -o ./quants/" + a)
+	#print("salmon quant -i ./" + fnt_filename[:fnt_filename.find(".")] + " -l A -1 " + ppath+ffiles[i] + " -2 " + ppath + ffiles[i].replace(ppatern1, ppatern2) + " -p 3 --gcBias --validateMappings -o ./quants/" + a)
+	#os.system("salmon quant -i ./" + fnt_filename[:fnt_filename.find(".")] + " -l A -1 " + ppath + ffiles[i] + " -2 " + ppath + ffiles[i].replace(ppatern1, ppatern2) + " -p 3 --gcBias --validateMappings -o ./quants/" + a)
 
     # Single-end
-	# print ("salmon quant -i ./"+fnt_filename[:fnt_filename.find(".")]+" -l A -r "+ppath+ffiles[i]+" -p 3 --validateMappings -o ./quants/"+a)
-	# os.system("salmon quant -i ./"+fnt_filename[:fnt_filename.find(".")]+" -l A -r "+ppath+ffiles[i]+" -p 3 --validateMappings -o ./quants/"+a)
+	print ("salmon quant -i ./"+fnt_filename[:fnt_filename.find(".")]+" -l A -r "+ppath+ffiles[i]+" -p 3 --validateMappings -o ./quants/"+a)
+	os.system("salmon quant -i ./"+fnt_filename[:fnt_filename.find(".")]+" -l A -r "+ppath+ffiles[i]+" -p 3 --validateMappings -o ./quants/"+a)
 
 	#exit()
 

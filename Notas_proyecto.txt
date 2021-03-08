@@ -14,4 +14,8 @@ Hay datos de mRNA para las diferentes temperaturas (tras la adaptación). Tambi�
 
 Podría investigar BRENDA para buscar datos de temperaturas óptimas o rangos para enzymas presentes en esa bacteria, o al menos una similar, y con estos datos establecer vías metabólicas alternativas para mejorar la eficiencia en el crecimiento. La idea es que hay enzimas que son más sensibles que otras a la temperatura y el metabolismo se reajusta para adaptarse a la temperatura.
 
-BIOCYC ofrece pathway tools con una licencia académica, necesito contactar con Jose o alguien para que me firme la solicitud para la ULL.
+BIOCYC ofrece pathway tools con una licencia académica, necesito contactar coHn Jose o alguien para que me firmeh la solicitud para la ULL.
+
+Would be useful to know how main nutrient concentrations change with temperature in the oceans, as well as how import/export of these change. Perhaps we can use Copernicus data to estimate surface concentrations of CO2, P, S, N, biomass as well as water temperature.
+
+Would be very cool to identify a novel metabolic pathway in these oceanic prokariotic people, Science paper ;)
