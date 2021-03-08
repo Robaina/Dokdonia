@@ -20,7 +20,7 @@ library(Rsubread)
 rm(list = ls())
 RNAseqDATADIR <- "Data/LauraDokdoniaReadsCleaned"
 fastq_files <- dir(RNAseqDATADIR)
-REF_GENOME <- "Data/DokdoniaMED134_full.fasta"
+REF_GENOME <- "Data/DokdoniaMED134_full.fasta" # Perhaps this genome is the problem
 Annotated_GTF <- "Data/DokdoniaMED134_fake_MED134_01165.gtf"# "Data/DokdoniaMED134.gtf"
 RSUBREAD_INDEX_PATH <- "Data/ref_data"
 RSUBREAD_INDEX_BASE <- "MED134"
@@ -63,7 +63,7 @@ alignSequences <- function(conditions, ncores = 14) {
  }
 
 alignSequencesBioParallel <- function(conditions, ncores = 8) {
-  # Rsubread doesn't parallelized very well... only 14% CPU usage!
+  # Rsubread doesn't parallelize very well... only 14% CPU usage!
   # I'll use here an external parallelization tool
   # Carefull, runs out of RAM with 14 threads...
   library(BiocParallel)
