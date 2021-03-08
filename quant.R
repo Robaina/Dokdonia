@@ -12,7 +12,7 @@
 # 4. An additional workflow based in Rsubread can be found at: http://monashbioinformaticsplatform.github.io/RNAseq-DE-analysis-with-R/RNAseq_DE_analysis_with_R.html
 # 5. Alignment can be parallelized with 'BiocParallel' following directions in the first workflow.
 # 6. featureCounts options: https://rdrr.io/bioc/Rsubread/man/featureCounts.html
-#
+# 7. SAM format: http://www.metagenomics.wiki/tools/samtools/bam-sam-file-format
 # Semidán Robaina Estévez, March 2021.
 
 library(Rsubread)
