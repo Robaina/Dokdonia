@@ -192,6 +192,6 @@ countReads <- function(paired_end = TRUE, ncores = 8) {
 
 #buildindex(basename=file.path(RSUBREAD_INDEX_PATH, RSUBREAD_INDEX_BASE), reference=REF_GENOME)
 conditions <- getDataIDs()
-alignSequences(conditions, ncores = 8, paired = TRUE)
+# alignSequences(conditions, ncores = 8, paired = TRUE)
 #alignSequencesBioParallel(conditions, ncores = 10)
-#countReads(paired_end = TRUE, ncores = 8)
+countReads(paired_end = TRUE, ncores = 8)
