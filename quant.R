@@ -111,7 +111,7 @@ countReads <- function(paired_end = TRUE, ncores = 8) {
     # annotation
     annot.ext = file.path(curdir, Annotated_GTF),
     isGTFAnnotationFile = TRUE,
-    GTF.featureType = "gene",
+    GTF.featureType = "exon",
     GTF.attrType = "gene_id",
     GTF.attrType.extra = NULL,
     chrAliases = NULL,
@@ -194,4 +194,4 @@ countReads <- function(paired_end = TRUE, ncores = 8) {
 conditions <- getDataIDs()
 alignSequences(conditions, ncores = 8, paired = TRUE)
 #alignSequencesBioParallel(conditions, ncores = 10)
-countReads(paired_end = TRUE, ncores = 8)
+#countReads(paired_end = TRUE, ncores = 8)
