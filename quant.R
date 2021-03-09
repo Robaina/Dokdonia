@@ -136,7 +136,7 @@ countReads <- function(paired_end = TRUE, ncores = 8) {
     read2pos = NULL,
 
     # multi-mapping reads
-    countMultiMappingReads = FALSE,
+    countMultiMappingReads = TRUE, #FALSE,
 
     # fractional counting
     fraction = FALSE,
