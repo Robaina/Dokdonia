@@ -120,7 +120,7 @@ countReads <- function(paired_end = TRUE, ncores = 8) {
     useMetaFeatures = TRUE,
 
     # overlap between reads and features
-    allowMultiOverlap = FALSE,
+    allowMultiOverlap = TRUE,
     minOverlap = 1,
     fracOverlap = 0,
     fracOverlapFeature = 0,
