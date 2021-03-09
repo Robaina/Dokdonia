@@ -136,7 +136,7 @@ countReads <- function(paired_end = TRUE, ncores = 8) {
     read2pos = NULL,
 
     # multi-mapping reads
-    countMultiMappingReads = TRUE, #FALSE,
+    countMultiMappingReads = FALSE,
 
     # fractional counting
     fraction = FALSE,
@@ -156,7 +156,7 @@ countReads <- function(paired_end = TRUE, ncores = 8) {
 
     # exon-exon junctions
     juncCounts = FALSE,
-    # genome = file.path(curdir, REF_GENOME),
+    genome = file.path(curdir, REF_GENOME),
 
     # parameters specific to paired end reads
     isPairedEnd = paired_end,
