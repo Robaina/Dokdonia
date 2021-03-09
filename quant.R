@@ -20,7 +20,7 @@ library(Rsubread)
 rm(list = ls())
 RNAseqDATADIR <- "Data/LauraDokdoniaReadsCleaned"
 fastq_files <- dir(RNAseqDATADIR)
-REF_GENOME <- "Data/DokdoniaMED134_full.fasta" # Perhaps this genome is the problem
+REF_GENOME <- "Data/DokdoniaMED134_80char.fasta"
 Annotated_GTF <- "Data/DokdoniaMED134.gtf"
 RSUBREAD_INDEX_PATH <- "Data/ref_data"
 RSUBREAD_INDEX_BASE <- "MED134"
@@ -39,27 +39,39 @@ getDataIDs <- function() {
   return(conditions)
 }
 
-alignSequences <- function(conditions, ncores = 14) {
+alignSequences <- function(conditions, ncores = 14, paired = TRUE) {
   inputfilesfwd <- vector()
-  # inputfilesrev <- vector()
+  inputfilesrev <- vector()
   output_files <- vector()
   for (condition in conditions) {
     inputfilesfwd <- c(inputfilesfwd, file.path(
       RNAseqDATADIR, paste0(condition, "_1.fastq.gz")))
-    # inputfilesrev <- c(inputfilesrev, file.path(
-    #  RNAseqDATADIR, paste0(condition, "_2.fastq.gz")))
+    if (paired == TRUE) {
+      inputfilesrev <- c(inputfilesrev, file.path(
+       RNAseqDATADIR, paste0(condition, "_2.fastq.gz")))
+    }
     output_files <- c(output_files, file.path(
       SAM_OUTPUT_PATH, paste0(condition, ".sam")))
   }
-
-  align(index = file.path(RSUBREAD_INDEX_PATH, RSUBREAD_INDEX_BASE),
-     readfile1 = inputfilesfwd,
-     readfile2 = NULL,
-     type = "rna",
-     nthreads = ncores,
-     output_file = output_files,
-     output_format = "SAM"
-   )
+  if (paired == TRUE) {
+    align(index = file.path(RSUBREAD_INDEX_PATH, RSUBREAD_INDEX_BASE),
+       readfile1 = inputfilesfwd,
+       readfile2 = inputfilesrev,
+       type = "rna",
+       nthreads = ncores,
+       output_file = output_files,
+       output_format = "SAM"
+     )
+  } else {
+    align(index = file.path(RSUBREAD_INDEX_PATH, RSUBREAD_INDEX_BASE),
+       readfile1 = inputfilesfwd,
+       readfile2 = NULL,
+       type = "rna",
+       nthreads = ncores,
+       output_file = output_files,
+       output_format = "SAM"
+     )
+  }
  }
 
 alignSequencesBioParallel <- function(conditions, ncores = 8) {
@@ -99,7 +111,7 @@ countReads <- function(paired_end = TRUE, ncores = 8) {
     # annotation
     annot.ext = file.path(curdir, Annotated_GTF),
     isGTFAnnotationFile = TRUE,
-    GTF.featureType = "exon",
+    GTF.featureType = "gene",
     GTF.attrType = "gene_id",
     GTF.attrType.extra = NULL,
     chrAliases = NULL,
@@ -151,7 +163,7 @@ countReads <- function(paired_end = TRUE, ncores = 8) {
     countReadPairs = TRUE,
     requireBothEndsMapped = FALSE,
     checkFragLength = FALSE,
-    minFragLength = 50,
+    minFragLength = 30,
     maxFragLength = 600,
     countChimericFragments = TRUE,
     autosort = TRUE,
@@ -178,7 +190,8 @@ countReads <- function(paired_end = TRUE, ncores = 8) {
   save(fcLim, file="Data/LauraDokdoniaCounts.RData")
 }
 
-# buildindex(basename=file.path(RSUBREAD_INDEX_PATH, RSUBREAD_INDEX_BASE), reference=REF_GENOME)
+#buildindex(basename=file.path(RSUBREAD_INDEX_PATH, RSUBREAD_INDEX_BASE), reference=REF_GENOME)
 conditions <- getDataIDs()
-alignSequencesBioParallel(conditions, ncores = 10) # alignSequences(conditions, ncores = 14)
-countReads(paired_end = TRUE, ncores = 8)
+#alignSequences(conditions, ncores = 8)
+#alignSequencesBioParallel(conditions, ncores = 10)
+countReads(paired_end = FALSE, ncores = 8)
