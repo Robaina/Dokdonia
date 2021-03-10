@@ -3,8 +3,8 @@ import re
 import os
 import numpy as np
 
-sam_dir = ''
-sam_files = []
+sam_dir = 'Data/SAM_files_80_char_index'
+sam_files = ['D_10_R1.sam']
 
 
 def findAll(string, pattern):
@@ -29,7 +29,7 @@ def getGeneList(gtf_path):
     return np.unique(gene_list).tolist()
 
 
-gene_list = getGeneList("../Data/DokdoniaMED134.gtf")
+gene_list = getGeneList("Data/DokdoniaMED134.gtf")
 counts = {}
 
 for file in sam_files:

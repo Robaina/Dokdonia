@@ -19,3 +19,5 @@ BIOCYC ofrece pathway tools con una licencia académica, necesito contactar coHn
 Would be useful to know how main nutrient concentrations change with temperature in the oceans, as well as how import/export of these change. Perhaps we can use Copernicus data to estimate surface concentrations of CO2, P, S, N, biomass as well as water temperature.
 
 Would be very cool to identify a novel metabolic pathway in these oceanic prokariotic people, Science paper ;)
+
+Would be cool to plot gene expression on the circular genome to see the distribution of gene expression in the genome, perhaps some spatial patterns arise?

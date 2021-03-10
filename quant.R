@@ -20,8 +20,8 @@ library(Rsubread)
 rm(list = ls())
 RNAseqDATADIR <- "Data/LauraDokdoniaReadsCleaned"
 fastq_files <- dir(RNAseqDATADIR)
-REF_GENOME <- "Data/DokdoniaMED134_80char.fasta"
-Annotated_GTF <- "Data/DokdoniaMED134_geneIDs.gtf"
+REF_GENOME <- "Data/DokdoniaMED134_full.fasta" # "Data/DokdoniaMED134_80char.fasta"
+Annotated_GTF <- "Data/DokdoniaMED134.gtf" # "Data/DokdoniaMED134_geneIDs.gtf"
 RSUBREAD_INDEX_PATH <- "Data/ref_data"
 RSUBREAD_INDEX_BASE <- "MED134"
 forward_pattern <- "_1.fastq.gz"
@@ -95,7 +95,6 @@ alignSequencesBioParallel <- function(conditions, ncores = 8) {
                    ),
                    output_format = "SAM"
                  )
-              # return(paste("Aligned:", condition))
             }
 
   bplapply(conditions, myAlign, BPPARAM = bpparam)
@@ -111,7 +110,7 @@ countReads <- function(paired_end = TRUE, ncores = 8) {
     # annotation
     annot.ext = file.path(curdir, Annotated_GTF),
     isGTFAnnotationFile = TRUE,
-    GTF.featureType = "exon",
+    GTF.featureType = "gene",
     GTF.attrType = "gene_id",
     GTF.attrType.extra = NULL,
     chrAliases = NULL,
@@ -136,7 +135,7 @@ countReads <- function(paired_end = TRUE, ncores = 8) {
     read2pos = NULL,
 
     # multi-mapping reads
-    countMultiMappingReads = FALSE,
+    countMultiMappingReads = TRUE,
 
     # fractional counting
     fraction = FALSE,
@@ -156,14 +155,14 @@ countReads <- function(paired_end = TRUE, ncores = 8) {
 
     # exon-exon junctions
     juncCounts = FALSE,
-    genome = file.path(curdir, REF_GENOME),
+    genome = NULL,
 
     # parameters specific to paired end reads
     isPairedEnd = paired_end,
     countReadPairs = TRUE,
     requireBothEndsMapped = FALSE,
     checkFragLength = FALSE,
-    minFragLength = 30,
+    minFragLength = 50,
     maxFragLength = 600,
     countChimericFragments = TRUE,
     autosort = TRUE,
@@ -187,11 +186,9 @@ countReads <- function(paired_end = TRUE, ncores = 8) {
   setwd(curdir)
   print("Saving results")
   save(fcLim, file="Data/LauraDokdoniaCounts.RData")
-  knitr::kable(fcLim$stat) # Print stats
 }
 
-#buildindex(basename=file.path(RSUBREAD_INDEX_PATH, RSUBREAD_INDEX_BASE), reference=REF_GENOME)
+# buildindex(basename=file.path(RSUBREAD_INDEX_PATH, RSUBREAD_INDEX_BASE), reference=REF_GENOME)
 conditions <- getDataIDs()
 alignSequences(conditions, ncores = 10, paired = TRUE)
-#alignSequencesBioParallel(conditions, ncores = 10)
 countReads(paired_end = TRUE, ncores = 10)

@@ -16,3 +16,4 @@
 *.sam
 *.vcf
 *.summary
+*.tmp
