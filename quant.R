@@ -186,6 +186,7 @@ countReads <- function(paired_end = TRUE, ncores = 8) {
   setwd(curdir)
   print("Saving results")
   save(fcLim, file="Data/LauraDokdoniaCounts.RData")
+  write.csv(fcLim$counts, "Data/DokdoniaCounts.csv")
 }
 
 # buildindex(basename=file.path(RSUBREAD_INDEX_PATH, RSUBREAD_INDEX_BASE), reference=REF_GENOME)
