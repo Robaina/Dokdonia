@@ -7,7 +7,6 @@
 *.log
 *.bin
 *.sbgn
-*.pdf
 *.reads
 *.files
 *.array
@@ -17,3 +16,4 @@
 *.vcf
 *.summary
 *.tmp
+/Papers
