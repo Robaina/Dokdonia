@@ -6,3 +6,6 @@ Orignal data: /usr/gonzalez/transcriptomes/LauraDokdoniaReads
 Cleaned data: /usr/gonzalez/transcriptomes/LauraDokdoniaReadsCleaned
 
 Python script used to clean original data: clean.py
+
+Dataset contains technical replicates which can be removed to balance number of samples across conditions.
+

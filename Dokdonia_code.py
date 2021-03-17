@@ -50,11 +50,16 @@ def getMetaMatrix(counts):
 
 
 def runDEtest(counts, test='Wald', alpha=1e-2,
-              formula='~ lighting', reduced_formula=None):
+              formula='~ lighting', reduced_formula=None,
+              log2fold_cutoff=0):
     '''
     Runs DeSeq2
     reduced_formula only for LRT test
+    log2fold_cutoff: threshold to consider genes as DE when
+    pair-wise comparisons with Wald test 
+    (Schurch et al., 2016 recommends 0.5 for 3 replicates)
     '''
+    k = log2fold_cutoff
     meta = getMetaMatrix(counts)
     dds = py_DESeq2(count_matrix=counts,
                     design_matrix=meta,
@@ -63,13 +68,14 @@ def runDEtest(counts, test='Wald', alpha=1e-2,
 
     if test == 'LRT':
         dds.run_deseq(test=test, reduced=Formula(reduced_formula))
+        dds.get_deseq_result(alpha=alpha)
     else:
         dds.run_deseq(test=test)
-    dds.get_deseq_result(alpha=alpha)
+        dds.get_deseq_result(alpha=alpha, lfcThreshold=log2fold_cutoff)
     res = dds.deseq_result
     res = res[res.padj < alpha]
     stats = {'DE+': res.log2FoldChange.where(res.log2FoldChange > 0).dropna().shape[0],
-             'DE-': res.log2FoldChange.where(res.log2FoldChange < 0).dropna().shape[0]}
+             'DE-': res.log2FoldChange.where(res.log2FoldChange < -0).dropna().shape[0]}
     return (res, stats)
 
 

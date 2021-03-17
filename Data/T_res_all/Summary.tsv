@@ -1,15 +1,15 @@
-Starting data and time	Monday 15 March 2021 (21:38:44)
-Ending date and time	Monday 15 March 2021 (21:39:01)
-Time consumed	0 hours, 0 minutes, and 16 seconds
+Starting data and time	Tuesday 16 March 2021 (12:46:12)
+Ending date and time	Tuesday 16 March 2021 (12:46:30)
+Time consumed	0 hours, 0 minutes, and 17 seconds
 Number of datasets	1
 Total number of input genes	1991
 Genes included in the analysis	1991
 Genes filtered out from the analysis	0
-Number of clusters	4
-Total number of genes in clusters	668
-Genes not included in any cluster	1323
-Min cluster size	34
-Max cluster size	341
-Average cluster size	167.0
+Number of clusters	5
+Total number of genes in clusters	667
+Genes not included in any cluster	1324
+Min cluster size	35
+Max cluster size	305
+Average cluster size	133.4
 Number of samples (including replicates)	33
 Number of conditions	8
