@@ -13,6 +13,7 @@
 *.reads
 *.tab
 *.sam
+*.bam
 *.vcf
 *.summary
 *.tmp
