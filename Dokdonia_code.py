@@ -56,10 +56,9 @@ def runDEtest(counts, test='Wald', alpha=1e-2,
     Runs DeSeq2
     reduced_formula only for LRT test
     log2fold_cutoff: threshold to consider genes as DE when
-    pair-wise comparisons with Wald test 
+    pair-wise comparisons with Wald test
     (Schurch et al., 2016 recommends 0.5 for 3 replicates)
     '''
-    k = log2fold_cutoff
     meta = getMetaMatrix(counts)
     dds = py_DESeq2(count_matrix=counts,
                     design_matrix=meta,
