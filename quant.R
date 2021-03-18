@@ -182,7 +182,7 @@ SAM_OUTPUT_PATH <- "Data/Laura_Normalization/SAM_files"
 REF_Standars <- "Data/Laura_Normalization/Internal_Standard_sequences.fasta"
 Annotated_GTF <- "Data/Laura_Normalization/Internal_Standard_sequences.gtf"
 index_path <- file.path(RSUBREAD_INDEX_PATH, "SulfoStandars")
-counts_output <- "Data/Laura_Normalization/SulfoStandardsCountsRandStrand"
+counts_output <- "Data/Laura_Normalization/SulfoStandardsCounts"
 
 # buildindex(basename=index_path, reference=REF_Standars)
 # conditions <- getDataIDs()
