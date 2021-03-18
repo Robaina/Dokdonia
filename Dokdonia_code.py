@@ -18,6 +18,10 @@ class GenomeGBK:
     @property
     def meta(self):
         return dict(self._gbk.features[0].qualifiers)
+    
+    @property
+    def features(self):
+        return [f for f in self._gbk.features[1:]]
 
     def getGeneInfo(self, gene_id: str):
         try:

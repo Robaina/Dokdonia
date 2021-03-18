@@ -20,8 +20,6 @@ library(Rsubread)
 rm(list = ls())
 RNAseqDATADIR <- "Data/LauraDokdoniaReadsCleaned"
 fastq_files <- dir(RNAseqDATADIR)
-REF_GENOME <- "Data/DokdoniaMED134_full.fasta"
-Annotated_GTF <- "Data/DokdoniaMED134.gtf"
 RSUBREAD_INDEX_PATH <- "Data/ref_data"
 forward_pattern <- "_1.fastq.gz"
 reverses_pattern <- "_2.fastq.gz"
@@ -39,21 +37,21 @@ getDataIDs <- function() {
 }
 
 alignSequences <- function(conditions, index_path, sam_output_dir,
-  ncores = 14, paired = TRUE) {
+  ncores = 14, paired_end = TRUE) {
   inputfilesfwd <- vector()
   inputfilesrev <- vector()
   output_files <- vector()
   for (condition in conditions) {
     inputfilesfwd <- c(inputfilesfwd, file.path(
       RNAseqDATADIR, paste0(condition, "_1.fastq.gz")))
-    if (paired == TRUE) {
+    if (paired_end == TRUE) {
       inputfilesrev <- c(inputfilesrev, file.path(
        RNAseqDATADIR, paste0(condition, "_2.fastq.gz")))
     }
     output_files <- c(output_files, file.path(
       sam_output_dir, paste0(condition, ".sam")))
   }
-  if (paired == TRUE) {
+  if (paired_end == TRUE) {
     align(index = index_path,
        readfile1 = inputfilesfwd,
        readfile2 = inputfilesrev,
@@ -74,15 +72,14 @@ alignSequences <- function(conditions, index_path, sam_output_dir,
   }
  }
 
-countReads <- function(sam_dir, paired_end = TRUE, ncores= 8) {
+countReads <- function(sam_dir, gtf_file, output_dir, paired_end = TRUE, ncores= 8) {
   samFiles <- list.files(sam_dir, pattern = ".*sam$")
   curdir <- getwd()
   setwd(file.path(curdir, sam_dir))
-  print("Counting reads that match overlap exons and grouping exons by gene_id")
 
   fcLim <- featureCounts(files = samFiles,
     # annotation
-    annot.ext = file.path(curdir, Annotated_GTF),
+    annot.ext = file.path(curdir, gtf_file),
     isGTFAnnotationFile = TRUE,
     GTF.featureType = "gene",
     GTF.attrType = "gene_id",
@@ -159,17 +156,21 @@ countReads <- function(sam_dir, paired_end = TRUE, ncores= 8) {
 
   setwd(curdir)
   print("Saving results")
-  save(fcLim, file="Data/LauraDokdoniaCounts.RData")
-  write.csv(fcLim$counts, "Data/DokdoniaCounts.csv")
+  save(fcLim, file=paste0(output_dir, ".RData"))
+  write.csv(fcLim$counts, paste0(output_dir, ".csv"))
 }
 
 # Align dokdonia transcripts
 # SAM_OUTPUT_PATH <- "Data/SAM_files"
+# REF_GENOME <- "Data/DokdoniaMED134_full.fasta"
 # index_path <- file.path(RSUBREAD_INDEX_PATH, "MED134")
+# Annotated_GTF <- "Data/DokdoniaMED134.gtf"
+# counts_output <- "Data/DokdoniaCounts"
+
 # buildindex(basename=index_path, reference=REF_GENOME)
 # conditions <- getDataIDs()
-# alignSequences(conditions, index_path, SAM_OUTPUT_PATH, ncores = 10, paired = TRUE)
-# countReads(SAM_OUTPUT_PATH, paired_end = TRUE, ncores = 10)
+# alignSequences(conditions, index_path, SAM_OUTPUT_PATH, ncores = 10, paired_end = TRUE)
+# countReads(SAM_OUTPUT_PATH, Annotated_GTF, counts_output, paired_end = TRUE, ncores = 10)
 
 # Align Sulfolobus solfataricus P2 internal standars
 # The idea here is  to align LauraDokdoniaReadsCleaned files to the Sulfolobus Fasta
@@ -179,10 +180,11 @@ countReads <- function(sam_dir, paired_end = TRUE, ncores= 8) {
 # counted directly from the SAM file, samtools can do that with the index.
 SAM_OUTPUT_PATH <- "Data/Laura_Normalization/SAM_files"
 REF_Standars <- "Data/Laura_Normalization/Internal_Standard_sequences.fasta"
-Annotated_GTF <- "Data/Internal_Standard_sequences.fasta.gtf"
+Annotated_GTF <- "Data/Laura_Normalization/Internal_Standard_sequences.gtf"
 index_path <- file.path(RSUBREAD_INDEX_PATH, "SulfoStandars")
+counts_output <- "Data/Laura_Normalization/SulfoStandardsCountsRandStrand"
 
-buildindex(basename=index_path, reference=REF_Standars)
-conditions <- getDataIDs()
-alignSequences(conditions, index_path, SAM_OUTPUT_PATH, ncores = 10, paired = TRUE)
-# countReads(SAM_OUTPUT_PATH, paired_end = TRUE, ncores = 10)
+# buildindex(basename=index_path, reference=REF_Standars)
+# conditions <- getDataIDs()
+# alignSequences(conditions, index_path, SAM_OUTPUT_PATH, ncores = 10, paired_end = TRUE)
+countReads(SAM_OUTPUT_PATH, Annotated_GTF, counts_output, paired_end = TRUE, ncores = 10)
