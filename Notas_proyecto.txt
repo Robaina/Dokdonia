@@ -21,3 +21,5 @@ Would be useful to know how main nutrient concentrations change with temperature
 Would be very cool to identify a novel metabolic pathway in these oceanic prokariotic people, Science paper ;)
 
 Would be cool to plot gene expression on the circular genome to see the distribution of gene expression in the genome, perhaps some spatial patterns arise?
+
+What source of nitrogen does Dokdonia take? Nitrate is an expensive one, ammonia is cheaper, according to Braakman eLife paper...
