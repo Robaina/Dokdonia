@@ -116,3 +116,51 @@ def getGeneClusters(DE_TPM, path_to_wd, out_dir, cluster_tightness=1):
         os.path.join(out_dir, 'Clusters_Objects.tsv'), sep='\t', header=1)
     return {f'C{i}': clusters.iloc[:, i].dropna().values
             for i in range(clusters.shape[1])}
+
+
+def getAverageStandardRatio(IS_counts, standards_data):
+    """
+    Compute average standard ratios from standard counts and metadata
+    """
+    cond_out = 'D_25_R1'
+    IS = IS_counts['index'].values
+    conditions = IS_counts.columns.values.tolist()
+    conditions.remove('index')
+    conditions.remove(cond_out)
+
+    avg_st_ratios = {}
+    for cond_id in conditions:
+        st_ratios = []
+        for st_id in IS:
+            
+            st_copies = standards_data[
+                (standards_data['Sample ID'] == cond_id) & (standards_data['Standard'] == st_id)
+            ]['Standard added (copias)'].values[0]
+  
+            st_counts = IS_counts[IS_counts['index'] == st_id][cond_id].values[0]
+            
+            st_ratios.append(st_copies / st_counts)
+        
+        avg_st_ratios[cond_id] = {'average': np.mean(st_ratios),
+                                  'std': np.std(st_ratios),
+                                  'cv': np.std(st_ratios) / np.mean(st_ratios)}
+    return avg_st_ratios
+    
+    
+def getTranscriptsPerCell(counts, avg_st_ratios, abundance_meta):
+    """
+    Normalize counts by internal standards and cell abundances
+    transcripts/cell = (counts * avg_st_ratio) / total_cell_abundance
+    
+    """
+    cond_out = 'D_25_R1'
+    conditions = abundance_meta['Sample'].values.tolist()
+    conditions.remove(cond_out)
+    
+    n_counts = counts[counts.columns.intersection(conditions + ['index'])].copy()
+    for cond_id in conditions:
+        n_cells = abundance_meta[abundance_meta['Sample'] == cond_id]['Total_cell_abundance'].values[0]
+        avg_ratio = avg_st_ratios[cond_id]['average']
+        n_counts[cond_id] = (n_counts[cond_id] * avg_ratio) / n_cells
+        
+    return n_counts
