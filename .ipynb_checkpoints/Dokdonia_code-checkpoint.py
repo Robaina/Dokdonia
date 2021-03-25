@@ -118,6 +118,20 @@ def getGeneClusters(DE_TPM, path_to_wd, out_dir, cluster_tightness=1):
             for i in range(clusters.shape[1])}
 
 
+def plotClusters(pdata, clusters):
+    n_rows = int(np.ceil(len(clusters) / 2))
+    fig, axes = plt.subplots(nrows=n_rows, ncols=2)
+    plt.subplots_adjust(hspace=0.3)
+    coords = list(np.ndindex((n_rows, 2)))
+    for n, cluster_id in enumerate(clusters):
+        i, j = coords[n]
+        cluster = clusters[cluster_id]
+        ax = pdata[pdata.index.isin(cluster)].transpose().plot(
+            legend=False, figsize=(15, 18), title=f'{cluster_id}, size={len(cluster)}',
+            ax=axes[i,j])
+    plt.show()
+
+
 def getAverageStandardRatio(IS_counts, standards_data):
     """
     Compute average standard ratios from standard counts and metadata
