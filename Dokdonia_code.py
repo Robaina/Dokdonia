@@ -6,6 +6,7 @@ from subprocess import call
 from diffexpr.py_deseq import py_DESeq2
 from rpy2.rinterface_lib.callbacks import logger as rpy2_logger
 from rpy2.robjects import Formula
+from matplotlib import pyplot as plt
 import logging
 rpy2_logger.setLevel(logging.ERROR)
 
