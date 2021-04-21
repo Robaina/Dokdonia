@@ -2,6 +2,7 @@ from Bio import SeqIO
 import pandas as pd
 import numpy as np
 import os
+import re
 from subprocess import call
 from diffexpr.py_deseq import py_DESeq2
 from rpy2.rinterface_lib.callbacks import logger as rpy2_logger
@@ -131,6 +132,20 @@ def plotClusters(pdata, clusters):
             legend=False, figsize=(15, 18), title=f'{cluster_id}, size={len(cluster)}',
             ax=axes[i,j])
     plt.show()
+    
+    
+def plotClusters(pdata, clusters):
+    n_rows = int(np.ceil(len(clusters) / 2))
+    fig, axes = plt.subplots(nrows=n_rows, ncols=2)
+    plt.subplots_adjust(hspace=0.3)
+    coords = list(np.ndindex((n_rows, 2)))
+    for n, cluster_id in enumerate(clusters):
+        i, j = coords[n]
+        cluster = clusters[cluster_id]
+        pdata[pdata.index.isin(cluster)].transpose().plot(
+            legend=False, figsize=(15, 18), title=f'{cluster_id}, size={len(cluster)}',
+            ax=axes[i, j])
+    plt.show()
 
 
 def getAverageStandardRatio(IS_counts, standards_data):
@@ -179,3 +194,43 @@ def getTranscriptsPerCell(counts, avg_st_ratios, abundance_meta):
         n_counts[cond_id] = (n_counts[cond_id] * avg_ratio) / n_cells
         
     return n_counts
+
+
+def getECnumber(rxn_str):
+    m = re.search('\[EC:(.+?)\]', rxn_str)
+    if m:
+        return m.group(1)
+    else:
+        return False
+    
+def assignSystemsToEnzymes(kegg_pathways):
+    """
+    Supersystem 6 gives an error...
+    """
+    kegg_dict = {}
+    for supersystem in kegg_pathways[:6] + kegg_pathways[7:8]:
+        for system in supersystem['children']:
+            for subsystem in system['children']:
+                for rxn in subsystem['children']:
+                    ec = getECnumber(rxn['name'])
+                    if ec and ec not in kegg_dict.keys():
+                        kegg_dict[ec] = {
+                            'supersystem': supersystem['name'],
+                            'system': system['name'],
+                            'subsystem': subsystem['name']
+                        }
+    return kegg_dict
+
+
+def getCounts(array_like, sort_by_value=True):
+    """
+    Get dict of array item counts. Dict sorted
+    by keys unless sort_by_value set to True.
+    """
+    unique_cond, counts_cond = np.unique(array_like, return_counts=True)
+    counts = dict(zip(unique_cond, counts_cond))
+    if sort_by_value:
+        return dict(sorted(
+            counts.items(), key=lambda item: item[1], reverse=True))
+    else:
+        return counts
