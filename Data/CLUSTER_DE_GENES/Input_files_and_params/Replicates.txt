@@ -1,8 +1,0 @@
-clust_input.tsv, D_10, D_10_R1,D_10_R2,D_10_R3
-clust_input.tsv, D_18, D_18_R1,D_18_R2,D_18_R3,D_18_R4
-clust_input.tsv, D_25, D_25_R1,D_25_R2,D_25_R3
-clust_input.tsv, D_34, D_34_R1,D_34_R2,D_34_R3,D_34_R4
-clust_input.tsv, L_10, L_10_R1,L_10_R2,L_10_R3
-clust_input.tsv, L_18, L_18_R1,L_18_R2,L_18_R3,L_18_R4
-clust_input.tsv, L_25, L_25_R1,L_25_R2,L_25_R3
-clust_input.tsv, L_34, L_34_R1,L_34_R2,L_34_R3,L_34_R4

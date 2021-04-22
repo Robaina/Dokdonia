@@ -234,3 +234,13 @@ def getCounts(array_like, sort_by_value=True):
             counts.items(), key=lambda item: item[1], reverse=True))
     else:
         return counts
+    
+    
+def getRankedSystems(EC_numbers, system_type='system'):
+    systems = []
+    for ec in EC_numbers:
+        try:
+            systems.append(kegg_dict[ec][system_type])
+        except:
+            pass
+    return Dc.getCounts(systems)

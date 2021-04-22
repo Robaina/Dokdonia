@@ -1,0 +1,180 @@
+Pathways
+queuosine biosynthesis I (<i>de novo</i>)
+5-aminoimidazole ribonucleotide biosynthesis I
+trehalose degradation VI (periplasmic)
+L-leucine biosynthesis
+L-histidine biosynthesis
+ammonia assimilation cycle III
+glycerophosphodiester degradation
+pentose phosphate pathway (oxidative branch) I
+guanosine ribonucleotides <i>de novo</i> biosynthesis
+adenosine deoxyribonucleotides <i>de novo</i> biosynthesis
+L-phenylalanine degradation I (aerobic)
+L-histidine degradation I
+L-cysteine biosynthesis III (from L-homocysteine)
+pyrimidine deoxyribonucleotides <i>de novo</i> biosynthesis I
+flavin biosynthesis I (bacteria and plants)
+L-asparagine biosynthesis II
+UTP and CTP <i>de novo</i> biosynthesis
+superpathway of pyrimidine nucleobases salvage
+chorismate biosynthesis I
+menaquinol-6 biosynthesis
+GDP-mannose biosynthesis
+alginate degradation
+6-hydroxymethyl-dihydropterin diphosphate biosynthesis I
+thiosulfate disproportionation IV (rhodanese)
+L-methionine biosynthesis III
+TCA cycle I (prokaryotic)
+xanthine and xanthosine salvage
+assimilatory sulfate reduction III
+L-homoserine biosynthesis
+L-tryptophan biosynthesis
+superpathway of glyoxylate bypass and TCA
+2-oxoglutarate decarboxylation to succinyl-CoA
+[2Fe-2S] iron-sulfur cluster biosynthesis
+PRPP biosynthesis
+L-glutamate biosynthesis III
+D-xylose degradation I
+L-proline degradation
+L-threonine degradation II
+4-hydroxyphenylpyruvate biosynthesis
+gluconeogenesis I
+L-lysine biosynthesis I
+L-arginine biosynthesis III (via <i>N</i>-acetyl-L-citrulline)
+reactive oxygen species degradation
+GDP-L-fucose biosynthesis I (from GDP-D-mannose)
+<i>S</i>-adenosyl-L-methionine cycle II
+glycolysis I (from glucose 6-phosphate)
+bacillithiol biosynthesis
+D-gluconate degradation
+acyl carrier protein activation
+dTDP-L-rhamnose biosynthesis
+pyridoxal 5'-phosphate biosynthesis I
+lipid IV<sub>A</sub> biosynthesis (<i>P. putida</i>)
+UDP-<i>N</i>-acetyl-&alpha;-D-mannosaminouronate biosynthesis
+adenosine ribonucleotides <i>de novo</i> biosynthesis
+superpathway of 5-aminoimidazole ribonucleotide biosynthesis
+superoxide radicals degradation
+L-aspartate degradation I
+anhydromuropeptides recycling I
+L-phenylalanine biosynthesis I
+fatty acid biosynthesis initiation (bacteria and plants)
+2-carboxy-1,4-naphthoquinol biosynthesis
+L-asparagine biosynthesis I
+L-cysteine biosynthesis I
+demethylmenaquinol-8 biosynthesis I
+purine deoxyribonucleosides degradation I
+thiamine diphosphate biosynthesis I (E. coli)
+menaquinol-8 biosynthesis
+L-glutamate biosynthesis I
+thioredoxin pathway
+pyruvate decarboxylation to acetyl CoA
+tetrahydrofolate biosynthesis
+L-ornithine biosynthesis I
+glyoxylate cycle
+L-serine degradation
+putrescine biosynthesis I
+&beta;-1,4-D-mannosyl-<i>N</i>-acetyl-D-glucosamine degradation
+5-aminoimidazole ribonucleotide biosynthesis II
+alanine racemization
+coenzyme A biosynthesis I (prokaryotic)
+di-<i>trans</i>,poly-<i>cis</i>-undecaprenyl phosphate biosynthesis
+purine deoxyribonucleosides salvage
+3-dehydroquinate biosynthesis I
+pyrimidine deoxyribonucleosides salvage
+UDP-<i>N</i>-acetyl-D-glucosamine biosynthesis I
+D-mannose degradation
+L-valine biosynthesis
+NADH repair
+glycine biosynthesis I
+N<sup>6</sup>-L-threonylcarbamoyladenosine<sup>37</sup>-modified tRNA biosynthesis
+folate transformations III (<i>E. coli</i>)
+glycerol degradation I
+L-isoleucine biosynthesis I (from threonine)
+NAD biosynthesis from 2-amino-3-carboxymuconate semialdehyde
+propanoyl CoA degradation I
+menaquinol-7 biosynthesis
+superpathway of pyrimidine deoxyribonucleoside salvage
+L-tryptophan degradation to 2-amino-3-carboxymuconate semialdehyde
+mevalonate degradation
+lipoate biosynthesis and incorporation I
+superpathway of branched chain amino acid biosynthesis
+L-arginine degradation III (arginine decarboxylase/agmatinase pathway)
+thiamine diphosphate biosynthesis II (Bacillus)
+L-alanine degradation IV
+formaldehyde oxidation VII (THF pathway)
+pyrimidine deoxyribonucleotides dephosphorylation
+NAD <i>de novo</i> biosynthesis II (from tryptophan)
+arsenate detoxification II (glutaredoxin)
+superpathway of glycolysis, pyruvate dehydrogenase, TCA, and glyoxylate bypass
+menaquinol-11 biosynthesis
+menaquinol-10 biosynthesis
+L-asparagine degradation I
+protocatechuate degradation II (ortho-cleavage pathway)
+superpathway of L-threonine biosynthesis
+L-tyrosine biosynthesis I
+chorismate biosynthesis from 3-dehydroquinate
+pyrimidine deoxyribonucleotide phosphorylation
+L-glutamine biosynthesis I
+L-arginine degradation I (arginase pathway)
+L-homocysteine biosynthesis
+UDP-<i>N</i>-acetylmuramoyl-pentapeptide biosynthesis I (<i>meso</i>-diaminopimelate containing)
+selenate reduction
+L-threonine biosynthesis
+maltose degradation
+guanosine nucleotides degradation III
+superpathway of adenosine nucleotides <i>de novo</i> biosynthesis I
+L-tryptophan degradation I (via anthranilate)
+phosphopantothenate biosynthesis I
+L-alanine biosynthesis III
+inosine-5'-phosphate biosynthesis I
+superpathway of L-cysteine biosynthesis (mammalian)
+glycine cleavage
+guanosine deoxyribonucleotides <i>de novo</i> biosynthesis I
+CMP phosphorylation
+acetate conversion to acetyl-CoA
+fatty acid &beta;-oxidation I (generic)
+L-aspartate biosynthesis
+biotin biosynthesis from 8-amino-7-oxononanoate I
+L-arginine degradation VI (arginase 2 pathway)
+folate polyglutamylation
+UTP and CTP dephosphorylation I
+glycerol and glycerophosphodiester degradation
+tRNA-uridine 2-thiolation and selenation (bacteria)
+fatty acid elongation -- saturated
+phosphatidylserine and phosphatidylethanolamine biosynthesis I
+aerobic respiration II (cytochrome c) (yeast)
+UDP-&alpha;-D-galactose biosynthesis
+dipicolinate biosynthesis
+superpathway of guanosine nucleotides <i>de novo</i> biosynthesis I
+heme <i>b</i> biosynthesis II (oxygen-independent)
+L-glutamine degradation II
+glycine biosynthesis II
+S-adenosyl-L-methionine biosynthesis
+purine ribonucleosides degradation
+superpathway of L-asparagine biosynthesis
+trehalose degradation II (cytosolic)
+biotin-carboxyl carrier protein assembly
+L-arginine biosynthesis I (via L-ornithine)
+pyrimidine nucleobases salvage I
+adenine and adenosine salvage I
+ppGpp metabolism
+palmitate biosynthesis II (bacteria and plant cytoplasm)
+L-methionine degradation I (to L-homocysteine)
+oleate &beta;-oxidation
+preQ<sub>0</sub> biosynthesis
+lipoprotein posttranslational modification
+L-glutamine degradation I
+heparin degradation
+lipid IV<sub>A</sub> biosynthesis (E. coli)
+urea cycle
+N-end rule pathway I (prokaryotic)
+pyrimidine ribonucleosides salvage I
+tRNA charging
+UDP-&alpha;-D-glucuronate biosynthesis (from UDP-glucose)
+superpathway of L-isoleucine biosynthesis I
+CDP-diacylglycerol biosynthesis I
+menaquinol-9 biosynthesis
+inosine 5'-phosphate degradation
+pyruvate fermentation to (<i>R</i>)-acetoin II
+octane oxidation
