@@ -1,0 +1,2 @@
+# Command:
+deepgoplus --data-root /home/robaina/Software/deepgoplus/deepgoplus_data/data --in-file /home/robaina/Documents/Proyecto_rodopsina/eggNOG_Input.fasta

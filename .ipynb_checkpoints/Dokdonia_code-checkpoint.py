@@ -118,20 +118,6 @@ def getGeneClusters(DE_TPM, path_to_wd, out_dir, cluster_tightness=1):
         os.path.join(out_dir, 'Clusters_Objects.tsv'), sep='\t', header=1)
     return {f'C{i}': clusters.iloc[:, i].dropna().values
             for i in range(clusters.shape[1])}
-
-
-def plotClusters(pdata, clusters):
-    n_rows = int(np.ceil(len(clusters) / 2))
-    fig, axes = plt.subplots(nrows=n_rows, ncols=2)
-    plt.subplots_adjust(hspace=0.3)
-    coords = list(np.ndindex((n_rows, 2)))
-    for n, cluster_id in enumerate(clusters):
-        i, j = coords[n]
-        cluster = clusters[cluster_id]
-        ax = pdata[pdata.index.isin(cluster)].transpose().plot(
-            legend=False, figsize=(15, 18), title=f'{cluster_id}, size={len(cluster)}',
-            ax=axes[i,j])
-    plt.show()
     
     
 def plotClusters(pdata, clusters):
@@ -144,7 +130,8 @@ def plotClusters(pdata, clusters):
         cluster = clusters[cluster_id]
         pdata[pdata.index.isin(cluster)].transpose().plot(
             legend=False, figsize=(15, 18), title=f'{cluster_id}, size={len(cluster)}',
-            ax=axes[i, j])
+            ax=axes[i, j], color='#9a9a9a', linewidth=0.8, 
+            marker='.', markerfacecolor='#ee9929', markersize=12)
     plt.show()
 
 
