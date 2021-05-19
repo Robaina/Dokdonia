@@ -192,7 +192,10 @@ def getECnumber(rxn_str):
     
 def assignSystemsToEnzymes(kegg_pathways):
     """
-    Supersystem 6 gives an error...
+    Supersystem 4 to organismal systems
+    Superystem 5 to human diseases
+    Supersystem 6 corresponds to BRITE pathway database
+    Supersystem 7 corresponds to pathwways not in BRITE or KEGG
     """
     kegg_dict = {}
     for supersystem in kegg_pathways[:6] + kegg_pathways[7:8]:
