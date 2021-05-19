@@ -20,7 +20,7 @@ class GenomeGBK:
     @property
     def meta(self):
         return dict(self._gbk.features[0].qualifiers)
-    
+
     @property
     def features(self):
         return [f for f in self._gbk.features[1:]]
@@ -118,8 +118,8 @@ def getGeneClusters(DE_TPM, path_to_wd, out_dir, cluster_tightness=1):
         os.path.join(out_dir, 'Clusters_Objects.tsv'), sep='\t', header=1)
     return {f'C{i}': clusters.iloc[:, i].dropna().values
             for i in range(clusters.shape[1])}
-    
-    
+
+
 def plotClusters(pdata, clusters):
     n_rows = int(np.ceil(len(clusters) / 2))
     fig, axes = plt.subplots(nrows=n_rows, ncols=2)
@@ -130,7 +130,7 @@ def plotClusters(pdata, clusters):
         cluster = clusters[cluster_id]
         pdata[pdata.index.isin(cluster)].transpose().plot(
             legend=False, figsize=(15, 18), title=f'{cluster_id}, size={len(cluster)}',
-            ax=axes[i, j], color='#9a9a9a', linewidth=0.8, 
+            ax=axes[i, j], color='#9a9a9a', linewidth=0.8,
             marker='.', markerfacecolor='#ee9929', markersize=12)
     plt.show()
 
@@ -149,37 +149,37 @@ def getAverageStandardRatio(IS_counts, standards_data):
     for cond_id in conditions:
         st_ratios = []
         for st_id in IS:
-            
+
             st_copies = standards_data[
                 (standards_data['Sample ID'] == cond_id) & (standards_data['Standard'] == st_id)
             ]['Standard added (copias)'].values[0]
-  
+
             st_counts = IS_counts[IS_counts['index'] == st_id][cond_id].values[0]
-            
+
             st_ratios.append(st_copies / st_counts)
-        
+
         avg_st_ratios[cond_id] = {'average': np.mean(st_ratios),
                                   'std': np.std(st_ratios),
                                   'cv': np.std(st_ratios) / np.mean(st_ratios)}
     return avg_st_ratios
-    
-    
+
+
 def getTranscriptsPerCell(counts, avg_st_ratios, abundance_meta):
     """
     Normalize counts by internal standards and cell abundances
     transcripts/cell = (counts * avg_st_ratio) / total_cell_abundance
-    
+
     """
     cond_out = 'D_25_R1'
     conditions = abundance_meta['Sample'].values.tolist()
     conditions.remove(cond_out)
-    
+
     n_counts = counts[counts.columns.intersection(conditions + ['index'])].copy()
     for cond_id in conditions:
         n_cells = abundance_meta[abundance_meta['Sample'] == cond_id]['Total_cell_abundance'].values[0]
         avg_ratio = avg_st_ratios[cond_id]['average']
         n_counts[cond_id] = (n_counts[cond_id] * avg_ratio) / n_cells
-        
+
     return n_counts
 
 
@@ -189,7 +189,8 @@ def getECnumber(rxn_str):
         return m.group(1)
     else:
         return False
-    
+
+
 def assignSystemsToEnzymes(kegg_pathways):
     """
     Supersystem 6 gives an error...
@@ -221,13 +222,13 @@ def getCounts(array_like, sort_by_value=True):
             counts.items(), key=lambda item: item[1], reverse=True))
     else:
         return counts
-    
-    
-def getRankedSystems(EC_numbers, system_type='system'):
+
+
+def getRankedSystems(kegg_dict, EC_numbers, system_type='system'):
     systems = []
     for ec in EC_numbers:
         try:
             systems.append(kegg_dict[ec][system_type])
         except:
             pass
-    return Dc.getCounts(systems)
+    return getCounts(systems)
