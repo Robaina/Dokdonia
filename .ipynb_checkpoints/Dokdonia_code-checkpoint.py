@@ -9,7 +9,6 @@ from rpy2.rinterface_lib.callbacks import logger as rpy2_logger
 from rpy2.robjects import Formula
 from matplotlib import pyplot as plt
 import logging
-from Bio import SeqIO
 from ipywidgets import widgets, interact
 from ipywidgets_New.interact import StaticInteract
 from ipywidgets_New.widgets import DropDownWidget
@@ -88,35 +87,43 @@ def runDEtest(counts, test='Wald', alpha=1e-2,
     return (res, stats)
 
 
-def writeClustInputFiles(DE_TPM, path_to_wd='Data'):
-    DE_TPM.to_csv(os.path.join(path_to_wd, 'clust_input.tsv'), sep='\t')
-    conds = np.unique([s[:4] for s in DE_TPM.columns])
+def writeClustInputFiles(clust_data, path_to_wd='Data'):
+    clust_data.to_csv(os.path.join(path_to_wd, 'clust_input.tsv'), sep='\t')
+    conds = np.unique([s[:4] for s in clust_data.columns])
     open(os.path.join(path_to_wd, 'clust_replicates.txt'), 'w').close()
     with open(os.path.join(path_to_wd, 'clust_replicates.txt'), 'a+') as file:
         for cond in conds:
-            reps = ",".join(list(DE_TPM.filter(regex=f'{cond}').columns))
+            reps = ",".join(list(clust_data.filter(regex=f'{cond}').columns))
             txt_s = f'clust_input.tsv, {cond}, {reps}\n'
             file.write(txt_s)
+          
+    open(os.path.join(path_to_wd, 'clust_no_normalization.txt'), 'w').close()
+    with open(os.path.join(path_to_wd, 'clust_no_normalization.txt'), 'a+') as file:
+        file.write('clust_input.tsv 0')
 
 
-def runClust(DE_TPM, path_to_wd, out_dir, cluster_tightness=1):
+def runClust(path_to_wd, out_dir, cluster_tightness=1, normalization=True):
     """
     Compute clusters with clust
-    DE_TPM: pandas DataFrame.
+    clust_data: pandas DataFrame.
     """
-    call([
-        'clust', os.path.join(path_to_wd, 'clust_input.tsv'),
+    call_list = ['clust', os.path.join(path_to_wd, 'clust_input.tsv'),
         '-r', os.path.join(path_to_wd, 'clust_replicates.txt'),
-        f'-t {cluster_tightness}',
-        '-o', f'{out_dir}'
-    ], cwd=path_to_wd)
+        '-t', f'{cluster_tightness}',
+        '-o', f'{out_dir}']
+    if not normalization:
+        call_list.append('-n')
+        call_list.append(os.path.join(path_to_wd, 'clust_no_normalization.txt'))
+    call(call_list, cwd=path_to_wd)
 
 
-def getGeneClusters(DE_TPM, path_to_wd, out_dir, cluster_tightness=1):
+def getGeneClusters(clust_data, path_to_wd, out_dir, cluster_tightness=1,
+                    input_data_normalization=True):
     "Returns dict with Clust gene clusters"
-    writeClustInputFiles(DE_TPM, path_to_wd)
-    runClust(DE_TPM, path_to_wd=path_to_wd,
-             out_dir=out_dir, cluster_tightness=cluster_tightness)
+    writeClustInputFiles(clust_data, path_to_wd)
+    runClust(path_to_wd=path_to_wd,
+             out_dir=out_dir, cluster_tightness=cluster_tightness, 
+             normalization=input_data_normalization)
 
     clusters = pd.read_csv(
         os.path.join(out_dir, 'Clusters_Objects.tsv'), sep='\t', header=1)
@@ -131,10 +138,14 @@ def plotClusters(pdata, clusters):
     coords = list(np.ndindex((n_rows, 2)))
     for n, cluster_id in enumerate(clusters):
         i, j = coords[n]
+        try:
+            axis = axes[i, j]
+        except Exception:
+            axis = axes[j]
         cluster = clusters[cluster_id]
         pdata[pdata.index.isin(cluster)].transpose().plot(
             legend=False, figsize=(15, 18), title=f'{cluster_id}, size={len(cluster)}',
-            ax=axes[i, j], color='#9a9a9a', linewidth=0.8,
+            ax=axis, color='#9a9a9a', linewidth=0.8,
             marker='.', markerfacecolor='#ee9929', markersize=12)
     plt.show()
 
@@ -255,7 +266,7 @@ def getKEGGPathwayDict(kegg_pathways):
     KEGG pathway id (koXXXXX)
     """
     kegg_dict = {}
-        
+
     for supersystem in kegg_pathways[:4]:
         for system in supersystem['children']:
             for subsystem in system['children']:
@@ -300,14 +311,14 @@ def summarizeKEGGpathwaysForGene(ko_pathway_dict, gene_ko_dict, gene_id):
                     res['subsystem'].append(ko_path['subsystem'])
                     res['system'].append(ko_path['system'])
                     res['supersystem'].append(ko_path['supersystem'])
-                    
+
         for k, v in res.items():
             res[k] = np.unique(v).tolist()
         return res
-    
+
     except Exception:
         return res
-    
+
 def getKEGGpathwaysForGeneList(ko_pathway_dict, gene_ko_dict, gene_list):
     """
     Get KEGG pathway classification for genes in gene_list
@@ -322,7 +333,7 @@ def getKEGGpathwaysForGeneList(ko_pathway_dict, gene_ko_dict, gene_list):
 def getElementsFrequency(array_like, ranked=True):
     """
     Return dictionary with keys equal to unique elements in
-    array_like and values equal to their frequencies. 
+    array_like and values equal to their frequencies.
     If ranked then dictionary is sorted
     """
     elems, counts = np.unique(array_like, return_counts=True)
@@ -331,14 +342,14 @@ def getElementsFrequency(array_like, ranked=True):
         return dict(sorted(res.items(), key=lambda item: item[1], reverse=True))
     else:
         return res
-    
+
 def extractSubsystemsFromSystem(subsystems_list, system_name, ko_pathway_dict):
     """
     Filter subsystems from list that belong to specified KEGG system name
     """
     return [s for s in subsystems_list if ko_pathway_dict[extractKoID(s)]['system'] == system_name]
 
-    
+
 def plotKEGGFrequencies(data, color=None, axis=None):
     """
     Bar plot of sorted KEGG systems or subsystems
@@ -346,18 +357,18 @@ def plotKEGGFrequencies(data, color=None, axis=None):
     if color is None:
         color = 'C0'
     clean_name_data = {extractKoPathwayName(k): data[k] for k in data.keys()}
-    ax = pd.Series(clean_name_data).plot.bar(figsize=(12, 8), color=color, ax=axis)
-    
+    pd.Series(clean_name_data).plot.bar(figsize=(12, 8), color=color, ax=axis)
+
 
 def plotSystemsAndSubsystems(data, ko_pathway_dict, color=None):
     if color is None:
         color = 'C0'
 
     system_freqs = getElementsFrequency(data['system'])
-    
+
     def plot_fun(system_name):
-        subsystems = extractSubsystemsFromSystem(data['subsystem'], 
-                                                      system_name, 
+        subsystems = extractSubsystemsFromSystem(data['subsystem'],
+                                                      system_name,
                                                       ko_pathway_dict)
         subsystem_freqs = getElementsFrequency(subsystems)
         colors = ['grey' for _ in range(len(system_freqs))]
@@ -372,12 +383,12 @@ def plotSystemsAndSubsystems(data, ko_pathway_dict, color=None):
         plotKEGGFrequencies(system_freqs, color=colors, axis=ax1)
         plotKEGGFrequencies(subsystem_freqs, color=color, axis=ax2)
         plt.show()
-        
+
     interact(plot_fun,
              system_name=widgets.Dropdown(options=list(system_freqs.keys()),
                                              description='KEGG pathway')
             )
-    
+
 def plotCluster(pdata, clusters, cluster_id, ax):
     cluster = clusters[cluster_id]
     pdata[pdata.index.isin(cluster)].transpose().plot(
@@ -387,23 +398,21 @@ def plotCluster(pdata, clusters, cluster_id, ax):
 
 def plotSystemsAndSubsystemsWebPage(clusters, pdata, ko_pathway_dict, gene_ko_dict,
                              color=None, img_folder_name=None):
-    
+
     plt.rcParams.update({'figure.max_open_warning': 0})
     if color is None:
         color = 'C0'
     if img_folder_name is None:
         img_folder_name = 'iplot'
-        
+
     cluster_ids = list(clusters.keys())
-    data = getKEGGpathwaysForGeneList(
-            ko_pathway_dict, gene_ko_dict, clusters[list(clusters.keys())[0]])
     system_names = np.unique([v['system'] for v in ko_pathway_dict.values()]).tolist()
-    
+
     def plot_fun(system_name, cluster_id):
 
         data = getKEGGpathwaysForGeneList(
             ko_pathway_dict, gene_ko_dict, clusters[cluster_id])
-        
+
         system_freqs = getElementsFrequency(data['system'])
 
         colors = ['grey' for _ in range(len(system_freqs))]
@@ -415,15 +424,15 @@ def plotSystemsAndSubsystemsWebPage(clusters, pdata, ko_pathway_dict, gene_ko_di
             """,
             gridspec_kw={"height_ratios": [0.7, 1]}
         )
-        
+
         ax['B'].set_ylabel('freq')
         ax['C'].set_ylabel('freq')
         ax['B'].set_title('KEGG systems')
         ax['C'].set_title(f'KEGG pathways of {system_name}')
-        
+
         try:
-            subsystems = extractSubsystemsFromSystem(data['subsystem'], 
-                                                     system_name, 
+            subsystems = extractSubsystemsFromSystem(data['subsystem'],
+                                                     system_name,
                                                      ko_pathway_dict)
 
             subsystem_freqs = getElementsFrequency(subsystems)
@@ -431,14 +440,14 @@ def plotSystemsAndSubsystemsWebPage(clusters, pdata, ko_pathway_dict, gene_ko_di
             colors[list(system_freqs.keys()).index(system_name)] = color
         except Exception:
             pass
-        
-        
+
+
         plotKEGGFrequencies(system_freqs, color=colors, axis=ax['B'])
         plotCluster(pdata, clusters, cluster_id, ax['A'])
         fig.set_figwidth(20)
         fig.set_figheight(20)
         return fig
-        
+
     i_fig = StaticInteract(plot_fun,
                            system_name=DropDownWidget(system_names,
                                         description='KEGG pathway'),
@@ -456,6 +465,3 @@ def getEggNOGInputFile(gbk_file):
                     gene = feature.qualifiers["locus_tag"][0].replace("'", "")
                     aas = feature.qualifiers["translation"][0].replace("'", "")
                     file.write(f'\n>{gene}\n{aas}')
-
-
-                    

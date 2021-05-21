@@ -87,35 +87,43 @@ def runDEtest(counts, test='Wald', alpha=1e-2,
     return (res, stats)
 
 
-def writeClustInputFiles(DE_TPM, path_to_wd='Data'):
-    DE_TPM.to_csv(os.path.join(path_to_wd, 'clust_input.tsv'), sep='\t')
-    conds = np.unique([s[:4] for s in DE_TPM.columns])
+def writeClustInputFiles(clust_data, path_to_wd='Data'):
+    clust_data.to_csv(os.path.join(path_to_wd, 'clust_input.tsv'), sep='\t')
+    conds = np.unique([s[:4] for s in clust_data.columns])
     open(os.path.join(path_to_wd, 'clust_replicates.txt'), 'w').close()
     with open(os.path.join(path_to_wd, 'clust_replicates.txt'), 'a+') as file:
         for cond in conds:
-            reps = ",".join(list(DE_TPM.filter(regex=f'{cond}').columns))
+            reps = ",".join(list(clust_data.filter(regex=f'{cond}').columns))
             txt_s = f'clust_input.tsv, {cond}, {reps}\n'
             file.write(txt_s)
+          
+    open(os.path.join(path_to_wd, 'clust_no_normalization.txt'), 'w').close()
+    with open(os.path.join(path_to_wd, 'clust_no_normalization.txt'), 'a+') as file:
+        file.write('clust_input.tsv 0')
 
 
-def runClust(DE_TPM, path_to_wd, out_dir, cluster_tightness=1):
+def runClust(path_to_wd, out_dir, cluster_tightness=1, normalization=True):
     """
     Compute clusters with clust
-    DE_TPM: pandas DataFrame.
+    clust_data: pandas DataFrame.
     """
-    call([
-        'clust', os.path.join(path_to_wd, 'clust_input.tsv'),
+    call_list = ['clust', os.path.join(path_to_wd, 'clust_input.tsv'),
         '-r', os.path.join(path_to_wd, 'clust_replicates.txt'),
-        f'-t {cluster_tightness}',
-        '-o', f'{out_dir}'
-    ], cwd=path_to_wd)
+        '-t', f'{cluster_tightness}',
+        '-o', f'{out_dir}']
+    if not normalization:
+        call_list.append('-n')
+        call_list.append(os.path.join(path_to_wd, 'clust_no_normalization.txt'))
+    call(call_list, cwd=path_to_wd)
 
 
-def getGeneClusters(DE_TPM, path_to_wd, out_dir, cluster_tightness=1):
+def getGeneClusters(clust_data, path_to_wd, out_dir, cluster_tightness=1,
+                    input_data_normalization=True):
     "Returns dict with Clust gene clusters"
-    writeClustInputFiles(DE_TPM, path_to_wd)
-    runClust(DE_TPM, path_to_wd=path_to_wd,
-             out_dir=out_dir, cluster_tightness=cluster_tightness)
+    writeClustInputFiles(clust_data, path_to_wd)
+    runClust(path_to_wd=path_to_wd,
+             out_dir=out_dir, cluster_tightness=cluster_tightness, 
+             normalization=input_data_normalization)
 
     clusters = pd.read_csv(
         os.path.join(out_dir, 'Clusters_Objects.tsv'), sep='\t', header=1)
@@ -130,10 +138,14 @@ def plotClusters(pdata, clusters):
     coords = list(np.ndindex((n_rows, 2)))
     for n, cluster_id in enumerate(clusters):
         i, j = coords[n]
+        try:
+            axis = axes[i, j]
+        except Exception:
+            axis = axes[j]
         cluster = clusters[cluster_id]
         pdata[pdata.index.isin(cluster)].transpose().plot(
             legend=False, figsize=(15, 18), title=f'{cluster_id}, size={len(cluster)}',
-            ax=axes[i, j], color='#9a9a9a', linewidth=0.8,
+            ax=axis, color='#9a9a9a', linewidth=0.8,
             marker='.', markerfacecolor='#ee9929', markersize=12)
     plt.show()
 

@@ -18,3 +18,5 @@
 *.summary
 *.tmp
 /Papers
+/iplot_imgs
+/ipywidgets_New
