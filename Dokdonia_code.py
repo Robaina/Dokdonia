@@ -9,6 +9,10 @@ from rpy2.rinterface_lib.callbacks import logger as rpy2_logger
 from rpy2.robjects import Formula
 from matplotlib import pyplot as plt
 import logging
+from Bio import SeqIO
+from ipywidgets import widgets, interact
+from ipywidgets_New.interact import StaticInteract
+from ipywidgets_New.widgets import DropDownWidget
 rpy2_logger.setLevel(logging.ERROR)
 
 
@@ -116,7 +120,7 @@ def getGeneClusters(DE_TPM, path_to_wd, out_dir, cluster_tightness=1):
 
     clusters = pd.read_csv(
         os.path.join(out_dir, 'Clusters_Objects.tsv'), sep='\t', header=1)
-    return {f'C{i}': clusters.iloc[:, i].dropna().values
+    return {f'C{i}': clusters.iloc[:, i].dropna().values.tolist()
             for i in range(clusters.shape[1])}
 
 
@@ -235,3 +239,223 @@ def getRankedSystems(kegg_dict, EC_numbers, system_type='system'):
         except:
             pass
     return getCounts(systems)
+
+
+# KEGG pathways analysis
+
+def extractKoPathwayName(Ko_str):
+    return re.sub('\[.*?\]', '', Ko_str).strip()
+
+def extractKoID(Ko_str):
+    return 'ko' + re.search('ko(.*?)\]', Ko_str).group(1)
+
+def getKEGGPathwayDict(kegg_pathways):
+    """
+    Obtain dictionary containing KEGG pathway classification for each
+    KEGG pathway id (koXXXXX)
+    """
+    kegg_dict = {}
+        
+    for supersystem in kegg_pathways[:4]:
+        for system in supersystem['children']:
+            for subsystem in system['children']:
+                try:
+                    ko_id = extractKoID(subsystem['name'])
+                    ko_path_name = subsystem['name']
+                except Exception:
+                    pass
+                kegg_dict[ko_id] = {
+                    'subsystem': ko_path_name,
+                    'system': system['name'],
+                    'supersystem': supersystem['name']
+                }
+    return kegg_dict
+
+def getGeneKOs(eggNOGresult):
+    """
+    Obtain dictionary containing KEGG pathway identifiers (koXXXX)
+    for each gene as retrieved by EggNOG mapper
+    """
+    gene_Kos = {}
+    for i, row in eggNOGresult.iterrows():
+        gene_id = row['Query']
+        Kos = row['KEGG pathway']
+        if type(Kos) == str:
+            gene_Kos[gene_id] = [Ko for Ko in Kos.split(',') if 'ko' in Ko]
+        else:
+            gene_Kos[gene_id] = []
+    return gene_Kos
+
+def summarizeKEGGpathwaysForGene(ko_pathway_dict, gene_ko_dict, gene_id):
+    """
+    Summary of KEGG pathway classification for gene (may have multiple repeated ones)
+    """
+    res = {'subsystem': [], 'system': [], 'supersystem': []}
+    try:
+        kos = gene_ko_dict[gene_id]
+        if len(kos) > 0:
+            for ko in kos:
+                if ko in ko_pathway_dict.keys():
+                    ko_path = ko_pathway_dict[ko]
+                    res['subsystem'].append(ko_path['subsystem'])
+                    res['system'].append(ko_path['system'])
+                    res['supersystem'].append(ko_path['supersystem'])
+                    
+        for k, v in res.items():
+            res[k] = np.unique(v).tolist()
+        return res
+    
+    except Exception:
+        return res
+    
+def getKEGGpathwaysForGeneList(ko_pathway_dict, gene_ko_dict, gene_list):
+    """
+    Get KEGG pathway classification for genes in gene_list
+    """
+    res = {'subsystem': [], 'system': [], 'supersystem': []}
+    for gene_id in gene_list:
+        gene_res = summarizeKEGGpathwaysForGene(ko_pathway_dict, gene_ko_dict, gene_id)
+        for k, v in gene_res.items():
+            res[k].extend(v)
+    return res
+
+def getElementsFrequency(array_like, ranked=True):
+    """
+    Return dictionary with keys equal to unique elements in
+    array_like and values equal to their frequencies. 
+    If ranked then dictionary is sorted
+    """
+    elems, counts = np.unique(array_like, return_counts=True)
+    res = dict(zip(elems, counts / sum(counts)))
+    if ranked:
+        return dict(sorted(res.items(), key=lambda item: item[1], reverse=True))
+    else:
+        return res
+    
+def extractSubsystemsFromSystem(subsystems_list, system_name, ko_pathway_dict):
+    """
+    Filter subsystems from list that belong to specified KEGG system name
+    """
+    return [s for s in subsystems_list if ko_pathway_dict[extractKoID(s)]['system'] == system_name]
+
+    
+def plotKEGGFrequencies(data, color=None, axis=None):
+    """
+    Bar plot of sorted KEGG systems or subsystems
+    """
+    if color is None:
+        color = 'C0'
+    clean_name_data = {extractKoPathwayName(k): data[k] for k in data.keys()}
+    ax = pd.Series(clean_name_data).plot.bar(figsize=(12, 8), color=color, ax=axis)
+    
+
+def plotSystemsAndSubsystems(data, ko_pathway_dict, color=None):
+    if color is None:
+        color = 'C0'
+
+    system_freqs = getElementsFrequency(data['system'])
+    
+    def plot_fun(system_name):
+        subsystems = extractSubsystemsFromSystem(data['subsystem'], 
+                                                      system_name, 
+                                                      ko_pathway_dict)
+        subsystem_freqs = getElementsFrequency(subsystems)
+        colors = ['grey' for _ in range(len(system_freqs))]
+        colors[list(system_freqs.keys()).index(system_name)] = color
+        fig, (ax1, ax2) = plt.subplots(nrows=1, ncols=2)
+        ax1.set_ylabel('freq')
+        ax2.set_ylabel('freq')
+        ax1.set_title('KEGG systems')
+        ax2.set_title(f'KEGG pathways of {system_name}')
+        fig.set_figwidth(25, forward=True)
+        fig.set_figheight(10, forward=True)
+        plotKEGGFrequencies(system_freqs, color=colors, axis=ax1)
+        plotKEGGFrequencies(subsystem_freqs, color=color, axis=ax2)
+        plt.show()
+        
+    interact(plot_fun,
+             system_name=widgets.Dropdown(options=list(system_freqs.keys()),
+                                             description='KEGG pathway')
+            )
+    
+def plotCluster(pdata, clusters, cluster_id, ax):
+    cluster = clusters[cluster_id]
+    pdata[pdata.index.isin(cluster)].transpose().plot(
+        legend=False, figsize=(15, 18), title=f'{cluster_id}, size={len(cluster)}',
+        ax=ax, color='#9a9a9a', linewidth=0.8,
+        marker='.', markerfacecolor='#ee9929', markersize=12)
+
+def plotSystemsAndSubsystemsWebPage(clusters, pdata, ko_pathway_dict, gene_ko_dict,
+                             color=None, img_folder_name=None):
+    
+    plt.rcParams.update({'figure.max_open_warning': 0})
+    if color is None:
+        color = 'C0'
+    if img_folder_name is None:
+        img_folder_name = 'iplot'
+        
+    cluster_ids = list(clusters.keys())
+    data = getKEGGpathwaysForGeneList(
+            ko_pathway_dict, gene_ko_dict, clusters[list(clusters.keys())[0]])
+    system_names = np.unique([v['system'] for v in ko_pathway_dict.values()]).tolist()
+    
+    def plot_fun(system_name, cluster_id):
+
+        data = getKEGGpathwaysForGeneList(
+            ko_pathway_dict, gene_ko_dict, clusters[cluster_id])
+        
+        system_freqs = getElementsFrequency(data['system'])
+
+        colors = ['grey' for _ in range(len(system_freqs))]
+
+        fig, ax = plt.subplot_mosaic(
+            """
+            AA
+            BC
+            """,
+            gridspec_kw={"height_ratios": [0.7, 1]}
+        )
+        
+        ax['B'].set_ylabel('freq')
+        ax['C'].set_ylabel('freq')
+        ax['B'].set_title('KEGG systems')
+        ax['C'].set_title(f'KEGG pathways of {system_name}')
+        
+        try:
+            subsystems = extractSubsystemsFromSystem(data['subsystem'], 
+                                                     system_name, 
+                                                     ko_pathway_dict)
+
+            subsystem_freqs = getElementsFrequency(subsystems)
+            plotKEGGFrequencies(subsystem_freqs, color=color, axis=ax['C'])
+            colors[list(system_freqs.keys()).index(system_name)] = color
+        except Exception:
+            pass
+        
+        
+        plotKEGGFrequencies(system_freqs, color=colors, axis=ax['B'])
+        plotCluster(pdata, clusters, cluster_id, ax['A'])
+        fig.set_figwidth(20)
+        fig.set_figheight(20)
+        return fig
+        
+    i_fig = StaticInteract(plot_fun,
+                           system_name=DropDownWidget(system_names,
+                                        description='KEGG pathway'),
+                           cluster_id=DropDownWidget(cluster_ids,
+                                        description='Cluster ID'),
+                           interact_name=img_folder_name)
+    return i_fig
+
+def getEggNOGInputFile(gbk_file):
+    "First line cannot be blank"
+    with open('eggNOG_Input.fasta', 'a') as file:
+        for rec in SeqIO.parse(gbk_file, "genbank"):
+            for feature in rec.features:
+                if feature.type == 'CDS':
+                    gene = feature.qualifiers["locus_tag"][0].replace("'", "")
+                    aas = feature.qualifiers["translation"][0].replace("'", "")
+                    file.write(f'\n>{gene}\n{aas}')
+
+
+                    
