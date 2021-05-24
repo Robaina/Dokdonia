@@ -2515,3 +2515,11 @@
 | basel.abu-jamous@sensynehealth.com                                        |
 | baselabujamous@gmail.com                                                  |
 \===========================================================================/
+
+/===========================================================================\
+|                                   Clust                                   |
+|    (Optimised consensus clustering of multiple heterogenous datasets)     |
+|           Python package version 1.12.0 (2019) Basel Abu-Jamous           |
++---------------------------------------------------------------------------+
+| Analysis started at: Sunday 23 May 2021 (17:44:56)                        |
+| 1. Reading dataset(s)                                                     |
