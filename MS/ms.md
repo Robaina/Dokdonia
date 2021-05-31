@@ -20,8 +20,8 @@ Gene function annotations for Dokdonia MED134 were generated using the online ve
 # Results & Discussion
 
 ## Analysis of differential expression
-Two main environmental factors that could affect gene expression varied in the culture conditons employed in this study: light and temperature. Thus, were were interested in assessing to which extent gene expression was influeced by each factor. To this end, we first performed an analysis of differential expression between light and dark conditions for each culture temperature, followed by an analysis of differential expression across temperatures.
+Two main environmental factors potentially affecting gene expression varied in the culture conditons employed in our study: light and temperature. Thus, were were interested in assessing to which extent gene expression was influenced by each factor. To this end, we first performed an analysis of differential expression between light and dark conditions for each culture temperature, followed by an analysis of differential expression across temperatures.
 
-Employing a fold-change cutoff value of 0.5 (Methods), we found few differentially expressed (DE) genes between light and dark conditions. Specifically, we found a set of 17 genes which were DE at 10°C and 18°C, and with greater expression in light than in dark conditions. Among these genes, we found a subset directly involved in the Proteorhodopsin-mediated light-haversting system (Table X), a system previously described in Dokdonia and which is ubiquitous in marine microbes [REF]
+Employing a fold-change cutoff value of 0.5 (Methods), we found few differentially expressed (DE) genes between light and dark conditions. Specifically, we found a set of 17 genes which were DE at 10°C and 18°C, with greater expression in light than in dark. Among these genes, we found a subset directly involved in the proteorhodopsin-mediated light-haversting system (Table X), a system previously described in Dokdonia and which is ubiquitous in marine microbes [REF]
 
 ## Gene clusters

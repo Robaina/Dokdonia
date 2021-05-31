@@ -4,3 +4,7 @@
 # Fastp seems faster, developed by same people of AfterQC: https://github.com/OpenGene/fastp
 
 path_to_afterqc = '/home/robaina/miniconda3/envs/afterqc/bin/after.py'
+
+# AfterQC or Fastp
+
+# Remove contaminations: rRNA + known contaminating sequencies
