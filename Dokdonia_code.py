@@ -87,6 +87,12 @@ def runDEtest(counts, test='Wald', alpha=1e-2,
     return (res, stats)
 
 
+def addProteinNamesToDeseqResult(gbk, deseq_res):
+    proteins = [gbk.getGeneInfo(gene_id)['product'][0] for gene_id in deseq_res.index]
+    deseq_res['proteins'] = proteins
+    return deseq_res
+
+
 def writeClustInputFiles(clust_data, path_to_wd='Data'):
     clust_data.to_csv(os.path.join(path_to_wd, 'clust_input.tsv'), sep='\t')
     conds = np.unique([s[:4] for s in clust_data.columns])

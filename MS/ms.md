@@ -9,6 +9,9 @@ After preprocessing, pair-end reads were mapped to the Dokdonia MED134 genome (a
 ## Differential expression analysis
 Differentially expressed genes were obtained with DeSeq2 [REF], a tool developed to analyze differential expression directly from count data via shrinkage estimation for dispersion and fold changes. To analyze differential expression between light and dark conditions for each temperature, we employed the Wald test within DeSeq2 using default settings and with a p-value cutoff of 0.01 and fold-change cutoff value of 0.5 to compensate for the small number of replicates (≤4) in our experiment [REF to Schurch et al)]. To obtain the sets of differentially expressed genes across temperatures --- under light, dark and light or dark conditions --- we applied the Likelihood Ratio Test within DeSeq2 with default settings and a p-value cutoff of 0.01.
 
+## On the Likelihood Ratio Test
+The LRT allows testing for significant expression changes across a range of conditions, sucha as time points or, in our case, temperatures. It operates by comparing two models, a full model and a constrained, or reduced, one.
+
 ## Gene clustering
 Gene clusters were obtained with Clust, a clustering algorithm specifically designed to cluster gene expression data [REF]. Contrary to other methods, such as those based on hierarchical or K-means approaches, Clust minimizes the variance within each cluster and does not attempt to assign a cluster to every gene in the sample. As a result, Clust minimizes spurious assignments of genes that are not truly correlated. We employed Clust with default parameters with the exception of the cluster tightness parameter, which was set to 5 --- smaller values decreased the resolution of the clusters, producing aggregated clusters of genes with upward or downward trends across temperatures).
 
