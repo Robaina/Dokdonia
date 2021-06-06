@@ -1,6 +1,7 @@
 from Bio import SeqIO
 import pandas as pd
 import numpy as np
+import random
 import os
 import re
 from subprocess import call
@@ -325,15 +326,20 @@ def summarizeKEGGpathwaysForGene(ko_pathway_dict, gene_ko_dict, gene_id):
     except Exception:
         return res
 
-def getKEGGpathwaysForGeneList(ko_pathway_dict, gene_ko_dict, gene_list):
+def getKEGGpathwaysForGeneList(ko_pathway_dict, gene_ko_dict, gene_list, unique=False):
     """
     Get KEGG pathway classification for genes in gene_list
+    if unique is set to True, it returns only the list of (unique)
+    pathways found in the gene list
     """
     res = {'subsystem': [], 'system': [], 'supersystem': []}
     for gene_id in gene_list:
         gene_res = summarizeKEGGpathwaysForGene(ko_pathway_dict, gene_ko_dict, gene_id)
         for k, v in gene_res.items():
             res[k].extend(v)
+    if unique:
+        for k, v in res.items():
+            res[k] = np.unique(v).tolist()
     return res
 
 def getElementsFrequency(array_like, ranked=True):
@@ -471,3 +477,137 @@ def getEggNOGInputFile(gbk_file):
                     gene = feature.qualifiers["locus_tag"][0].replace("'", "")
                     aas = feature.qualifiers["translation"][0].replace("'", "")
                     file.write(f'\n>{gene}\n{aas}')
+                    
+                    
+# Custom enrichment analysis based on permutation
+def randomPartition(elems:list, bin_sizes:list):
+    """
+    Randomly partition list elemnts into
+    bin of given sizes
+    """
+    def shuffleList(elems:list):
+        random.shuffle(elems)
+        return elems
+
+    elems = shuffleList(elems)
+    partition = []
+    start, end = 0, 0
+    for bin_size in bin_sizes:
+        end += bin_size
+        partition.append(elems[start:end])
+        start += bin_size
+    return partition
+        
+
+def permuteGenesInClusters(ko_pathway_dict, gene_ko_dict,
+                           gene_list, clusters, n_permutations=10):
+    """
+    Obtain frequencies of KEGG pathways in permuted clusters
+        
+    Note: since we are randomly shuffling genes in bins, we can't ensure
+    that each permutation will produce the same set of pathways. Thus,
+    some pathways may get empty frequency value in a permutation. Filling
+    with 0s to ammend this issue.
+    """
+    
+    bin_sizes = [len(v) for v in clusters.values()]
+    cluster_ids = [k for k in clusters.keys()]
+    bin_sizes.append(len(gene_list) - sum(bin_sizes))
+    
+    # Initialize result dict
+    KEGG_paths = getKEGGpathwaysForGeneList(
+        ko_pathway_dict, gene_ko_dict, gene_list, unique=True)
+
+    res = {
+        k: {
+            'system': {p: [] for p in KEGG_paths['system']},
+            'subsystem': {p: [] for p in KEGG_paths['subsystem']}
+        } for k in cluster_ids
+    }
+    # Run permutation
+    for i in range(n_permutations):
+        partition = randomPartition(gene_list, bin_sizes)
+
+        for cluster_id, rand_bin in zip(cluster_ids, partition):
+
+            data = getKEGGpathwaysForGeneList(
+                ko_pathway_dict, gene_ko_dict, rand_bin)
+            system_freqs = getElementsFrequency(data['system'])
+            subsystem_freqs = getElementsFrequency(data['subsystem'])
+
+            for k, v in system_freqs.items():
+                res[cluster_id]['system'][k].append(v)
+            for k, v in subsystem_freqs.items():
+                res[cluster_id]['subsystem'][k].append(v)
+                
+    # Add 0s if sample size is smaller than n_permutations
+    for cluster_id in cluster_ids:
+        for sys_type in ('system', 'subsystem'):
+            for k in res[cluster_id][sys_type].keys():
+                sample_size = len(res[cluster_id][sys_type][k])
+                size_diff = n_permutations - sample_size
+                if size_diff > 0:
+                    res[cluster_id][sys_type][k].extend([0.0 for _ in range(size_diff)])
+
+    return res
+
+
+def runClusterPathwayEnrichmentAnalysis(gene_list, clusters, n_permutations=10):
+    """
+    Run permutation analysis
+    """
+    def getKEGGfrequenciesInClusters(clusters):
+        res = {k: {} for k in clusters.keys()}
+        for k, v in clusters.items():
+            data = getKEGGpathwaysForGeneList(
+                ko_pathway_dict, gene_ko_dict, v)
+            res[k]['system'] = getElementsFrequency(data['system'])
+            res[k]['subsystem'] = getElementsFrequency(data['subsystem'])
+        return res
+    
+    def computeSamplePvalue(sample, value):
+        return len(np.where(np.array(sample) >= value)[0]) / len(sample)
+    
+    def computePathwayPvalue(pathways_freq, pathways_permuted_freq):
+        p_pathways = {}
+        for pathway, freq in pathways_freq.items():
+            pvalue = computeSamplePvalue(pathways_permuted_freq[pathway], freq)
+            p_pathways[pathway] = (freq, pvalue)
+        return p_pathways
+        
+    cluster_path_freq = getKEGGfrequenciesInClusters(clusters)
+    permuted_path_freq = permuteGenesInClusters(ko_pathway_dict, gene_ko_dict,
+                                                gene_list, clusters, n_permutations)
+   
+    p_KEGG_paths = {cluster_id: {
+            'system': computePathwayPvalue(cluster_path_freq[cluster_id]['system'],
+                                                 permuted_path_freq[cluster_id]['system']),
+            'subsystem': computePathwayPvalue(cluster_path_freq[cluster_id]['subsystem'],
+                                                 permuted_path_freq[cluster_id]['subsystem'])
+        } for cluster_id in clusters.keys()}
+        
+    return p_KEGG_paths
+
+
+def extractSignificantPathways(p_KEGG_pathways, pvalue_cutoff):
+    """
+    Extract significantly enriched or depleted pathways
+    """
+    sig_pathways = {k: {'system': {'enriched': {}, 'depleted': {}},
+                       'subsystem': {'enriched': {}, 'depleted': {}}
+                       } for k in p_KEGG_pathways.keys()}
+    
+    for cluster_id, pathways in p_KEGG_pathways.items():
+        for pathway, (freq, pvalue) in pathways['system'].items():
+            if pvalue < pvalue_cutoff:
+                sig_pathways[cluster_id]['system']['enriched'][pathway] = (freq, pvalue)
+            elif pvalue > (1 - pvalue_cutoff): 
+                sig_pathways[cluster_id]['system']['depleted'][pathway] = (freq, pvalue)
+                
+        for pathway, (freq, pvalue) in pathways['subsystem'].items():
+            if pvalue < pvalue_cutoff:
+                sig_pathways[cluster_id]['subsystem']['enriched'][pathway] = (freq, pvalue)
+            elif pvalue > (1 - pvalue_cutoff): 
+                sig_pathways[cluster_id]['subsystem']['depleted'][pathway] = (freq, pvalue)
+    
+    return sig_pathways
