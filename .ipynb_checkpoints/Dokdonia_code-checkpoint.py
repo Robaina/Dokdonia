@@ -2,6 +2,7 @@ from Bio import SeqIO
 import pandas as pd
 import numpy as np
 import random
+import statsmodels
 import os
 import re
 from subprocess import call
@@ -479,7 +480,7 @@ def getEggNOGInputFile(gbk_file):
                     file.write(f'\n>{gene}\n{aas}')
                     
                     
-# Custom enrichment analysis based on permutation
+# Custom enrichment analysis based on permutation (randomization)
 def randomPartition(elems:list, bin_sizes:list):
     """
     Randomly partition list elemnts into
@@ -552,7 +553,8 @@ def permuteGenesInClusters(ko_pathway_dict, gene_ko_dict,
     return res
 
 
-def runClusterPathwayEnrichmentAnalysis(gene_list, clusters, n_permutations=10):
+def runClusterPathwayEnrichmentAnalysis(gene_list, clusters, ko_pathway_dict, gene_ko_dict,
+                                        n_permutations=10, sort_by_pvalue=True):
     """
     Run permutation analysis
     """
@@ -578,15 +580,37 @@ def runClusterPathwayEnrichmentAnalysis(gene_list, clusters, n_permutations=10):
     cluster_path_freq = getKEGGfrequenciesInClusters(clusters)
     permuted_path_freq = permuteGenesInClusters(ko_pathway_dict, gene_ko_dict,
                                                 gene_list, clusters, n_permutations)
-   
-    p_KEGG_paths = {cluster_id: {
-            'system': computePathwayPvalue(cluster_path_freq[cluster_id]['system'],
-                                                 permuted_path_freq[cluster_id]['system']),
-            'subsystem': computePathwayPvalue(cluster_path_freq[cluster_id]['subsystem'],
-                                                 permuted_path_freq[cluster_id]['subsystem'])
-        } for cluster_id in clusters.keys()}
+    p_KEGG_paths = {}
+    for cluster_id in clusters.keys():
+    
+        systems = computePathwayPvalue(cluster_path_freq[cluster_id]['system'],
+                                                     permuted_path_freq[cluster_id]['system'])
+        subsystems = computePathwayPvalue(cluster_path_freq[cluster_id]['subsystem'],
+                                                     permuted_path_freq[cluster_id]['subsystem'])
+    
+        if sort_by_pvalue:
+            sorted_keys = np.array(list(systems.keys()))[np.argsort([pvalue for f, pvalue in systems.values()])]
+            systems = {k: systems[k] for k in sorted_keys}
+
+            sorted_keys = np.array(list(subsystems.keys()))[np.argsort([pvalue for f, pvalue in subsystems.values()])]
+            subsystems = {k: subsystems[k] for k in sorted_keys}
+        
+        p_KEGG_paths[cluster_id] = {
+                'system': systems,
+                'subsystem': subsystems
+            }
         
     return p_KEGG_paths
+
+
+# These functions were meant to do hypothesis testing, abandoning this idea.
+def correctPvalues(pvalues, FWER=0.05, method='fdr_bh'): 
+    """
+    Control FWER in reported p-values
+    """
+    reject, qvalues, alphaSidak, alphaBon = statsmodels.stats.multitest.multipletests(
+        pvalues, alpha=FWER, method=method, is_sorted=False, returnsorted=False)
+    return qvalues
 
 
 def extractSignificantPathways(p_KEGG_pathways, pvalue_cutoff):
