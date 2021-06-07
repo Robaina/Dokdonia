@@ -2,7 +2,6 @@ from Bio import SeqIO
 import pandas as pd
 import numpy as np
 import random
-import statsmodels
 import os
 import re
 from subprocess import call
@@ -604,34 +603,35 @@ def runClusterPathwayEnrichmentAnalysis(gene_list, clusters, ko_pathway_dict, ge
 
 
 # These functions were meant to do hypothesis testing, abandoning this idea.
-def correctPvalues(pvalues, FWER=0.05, method='fdr_bh'): 
-    """
-    Control FWER in reported p-values
-    """
-    reject, qvalues, alphaSidak, alphaBon = statsmodels.stats.multitest.multipletests(
-        pvalues, alpha=FWER, method=method, is_sorted=False, returnsorted=False)
-    return qvalues
+# import statsmodels
+# def correctPvalues(pvalues, FWER=0.05, method='fdr_bh'): 
+#     """
+#     Control FWER in reported p-values
+#     """
+#     reject, qvalues, alphaSidak, alphaBon = statsmodels.stats.multitest.multipletests(
+#         pvalues, alpha=FWER, method=method, is_sorted=False, returnsorted=False)
+#     return qvalues
 
 
-def extractSignificantPathways(p_KEGG_pathways, pvalue_cutoff):
-    """
-    Extract significantly enriched or depleted pathways
-    """
-    sig_pathways = {k: {'system': {'enriched': {}, 'depleted': {}},
-                       'subsystem': {'enriched': {}, 'depleted': {}}
-                       } for k in p_KEGG_pathways.keys()}
+# def extractSignificantPathways(p_KEGG_pathways, pvalue_cutoff):
+#     """
+#     Extract significantly enriched or depleted pathways
+#     """
+#     sig_pathways = {k: {'system': {'enriched': {}, 'depleted': {}},
+#                        'subsystem': {'enriched': {}, 'depleted': {}}
+#                        } for k in p_KEGG_pathways.keys()}
     
-    for cluster_id, pathways in p_KEGG_pathways.items():
-        for pathway, (freq, pvalue) in pathways['system'].items():
-            if pvalue < pvalue_cutoff:
-                sig_pathways[cluster_id]['system']['enriched'][pathway] = (freq, pvalue)
-            elif pvalue > (1 - pvalue_cutoff): 
-                sig_pathways[cluster_id]['system']['depleted'][pathway] = (freq, pvalue)
+#     for cluster_id, pathways in p_KEGG_pathways.items():
+#         for pathway, (freq, pvalue) in pathways['system'].items():
+#             if pvalue < pvalue_cutoff:
+#                 sig_pathways[cluster_id]['system']['enriched'][pathway] = (freq, pvalue)
+#             elif pvalue > (1 - pvalue_cutoff): 
+#                 sig_pathways[cluster_id]['system']['depleted'][pathway] = (freq, pvalue)
                 
-        for pathway, (freq, pvalue) in pathways['subsystem'].items():
-            if pvalue < pvalue_cutoff:
-                sig_pathways[cluster_id]['subsystem']['enriched'][pathway] = (freq, pvalue)
-            elif pvalue > (1 - pvalue_cutoff): 
-                sig_pathways[cluster_id]['subsystem']['depleted'][pathway] = (freq, pvalue)
+#         for pathway, (freq, pvalue) in pathways['subsystem'].items():
+#             if pvalue < pvalue_cutoff:
+#                 sig_pathways[cluster_id]['subsystem']['enriched'][pathway] = (freq, pvalue)
+#             elif pvalue > (1 - pvalue_cutoff): 
+#                 sig_pathways[cluster_id]['subsystem']['depleted'][pathway] = (freq, pvalue)
     
-    return sig_pathways
+#     return sig_pathways

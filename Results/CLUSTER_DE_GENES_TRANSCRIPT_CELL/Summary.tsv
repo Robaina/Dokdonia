@@ -1,15 +1,15 @@
-Starting data and time	Sunday 23 May 2021 (17:23:49)
-Ending date and time	Sunday 23 May 2021 (17:24:02)
-Time consumed	0 hours, 0 minutes, and 12 seconds
+Starting data and time	Monday 07 June 2021 (22:03:50)
+Ending date and time	Monday 07 June 2021 (22:03:59)
+Time consumed	0 hours, 0 minutes, and 8 seconds
 Number of datasets	1
 Total number of input genes	1930
-Genes included in the analysis	1930
-Genes filtered out from the analysis	0
-Number of clusters	2
-Total number of genes in clusters	1466
-Genes not included in any cluster	464
-Min cluster size	17
-Max cluster size	1449
-Average cluster size	733.0
+Genes included in the analysis	430
+Genes filtered out from the analysis	1500
+Number of clusters	3
+Total number of genes in clusters	154
+Genes not included in any cluster	276
+Min cluster size	11
+Max cluster size	89
+Average cluster size	51.333333333333336
 Number of samples (including replicates)	27
 Number of conditions	8
