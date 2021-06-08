@@ -296,8 +296,8 @@ def getGeneKOs(eggNOGresult):
     """
     gene_Kos = {}
     for i, row in eggNOGresult.iterrows():
-        gene_id = row['Query']
-        Kos = row['KEGG pathway']
+        gene_id = row['query']
+        Kos = row['KEGG_Pathway']
         if type(Kos) == str:
             gene_Kos[gene_id] = [Ko for Ko in Kos.split(',') if 'ko' in Ko]
         else:
@@ -468,6 +468,7 @@ def plotSystemsAndSubsystemsWebPage(clusters, pdata, ko_pathway_dict, gene_ko_di
                            interact_name=img_folder_name)
     return i_fig
 
+
 def getEggNOGInputFile(gbk_file):
     "First line cannot be blank"
     with open('eggNOG_Input.fasta', 'a') as file:
@@ -478,7 +479,18 @@ def getEggNOGInputFile(gbk_file):
                     aas = feature.qualifiers["translation"][0].replace("'", "")
                     file.write(f'\n>{gene}\n{aas}')
                     
-                    
+
+# Perform pathway analysis using PATRIC pathways
+def locusTag2PatricID(locus_tag, patric_features):
+    return patric_features['PATRIC ID'][patric_features['RefSeq Locus Tag'] == locus_tag].item()
+
+
+def getPatricPathway(patric_id, patric_pathways_genes, patric_pathways):
+    path_name = patric_pathways_genes['Pathway Name'][patric_pathways_genes['PATRIC ID'] == patric_id].item()
+    path_class = patric_pathways['Pathway Class'][patric_pathways['Pathway Name'] == path_name].item()
+    return {'name': path_name, 'class': path_class}
+
+
 # Custom enrichment analysis based on permutation (randomization)
 def randomPartition(elems:list, bin_sizes:list):
     """
