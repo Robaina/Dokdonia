@@ -3633,3 +3633,353 @@
 | basel.abu-jamous@sensynehealth.com                                        |
 | baselabujamous@gmail.com                                                  |
 \===========================================================================/
+
+/===========================================================================\
+|                                   Clust                                   |
+|    (Optimised consensus clustering of multiple heterogenous datasets)     |
+|           Python package version 1.12.0 (2019) Basel Abu-Jamous           |
++---------------------------------------------------------------------------+
+| Analysis started at: Wednesday 09 June 2021 (18:22:38)                    |
+| 1. Reading dataset(s)                                                     |
+| 2. Data pre-processing                                                    |
+|  - Automatic normalisation mode (default in v1.7.0+).                     |
+|    Clust automatically normalises your dataset(s).                        |
+|    To switch it off, use the `-n 0` option (not recommended).             |
+|    Check https://github.com/BaselAbujamous/clust for details.             |
+|  - Flat expression profiles filtered out (default in v1.7.0+).            |
+|    To switch it off, use the --no-fil-flat option (not recommended).      |
+|    Check https://github.com/BaselAbujamous/clust for details.             |
+| 3. Seed clusters production (the Bi-CoPaM method)                         |
+| 10%                                                                       |
+| 20%                                                                       |
+| 30%                                                                       |
+| 40%                                                                       |
+| 50%                                                                       |
+| 60%                                                                       |
+| 70%                                                                       |
+| 80%                                                                       |
+| 90%                                                                       |
+| 100%                                                                      |
+| 4. Cluster evaluation and selection (the M-N scatter plots technique)     |
+| 10%                                                                       |
+| 20%                                                                       |
+| 30%                                                                       |
+| 40%                                                                       |
+| 50%                                                                       |
+| 60%                                                                       |
+| 70%                                                                       |
+| 80%                                                                       |
+| 90%                                                                       |
+| 100%                                                                      |
+| 5. Cluster optimisation and completion                                    |
+| 6. Saving results in                                                      |
+| C:\Users\tinta\OneDrive\Documents\Projects\Proyecto_rodopsina\Results\CLU |
+| STER_DE_GENES                                                             |
++---------------------------------------------------------------------------+
+| Analysis finished at: Wednesday 09 June 2021 (18:22:50)                   |
+| Total time consumed: 0 hours, 0 minutes, and 12 seconds                   |
+|                                                                           |
+\===========================================================================/
+
+/===========================================================================\
+|                              RESULTS SUMMARY                              |
++---------------------------------------------------------------------------+
+| Clust received 1 dataset with 1930 unique genes. After filtering, 1930    |
+| genes made it to the clustering step. Clust generated 8 clusters of       |
+| genes, which in total include 815 genes. The smallest cluster includes    |
+| 13 genes, the largest cluster includes 328 genes, and the average         |
+| cluster size is 102 genes.                                                |
++---------------------------------------------------------------------------+
+|                                 Citation                                  |
+|                                 ~~~~~~~~                                  |
+| When publishing work that uses Clust, please include this citation:       |
+| Basel Abu-Jamous and Steven Kelly (2018) Clust: automatic extraction of   |
+| optimal co-expressed gene clusters from gene expression data. Genome      |
+| Biology 19:172; doi: https://doi.org/10.1186/s13059-018-1536-8.           |
++---------------------------------------------------------------------------+
+| For enquiries contact:                                                    |
+| Basel Abu-Jamous                                                          |
+| Sensyne Health, Oxford, UK                                                |
+| basel.abu-jamous@sensynehealth.com                                        |
+| baselabujamous@gmail.com                                                  |
+\===========================================================================/
+
+/===========================================================================\
+|                                   Clust                                   |
+|    (Optimised consensus clustering of multiple heterogenous datasets)     |
+|           Python package version 1.12.0 (2019) Basel Abu-Jamous           |
++---------------------------------------------------------------------------+
+| Analysis started at: Wednesday 09 June 2021 (18:34:01)                    |
+| 1. Reading dataset(s)                                                     |
+| 2. Data pre-processing                                                    |
+|  - Automatic normalisation mode (default in v1.7.0+).                     |
+|    Clust automatically normalises your dataset(s).                        |
+|    To switch it off, use the `-n 0` option (not recommended).             |
+|    Check https://github.com/BaselAbujamous/clust for details.             |
+|  - Flat expression profiles filtered out (default in v1.7.0+).            |
+|    To switch it off, use the --no-fil-flat option (not recommended).      |
+|    Check https://github.com/BaselAbujamous/clust for details.             |
+| 3. Seed clusters production (the Bi-CoPaM method)                         |
+| 10%                                                                       |
+| 20%                                                                       |
+| 30%                                                                       |
+| 40%                                                                       |
+| 50%                                                                       |
+| 60%                                                                       |
+| 70%                                                                       |
+| 80%                                                                       |
+| 90%                                                                       |
+| 100%                                                                      |
+| 4. Cluster evaluation and selection (the M-N scatter plots technique)     |
+| 10%                                                                       |
+| 20%                                                                       |
+| 30%                                                                       |
+| 40%                                                                       |
+| 50%                                                                       |
+| 60%                                                                       |
+| 70%                                                                       |
+| 80%                                                                       |
+| 90%                                                                       |
+| 100%                                                                      |
+| 5. Cluster optimisation and completion                                    |
+| 6. Saving results in                                                      |
+| C:\Users\tinta\OneDrive\Documents\Projects\Proyecto_rodopsina\Results\CLU |
+| STER_DE_GENES                                                             |
++---------------------------------------------------------------------------+
+| Analysis finished at: Wednesday 09 June 2021 (18:34:19)                   |
+| Total time consumed: 0 hours, 0 minutes, and 17 seconds                   |
+|                                                                           |
+\===========================================================================/
+
+/===========================================================================\
+|                              RESULTS SUMMARY                              |
++---------------------------------------------------------------------------+
+| Clust received 1 dataset with 1930 unique genes. After filtering, 1930    |
+| genes made it to the clustering step. Clust generated 8 clusters of       |
+| genes, which in total include 815 genes. The smallest cluster includes    |
+| 13 genes, the largest cluster includes 328 genes, and the average         |
+| cluster size is 102 genes.                                                |
++---------------------------------------------------------------------------+
+|                                 Citation                                  |
+|                                 ~~~~~~~~                                  |
+| When publishing work that uses Clust, please include this citation:       |
+| Basel Abu-Jamous and Steven Kelly (2018) Clust: automatic extraction of   |
+| optimal co-expressed gene clusters from gene expression data. Genome      |
+| Biology 19:172; doi: https://doi.org/10.1186/s13059-018-1536-8.           |
++---------------------------------------------------------------------------+
+| For enquiries contact:                                                    |
+| Basel Abu-Jamous                                                          |
+| Sensyne Health, Oxford, UK                                                |
+| basel.abu-jamous@sensynehealth.com                                        |
+| baselabujamous@gmail.com                                                  |
+\===========================================================================/
+
+/===========================================================================\
+|                                   Clust                                   |
+|    (Optimised consensus clustering of multiple heterogenous datasets)     |
+|           Python package version 1.12.0 (2019) Basel Abu-Jamous           |
++---------------------------------------------------------------------------+
+| Analysis started at: Wednesday 09 June 2021 (18:47:20)                    |
+| 1. Reading dataset(s)                                                     |
+| 2. Data pre-processing                                                    |
+|  - Automatic normalisation mode (default in v1.7.0+).                     |
+|    Clust automatically normalises your dataset(s).                        |
+|    To switch it off, use the `-n 0` option (not recommended).             |
+|    Check https://github.com/BaselAbujamous/clust for details.             |
+|  - Flat expression profiles filtered out (default in v1.7.0+).            |
+|    To switch it off, use the --no-fil-flat option (not recommended).      |
+|    Check https://github.com/BaselAbujamous/clust for details.             |
+| 3. Seed clusters production (the Bi-CoPaM method)                         |
+| 10%                                                                       |
+| 20%                                                                       |
+| 30%                                                                       |
+| 40%                                                                       |
+| 50%                                                                       |
+| 60%                                                                       |
+| 70%                                                                       |
+| 80%                                                                       |
+| 90%                                                                       |
+| 100%                                                                      |
+| 4. Cluster evaluation and selection (the M-N scatter plots technique)     |
+| 10%                                                                       |
+| 20%                                                                       |
+| 30%                                                                       |
+| 40%                                                                       |
+| 50%                                                                       |
+| 60%                                                                       |
+| 70%                                                                       |
+| 80%                                                                       |
+| 90%                                                                       |
+| 100%                                                                      |
+| 5. Cluster optimisation and completion                                    |
+| 6. Saving results in                                                      |
+| C:\Users\tinta\OneDrive\Documents\Projects\Proyecto_rodopsina\Results\CLU |
+| STER_DE_GENES                                                             |
++---------------------------------------------------------------------------+
+| Analysis finished at: Wednesday 09 June 2021 (18:47:32)                   |
+| Total time consumed: 0 hours, 0 minutes, and 12 seconds                   |
+|                                                                           |
+\===========================================================================/
+
+/===========================================================================\
+|                              RESULTS SUMMARY                              |
++---------------------------------------------------------------------------+
+| Clust received 1 dataset with 1930 unique genes. After filtering, 1930    |
+| genes made it to the clustering step. Clust generated 8 clusters of       |
+| genes, which in total include 815 genes. The smallest cluster includes    |
+| 13 genes, the largest cluster includes 328 genes, and the average         |
+| cluster size is 102 genes.                                                |
++---------------------------------------------------------------------------+
+|                                 Citation                                  |
+|                                 ~~~~~~~~                                  |
+| When publishing work that uses Clust, please include this citation:       |
+| Basel Abu-Jamous and Steven Kelly (2018) Clust: automatic extraction of   |
+| optimal co-expressed gene clusters from gene expression data. Genome      |
+| Biology 19:172; doi: https://doi.org/10.1186/s13059-018-1536-8.           |
++---------------------------------------------------------------------------+
+| For enquiries contact:                                                    |
+| Basel Abu-Jamous                                                          |
+| Sensyne Health, Oxford, UK                                                |
+| basel.abu-jamous@sensynehealth.com                                        |
+| baselabujamous@gmail.com                                                  |
+\===========================================================================/
+
+/===========================================================================\
+|                                   Clust                                   |
+|    (Optimised consensus clustering of multiple heterogenous datasets)     |
+|           Python package version 1.12.0 (2019) Basel Abu-Jamous           |
++---------------------------------------------------------------------------+
+| Analysis started at: Thursday 10 June 2021 (00:18:39)                     |
+| 1. Reading dataset(s)                                                     |
+| 2. Data pre-processing                                                    |
+|  - Automatic normalisation mode (default in v1.7.0+).                     |
+|    Clust automatically normalises your dataset(s).                        |
+|    To switch it off, use the `-n 0` option (not recommended).             |
+|    Check https://github.com/BaselAbujamous/clust for details.             |
+|  - Flat expression profiles filtered out (default in v1.7.0+).            |
+|    To switch it off, use the --no-fil-flat option (not recommended).      |
+|    Check https://github.com/BaselAbujamous/clust for details.             |
+| 3. Seed clusters production (the Bi-CoPaM method)                         |
+| 10%                                                                       |
+| 20%                                                                       |
+| 30%                                                                       |
+| 40%                                                                       |
+| 50%                                                                       |
+| 60%                                                                       |
+| 70%                                                                       |
+| 80%                                                                       |
+| 90%                                                                       |
+| 100%                                                                      |
+| 4. Cluster evaluation and selection (the M-N scatter plots technique)     |
+| 10%                                                                       |
+| 20%                                                                       |
+| 30%                                                                       |
+| 40%                                                                       |
+| 50%                                                                       |
+| 60%                                                                       |
+| 70%                                                                       |
+| 80%                                                                       |
+| 90%                                                                       |
+| 100%                                                                      |
+| 5. Cluster optimisation and completion                                    |
+| 6. Saving results in                                                      |
+| C:\Users\tinta\OneDrive\Documents\Projects\Proyecto_rodopsina\Results\CLU |
+| STER_DE_GENES                                                             |
++---------------------------------------------------------------------------+
+| Analysis finished at: Thursday 10 June 2021 (00:18:51)                    |
+| Total time consumed: 0 hours, 0 minutes, and 11 seconds                   |
+|                                                                           |
+\===========================================================================/
+
+/===========================================================================\
+|                              RESULTS SUMMARY                              |
++---------------------------------------------------------------------------+
+| Clust received 1 dataset with 1930 unique genes. After filtering, 1930    |
+| genes made it to the clustering step. Clust generated 8 clusters of       |
+| genes, which in total include 815 genes. The smallest cluster includes    |
+| 13 genes, the largest cluster includes 328 genes, and the average         |
+| cluster size is 102 genes.                                                |
++---------------------------------------------------------------------------+
+|                                 Citation                                  |
+|                                 ~~~~~~~~                                  |
+| When publishing work that uses Clust, please include this citation:       |
+| Basel Abu-Jamous and Steven Kelly (2018) Clust: automatic extraction of   |
+| optimal co-expressed gene clusters from gene expression data. Genome      |
+| Biology 19:172; doi: https://doi.org/10.1186/s13059-018-1536-8.           |
++---------------------------------------------------------------------------+
+| For enquiries contact:                                                    |
+| Basel Abu-Jamous                                                          |
+| Sensyne Health, Oxford, UK                                                |
+| basel.abu-jamous@sensynehealth.com                                        |
+| baselabujamous@gmail.com                                                  |
+\===========================================================================/
+
+/===========================================================================\
+|                                   Clust                                   |
+|    (Optimised consensus clustering of multiple heterogenous datasets)     |
+|           Python package version 1.12.0 (2019) Basel Abu-Jamous           |
++---------------------------------------------------------------------------+
+| Analysis started at: Thursday 10 June 2021 (00:20:34)                     |
+| 1. Reading dataset(s)                                                     |
+| 2. Data pre-processing                                                    |
+|  - Automatic normalisation mode (default in v1.7.0+).                     |
+|    Clust automatically normalises your dataset(s).                        |
+|    To switch it off, use the `-n 0` option (not recommended).             |
+|    Check https://github.com/BaselAbujamous/clust for details.             |
+|  - Flat expression profiles filtered out (default in v1.7.0+).            |
+|    To switch it off, use the --no-fil-flat option (not recommended).      |
+|    Check https://github.com/BaselAbujamous/clust for details.             |
+| 3. Seed clusters production (the Bi-CoPaM method)                         |
+| 10%                                                                       |
+| 20%                                                                       |
+| 30%                                                                       |
+| 40%                                                                       |
+| 50%                                                                       |
+| 60%                                                                       |
+| 70%                                                                       |
+| 80%                                                                       |
+| 90%                                                                       |
+| 100%                                                                      |
+| 4. Cluster evaluation and selection (the M-N scatter plots technique)     |
+| 10%                                                                       |
+| 20%                                                                       |
+| 30%                                                                       |
+| 40%                                                                       |
+| 50%                                                                       |
+| 60%                                                                       |
+| 70%                                                                       |
+| 80%                                                                       |
+| 90%                                                                       |
+| 100%                                                                      |
+| 5. Cluster optimisation and completion                                    |
+| 6. Saving results in                                                      |
+| C:\Users\tinta\OneDrive\Documents\Projects\Proyecto_rodopsina\Results\CLU |
+| STER_DE_GENES                                                             |
++---------------------------------------------------------------------------+
+| Analysis finished at: Thursday 10 June 2021 (00:20:44)                    |
+| Total time consumed: 0 hours, 0 minutes, and 9 seconds                    |
+|                                                                           |
+\===========================================================================/
+
+/===========================================================================\
+|                              RESULTS SUMMARY                              |
++---------------------------------------------------------------------------+
+| Clust received 1 dataset with 1930 unique genes. After filtering, 1930    |
+| genes made it to the clustering step. Clust generated 8 clusters of       |
+| genes, which in total include 815 genes. The smallest cluster includes    |
+| 13 genes, the largest cluster includes 328 genes, and the average         |
+| cluster size is 102 genes.                                                |
++---------------------------------------------------------------------------+
+|                                 Citation                                  |
+|                                 ~~~~~~~~                                  |
+| When publishing work that uses Clust, please include this citation:       |
+| Basel Abu-Jamous and Steven Kelly (2018) Clust: automatic extraction of   |
+| optimal co-expressed gene clusters from gene expression data. Genome      |
+| Biology 19:172; doi: https://doi.org/10.1186/s13059-018-1536-8.           |
++---------------------------------------------------------------------------+
+| For enquiries contact:                                                    |
+| Basel Abu-Jamous                                                          |
+| Sensyne Health, Oxford, UK                                                |
+| basel.abu-jamous@sensynehealth.com                                        |
+| baselabujamous@gmail.com                                                  |
+\===========================================================================/
