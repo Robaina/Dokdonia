@@ -2,6 +2,7 @@ from Bio import SeqIO
 import pandas as pd
 import numpy as np
 import random
+import pickle
 import os
 import re
 from subprocess import call
@@ -13,6 +14,24 @@ import logging
 from ipywidgets_New.interact import StaticInteract
 from ipywidgets_New.widgets import DropDownWidget
 rpy2_logger.setLevel(logging.ERROR)
+
+
+def saveToPickleFile(python_object, path_to_file='object.pkl'):
+    """
+    Save python object to pickle file
+    """
+    out_file = open(path_to_file,'wb')
+    pickle.dump(python_object, out_file)
+    out_file.close()
+    
+def readFromPickleFile(path_to_file='object.pkl'):
+    """
+    Load python object from pickle file.
+    Returns python object.
+    """
+    in_file = open(path_to_file,'rb')
+    python_object = pickle.load(in_file)
+    return python_object
 
 
 class GenomeGBK:
@@ -433,7 +452,7 @@ def locusTag2PatricID(locus_tag, patric_features):
 def getPatricPathway(patric_id, patric_pathways_genes, patric_pathways):
     path_name = patric_pathways_genes['Pathway Name'][patric_pathways_genes['PATRIC ID'] == patric_id].item()
     path_class = patric_pathways['Pathway Class'][patric_pathways['Pathway Name'] == path_name].item()
-    return {'name': path_name, 'class': path_class}
+    return {'subsystem': path_name, 'system': path_class}
 
 
 # Custom enrichment analysis based on permutation (randomization)
@@ -568,26 +587,32 @@ def runClusterPathwayEnrichmentAnalysis(gene_list, clusters, KEGG_pathway_counts
 
 
 # Plotting functions
-def plotKEGGFrequencies(data, color=None, axis=None):
-    """
-    Bar plot of sorted KEGG systems or subsystems
-    """
-    if color is None:
-        color = 'C0'
-    clean_name_data = {extractKoPathwayName(k): data[k] for k in data.keys()}
-    pd.Series(clean_name_data).plot.bar(figsize=(12, 8), color=color, ax=axis)
-    
-
 def plotCluster(pdata, clusters, cluster_id, ax):
     cluster = clusters[cluster_id]
     pdata[pdata.index.isin(cluster)].transpose().plot(
         legend=False, figsize=(15, 18), title=f'{cluster_id}, size={len(cluster)}',
         ax=ax, color='#9a9a9a', linewidth=0.8,
         marker='.', markerfacecolor='#ee9929', markersize=12)
+
+
+def plotKEGGFrequencies(data, color=None, axis=None):
+    """
+    Bar plot of sorted KEGG systems or subsystems
+    """
+    if color is None:
+        color = 'C0'
+    pvalues = [v[1] for v in data.values()]
+    clean_name_data = 100 * pd.Series(
+        {extractKoPathwayName(k): data[k][0] for k in data.keys()}
+    )
+    ax = clean_name_data.plot.bar(figsize=(12, 8), color=color, ax=axis, rot=75)
+    for i, p in enumerate(ax.patches):
+        ax.annotate(f'({pvalues[i]:.4f})', (p.get_x() * 1.005, p.get_height() + 0.6))
     
 
-def plotSystemsAndSubsystemsWebPage(clusters, pdata, ko_pathway_dict, gene_ko_dict,
-                             color=None, img_folder_name=None):
+def plotSystemsAndSubsystemsWebPage(clusters, pdata, p_KEGG_paths,
+                                    plot_first_N=10, color=None, 
+                                    img_folder_name=None):
 
     plt.rcParams.update({'figure.max_open_warning': 0})
     if color is None:
@@ -596,56 +621,43 @@ def plotSystemsAndSubsystemsWebPage(clusters, pdata, ko_pathway_dict, gene_ko_di
         img_folder_name = 'iplot'
 
     cluster_ids = list(clusters.keys())
-    system_names = np.unique([v['system'] for v in ko_pathway_dict.values()]).tolist()
+    system_names = np.unique(
+        [v['system'] for v in ko_pathway_dict.values()]
+    ).tolist()
+    
+    system_types = ['system', 'subsystem']
 
-    def plot_fun(system_name, cluster_id):
-
-        data = getKEGGpathwaysForGeneList(
-            ko_pathway_dict, gene_ko_dict, clusters[cluster_id])
-
-        system_freqs = getElementsFrequency(data['system'])
-
-        colors = ['grey' for _ in range(len(system_freqs))]
+    def plot_fun(system_type, cluster_id):
 
         fig, ax = plt.subplot_mosaic(
             """
-            AA
-            BC
+            A
+            B
             """,
             gridspec_kw = {"height_ratios": [0.7, 1]}
         )
 
-        ax['B'].set_ylabel('freq')
-        ax['C'].set_ylabel('freq')
-        ax['B'].set_title('KEGG systems')
-        ax['C'].set_title(f'KEGG pathways of {system_name}')
+        ax['B'].set_ylabel('Pathway representation (%)')
+        ax['B'].set_title(f'KEGG {system_type}s (sample p-value)')
 
-        try:
-            subsystems = extractSubsystemsFromSystem(data['subsystem'],
-                                                     system_name,
-                                                     ko_pathway_dict)
-
-            subsystem_freqs = getElementsFrequency(subsystems)
-            plotKEGGFrequencies(subsystem_freqs, color=color, axis=ax['C'])
-            colors[list(system_freqs.keys()).index(system_name)] = color
-        except Exception:
-            pass
-
-
-        plotKEGGFrequencies(system_freqs, color=colors, axis=ax['B'])
+        kdata = {k: v 
+                 for k,v in p_KEGG_paths[cluster_id][system_type].items()}
+        if len(kdata) > plot_first_N:
+            kdata = {k: kdata[k] for k in list(kdata.keys())[:10]}
         plotCluster(pdata, clusters, cluster_id, ax['A'])
+        plotKEGGFrequencies(kdata,
+                            color=color, axis=ax['B'])
         fig.set_figwidth(20)
         fig.set_figheight(20)
         return fig
 
     i_fig = StaticInteract(plot_fun,
-                           system_name=DropDownWidget(system_names,
-                                        description='KEGG pathway'),
+                           system_type=DropDownWidget(system_types,
+                                        description='KEGG Level'),
                            cluster_id=DropDownWidget(cluster_ids,
                                         description='Cluster ID'),
                            interact_name=img_folder_name)
     return i_fig
-
 
 
 # These functions were meant to do hypothesis testing, abandoning this idea.
