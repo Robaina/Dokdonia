@@ -431,8 +431,6 @@ def extractSubsystemsFromSystem(subsystems_list, system_name, ko_pathway_dict):
     return [s for s in subsystems_list if ko_pathway_dict[extractKoID(s)]['system'] == system_name]
 
 
-
-
 def getEggNOGInputFile(gbk_file):
     "First line cannot be blank"
     with open('eggNOG_Input.fasta', 'a') as file:
@@ -491,9 +489,6 @@ def permuteGenesInClusters(KEGG_pathway_counts, ko_pathway_dict, gene_ko_dict,
     bin_sizes.append(len(gene_list) - sum(bin_sizes))
     
     # Initialize result dict
-    KEGG_paths = getKEGGpathwaysForGeneList(
-        ko_pathway_dict, gene_ko_dict, gene_list, unique=True)
-
     res = {
         k: {
             'system': {p: [] for p in KEGG_pathway_counts['system']},
@@ -605,14 +600,18 @@ def plotKEGGFrequencies(data, color=None, axis=None):
     clean_name_data = 100 * pd.Series(
         {extractKoPathwayName(k): data[k][0] for k in data.keys()}
     )
-    ax = clean_name_data.plot.bar(figsize=(12, 8), color=color, ax=axis, rot=75)
+    ax = clean_name_data.plot.bar(figsize=(12, 8), color=color, ax=axis)
     for i, p in enumerate(ax.patches):
-        ax.annotate(f'({pvalues[i]:.4f})', (p.get_x() * 1.005, p.get_height() + 0.6))
+        ax.annotate(f'({pvalues[i]:.4f})', (p.get_x() * 1.005, p.get_height() * 1.006))
     
 
-def plotSystemsAndSubsystemsWebPage(clusters, pdata, p_KEGG_paths,
+def plotSystemsAndSubsystemsWebPage(clusters, pdata, p_Data_paths,
                                     plot_first_N=10, color=None, 
                                     img_folder_name=None):
+    """
+    p_Data_paths is a dict with keys equal to database name and values equal
+    to results.
+    """
 
     plt.rcParams.update({'figure.max_open_warning': 0})
     if color is None:
@@ -622,12 +621,13 @@ def plotSystemsAndSubsystemsWebPage(clusters, pdata, p_KEGG_paths,
 
     cluster_ids = list(clusters.keys())
     system_names = np.unique(
-        [v['system'] for v in ko_pathway_dict.values()]
+        [k for v in p_KEGG_paths.values() for k in v['system'].keys()]
     ).tolist()
     
     system_types = ['system', 'subsystem']
+    databases = list(p_Data_paths.keys())
 
-    def plot_fun(system_type, cluster_id):
+    def plot_fun(database, system_type, cluster_id):
 
         fig, ax = plt.subplot_mosaic(
             """
@@ -638,10 +638,10 @@ def plotSystemsAndSubsystemsWebPage(clusters, pdata, p_KEGG_paths,
         )
 
         ax['B'].set_ylabel('Pathway representation (%)')
-        ax['B'].set_title(f'KEGG {system_type}s (sample p-value)')
+        ax['B'].set_title(f'{database} {system_type}s (sample p-value)')
 
         kdata = {k: v 
-                 for k,v in p_KEGG_paths[cluster_id][system_type].items()}
+                 for k,v in p_Data_paths[database][cluster_id][system_type].items()}
         if len(kdata) > plot_first_N:
             kdata = {k: kdata[k] for k in list(kdata.keys())[:10]}
         plotCluster(pdata, clusters, cluster_id, ax['A'])
@@ -652,8 +652,10 @@ def plotSystemsAndSubsystemsWebPage(clusters, pdata, p_KEGG_paths,
         return fig
 
     i_fig = StaticInteract(plot_fun,
+                           database=DropDownWidget(databases,
+                                        description='Database'),
                            system_type=DropDownWidget(system_types,
-                                        description='KEGG Level'),
+                                        description='Level'),
                            cluster_id=DropDownWidget(cluster_ids,
                                         description='Cluster ID'),
                            interact_name=img_folder_name)

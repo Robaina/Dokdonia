@@ -23,3 +23,33 @@ Would be very cool to identify a novel metabolic pathway in these oceanic prokar
 Would be cool to plot gene expression on the circular genome to see the distribution of gene expression in the genome, perhaps some spatial patterns arise?
 
 What source of nitrogen does Dokdonia take? Nitrate is an expensive one, ammonia is cheaper, according to Braakman eLife paper...
+
+
+-----------
+Permutation analysis
+-----------
+
+Originally,
+1. the total set of genes is partition into DE and non-DE
+2. DE genes are clustered in 8 clusters of different sizes
+3. not all genes are assigned to a pathway, thus pathway 
+   representation within cluster is computed for these genes 
+   with assigned pathway
+   
+Permutation test - Null model,
+1. original gene population is the entire set of genes (DE effect also evaluated)
+2. genes are clustered randomly into 8 clusters
+3. pathway representation only computed with these genes that
+   have assigned pathway.
+   
+Now, would it be equivalent to sample only from the population
+of genes with assigned pathway? (it would be faster). No, then clusters
+would be artificially enriched in pathways. However, it would be fair to
+use the set of DE genes as original population. Since the clusters are
+constructed from this population of genes.
+
+----------------------
+IDEA
+----------------------
+
+Completing MAG genomes by using metabolic gap filling algorithms, finding most likely missing reactions given set of reactions, then predict missing genes.

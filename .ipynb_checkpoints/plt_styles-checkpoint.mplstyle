@@ -4,6 +4,6 @@ axes.labelsize : 20
 axes.labelpad: 6
 lines.linewidth : 3
 lines.markersize : 10
-xtick.labelsize : 18
+xtick.labelsize : 16
 ytick.labelsize : 16
 font.size: 14
