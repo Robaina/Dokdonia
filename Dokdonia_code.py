@@ -124,10 +124,18 @@ def writeClustInputFiles(clust_data, path_to_wd='Data'):
           
     open(os.path.join(path_to_wd, 'clust_no_normalization.txt'), 'w').close()
     with open(os.path.join(path_to_wd, 'clust_no_normalization.txt'), 'a+') as file:
-        file.write('clust_input.tsv 0')
+        file.write('clust_input.tsv 0') # no normalization
+        
+    open(os.path.join(path_to_wd, 'clust_transcript_cell_normalization.txt'), 'w').close()
+    with open(os.path.join(path_to_wd, 'clust_transcript_cell_normalization.txt'), 'a+') as file:
+        file.write('clust_input.tsv 101 4') # Quantile + z-score
+        
+    open(os.path.join(path_to_wd, 'clust_TPM_normalization.txt'), 'w').close()
+    with open(os.path.join(path_to_wd, 'clust_TPM_normalization.txt'), 'a+') as file:
+        file.write('clust_input.tsv 101 3 4') # Quantile + log2 + z-score
 
 
-def runClust(path_to_wd, out_dir, cluster_tightness=1, normalization=True):
+def runClust(path_to_wd, out_dir, cluster_tightness=1, normalization_file=None):
     """
     Compute clusters with clust
     clust_data: pandas DataFrame.
@@ -136,19 +144,23 @@ def runClust(path_to_wd, out_dir, cluster_tightness=1, normalization=True):
         '-r', os.path.join(path_to_wd, 'clust_replicates.txt'),
         '-t', f'{cluster_tightness}',
         '-o', f'{out_dir}']
-    if not normalization:
+    if normalization_file is None:
         call_list.append('-n')
         call_list.append(os.path.join(path_to_wd, 'clust_no_normalization.txt'))
+    else:
+        call_list.append('-n')
+        call_list.append(os.path.join(path_to_wd, normalization_file))
+        
     call(call_list, cwd=path_to_wd)
 
 
 def getGeneClusters(clust_data, path_to_wd, out_dir, cluster_tightness=1,
-                    input_data_normalization=True):
+                    normalization_file=None):
     "Returns dict with Clust gene clusters"
     writeClustInputFiles(clust_data, path_to_wd)
     runClust(path_to_wd=path_to_wd,
              out_dir=out_dir, cluster_tightness=cluster_tightness, 
-             normalization=input_data_normalization)
+             normalization_file=normalization_file)
 
     clusters = pd.read_csv(
         os.path.join(out_dir, 'Clusters_Objects.tsv'), sep='\t', header=1)

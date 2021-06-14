@@ -4,7 +4,7 @@
 |    (Optimised consensus clustering of multiple heterogenous datasets)     |
 |           Python package version 1.12.0 (2019) Basel Abu-Jamous           |
 +---------------------------------------------------------------------------+
-| Analysis started at: Sunday 13 June 2021 (18:51:48)                       |
+| Analysis started at: Monday 14 June 2021 (15:12:30)                       |
 | 1. Reading dataset(s)                                                     |
 | 2. Data pre-processing                                                    |
 |  - Flat expression profiles filtered out (default in v1.7.0+).            |
@@ -34,22 +34,21 @@
 | 100%                                                                      |
 | 5. Cluster optimisation and completion                                    |
 | 6. Saving results in                                                      |
-| C:\Users\tinta\OneDrive\Documents\Projects\Proyecto_rodopsina\Results\CLU |
-| STER_ALL_GENES_TRANSCRIPT_CELL_NO_NORMALIZATION                           |
+| /home/robaina/Documents/Proyecto_rodopsina/Results/CLUSTER_ALL_GENES_TPM  |
 +---------------------------------------------------------------------------+
-| Analysis finished at: Sunday 13 June 2021 (18:52:01)                      |
-| Total time consumed: 0 hours, 0 minutes, and 13 seconds                   |
+| Analysis finished at: Monday 14 June 2021 (15:12:37)                      |
+| Total time consumed: 0 hours, 0 minutes, and 7 seconds                    |
 |                                                                           |
 \===========================================================================/
 
 /===========================================================================\
 |                              RESULTS SUMMARY                              |
 +---------------------------------------------------------------------------+
-| Clust received 1 dataset with 2877 unique genes. After filtering, 2877    |
-| genes made it to the clustering step. Clust generated 1 clusters of       |
-| genes, which in total include 2119 genes. The smallest cluster includes   |
-| 2119 genes, the largest cluster includes 2119 genes, and the average      |
-| cluster size is 2119 genes.                                               |
+| Clust received 1 dataset with 2886 unique genes. After filtering, 2885    |
+| genes made it to the clustering step. Clust generated 4 clusters of       |
+| genes, which in total include 896 genes. The smallest cluster includes    |
+| 75 genes, the largest cluster includes 392 genes, and the average         |
+| cluster size is 224 genes.                                                |
 +---------------------------------------------------------------------------+
 |                                 Citation                                  |
 |                                 ~~~~~~~~                                  |
@@ -70,7 +69,7 @@
 |    (Optimised consensus clustering of multiple heterogenous datasets)     |
 |           Python package version 1.12.0 (2019) Basel Abu-Jamous           |
 +---------------------------------------------------------------------------+
-| Analysis started at: Monday 14 June 2021 (12:26:40)                       |
+| Analysis started at: Monday 14 June 2021 (15:12:56)                       |
 | 1. Reading dataset(s)                                                     |
 | 2. Data pre-processing                                                    |
 |  - Flat expression profiles filtered out (default in v1.7.0+).            |
@@ -100,22 +99,21 @@
 | 100%                                                                      |
 | 5. Cluster optimisation and completion                                    |
 | 6. Saving results in                                                      |
-| /home/robaina/Documents/Proyecto_rodopsina/Results/CLUSTER_ALL_GENES_TRAN |
-| SCRIPT_CELL_NO_NORMALIZATION                                              |
+| /home/robaina/Documents/Proyecto_rodopsina/Results/CLUSTER_ALL_GENES_TPM  |
 +---------------------------------------------------------------------------+
-| Analysis finished at: Monday 14 June 2021 (12:26:49)                      |
-| Total time consumed: 0 hours, 0 minutes, and 9 seconds                    |
+| Analysis finished at: Monday 14 June 2021 (15:13:04)                      |
+| Total time consumed: 0 hours, 0 minutes, and 7 seconds                    |
 |                                                                           |
 \===========================================================================/
 
 /===========================================================================\
 |                              RESULTS SUMMARY                              |
 +---------------------------------------------------------------------------+
-| Clust received 1 dataset with 2877 unique genes. After filtering, 2877    |
-| genes made it to the clustering step. Clust generated 1 clusters of       |
-| genes, which in total include 2119 genes. The smallest cluster includes   |
-| 2119 genes, the largest cluster includes 2119 genes, and the average      |
-| cluster size is 2119 genes.                                               |
+| Clust received 1 dataset with 2886 unique genes. After filtering, 2885    |
+| genes made it to the clustering step. Clust generated 6 clusters of       |
+| genes, which in total include 948 genes. The smallest cluster includes    |
+| 37 genes, the largest cluster includes 355 genes, and the average         |
+| cluster size is 158 genes.                                                |
 +---------------------------------------------------------------------------+
 |                                 Citation                                  |
 |                                 ~~~~~~~~                                  |
@@ -136,7 +134,7 @@
 |    (Optimised consensus clustering of multiple heterogenous datasets)     |
 |           Python package version 1.12.0 (2019) Basel Abu-Jamous           |
 +---------------------------------------------------------------------------+
-| Analysis started at: Monday 14 June 2021 (12:29:04)                       |
+| Analysis started at: Monday 14 June 2021 (15:15:46)                       |
 | 1. Reading dataset(s)                                                     |
 | 2. Data pre-processing                                                    |
 |  - Flat expression profiles filtered out (default in v1.7.0+).            |
@@ -166,22 +164,21 @@
 | 100%                                                                      |
 | 5. Cluster optimisation and completion                                    |
 | 6. Saving results in                                                      |
-| /home/robaina/Documents/Proyecto_rodopsina/Results/CLUSTER_ALL_GENES_TRAN |
-| SCRIPT_CELL_NO_NORMALIZATION                                              |
+| /home/robaina/Documents/Proyecto_rodopsina/Results/CLUSTER_ALL_GENES_TPM  |
 +---------------------------------------------------------------------------+
-| Analysis finished at: Monday 14 June 2021 (12:29:13)                      |
-| Total time consumed: 0 hours, 0 minutes, and 9 seconds                    |
+| Analysis finished at: Monday 14 June 2021 (15:15:55)                      |
+| Total time consumed: 0 hours, 0 minutes, and 8 seconds                    |
 |                                                                           |
 \===========================================================================/
 
 /===========================================================================\
 |                              RESULTS SUMMARY                              |
 +---------------------------------------------------------------------------+
-| Clust received 1 dataset with 2877 unique genes. After filtering, 2877    |
-| genes made it to the clustering step. Clust generated 1 clusters of       |
-| genes, which in total include 2119 genes. The smallest cluster includes   |
-| 2119 genes, the largest cluster includes 2119 genes, and the average      |
-| cluster size is 2119 genes.                                               |
+| Clust received 1 dataset with 2886 unique genes. After filtering, 2885    |
+| genes made it to the clustering step. Clust generated 6 clusters of       |
+| genes, which in total include 948 genes. The smallest cluster includes    |
+| 37 genes, the largest cluster includes 355 genes, and the average         |
+| cluster size is 158 genes.                                                |
 +---------------------------------------------------------------------------+
 |                                 Citation                                  |
 |                                 ~~~~~~~~                                  |
@@ -202,7 +199,7 @@
 |    (Optimised consensus clustering of multiple heterogenous datasets)     |
 |           Python package version 1.12.0 (2019) Basel Abu-Jamous           |
 +---------------------------------------------------------------------------+
-| Analysis started at: Monday 14 June 2021 (12:37:11)                       |
+| Analysis started at: Monday 14 June 2021 (15:16:07)                       |
 | 1. Reading dataset(s)                                                     |
 | 2. Data pre-processing                                                    |
 |  - Flat expression profiles filtered out (default in v1.7.0+).            |
@@ -232,22 +229,21 @@
 | 100%                                                                      |
 | 5. Cluster optimisation and completion                                    |
 | 6. Saving results in                                                      |
-| /home/robaina/Documents/Proyecto_rodopsina/Results/CLUSTER_ALL_GENES_TRAN |
-| SCRIPT_CELL_NO_NORMALIZATION                                              |
+| /home/robaina/Documents/Proyecto_rodopsina/Results/CLUSTER_ALL_GENES_TPM  |
 +---------------------------------------------------------------------------+
-| Analysis finished at: Monday 14 June 2021 (12:37:20)                      |
-| Total time consumed: 0 hours, 0 minutes, and 9 seconds                    |
+| Analysis finished at: Monday 14 June 2021 (15:16:15)                      |
+| Total time consumed: 0 hours, 0 minutes, and 7 seconds                    |
 |                                                                           |
 \===========================================================================/
 
 /===========================================================================\
 |                              RESULTS SUMMARY                              |
 +---------------------------------------------------------------------------+
-| Clust received 1 dataset with 2877 unique genes. After filtering, 2877    |
-| genes made it to the clustering step. Clust generated 1 clusters of       |
-| genes, which in total include 2119 genes. The smallest cluster includes   |
-| 2119 genes, the largest cluster includes 2119 genes, and the average      |
-| cluster size is 2119 genes.                                               |
+| Clust received 1 dataset with 2886 unique genes. After filtering, 2885    |
+| genes made it to the clustering step. Clust generated 6 clusters of       |
+| genes, which in total include 948 genes. The smallest cluster includes    |
+| 37 genes, the largest cluster includes 355 genes, and the average         |
+| cluster size is 158 genes.                                                |
 +---------------------------------------------------------------------------+
 |                                 Citation                                  |
 |                                 ~~~~~~~~                                  |
