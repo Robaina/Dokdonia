@@ -46,7 +46,8 @@ print(f'Running condition: {res_id}')
 workdir = os.path.join(os.getcwd(),'Results')
 clusters = Dc.getGeneClusters(clust_data_TPM, path_to_wd=workdir, 
                               out_dir=os.path.join(workdir, res_id),
-                              cluster_tightness=5)
+                              cluster_tightness=5,
+                              normalization_file='clust_TPM_normalization.txt')
 
 
 # Obtain genes without assigned cluster
@@ -97,6 +98,12 @@ Dc.saveToPickleFile(clusters, path_to_file=f'Results/Clusters_{res_id}.pkl')
 print(f'There a total of {len(genes_in_cluster)} genes assigned to a cluster')
 print(f'There a total of {len(genes_without_cluster)} genes not assigned to any cluster')
 
+##############################################################################
+# Permutation tests
+##############################################################################
+
+N = 500000
+res_ids = ['CLUSTER_ALL_GENES_TPM', 'CLUSTER_ALL_GENES_TRANSCRIPT_CELL']
 
 ##############################################################################
 # Permutation test with KEGG annotations
@@ -110,9 +117,6 @@ gene_list = list(gene_ko_dict.keys())
 KEGG_pathway_counts = Dc.computeKEGGpathwaySize(gene_list, 
                                                 gene_ko_dict, ko_pathway_dict)
         
-N = 100
-res_ids = ['CLUSTER_ALL_GENES_TPM', 'CLUSTER_ALL_GENES_TRANSCRIPT_CELL']
-
 for res_id in res_ids:
     clusters = Dc.readFromPickleFile(f'Results/Clusters_{res_id}.pkl')
     clusters = {k: v for k,v in clusters.items() if k != 'No_cluster_assigned'}
@@ -136,10 +140,7 @@ gene_pathways = {}
 for gene_id in gene_list:
     gene_pathways[gene_id] = Dc.getPatricPathwaysForLocusTag(gene_id, patric_features,
                                                              patric_pathways_genes, patric_pathways)
-    
-N = 100
 total_pathway_counts = Dc.getPathwayCountsInGeneList(gene_list, gene_pathways)
-res_ids = ['CLUSTER_ALL_GENES_TPM', 'CLUSTER_ALL_GENES_TRANSCRIPT_CELL']
 
 for res_id in res_ids:
     clusters = Dc.readFromPickleFile(f'Results/Clusters_{res_id}.pkl')
@@ -152,4 +153,4 @@ for res_id in res_ids:
     Dc.saveToPickleFile(p_PATRIC_paths, path_to_file=f'Results/p_PATRIC_paths_{N}_{res_id}.pkl')
 
 
-os.system("shutdown /s /t 1")
+# os.system("shutdown /s /t 1")

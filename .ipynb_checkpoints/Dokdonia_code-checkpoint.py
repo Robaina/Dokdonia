@@ -16,6 +16,7 @@ from ipywidgets_New.widgets import DropDownWidget
 rpy2_logger.setLevel(logging.ERROR)
 
 
+import pickle
 def saveToPickleFile(python_object, path_to_file='object.pkl'):
     """
     Save python object to pickle file
@@ -767,10 +768,6 @@ def plotSystemsAndSubsystemsWebPage(clusters, pdata, p_Data_paths,
         img_folder_name = 'iplot'
 
     cluster_ids = list(clusters.keys())
-    system_names = np.unique(
-        [k for v in p_KEGG_paths.values() for k in v['system'].keys()]
-    ).tolist()
-    
     system_types = ['system', 'subsystem']
     databases = list(p_Data_paths.keys())
 
