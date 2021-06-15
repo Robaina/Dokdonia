@@ -465,6 +465,141 @@ def getPatricPathway(patric_id, patric_pathways_genes, patric_pathways):
     return {'subsystem': path_name, 'system': path_class}
 
 
+def getPatricPathwaysForLocusTag(locus_tag, patric_features,
+                                patric_pathways_genes, patric_pathways):
+    try:
+        patric_id = locusTag2PatricID(locus_tag, patric_features)
+        pathway = getPatricPathway(patric_id, patric_pathways_genes, patric_pathways)
+        return pathway
+    except Exception:
+        return {'system':'', 'subsystem': ''}
+    
+    
+def getPathwayCountsInGeneList(gene_list, gene_pathways):
+    
+    pathway_counts = {'system': [], 'subsystem': []}
+    systems, subsystems = [], []
+    gene_list = np.intersect1d(gene_list, list(gene_pathways.keys()))
+    for gene_id in gene_list:
+        pathway = gene_pathways[gene_id]
+        if pathway['system'] != '':
+            systems.append(pathway['system'])
+            
+        if pathway['subsystem'] != '':
+            subsystems.append(pathway['subsystem'])
+    
+    pathway_counts['system'] = getCounts(systems)
+    pathway_counts['subsystem'] = getCounts(subsystems)
+    
+    return pathway_counts
+
+
+def getPathwayRepresentationInGeneList(gene_list, total_pathway_counts, gene_pathways):
+    
+    pathway_rep = {'system': {}, 'subsystem': {}}
+    pathway_counts = getPathwayCountsInGeneList(gene_list, gene_pathways)
+    
+    pathway_rep['system'] = {k: v/total_pathway_counts['system'][k] for k,v in pathway_counts['system'].items()}
+    pathway_rep['subsystem'] = {k: v/total_pathway_counts['subsystem'][k] for k,v in pathway_counts['subsystem'].items()}
+    
+    return pathway_rep
+
+
+def permutePatricGenesInClusters(total_pathway_counts, gene_list, clusters,
+                                 gene_pathways, n_permutations=10):
+    """
+    Obtain frequencies of PATRIC pathways in permuted clusters
+        
+    Note: since we are randomly shuffling genes in bins, we can't ensure
+    that each permutation will produce the same set of pathways. Thus,
+    some pathways may get empty frequency value in a permutation. Filling
+    with 0s to ammend this issue.
+    """
+    
+    bin_sizes = [len(v) for v in clusters.values()]
+    cluster_ids = [k for k in clusters.keys()]
+    bin_sizes.append(len(gene_list) - sum(bin_sizes))
+    
+    # Initialize result dict
+    res = {
+        k: {
+            'system': {p: [] for p in total_pathway_counts['system']},
+            'subsystem': {p: [] for p in total_pathway_counts['subsystem']}
+        } for k in cluster_ids
+    }
+    # Run permutation
+    for i in range(n_permutations):
+        partition = randomPartition(gene_list, bin_sizes)
+
+        for cluster_id, rand_bin in zip(cluster_ids, partition):
+
+            pathway_representation = getPathwayRepresentationInGeneList(
+                rand_bin, total_pathway_counts, gene_pathways)
+
+            for k, v in pathway_representation['system'].items():
+                res[cluster_id]['system'][k].append(v)
+            for k, v in pathway_representation['subsystem'].items():
+                res[cluster_id]['subsystem'][k].append(v)
+                
+    # Add 0s if sample size is smaller than n_permutations 
+    # (because pathway not represented in random samples)
+    for cluster_id in cluster_ids:
+        for sys_type in ('system', 'subsystem'):
+            for k in res[cluster_id][sys_type].keys():
+                sample_size = len(res[cluster_id][sys_type][k])
+                size_diff = n_permutations - sample_size
+                if size_diff > 0:
+                    res[cluster_id][sys_type][k].extend([0.0 for _ in range(size_diff)])
+
+    return res
+
+
+def runClusterPathwayEnrichmentAnalysisPatric(gene_list, clusters, total_pathway_counts, 
+                                              gene_pathways, n_permutations=10, sort_by_pvalue=True):
+    """
+    Run permutation analysis
+    """
+    def computeSamplePvalue(sample, value):
+        return len(np.where(np.array(sample) >= value)[0]) / len(sample)
+    
+    def computePathwayPvalue(pathways_freq, pathways_permuted_freq):
+        p_pathways = {}
+        for pathway, freq in pathways_freq.items():
+            pvalue = computeSamplePvalue(pathways_permuted_freq[pathway], freq)
+            p_pathways[pathway] = (freq, pvalue)
+        return p_pathways
+        
+    cluster_path_rep = {}
+    for cluster_id, cluster in clusters.items():
+        cluster_path_rep[cluster_id] = getPathwayRepresentationInGeneList(cluster,
+                                                                          total_pathway_counts,
+                                                                          gene_pathways)
+        
+    permuted_path_rep = permutePatricGenesInClusters(total_pathway_counts, gene_list, clusters,
+                                                     gene_pathways,n_permutations=n_permutations)
+    p_paths = {}
+    for cluster_id in clusters.keys():
+    
+        systems = computePathwayPvalue(cluster_path_rep[cluster_id]['system'],
+                                                     permuted_path_rep[cluster_id]['system'])
+        subsystems = computePathwayPvalue(cluster_path_rep[cluster_id]['subsystem'],
+                                                     permuted_path_rep[cluster_id]['subsystem'])
+    
+        if sort_by_pvalue:
+            sorted_keys = np.array(list(systems.keys()))[np.argsort([pvalue for f, pvalue in systems.values()])]
+            systems = {k: systems[k] for k in sorted_keys}
+
+            sorted_keys = np.array(list(subsystems.keys()))[np.argsort([pvalue for f, pvalue in subsystems.values()])]
+            subsystems = {k: subsystems[k] for k in sorted_keys}
+        
+        p_paths[cluster_id] = {
+                'system': systems,
+                'subsystem': subsystems
+            }
+        
+    return p_paths
+
+
 # Custom enrichment analysis based on permutation (randomization)
 def randomPartition(elems:list, bin_sizes:list):
     """

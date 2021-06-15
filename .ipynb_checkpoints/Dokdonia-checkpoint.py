@@ -12,23 +12,6 @@ from matplotlib_venn import venn2
 import Dokdonia_code as Dc
 
 
-def saveToPickleFile(python_object, path_to_file='object.pkl'):
-    """
-    Save python object to pickle file
-    """
-    out_file = open(path_to_file,'wb')
-    pickle.dump(python_object, out_file)
-    out_file.close()
-    
-def readFromPickleFile(path_to_file='object.pkl'):
-    """
-    Load python object from pickle file.
-    Returns python object.
-    """
-    in_file = open(path_to_file,'rb')
-    python_object = pickle.load(in_file)
-    return python_object
-
 # Parsing GBK file and KEGG pathways
 with open('Data/Function_Annotations/KEGG/kegg_pathways.json') as json_file:
     kegg_pathways = json.load(json_file)['children']
@@ -57,6 +40,7 @@ clust_data_TPM = clust_data_TPM[clust_data_TPM.filter(regex='^[^T]+$').columns]
 clust_data_TPM.index.name = 'ID'
 clust_data_TPM.columns = conditions
 
+# Cluster genes
 res_id = 'CLUSTER_ALL_GENES_TPM'
 print(f'Running condition: {res_id}')
 workdir = os.path.join(os.getcwd(),'Results')
@@ -72,7 +56,7 @@ genes_without_cluster = np.setdiff1d(gene_ids, genes_in_cluster).tolist()
 clusters['No_cluster_assigned'] = genes_without_cluster
 
 # Save clusters
-saveToPickleFile(clusters, path_to_file=f'Results/Clusters_{res_id}.pkl')
+Dc.saveToPickleFile(clusters, path_to_file=f'Results/Clusters_{res_id}.pkl')
 
 print(f'There a total of {len(genes_in_cluster)} genes assigned to a cluster')
 print(f'There a total of {len(genes_without_cluster)} genes not assigned to any cluster')
@@ -90,7 +74,7 @@ clust_data_TC = clust_data_TC[clust_data_TC.filter(regex='^[^T]+$').columns]
 clust_data_TC = clust_data_TC.set_index('index')
 clust_data_TC.index.name = 'ID'
 
-# Cluster only DE genes across temperatures (n_counts)
+# Cluster genes
 res_id = 'CLUSTER_ALL_GENES_TRANSCRIPT_CELL'
 print(f'Running condition: {res_id}')
 workdir = os.path.join(os.getcwd(),'Results')
@@ -108,15 +92,15 @@ genes_without_cluster = np.setdiff1d(gene_ids, genes_in_cluster).tolist()
 clusters['No_cluster_assigned'] = genes_without_cluster
 
 # Save clusters
-saveToPickleFile(clusters, path_to_file=f'Results/Clusters_{res_id}.pkl')
+Dc.saveToPickleFile(clusters, path_to_file=f'Results/Clusters_{res_id}.pkl')
 
 print(f'There a total of {len(genes_in_cluster)} genes assigned to a cluster')
 print(f'There a total of {len(genes_without_cluster)} genes not assigned to any cluster')
 
+
 ##############################################################################
 # Permutation test with KEGG annotations
 ##############################################################################
-
 
 # Read eggNOG - Mapper (http://eggnog-mapper.embl.de/) results 
 eggNOG = pd.read_excel('Data/Function_Annotations/KEGG/result_eggNOGMapper.xlsx', header=2)
@@ -125,19 +109,17 @@ gene_ko_dict= Dc.getGeneKOs(eggNOG)
 gene_list = list(gene_ko_dict.keys())
 KEGG_pathway_counts = Dc.computeKEGGpathwaySize(gene_list, 
                                                 gene_ko_dict, ko_pathway_dict)
+        
+N = 100
+res_ids = ['CLUSTER_ALL_GENES_TPM', 'CLUSTER_ALL_GENES_TRANSCRIPT_CELL']
 
+for res_id in res_ids:
+    clusters = Dc.readFromPickleFile(f'Results/Clusters_{res_id}.pkl')
+    clusters = {k: v for k,v in clusters.items() if k != 'No_cluster_assigned'}
+    p_KEGG_paths = Dc.runClusterPathwayEnrichmentAnalysis(gene_list, clusters, KEGG_pathway_counts,
+                                                          ko_pathway_dict, gene_ko_dict, n_permutations=N)
 
-
-# Trying this out         
-gene_list = np.array(T_res['all'].index) 
-n_permutations = [100, 200, 1000, 10000, 20000, 40000, 60000, 80000, 100000, 200000, 500000]
-
-for N in n_permutations:
-    p_KEGG_paths = Dc.runClusterPathwayEnrichmentAnalysis(
-        gene_list, joined_clusters, KEGG_pathway_counts,
-        ko_pathway_dict, gene_ko_dict, n_permutations=N)
-    
-    saveToPickleFile(p_KEGG_paths, path_to_file=f'p_KEGG_paths_{N}.pkl')
+    Dc.saveToPickleFile(p_KEGG_paths, path_to_file=f'Results/p_KEGG_paths_{N}_{res_id}.pkl')
 
 
 ##############################################################################
@@ -148,171 +130,26 @@ patric_features = pd.read_csv('Data/Function_Annotations/PATRIC/Dokdonia_MED134_
 patric_pathways = pd.read_csv('Data/Function_Annotations/PATRIC/Dokdonia_MED134_PATRIC_pathways.csv')
 patric_pathways_genes = pd.read_csv('Data/Function_Annotations/PATRIC/Dokdonia_MED134_Craig_PATRIC_pathways_genes.csv')
 
-# Perform pathway analysis using PATRIC pathways
-def locusTag2PatricID(locus_tag, patric_features):
-    return patric_features['PATRIC ID'][patric_features['RefSeq Locus Tag'] == locus_tag].item()
-
-
-def getPatricPathway(patric_id, patric_pathways_genes, patric_pathways):
-    path_name = patric_pathways_genes['Pathway Name'][patric_pathways_genes['PATRIC ID'] == patric_id].item()
-    path_class = patric_pathways['Pathway Class'][patric_pathways['Pathway Name'] == path_name].item()
-    return {'subsystem': path_name, 'system': path_class}
-
-
-def getPatricPathwaysForLocusTag(locus_tag, patric_features,
-                                patric_pathways_genes, patric_pathways):
-    try:
-        patric_id = locusTag2PatricID(locus_tag, patric_features)
-        pathway = getPatricPathway(patric_id, patric_pathways_genes, patric_pathways)
-        return pathway
-    except Exception:
-        return {'system':'', 'subsystem': ''}
-    
-    
-def getPathwayCountsInGeneList(gene_list, gene_pathways):
-    
-    pathway_counts = {'system': [], 'subsystem': []}
-    systems, subsystems = [], []
-    for gene_id in gene_list:
-        pathway = gene_pathways[gene_id]
-        if pathway['system'] != '':
-            systems.append(pathway['system'])
-            
-        if pathway['subsystem'] != '':
-            subsystems.append(pathway['subsystem'])
-    
-    pathway_counts['system'] = Dc.getCounts(systems)
-    pathway_counts['subsystem'] = Dc.getCounts(subsystems)
-    
-    return pathway_counts
-    
-    
-def getPathwayRepresentationInGeneList(gene_list, total_pathway_counts, gene_pathways):
-    
-    pathway_rep = {'system': {}, 'subsystem': {}}
-    pathway_counts = getPathwayCountsInGeneList(gene_list, gene_pathways)
-    
-    pathway_rep['system'] = {k: v/total_pathway_counts['system'][k] for k,v in pathway_counts['system'].items()}
-    pathway_rep['subsystem'] = {k: v/total_pathway_counts['subsystem'][k] for k,v in pathway_counts['subsystem'].items()}
-    
-    return pathway_rep
-
-
-# Modify to accommodate frequencies within pathways in each cluster
-def permuteGenesInClusters(total_pathway_counts, gene_list, clusters,
-                           gene_pathways, n_permutations=10):
-    """
-    Obtain frequencies of KEGG pathways in permuted clusters
-        
-    Note: since we are randomly shuffling genes in bins, we can't ensure
-    that each permutation will produce the same set of pathways. Thus,
-    some pathways may get empty frequency value in a permutation. Filling
-    with 0s to ammend this issue.
-    """
-    
-    bin_sizes = [len(v) for v in clusters.values()]
-    cluster_ids = [k for k in clusters.keys()]
-    bin_sizes.append(len(gene_list) - sum(bin_sizes))
-    
-    # Initialize result dict
-    res = {
-        k: {
-            'system': {p: [] for p in total_pathway_counts['system']},
-            'subsystem': {p: [] for p in total_pathway_counts['subsystem']}
-        } for k in cluster_ids
-    }
-    # Run permutation
-    for i in range(n_permutations):
-        partition = Dc.randomPartition(gene_list, bin_sizes)
-
-        for cluster_id, rand_bin in zip(cluster_ids, partition):
-
-            pathway_representation = getPathwayRepresentationInGeneList(
-                rand_bin, total_pathway_counts, gene_pathways)
-
-            for k, v in pathway_representation['system'].items():
-                res[cluster_id]['system'][k].append(v)
-            for k, v in pathway_representation['subsystem'].items():
-                res[cluster_id]['subsystem'][k].append(v)
-                
-    # Add 0s if sample size is smaller than n_permutations 
-    # (because pathway not represented in random samples)
-    for cluster_id in cluster_ids:
-        for sys_type in ('system', 'subsystem'):
-            for k in res[cluster_id][sys_type].keys():
-                sample_size = len(res[cluster_id][sys_type][k])
-                size_diff = n_permutations - sample_size
-                if size_diff > 0:
-                    res[cluster_id][sys_type][k].extend([0.0 for _ in range(size_diff)])
-
-    return res
-
-
-def runClusterPathwayEnrichmentAnalysis(gene_list, clusters, total_pathway_counts, 
-                                        gene_pathways, n_permutations=10, sort_by_pvalue=True):
-    """
-    Run permutation analysis
-    """
-    def computeSamplePvalue(sample, value):
-        return len(np.where(np.array(sample) >= value)[0]) / len(sample)
-    
-    def computePathwayPvalue(pathways_freq, pathways_permuted_freq):
-        p_pathways = {}
-        for pathway, freq in pathways_freq.items():
-            pvalue = computeSamplePvalue(pathways_permuted_freq[pathway], freq)
-            p_pathways[pathway] = (freq, pvalue)
-        return p_pathways
-        
-    cluster_path_rep = {}
-    for cluster_id, cluster in clusters.items():
-        cluster_path_rep[cluster_id] = getPathwayRepresentationInGeneList(cluster,
-                                                                          total_pathway_counts,
-                                                                          gene_pathways)
-        
-    permuted_path_rep = permuteGenesInClusters(total_pathway_counts, gene_list, clusters,
-                                                gene_pathways,
-                                                n_permutations=n_permutations)
-    p_paths = {}
-    for cluster_id in clusters.keys():
-    
-        systems = computePathwayPvalue(cluster_path_rep[cluster_id]['system'],
-                                                     permuted_path_rep[cluster_id]['system'])
-        subsystems = computePathwayPvalue(cluster_path_rep[cluster_id]['subsystem'],
-                                                     permuted_path_rep[cluster_id]['subsystem'])
-    
-        if sort_by_pvalue:
-            sorted_keys = np.array(list(systems.keys()))[np.argsort([pvalue for f, pvalue in systems.values()])]
-            systems = {k: systems[k] for k in sorted_keys}
-
-            sorted_keys = np.array(list(subsystems.keys()))[np.argsort([pvalue for f, pvalue in subsystems.values()])]
-            subsystems = {k: subsystems[k] for k in sorted_keys}
-        
-        p_paths[cluster_id] = {
-                'system': systems,
-                'subsystem': subsystems
-            }
-        
-    return p_paths
-
-
 # Get dict of patric pathways for each locus tag (gene id)
 gene_list = counts['index'].values
 gene_pathways = {}
 for gene_id in gene_list:
-    gene_pathways[gene_id] = getPatricPathwaysForLocusTag(gene_id, patric_features,
-                                                          patric_pathways_genes, patric_pathways)
+    gene_pathways[gene_id] = Dc.getPatricPathwaysForLocusTag(gene_id, patric_features,
+                                                             patric_pathways_genes, patric_pathways)
     
-    
-n_permutations = [100, 200, 1000, 10000, 20000, 40000, 60000, 80000, 100000, 200000, 500000]
-total_pathway_counts = getPathwayCountsInGeneList(gene_list, gene_pathways)
+N = 100
+total_pathway_counts = Dc.getPathwayCountsInGeneList(gene_list, gene_pathways)
+res_ids = ['CLUSTER_ALL_GENES_TPM', 'CLUSTER_ALL_GENES_TRANSCRIPT_CELL']
 
-for N in n_permutations:
-    print(f'Running {N} permutations')
-    p_PATRIC_paths = runClusterPathwayEnrichmentAnalysis(gene_list, clusters, total_pathway_counts,
-                                                         gene_pathways,
-                                                         n_permutations=N,
-                                                         sort_by_pvalue=True)
-    Dc.saveToPickleFile(p_PATRIC_paths, path_to_file=f'p_PATRIC_paths_{N}.pkl')
-    
+for res_id in res_ids:
+    clusters = Dc.readFromPickleFile(f'Results/Clusters_{res_id}.pkl')
+    clusters = {k: v for k,v in clusters.items() if k != 'No_cluster_assigned'}
+    p_PATRIC_paths = Dc.runClusterPathwayEnrichmentAnalysisPatric(gene_list, clusters, total_pathway_counts,
+                                                                  gene_pathways,
+                                                                  n_permutations=N,
+                                                                  sort_by_pvalue=True)
+
+    Dc.saveToPickleFile(p_PATRIC_paths, path_to_file=f'Results/p_PATRIC_paths_{N}_{res_id}.pkl')
+
 
 os.system("shutdown /s /t 1")

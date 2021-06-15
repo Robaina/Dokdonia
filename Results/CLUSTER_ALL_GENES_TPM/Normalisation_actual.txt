@@ -1,1 +1,1 @@
-clust_input.tsv	101 3 4
+clust_input.tsv	0
