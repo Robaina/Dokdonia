@@ -406,6 +406,18 @@ def getKEGGpathwaysForGeneList(ko_pathway_dict, gene_ko_dict, gene_list, unique=
     return res
 
 
+def getKEGGPathwaysForLocusTag(gene_id, gene_ko_dict, ko_pathway_dict):
+    res = {}
+    try:
+        kos = gene_ko_dict[gene_id]
+        return {
+            'system': [ko_pathway_dict[ko]['system'] for ko in kos if ko in ko_pathway_dict.keys()],
+            'subsystem': [ko_pathway_dict[ko]['subsystem'] for ko in kos if ko in ko_pathway_dict.keys()]
+        }
+    except Exception:
+        return {'system':'', 'subsystem': ''}
+
+
 def getElementsFrequency(array_like, ranked=True):
     """
     Return dictionary with keys equal to unique elements in
@@ -455,6 +467,9 @@ def getEggNOGInputFile(gbk_file):
                     file.write(f'\n>{gene}\n{aas}')
                     
 
+                                      
+                    
+                    
 # Perform pathway analysis using PATRIC pathways
 def locusTag2PatricID(locus_tag, patric_features):
     return patric_features['PATRIC ID'][patric_features['RefSeq Locus Tag'] == locus_tag].item()
@@ -680,7 +695,7 @@ def runClusterPathwayEnrichmentAnalysis(gene_list, clusters, KEGG_pathway_counts
     """
     Run permutation analysis
     """
-    def getKEGGfrequenciesInClusters(clusters):
+    def getKEGGrepresentationInClusters(clusters):
         res = {k: {} for k in clusters.keys()}
         for k, v in clusters.items():
             data = getKEGGpathwaysForGeneList(
@@ -703,7 +718,7 @@ def runClusterPathwayEnrichmentAnalysis(gene_list, clusters, KEGG_pathway_counts
         return p_pathways
         
     
-    cluster_path_freq = getKEGGfrequenciesInClusters(clusters)
+    cluster_path_freq = getKEGGrepresentationInClusters(clusters)
     permuted_path_freq = permuteGenesInClusters(KEGG_pathway_counts, ko_pathway_dict, gene_ko_dict,
                                                 gene_list, clusters, n_permutations)
     p_KEGG_paths = {}
@@ -738,9 +753,11 @@ def plotCluster(pdata, clusters, cluster_id, ax):
         marker='.', markerfacecolor='#ee9929', markersize=12)
 
 
-def plotKEGGFrequencies(data, color=None, axis=None):
+def plotKEGGFrequencies(data: dict, color=None, axis=None):
     """
     Bar plot of sorted KEGG systems or subsystems
+    data: dictionary wth keys being system or subsystem names and
+    values, their frequencies/representation.
     """
     if color is None:
         color = 'C0'
