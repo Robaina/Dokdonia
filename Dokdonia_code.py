@@ -16,7 +16,6 @@ from ipywidgets_New.widgets import DropDownWidget
 rpy2_logger.setLevel(logging.ERROR)
 
 
-import pickle
 def saveToPickleFile(python_object, path_to_file='object.pkl'):
     """
     Save python object to pickle file
@@ -511,12 +510,27 @@ def getPathwayCountsInGeneList(gene_list, gene_pathways):
 
 
 def getPathwayRepresentationInGeneList(gene_list, total_pathway_counts, gene_pathways):
-    
+    """
+    Need to add pathways with representation of 0
+    """
     pathway_rep = {'system': {}, 'subsystem': {}}
     pathway_counts = getPathwayCountsInGeneList(gene_list, gene_pathways)
     
-    pathway_rep['system'] = {k: v/total_pathway_counts['system'][k] for k,v in pathway_counts['system'].items()}
-    pathway_rep['subsystem'] = {k: v/total_pathway_counts['subsystem'][k] for k,v in pathway_counts['subsystem'].items()}
+    for system in total_pathway_counts['system'].keys():
+        if system not in pathway_counts['system'].keys():
+            pathway_rep['system'][system] = 0
+        else:
+            system_counts = pathway_counts['system'][system]
+            system_total_counts = total_pathway_counts['system'][system]
+            pathway_rep['system'][system] = system_counts / system_total_counts
+            
+    for subsystem in total_pathway_counts['subsystem'].keys():
+        if subsystem not in pathway_counts['subsystem'].keys():
+            pathway_rep['subsystem'][subsystem] = 0
+        else:
+            system_counts = pathway_counts['subsystem'][subsystem]
+            system_total_counts = total_pathway_counts['subsystem'][subsystem]
+            pathway_rep['subsystem'][subsystem] = system_counts / system_total_counts
     
     return pathway_rep
 
@@ -821,6 +835,35 @@ def plotSystemsAndSubsystemsWebPage(clusters, pdata, p_Data_paths,
                                         description='Cluster ID'),
                            interact_name=img_folder_name)
     return i_fig
+
+#####################################################
+# Cluster analysis
+#####################################################
+
+def writeExcelOfClusterGenes(clusters, out_path, 
+                             patric_features, patric_pathways_genes, patric_pathways,
+                             gene_ko_dict, ko_pathway_dict):
+    
+    writer = pd.ExcelWriter(out_path, engine='xlsxwriter')
+    for cluster_id, cluster in clusters.items():
+        gene_pathways = {}
+        for gene_id in cluster:
+            PATRIC_gene_pathways = Dc.getPatricPathwaysForLocusTag(gene_id, patric_features,
+                                                                   patric_pathways_genes, patric_pathways)
+            KEGG_gene_pathways = getKEGGPathwaysForLocusTag(gene_id, gene_ko_dict, ko_pathway_dict)
+
+            gene_pathways[gene_id] = {
+                'Gene product': gbk.getGeneInfo(gene_id)['product'][0],
+                'KEGG system': ', '.join(np.unique(np.array(KEGG_gene_pathways['system']))),
+                'KEGG subsystem': ', '.join(np.unique(np.array(KEGG_gene_pathways['subsystem']))),
+                'PATRIC system': ', '.join(np.unique(np.array(PATRIC_gene_pathways['system']))),
+                'PATRIC subsystem': ', '.join(np.unique(np.array(PATRIC_gene_pathways['subsystem'])))
+            }
+
+        pd.DataFrame(gene_pathways).transpose().to_excel(writer, sheet_name=f'Cluster {cluster_id}')
+    writer.save()
+
+
 
 
 # These functions were meant to do hypothesis testing, abandoning this idea.
