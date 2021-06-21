@@ -12,7 +12,7 @@ from rpy2.robjects import Formula
 from matplotlib import pyplot as plt
 import logging
 from ipywidgets_New.interact import StaticInteract
-from ipywidgets_New.widgets import DropDownWidget
+from ipywidgets_New.widgets import DropDownWidget, RangeWidget
 rpy2_logger.setLevel(logging.ERROR)
 
 
@@ -23,6 +23,7 @@ def saveToPickleFile(python_object, path_to_file='object.pkl'):
     out_file = open(path_to_file,'wb')
     pickle.dump(python_object, out_file)
     out_file.close()
+    
     
 def readFromPickleFile(path_to_file='object.pkl'):
     """
@@ -363,6 +364,16 @@ def computeKEGGpathwaySize(gene_list, gene_ko_dict, ko_pathway_dict):
                 pass     
             
     return pathway_counts
+
+
+def getGenesInKEGGsystem(ko_pathway_dict, gene_ko_dict, system:str, system_type:str) -> list:
+    """
+    Retrieve all genes assigned to selected system 
+    system_type: system or subsystem.
+    """
+    kos = [k for k,v in ko_pathway_dict.items() if system.lower() in v[system_type].lower()]
+    genes = [g for g,v in gene_ko_dict.items() if any(x in kos for x in v)]
+    return genes
 
 
 def summarizeKEGGpathwaysForGene(ko_pathway_dict, gene_ko_dict, gene_id, unique=False):
@@ -784,7 +795,7 @@ def plotKEGGFrequencies(data: dict, color=None, axis=None):
         ax.annotate(f'({pvalues[i]:.4f})', (p.get_x() * 1.005, p.get_height() * 1.006))
     
 
-def plotSystemsAndSubsystemsWebPage(clusters, pdata, p_Data_paths,
+def plotSystemsAndSubsystemsWebPage(clusters, cluster_data, p_Data_paths,
                                     plot_first_N=10, color=None, 
                                     img_folder_name=None):
     """
@@ -798,12 +809,15 @@ def plotSystemsAndSubsystemsWebPage(clusters, pdata, p_Data_paths,
     if img_folder_name is None:
         img_folder_name = 'iplot'
 
-    cluster_ids = list(clusters.keys())
     system_types = ['system', 'subsystem']
-    databases = list(p_Data_paths.keys())
+    data_normalizations = ['TPM', 'TC']
+    databases = ['KEGG', 'PATRIC']
+    cluster_ids = list(np.unique(
+    [c for n in data_normalizations for c in clusters[n].keys()])
+                      )
 
-    def plot_fun(database, system_type, cluster_id):
-
+    def plot_fun(database, data_normalization, system_type, cluster_id):
+        
         fig, ax = plt.subplot_mosaic(
             """
             A
@@ -814,14 +828,17 @@ def plotSystemsAndSubsystemsWebPage(clusters, pdata, p_Data_paths,
 
         ax['B'].set_ylabel('Pathway representation (%)')
         ax['B'].set_title(f'{database} {system_type}s (sample p-value)')
-
-        kdata = {k: v 
-                 for k,v in p_Data_paths[database][cluster_id][system_type].items()}
-        if len(kdata) > plot_first_N:
-            kdata = {k: kdata[k] for k in list(kdata.keys())[:10]}
-        plotCluster(pdata, clusters, cluster_id, ax['A'])
-        plotKEGGFrequencies(kdata,
-                            color=color, axis=ax['B'])
+        
+        if cluster_id in clusters[data_normalization].keys():
+            p_Data = p_Data_paths[data_normalization][database]
+            kdata = {k: v 
+                     for k,v in p_Data[cluster_id][system_type].items()}
+            if len(kdata) > plot_first_N:
+                kdata = {k: kdata[k] for k in list(kdata.keys())[:10]}
+            plotCluster(cluster_data[data_normalization], clusters[data_normalization],
+                        cluster_id, ax['A'])
+            plotKEGGFrequencies(kdata,
+                                color=color, axis=ax['B'])
         fig.set_figwidth(20)
         fig.set_figheight(20)
         return fig
@@ -829,12 +846,98 @@ def plotSystemsAndSubsystemsWebPage(clusters, pdata, p_Data_paths,
     i_fig = StaticInteract(plot_fun,
                            database=DropDownWidget(databases,
                                         description='Database'),
+                           data_normalization=DropDownWidget(data_normalizations,
+                                        description='Normalization'),
                            system_type=DropDownWidget(system_types,
                                         description='Level'),
                            cluster_id=DropDownWidget(cluster_ids,
                                         description='Cluster ID'),
                            interact_name=img_folder_name)
     return i_fig
+
+
+def getRepresentationStackedPlotData(p_paths, pvalue_cutoff=1):
+    """
+    Make pandas dataframe of pathway representation across
+    clusters
+    """
+    unique_systems = np.unique([
+        system for c in p_paths.values()
+        for system in c['system'].keys() 
+    ])
+    unique_subsystems = np.unique([
+        subsystem
+        for c in p_paths.values()
+        for subsystem in c['subsystem'].keys()
+    ])
+    
+    rep_systems, rep_subsystems = {}, {}
+    for system in unique_systems:
+        rep_systems[system] = []
+        for cluster_id, values in p_paths.items():
+            rep, pvalue = values['system'][system]
+            if pvalue < pvalue_cutoff:
+                rep_systems[system].append(rep)
+            else:
+                rep_systems[system].append(0.0)
+        # Add rep outside clusters
+        rep_systems[system].append(1 - sum(rep_systems[system]))
+            
+    for subsystem in unique_subsystems:
+        rep_subsystems[subsystem] = []
+        for cluster_id, values in p_paths.items():
+            rep, pvalue = values['subsystem'][subsystem]
+            if pvalue < pvalue_cutoff:
+                rep_subsystems[subsystem].append(rep)
+            else:
+                rep_subsystems[subsystem].append(0.0)
+        # Add rep outside clusters
+        rep_subsystems[subsystem].append(1 - sum(rep_subsystems[subsystem]))
+        
+        rep_subsystems = {extractKoPathwayName(k): v
+                          for k,v in rep_subsystems.items()}
+            
+    return {'system': rep_systems, 'subsystem': rep_subsystems}
+
+
+def plotSystemsAndSubsystemsStacked(p_Data_paths, cluster_colors, img_folder_name):
+    """
+    """
+    plt.rcParams.update({'figure.max_open_warning': 0})
+    if img_folder_name is None:
+        img_folder_name = 'iplot'
+        
+    system_types = ['system', 'subsystem']
+    data_normalizations = ['TPM', 'TC']
+    databases = ['KEGG', 'PATRIC']
+        
+    def plot_fun(database, data_normalization, system_type, tpvalue_cutoff):
+        fig = plt.figure(figsize=(10, 8))
+        ax = plt.gca()
+        p_Data = p_Data_paths[data_normalization][database]
+        rep_data = getRepresentationStackedPlotData(p_Data, tpvalue_cutoff)
+
+        df = pd.DataFrame(rep_data[system_type], index=list(p_Data.keys()) + ['No cluster'])
+        df = df.loc[:, df.loc['No cluster'] < 1.0].sort_values('No cluster', axis=1)
+        ax = (100 * df).transpose().plot.bar(stacked=True, legend=True, figsize=(10,8),
+                                             color=list(cluster_colors[data_normalization].values()),
+                                             ax=ax)
+        return fig
+    
+    i_fig = StaticInteract(plot_fun,
+                           database=DropDownWidget(databases,
+                                        description='Database'),
+                           data_normalization=DropDownWidget(data_normalizations,
+                                        description='Normalization'),
+                           system_type=DropDownWidget(system_types,
+                                        description='Level'),
+                           tpvalue_cutoff=RangeWidget(min=0.05, max=1, 
+                                                     step=0.05,
+                                                     default=0.1,         
+                                                     description='p-value cutoff'),
+                           interact_name=img_folder_name)
+    return i_fig
+
 
 #####################################################
 # Cluster analysis

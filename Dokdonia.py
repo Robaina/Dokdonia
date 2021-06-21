@@ -36,69 +36,69 @@ clust_tightness = 5 # Maximizes number of clusters in both cases
 # Cluster ALL genes across temperatures using TPM values
 ########################################################################
 
-# # Get TPM values
-# clust_data_TPM = pd.read_csv('Data/tpm_counts.csv', index_col=0)
-# clust_data_TPM = clust_data_TPM[clust_data_TPM.filter(regex='^[^T]+$').columns]
-# clust_data_TPM.index.name = 'ID'
-# clust_data_TPM.columns = conditions
+# Get TPM values
+clust_data_TPM = pd.read_csv('Data/tpm_counts.csv', index_col=0)
+clust_data_TPM = clust_data_TPM[clust_data_TPM.filter(regex='^[^T]+$').columns]
+clust_data_TPM.index.name = 'ID'
+clust_data_TPM.columns = conditions
 
-# # Cluster genes
-# res_id = 'CLUSTER_ALL_GENES_TPM'
-# print(f'Running condition: {res_id}')
-# workdir = os.path.join(os.getcwd(),'Results')
-# clusters = Dc.getGeneClusters(clust_data_TPM, path_to_wd=workdir, 
-#                               out_dir=os.path.join(workdir, res_id),
-#                               cluster_tightness=clust_tightness,
-#                               normalization_file='clust_TPM_normalization.txt')
+# Cluster genes
+res_id = 'CLUSTER_ALL_GENES_TPM'
+print(f'Running condition: {res_id}')
+workdir = os.path.join(os.getcwd(),'Results')
+clusters = Dc.getGeneClusters(clust_data_TPM, path_to_wd=workdir, 
+                              out_dir=os.path.join(workdir, res_id),
+                              cluster_tightness=clust_tightness,
+                              normalization_file='clust_TPM_normalization.txt')
 
 
-# # Obtain genes without assigned cluster
-# gene_ids = list(clust_data_TPM.index)
-# genes_in_cluster = [gene for gene_ids in clusters.values() for gene in gene_ids]
-# genes_without_cluster = np.setdiff1d(gene_ids, genes_in_cluster).tolist()
-# clusters['No_cluster_assigned'] = genes_without_cluster
+# Obtain genes without assigned cluster
+gene_ids = list(clust_data_TPM.index)
+genes_in_cluster = [gene for gene_ids in clusters.values() for gene in gene_ids]
+genes_without_cluster = np.setdiff1d(gene_ids, genes_in_cluster).tolist()
+clusters['No_cluster_assigned'] = genes_without_cluster
 
-# # Save clusters
-# Dc.saveToPickleFile(clusters, path_to_file=f'Results/Clusters_{res_id}.pkl')
+# Save clusters
+Dc.saveToPickleFile(clusters, path_to_file=f'Results/Clusters_{res_id}.pkl')
 
-# print(f'There a total of {len(genes_in_cluster)} genes assigned to a cluster')
-# print(f'There a total of {len(genes_without_cluster)} genes not assigned to any cluster')
+print(f'There a total of {len(genes_in_cluster)} genes assigned to a cluster')
+print(f'There a total of {len(genes_without_cluster)} genes not assigned to any cluster')
 
 ########################################################################
 # Cluster ALL genes across temperatures using Transcript/cell values
 ########################################################################
 
-# # Loading Transcript/Cell data and scale up data
-# n_counts = pd.read_csv('Data/Dokdonia_transcripts_cell.csv', index_col=0)
-# n_counts.iloc[:,1:] = 1e4 * n_counts.iloc[:,1:]
+# Loading Transcript/Cell data and scale up data
+n_counts = pd.read_csv('Data/Dokdonia_transcripts_cell.csv', index_col=0)
+n_counts.iloc[:,1:] = 1e4 * n_counts.iloc[:,1:]
 
-# clust_data_TC = n_counts
-# clust_data_TC = clust_data_TC[clust_data_TC.filter(regex='^[^T]+$').columns]
-# clust_data_TC = clust_data_TC.set_index('index')
-# clust_data_TC.index.name = 'ID'
+clust_data_TC = n_counts
+clust_data_TC = clust_data_TC[clust_data_TC.filter(regex='^[^T]+$').columns]
+clust_data_TC = clust_data_TC.set_index('index')
+clust_data_TC.index.name = 'ID'
 
-# # Cluster genes
-# res_id = 'CLUSTER_ALL_GENES_TRANSCRIPT_CELL'
-# print(f'Running condition: {res_id}')
-# workdir = os.path.join(os.getcwd(),'Results')
+# Cluster genes
+res_id = 'CLUSTER_ALL_GENES_TRANSCRIPT_CELL'
+print(f'Running condition: {res_id}')
+workdir = os.path.join(os.getcwd(),'Results')
 
-# clusters = Dc.getGeneClusters(clust_data_TC, path_to_wd=workdir, 
-#                               out_dir=os.path.join(workdir, res_id),
-#                               cluster_tightness=clust_tightness,
-#                               normalization_file='clust_TPM_normalization.txt')
+clusters = Dc.getGeneClusters(clust_data_TC, path_to_wd=workdir, 
+                              out_dir=os.path.join(workdir, res_id),
+                              cluster_tightness=clust_tightness,
+                              normalization_file='clust_TPM_normalization.txt')
 
 
-# # Obtain genes without assigned cluster
-# gene_ids = list(clust_data_TC.index)
-# genes_in_cluster = [gene for gene_ids in clusters.values() for gene in gene_ids]
-# genes_without_cluster = np.setdiff1d(gene_ids, genes_in_cluster).tolist()
-# clusters['No_cluster_assigned'] = genes_without_cluster
+# Obtain genes without assigned cluster
+gene_ids = list(clust_data_TC.index)
+genes_in_cluster = [gene for gene_ids in clusters.values() for gene in gene_ids]
+genes_without_cluster = np.setdiff1d(gene_ids, genes_in_cluster).tolist()
+clusters['No_cluster_assigned'] = genes_without_cluster
 
-# # Save clusters
-# Dc.saveToPickleFile(clusters, path_to_file=f'Results/Clusters_{res_id}.pkl')
+# Save clusters
+Dc.saveToPickleFile(clusters, path_to_file=f'Results/Clusters_{res_id}.pkl')
 
-# print(f'There a total of {len(genes_in_cluster)} genes assigned to a cluster')
-# print(f'There a total of {len(genes_without_cluster)} genes not assigned to any cluster')
+print(f'There a total of {len(genes_in_cluster)} genes assigned to a cluster')
+print(f'There a total of {len(genes_without_cluster)} genes not assigned to any cluster')
 
 
 ##############################################################################
@@ -112,21 +112,21 @@ res_ids = ['CLUSTER_ALL_GENES_TPM', 'CLUSTER_ALL_GENES_TRANSCRIPT_CELL']
 # Permutation test with KEGG annotations
 ##############################################################################
 
-# # Read eggNOG - Mapper (http://eggnog-mapper.embl.de/) results 
-# eggNOG = pd.read_excel('Data/Function_Annotations/KEGG/result_eggNOGMapper.xlsx', header=2)
-# ko_pathway_dict = Dc.getKEGGPathwayDict(kegg_pathways)
-# gene_ko_dict= Dc.getGeneKOs(eggNOG)
-# gene_list = list(gene_ko_dict.keys())
-# KEGG_pathway_counts = Dc.computeKEGGpathwaySize(gene_list, 
-#                                                 gene_ko_dict, ko_pathway_dict)
+# Read eggNOG - Mapper (http://eggnog-mapper.embl.de/) results 
+eggNOG = pd.read_excel('Data/Function_Annotations/KEGG/result_eggNOGMapper.xlsx', header=2)
+ko_pathway_dict = Dc.getKEGGPathwayDict(kegg_pathways)
+gene_ko_dict= Dc.getGeneKOs(eggNOG)
+gene_list = list(gene_ko_dict.keys())
+KEGG_pathway_counts = Dc.computeKEGGpathwaySize(gene_list, 
+                                                gene_ko_dict, ko_pathway_dict)
         
-# for res_id in res_ids:
-#     clusters = Dc.readFromPickleFile(f'Results/Clusters_{res_id}.pkl')
-#     clusters = {k: v for k,v in clusters.items() if k != 'No_cluster_assigned'}
-#     p_KEGG_paths = Dc.runClusterPathwayEnrichmentAnalysis(gene_list, clusters, KEGG_pathway_counts,
-#                                                           ko_pathway_dict, gene_ko_dict, n_permutations=N)
+for res_id in res_ids:
+    clusters = Dc.readFromPickleFile(f'Results/Clusters_{res_id}.pkl')
+    clusters = {k: v for k,v in clusters.items() if k != 'No_cluster_assigned'}
+    p_KEGG_paths = Dc.runClusterPathwayEnrichmentAnalysis(gene_list, clusters, KEGG_pathway_counts,
+                                                          ko_pathway_dict, gene_ko_dict, n_permutations=N)
 
-#     Dc.saveToPickleFile(p_KEGG_paths, path_to_file=f'Results/p_KEGG_paths_{N}_{res_id}.pkl')
+    Dc.saveToPickleFile(p_KEGG_paths, path_to_file=f'Results/p_KEGG_paths_{N}_{res_id}.pkl')
 
 
 ##############################################################################
