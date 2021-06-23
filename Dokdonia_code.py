@@ -943,7 +943,7 @@ def plotSystemsAndSubsystemsStacked(p_Data_paths, cluster_colors, img_folder_nam
 # Cluster analysis
 #####################################################
 
-def writeExcelOfClusterGenes(clusters, out_path, 
+def writeExcelOfClusterGenes(clusters, out_path, gbk,
                              patric_features, patric_pathways_genes, patric_pathways,
                              gene_ko_dict, ko_pathway_dict):
     
@@ -951,7 +951,7 @@ def writeExcelOfClusterGenes(clusters, out_path,
     for cluster_id, cluster in clusters.items():
         gene_pathways = {}
         for gene_id in cluster:
-            PATRIC_gene_pathways = Dc.getPatricPathwaysForLocusTag(gene_id, patric_features,
+            PATRIC_gene_pathways = getPatricPathwaysForLocusTag(gene_id, patric_features,
                                                                    patric_pathways_genes, patric_pathways)
             KEGG_gene_pathways = getKEGGPathwaysForLocusTag(gene_id, gene_ko_dict, ko_pathway_dict)
 
