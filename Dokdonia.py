@@ -124,7 +124,9 @@ for res_id in res_ids:
     clusters = Dc.readFromPickleFile(f'Results/Clusters_{res_id}.pkl')
     clusters = {k: v for k,v in clusters.items() if k != 'No_cluster_assigned'}
     p_KEGG_paths = Dc.runClusterPathwayEnrichmentAnalysis(gene_list, clusters, KEGG_pathway_counts,
-                                                          ko_pathway_dict, gene_ko_dict, n_permutations=N)
+                                                          ko_pathway_dict, gene_ko_dict,
+                                                          n_permutations=N,
+                                                          sort_by_pvalue=True)
 
     Dc.saveToPickleFile(p_KEGG_paths, path_to_file=f'Results/p_KEGG_paths_{N}_{res_id}.pkl')
 
