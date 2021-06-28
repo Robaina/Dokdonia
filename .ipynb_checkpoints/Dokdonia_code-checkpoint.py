@@ -6,6 +6,7 @@ import pickle
 import os
 import re
 from subprocess import call
+from sklearn.metrics import silhouette_samples, silhouette_score
 from diffexpr.py_deseq import py_DESeq2
 from rpy2.rinterface_lib.callbacks import logger as rpy2_logger
 from rpy2.robjects import Formula
@@ -947,7 +948,9 @@ def writeExcelOfClusterGenes(clusters, out_path, gbk,
                              patric_features, patric_pathways_genes, patric_pathways,
                              gene_ko_dict, ko_pathway_dict):
     
+    silhouette = type(clusters[list(clusters.keys())[0]]) == dict
     writer = pd.ExcelWriter(out_path, engine='xlsxwriter')
+    
     for cluster_id, cluster in clusters.items():
         gene_pathways = {}
         for gene_id in cluster:
@@ -955,16 +958,60 @@ def writeExcelOfClusterGenes(clusters, out_path, gbk,
                                                                    patric_pathways_genes, patric_pathways)
             KEGG_gene_pathways = getKEGGPathwaysForLocusTag(gene_id, gene_ko_dict, ko_pathway_dict)
 
-            gene_pathways[gene_id] = {
-                'Gene product': gbk.getGeneInfo(gene_id)['product'][0],
-                'KEGG system': ', '.join(np.unique(np.array(KEGG_gene_pathways['system']))),
-                'KEGG subsystem': ', '.join(np.unique(np.array(KEGG_gene_pathways['subsystem']))),
-                'PATRIC system': ', '.join(np.unique(np.array(PATRIC_gene_pathways['system']))),
-                'PATRIC subsystem': ', '.join(np.unique(np.array(PATRIC_gene_pathways['subsystem'])))
-            }
+            if silhouette:
+                gene_pathways[gene_id] = {
+                    'Gene silhouette': cluster[gene_id],
+                    'Gene product': gbk.getGeneInfo(gene_id)['product'][0],
+                    'KEGG system': ', '.join(np.unique(np.array(KEGG_gene_pathways['system']))),
+                    'KEGG subsystem': ', '.join(np.unique(np.array(KEGG_gene_pathways['subsystem']))),
+                    'PATRIC system': ', '.join(np.unique(np.array(PATRIC_gene_pathways['system']))),
+                    'PATRIC subsystem': ', '.join(np.unique(np.array(PATRIC_gene_pathways['subsystem'])))
+                }
+            else:
+                gene_pathways[gene_id] = {
+                    'Gene product': gbk.getGeneInfo(gene_id)['product'][0],
+                    'KEGG system': ', '.join(np.unique(np.array(KEGG_gene_pathways['system']))),
+                    'KEGG subsystem': ', '.join(np.unique(np.array(KEGG_gene_pathways['subsystem']))),
+                    'PATRIC system': ', '.join(np.unique(np.array(PATRIC_gene_pathways['system']))),
+                    'PATRIC subsystem': ', '.join(np.unique(np.array(PATRIC_gene_pathways['subsystem'])))
+                }
 
         pd.DataFrame(gene_pathways).transpose().to_excel(writer, sheet_name=f'Cluster {cluster_id}')
     writer.save()
+    
+    
+def computeGeneSilhouettes(clusters, data):
+    """
+    Compute gene silhouettes for each gene in clusters
+    """
+    gene_sil = {}
+    genes_in_clusters, cluster_labels = [], []
+    for cluster_id, cluster in clusters.items():
+        genes_in_clusters.extend(cluster)
+        cluster_labels.extend([cluster_id for _ in range(len(cluster))])
+
+    X = data.loc[genes_in_clusters,:].values
+    sil_values = silhouette_samples(X, cluster_labels)
+    
+    return {gene_id: sil_values[i] for i, gene_id in enumerate(genes_in_clusters)}
+
+
+def rankGenesWithinClusters(clusters, data):
+    """
+    Rank genes within each cluster based on their silhouette
+    """
+    
+    gene_sil = computeGeneSilhouettes(clusters, data)
+    
+    ranked_clusters = {}
+    for cluster_id, cluster in clusters.items():
+        sil_dict = {gene_id: gene_sil[gene_id] for gene_id in cluster}
+        ranked_dict = dict(
+            sorted(sil_dict.items(), key=lambda item: item[1], reverse=True)
+        )
+        ranked_clusters[cluster_id] = ranked_dict
+        
+    return ranked_clusters
 
 
 
