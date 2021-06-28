@@ -13,9 +13,9 @@ import Dokdonia_code as Dc
 
 
 # Parsing GBK file and KEGG pathways
-with open('Data/Function_Annotations/KEGG/kegg_pathways.json') as json_file:
+with open('Data/Function_Annotations/KEGG/Dokdonia_KEGG_pathways.json') as json_file:
     kegg_pathways = json.load(json_file)['children']
-kegg_dict = Dc.assignSystemsToEnzymes(kegg_pathways)
+# kegg_dict = Dc.assignSystemsToEnzymes(kegg_pathways)
     
 gbk = Dc.GenomeGBK('Data/DokdoniaMED134.gbk')
 
