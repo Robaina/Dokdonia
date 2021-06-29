@@ -105,7 +105,7 @@ print(f'There a total of {len(genes_without_cluster)} genes not assigned to any 
 # Permutation tests
 ##############################################################################
 
-N = 500000
+N = 50
 res_ids = ['CLUSTER_ALL_GENES_TPM', 'CLUSTER_ALL_GENES_TRANSCRIPT_CELL']
 
 ##############################################################################
