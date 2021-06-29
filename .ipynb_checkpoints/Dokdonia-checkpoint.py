@@ -105,7 +105,7 @@ print(f'There a total of {len(genes_without_cluster)} genes not assigned to any 
 # Permutation tests
 ##############################################################################
 
-N = 50
+N = 500000
 res_ids = ['CLUSTER_ALL_GENES_TPM', 'CLUSTER_ALL_GENES_TRANSCRIPT_CELL']
 
 ##############################################################################
@@ -135,27 +135,27 @@ for res_id in res_ids:
 # Permutation test with PATRIC annotations
 ##############################################################################
 
-patric_features = pd.read_csv('Data/Function_Annotations/PATRIC/Dokdonia_MED134_Craig_PATRIC_genome_feature.csv')
-patric_pathways = pd.read_csv('Data/Function_Annotations/PATRIC/Dokdonia_MED134_PATRIC_pathways.csv')
-patric_pathways_genes = pd.read_csv('Data/Function_Annotations/PATRIC/Dokdonia_MED134_Craig_PATRIC_pathways_genes.csv')
+# patric_features = pd.read_csv('Data/Function_Annotations/PATRIC/Dokdonia_MED134_Craig_PATRIC_genome_feature.csv')
+# patric_pathways = pd.read_csv('Data/Function_Annotations/PATRIC/Dokdonia_MED134_PATRIC_pathways.csv')
+# patric_pathways_genes = pd.read_csv('Data/Function_Annotations/PATRIC/Dokdonia_MED134_Craig_PATRIC_pathways_genes.csv')
 
-# Get dict of patric pathways for each locus tag (gene id)
-gene_list = counts['index'].values
-gene_pathways = {}
-for gene_id in gene_list:
-    gene_pathways[gene_id] = Dc.getPatricPathwaysForLocusTag(gene_id, patric_features,
-                                                             patric_pathways_genes, patric_pathways)
-total_pathway_counts = Dc.getPathwayCountsInGeneList(gene_list, gene_pathways)
+# # Get dict of patric pathways for each locus tag (gene id)
+# gene_list = counts['index'].values
+# gene_pathways = {}
+# for gene_id in gene_list:
+#     gene_pathways[gene_id] = Dc.getPatricPathwaysForLocusTag(gene_id, patric_features,
+#                                                              patric_pathways_genes, patric_pathways)
+# total_pathway_counts = Dc.getPathwayCountsInGeneList(gene_list, gene_pathways)
 
-for res_id in res_ids:
-    clusters = Dc.readFromPickleFile(f'Results/Clusters_{res_id}.pkl')
-    clusters = {k: v for k,v in clusters.items() if k != 'No_cluster_assigned'}
-    p_PATRIC_paths = Dc.runClusterPathwayEnrichmentAnalysisPatric(gene_list, clusters, total_pathway_counts,
-                                                                  gene_pathways,
-                                                                  n_permutations=N,
-                                                                  sort_by_pvalue=True)
+# for res_id in res_ids:
+#     clusters = Dc.readFromPickleFile(f'Results/Clusters_{res_id}.pkl')
+#     clusters = {k: v for k,v in clusters.items() if k != 'No_cluster_assigned'}
+#     p_PATRIC_paths = Dc.runClusterPathwayEnrichmentAnalysisPatric(gene_list, clusters, total_pathway_counts,
+#                                                                   gene_pathways,
+#                                                                   n_permutations=N,
+#                                                                   sort_by_pvalue=True)
 
-    Dc.saveToPickleFile(p_PATRIC_paths, path_to_file=f'Results/p_PATRIC_paths_{N}_{res_id}.pkl')
+#     Dc.saveToPickleFile(p_PATRIC_paths, path_to_file=f'Results/p_PATRIC_paths_{N}_{res_id}.pkl')
 
 
 # os.system("shutdown /s /t 1")

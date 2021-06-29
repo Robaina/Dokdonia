@@ -802,6 +802,7 @@ def plotSystemsAndSubsystemsWebPage(clusters, cluster_data, p_Data_paths,
     """
     p_Data_paths is a dict with keys equal to database name and values equal
     to results.
+    NOTE: Increase tick labels font size!
     """
 
     plt.rcParams.update({'figure.max_open_warning': 0})
