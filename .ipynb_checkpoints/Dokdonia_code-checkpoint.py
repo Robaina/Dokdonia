@@ -771,10 +771,9 @@ def runClusterPathwayEnrichmentAnalysis(gene_list, clusters, KEGG_pathway_counts
 
 
 # Plotting functions
-def plotCluster(pdata, clusters, cluster_id, ax):
-    cluster = clusters[cluster_id]
+def plotClusterData(pdata, cluster, ax=None, cluster_id=None):
     pdata[pdata.index.isin(cluster)].transpose().plot(
-        legend=False, figsize=(15, 18), title=f'{cluster_id}, size={len(cluster)}',
+        legend=False, title=f'{cluster_id}, size={len(cluster)}',
         ax=ax, color='#9a9a9a', linewidth=0.8,
         marker='.', markerfacecolor='#ee9929', markersize=12)
 
@@ -837,8 +836,8 @@ def plotSystemsAndSubsystemsWebPage(clusters, cluster_data, p_Data_paths,
                      for k,v in p_Data[cluster_id][system_type].items()}
             if len(kdata) > plot_first_N:
                 kdata = {k: kdata[k] for k in list(kdata.keys())[:10]}
-            plotCluster(cluster_data[data_normalization], clusters[data_normalization],
-                        cluster_id, ax['A'])
+            plotClusterData(cluster_data[data_normalization], clusters[data_normalization],
+                            ax['A'], cluster_id)
             plotKEGGFrequencies(kdata,
                                 color=color, axis=ax['B'])
         fig.set_figwidth(20)
