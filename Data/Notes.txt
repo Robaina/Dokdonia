@@ -11,5 +11,5 @@ Dataset contains technical replicates which can be removed to balance number of 
 
 
 
-USING MicrobeAnnotator to add gene functions and KEGG ontology:
+USING MicrobeAnnotator to add gene functions and KEGG orthology:
 https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-020-03940-5
