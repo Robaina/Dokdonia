@@ -137,15 +137,18 @@ def writeClustInputFiles(clust_data, path_to_wd='Data'):
         file.write('clust_input.tsv 101 3 4') # Quantile + log2 + z-score
 
 
-def runClust(path_to_wd, out_dir, cluster_tightness=1, normalization_file=None):
+def runClust(path_to_wd, out_dir, cluster_tightness=1,
+             replicates_file=None, normalization_file=None):
     """
     Compute clusters with clust
     clust_data: pandas DataFrame.
     """
     call_list = ['clust', os.path.join(path_to_wd, 'clust_input.tsv'),
-        '-r', os.path.join(path_to_wd, 'clust_replicates.txt'),
         '-t', f'{cluster_tightness}',
         '-o', f'{out_dir}']
+    if replicates_file is not None:
+        call_list.append('-r')
+        call_list.append(os.path.join(path_to_wd, replicates_file))
     if normalization_file is None:
         call_list.append('-n')
         call_list.append(os.path.join(path_to_wd, 'clust_no_normalization.txt'))
@@ -157,11 +160,12 @@ def runClust(path_to_wd, out_dir, cluster_tightness=1, normalization_file=None):
 
 
 def getGeneClusters(clust_data, path_to_wd, out_dir, cluster_tightness=1,
-                    normalization_file=None):
+                    replicates_file=None, normalization_file=None):
     "Returns dict with Clust gene clusters"
     writeClustInputFiles(clust_data, path_to_wd)
     runClust(path_to_wd=path_to_wd,
              out_dir=out_dir, cluster_tightness=cluster_tightness, 
+             replicates_file=replicates_file,
              normalization_file=normalization_file)
 
     clusters = pd.read_csv(

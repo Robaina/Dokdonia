@@ -41,6 +41,7 @@ clust_data_TPM = pd.read_csv('Data/tpm_counts.csv', index_col=0)
 clust_data_TPM = clust_data_TPM[clust_data_TPM.filter(regex='^[^T]+$').columns]
 clust_data_TPM.index.name = 'ID'
 clust_data_TPM.columns = conditions
+clust_data_TPM = clust_data_TPM.dropna(axis=1) # Remove L_18_R4 and D_18_R4
 
 # Cluster genes
 res_id = 'CLUSTER_ALL_GENES_TPM'
@@ -76,6 +77,7 @@ clust_data_TC = n_counts
 clust_data_TC = clust_data_TC[clust_data_TC.filter(regex='^[^T]+$').columns]
 clust_data_TC = clust_data_TC.set_index('index')
 clust_data_TC.index.name = 'ID'
+clust_data_TC = clust_data_TC.dropna(axis=1) # Remove L_18_R4 and D_18_R4
 
 # Cluster genes
 res_id = 'CLUSTER_ALL_GENES_TRANSCRIPT_CELL'
