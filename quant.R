@@ -18,7 +18,7 @@
 library(Rsubread)
 
 rm(list = ls())
-RNAseqDATADIR <- "Data/LauraDokdoniaReadsCleaned"
+RNAseqDATADIR <- "Data/LauraDokdoniaReads/good"
 fastq_files <- dir(RNAseqDATADIR)
 RSUBREAD_INDEX_PATH <- "Data/ref_data"
 forward_pattern <- "_1.fastq.gz"
@@ -37,7 +37,7 @@ getDataIDs <- function() {
 }
 
 alignSequences <- function(conditions, index_path, sam_output_dir,
-  ncores = 14, paired_end = TRUE) {
+  ncores = 14, paired_end = TRUE, output_format="sam") {
   inputfilesfwd <- vector()
   inputfilesrev <- vector()
   output_files <- vector()
@@ -49,7 +49,7 @@ alignSequences <- function(conditions, index_path, sam_output_dir,
        RNAseqDATADIR, paste0(condition, "_2.fastq.gz")))
     }
     output_files <- c(output_files, file.path(
-      sam_output_dir, paste0(condition, ".sam")))
+      sam_output_dir, paste0(condition, paste0(".", output_format))))
   }
   if (paired_end == TRUE) {
     align(index = index_path,
@@ -58,7 +58,7 @@ alignSequences <- function(conditions, index_path, sam_output_dir,
        type = "rna",
        nthreads = ncores,
        output_file = output_files,
-       output_format = "SAM"
+       output_format = output_format
      )
   } else {
     align(index = index_path,
@@ -67,7 +67,7 @@ alignSequences <- function(conditions, index_path, sam_output_dir,
        type = "rna",
        nthreads = ncores,
        output_file = output_files,
-       output_format = "SAM"
+       output_format = output_format
      )
   }
  }
@@ -161,30 +161,31 @@ countReads <- function(sam_dir, gtf_file, output_dir, paired_end = TRUE, ncores=
 }
 
 # Align dokdonia transcripts
-# SAM_OUTPUT_PATH <- "Data/SAM_files"
-# REF_GENOME <- "Data/DokdoniaMED134_full.fasta"
-# index_path <- file.path(RSUBREAD_INDEX_PATH, "MED134")
-# Annotated_GTF <- "Data/DokdoniaMED134.gtf"
-# counts_output <- "Data/DokdoniaCounts"
+SAM_OUTPUT_PATH <- "Data/SAM_files"
+REF_GENOME <- "Data/DokdoniaMED134_full.fasta"
+index_path <- file.path(RSUBREAD_INDEX_PATH, "MED134")
+Annotated_GTF <- "Data/DokdoniaMED134.gtf"
+counts_output <- "Data/DokdoniaCounts"
 
-# buildindex(basename=index_path, reference=REF_GENOME)
-# conditions <- getDataIDs()
-# alignSequences(conditions, index_path, SAM_OUTPUT_PATH, ncores = 10, paired_end = TRUE)
+buildindex(basename=index_path, reference=REF_GENOME)
+conditions <- getDataIDs()
+alignSequences(conditions, index_path, SAM_OUTPUT_PATH, ncores = 10, paired_end = TRUE, output_format = "sam")
 # countReads(SAM_OUTPUT_PATH, Annotated_GTF, counts_output, paired_end = TRUE, ncores = 10)
 
+# ---------------------------------------------------------------------------------
 # Align Sulfolobus solfataricus P2 internal standars
 # The idea here is  to align LauraDokdoniaReadsCleaned files to the Sulfolobus Fasta
 # which contains fragments of gene sequences, it is not a complete genome. Due to
 # this, it doesn't make sense to use the Sulfolobus GBK file to count reads, because
 # the loci in GBK and the ones in the Fasta wouldn't match. Hence, reads must be
 # counted directly from the SAM file, samtools can do that with the index.
-SAM_OUTPUT_PATH <- "Data/Laura_Normalization/SAM_files"
-REF_Standars <- "Data/Laura_Normalization/Internal_Standard_sequences.fasta"
-Annotated_GTF <- "Data/Laura_Normalization/Internal_Standard_sequences.gtf"
-index_path <- file.path(RSUBREAD_INDEX_PATH, "SulfoStandars")
-counts_output <- "Data/Laura_Normalization/SulfoStandardsCounts"
+# SAM_OUTPUT_PATH <- "Data/Laura_Normalization/SAM_files"
+# REF_Standars <- "Data/Laura_Normalization/Internal_Standard_sequences.fasta"
+# Annotated_GTF <- "Data/Laura_Normalization/Internal_Standard_sequences.gtf"
+# index_path <- file.path(RSUBREAD_INDEX_PATH, "SulfoStandars")
+# counts_output <- "Data/Laura_Normalization/SulfoStandardsCounts"
 
-# buildindex(basename=index_path, reference=REF_Standars)
-# conditions <- getDataIDs()
-# alignSequences(conditions, index_path, SAM_OUTPUT_PATH, ncores = 10, paired_end = TRUE)
-countReads(SAM_OUTPUT_PATH, Annotated_GTF, counts_output, paired_end = TRUE, ncores = 10)
+buildindex(basename=index_path, reference=REF_Standars)
+conditions <- getDataIDs()
+alignSequences(conditions, index_path, SAM_OUTPUT_PATH, ncores = 10, paired_end = TRUE)
+#countReads(SAM_OUTPUT_PATH, Annotated_GTF, counts_output, paired_end = TRUE, ncores = 10)
