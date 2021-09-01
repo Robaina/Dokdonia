@@ -1,0 +1,268 @@
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+       Rsubread 2.4.2
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 33 SAM files                                     ||
+||                                                                            ||
+||                           D_10_R1.sam                                      ||
+||                           D_10_R2.sam                                      ||
+||                           D_10_R3.sam                                      ||
+||                           D_18_R1.sam                                      ||
+||                           D_18_R2.sam                                      ||
+||                           D_18_R3_T1.sam                                   ||
+||                           D_18_R3.sam                                      ||
+||                           D_18_R4.sam                                      ||
+||                           D_25_R1.sam                                      ||
+||                           D_25_R2.sam                                      ||
+||                           D_25_R3.sam                                      ||
+||                           D_34_R1.sam                                      ||
+||                           D_34_R2_T1.sam                                   ||
+||                           D_34_R2.sam                                      ||
+||                           D_34_R3.sam                                      ||
+||                           D_34_R4.sam                                      ||
+||                           L_10_R1.sam                                      ||
+||                           L_10_R2.sam                                      ||
+||                           L_10_R3.sam                                      ||
+||                           L_18_R1.sam                                      ||
+||                           L_18_R2.sam                                      ||
+||                           L_18_R3.sam                                      ||
+||                           L_18_R4.sam                                      ||
+||                           L_25_R1.sam                                      ||
+||                           L_25_R2.sam                                      ||
+||                           L_25_R3.sam                                      ||
+||                           L_34_R1.sam                                      ||
+||                           L_34_R2.sam                                      ||
+||                           L_34_R3.sam                                      ||
+||                           L_34_R4_T1.sam                                   ||
+||                           L_34_R4_T2.sam                                   ||
+||                           L_34_R4_T3.sam                                   ||
+||                           L_34_R4.sam                                      ||
+||                                                                            ||
+||              Paired-end : yes                                              ||
+||        Count read pairs : yes                                              ||
+||              Annotation : DokdoniaMED134.gtf (GTF)                         ||
+||      Dir for temp files : .                                                ||
+||                 Threads : 10                                               ||
+||                   Level : meta-feature level                               ||
+||      Multimapping reads : counted                                          ||
+|| Multi-overlapping reads : counted                                          ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\============================================================================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file DokdoniaMED134.gtf ...                                ||
+||    Features : 2886                                                         ||
+||    Meta-features : 2886                                                    ||
+||    Chromosomes/contigs : 1                                                 ||
+||                                                                            ||
+|| Process SAM file D_10_R1.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 16225986                                             ||
+||    Successfully assigned alignments : 13094318 (80,7%)                     ||
+||    Running time : 0,14 minutes                                             ||
+||                                                                            ||
+|| Process SAM file D_10_R2.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 16579650                                             ||
+||    Successfully assigned alignments : 14648159 (88,4%)                     ||
+||    Running time : 0,14 minutes                                             ||
+||                                                                            ||
+|| Process SAM file D_10_R3.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 17847084                                             ||
+||    Successfully assigned alignments : 13046621 (73,1%)                     ||
+||    Running time : 0,15 minutes                                             ||
+||                                                                            ||
+|| Process SAM file D_18_R1.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 24625694                                             ||
+||    Successfully assigned alignments : 20219749 (82,1%)                     ||
+||    Running time : 0,21 minutes                                             ||
+||                                                                            ||
+|| Process SAM file D_18_R2.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 26470052                                             ||
+||    Successfully assigned alignments : 22227116 (84,0%)                     ||
+||    Running time : 0,23 minutes                                             ||
+||                                                                            ||
+|| Process SAM file D_18_R3_T1.sam...                                         ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 18698169                                             ||
+||    Successfully assigned alignments : 15312129 (81,9%)                     ||
+||    Running time : 0,16 minutes                                             ||
+||                                                                            ||
+|| Process SAM file D_18_R3.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 29833689                                             ||
+||    Successfully assigned alignments : 24445174 (81,9%)                     ||
+||    Running time : 0,25 minutes                                             ||
+||                                                                            ||
+|| Process SAM file D_18_R4.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 18099177                                             ||
+||    Successfully assigned alignments : 13782352 (76,1%)                     ||
+||    Running time : 0,15 minutes                                             ||
+||                                                                            ||
+|| Process SAM file D_25_R1.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 26045275                                             ||
+||    Successfully assigned alignments : 23206713 (89,1%)                     ||
+||    Running time : 0,22 minutes                                             ||
+||                                                                            ||
+|| Process SAM file D_25_R2.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 18360532                                             ||
+||    Successfully assigned alignments : 14665754 (79,9%)                     ||
+||    Running time : 0,16 minutes                                             ||
+||                                                                            ||
+|| Process SAM file D_25_R3.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 22225478                                             ||
+||    Successfully assigned alignments : 20292557 (91,3%)                     ||
+||    Running time : 0,19 minutes                                             ||
+||                                                                            ||
+|| Process SAM file D_34_R1.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 17043664                                             ||
+||    Successfully assigned alignments : 14429029 (84,7%)                     ||
+||    Running time : 0,15 minutes                                             ||
+||                                                                            ||
+|| Process SAM file D_34_R2_T1.sam...                                         ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 15951556                                             ||
+||    Successfully assigned alignments : 13465364 (84,4%)                     ||
+||    Running time : 0,14 minutes                                             ||
+||                                                                            ||
+|| Process SAM file D_34_R2.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 30403222                                             ||
+||    Successfully assigned alignments : 25930185 (85,3%)                     ||
+||    Running time : 0,26 minutes                                             ||
+||                                                                            ||
+|| Process SAM file D_34_R3.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 23034176                                             ||
+||    Successfully assigned alignments : 19063990 (82,8%)                     ||
+||    Running time : 0,20 minutes                                             ||
+||                                                                            ||
+|| Process SAM file D_34_R4.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 19790990                                             ||
+||    Successfully assigned alignments : 15254805 (77,1%)                     ||
+||    Running time : 0,17 minutes                                             ||
+||                                                                            ||
+|| Process SAM file L_10_R1.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 13769008                                             ||
+||    Successfully assigned alignments : 11147900 (81,0%)                     ||
+||    Running time : 0,12 minutes                                             ||
+||                                                                            ||
+|| Process SAM file L_10_R2.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 11480019                                             ||
+||    Successfully assigned alignments : 8626286 (75,1%)                      ||
+||    Running time : 0,10 minutes                                             ||
+||                                                                            ||
+|| Process SAM file L_10_R3.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 16048907                                             ||
+||    Successfully assigned alignments : 13140600 (81,9%)                     ||
+||    Running time : 0,14 minutes                                             ||
+||                                                                            ||
+|| Process SAM file L_18_R1.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 26635478                                             ||
+||    Successfully assigned alignments : 19901721 (74,7%)                     ||
+||    Running time : 0,22 minutes                                             ||
+||                                                                            ||
+|| Process SAM file L_18_R2.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 13281208                                             ||
+||    Successfully assigned alignments : 9857118 (74,2%)                      ||
+||    Running time : 0,11 minutes                                             ||
+||                                                                            ||
+|| Process SAM file L_18_R3.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 18428749                                             ||
+||    Successfully assigned alignments : 12952101 (70,3%)                     ||
+||    Running time : 0,15 minutes                                             ||
+||                                                                            ||
+|| Process SAM file L_18_R4.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 17000495                                             ||
+||    Successfully assigned alignments : 12291046 (72,3%)                     ||
+||    Running time : 0,14 minutes                                             ||
+||                                                                            ||
+|| Process SAM file L_25_R1.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 20429285                                             ||
+||    Successfully assigned alignments : 16822067 (82,3%)                     ||
+||    Running time : 0,17 minutes                                             ||
+||                                                                            ||
+|| Process SAM file L_25_R2.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 20237901                                             ||
+||    Successfully assigned alignments : 16259697 (80,3%)                     ||
+||    Running time : 0,17 minutes                                             ||
+||                                                                            ||
+|| Process SAM file L_25_R3.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 19128534                                             ||
+||    Successfully assigned alignments : 15292096 (79,9%)                     ||
+||    Running time : 0,16 minutes                                             ||
+||                                                                            ||
+|| Process SAM file L_34_R1.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 24419670                                             ||
+||    Successfully assigned alignments : 19455489 (79,7%)                     ||
+||    Running time : 0,21 minutes                                             ||
+||                                                                            ||
+|| Process SAM file L_34_R2.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 15865990                                             ||
+||    Successfully assigned alignments : 13241135 (83,5%)                     ||
+||    Running time : 0,14 minutes                                             ||
+||                                                                            ||
+|| Process SAM file L_34_R3.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 17006344                                             ||
+||    Successfully assigned alignments : 13083908 (76,9%)                     ||
+||    Running time : 0,15 minutes                                             ||
+||                                                                            ||
+|| Process SAM file L_34_R4_T1.sam...                                         ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 20849360                                             ||
+||    Successfully assigned alignments : 17555140 (84,2%)                     ||
+||    Running time : 0,18 minutes                                             ||
+||                                                                            ||
+|| Process SAM file L_34_R4_T2.sam...                                         ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 20574231                                             ||
+||    Successfully assigned alignments : 17165620 (83,4%)                     ||
+||    Running time : 0,18 minutes                                             ||
+||                                                                            ||
+|| Process SAM file L_34_R4_T3.sam...                                         ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 18852902                                             ||
+||    Successfully assigned alignments : 15770485 (83,7%)                     ||
+||    Running time : 0,16 minutes                                             ||
+||                                                                            ||
+|| Process SAM file L_34_R4.sam...                                            ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 28977354                                             ||
+||    Successfully assigned alignments : 24591202 (84,9%)                     ||
+||    Running time : 0,25 minutes                                             ||
+||                                                                            ||
+|| Write the final count table.                                               ||
+|| Write the read assignment summary.                                         ||
+||                                                                            ||
+\\============================================================================//
+

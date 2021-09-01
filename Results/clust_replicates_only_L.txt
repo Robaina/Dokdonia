@@ -1,4 +1,0 @@
-clust_input.tsv, T_10, L_10_R1,L_10_R2,L_10_R3
-clust_input.tsv, T_18, L_18_R1,L_18_R2,L_18_R3
-clust_input.tsv, T_25, L_25_R1,L_25_R2,L_25_R3
-clust_input.tsv, T_34, L_34_R1,L_34_R2,L_34_R3,L_34_R4

@@ -1,0 +1,107 @@
+dok00010             Glycolysis / Gluconeogenesis - Dokdonia sp. MED134 
+dok00020             Citrate cycle (TCA cycle) - Dokdonia sp. MED134 
+dok00030             Pentose phosphate pathway - Dokdonia sp. MED134 
+dok00040             Pentose and glucuronate interconversions - Dokdonia sp. MED134 
+dok00051             Fructose and mannose metabolism - Dokdonia sp. MED134 
+dok00052             Galactose metabolism - Dokdonia sp. MED134 
+dok00053             Ascorbate and aldarate metabolism - Dokdonia sp. MED134 
+dok00061             Fatty acid biosynthesis - Dokdonia sp. MED134 
+dok00071             Fatty acid degradation - Dokdonia sp. MED134 
+dok00072             Synthesis and degradation of ketone bodies - Dokdonia sp. MED134 
+dok00130             Ubiquinone and other terpenoid-quinone biosynthesis - Dokdonia sp. MED134 
+dok00190             Oxidative phosphorylation - Dokdonia sp. MED134 
+dok00220             Arginine biosynthesis - Dokdonia sp. MED134 
+dok00230             Purine metabolism - Dokdonia sp. MED134 
+dok00240             Pyrimidine metabolism - Dokdonia sp. MED134 
+dok00250             Alanine, aspartate and glutamate metabolism - Dokdonia sp. MED134 
+dok00260             Glycine, serine and threonine metabolism - Dokdonia sp. MED134 
+dok00261             Monobactam biosynthesis - Dokdonia sp. MED134 
+dok00270             Cysteine and methionine metabolism - Dokdonia sp. MED134 
+dok00280             Valine, leucine and isoleucine degradation - Dokdonia sp. MED134 
+dok00281             Geraniol degradation - Dokdonia sp. MED134 
+dok00290             Valine, leucine and isoleucine biosynthesis - Dokdonia sp. MED134 
+dok00300             Lysine biosynthesis - Dokdonia sp. MED134 
+dok00310             Lysine degradation - Dokdonia sp. MED134 
+dok00330             Arginine and proline metabolism - Dokdonia sp. MED134 
+dok00340             Histidine metabolism - Dokdonia sp. MED134 
+dok00350             Tyrosine metabolism - Dokdonia sp. MED134 
+dok00360             Phenylalanine metabolism - Dokdonia sp. MED134 
+dok00361             Chlorocyclohexane and chlorobenzene degradation - Dokdonia sp. MED134 
+dok00362             Benzoate degradation - Dokdonia sp. MED134 
+dok00364             Fluorobenzoate degradation - Dokdonia sp. MED134 
+dok00380             Tryptophan metabolism - Dokdonia sp. MED134 
+dok00400             Phenylalanine, tyrosine and tryptophan biosynthesis - Dokdonia sp. MED134 
+dok00401             Novobiocin biosynthesis - Dokdonia sp. MED134 
+dok00410             beta-Alanine metabolism - Dokdonia sp. MED134 
+dok00430             Taurine and hypotaurine metabolism - Dokdonia sp. MED134 
+dok00450             Selenocompound metabolism - Dokdonia sp. MED134 
+dok00460             Cyanoamino acid metabolism - Dokdonia sp. MED134 
+dok00471             D-Glutamine and D-glutamate metabolism - Dokdonia sp. MED134 
+dok00473             D-Alanine metabolism - Dokdonia sp. MED134 
+dok00480             Glutathione metabolism - Dokdonia sp. MED134 
+dok00500             Starch and sucrose metabolism - Dokdonia sp. MED134 
+dok00511             Other glycan degradation - Dokdonia sp. MED134 
+dok00520             Amino sugar and nucleotide sugar metabolism - Dokdonia sp. MED134 
+dok00521             Streptomycin biosynthesis - Dokdonia sp. MED134 
+dok00523             Polyketide sugar unit biosynthesis - Dokdonia sp. MED134 
+dok00525             Acarbose and validamycin biosynthesis - Dokdonia sp. MED134 
+dok00540             Lipopolysaccharide biosynthesis - Dokdonia sp. MED134 
+dok00541             O-Antigen nucleotide sugar biosynthesis - Dokdonia sp. MED134 
+dok00550             Peptidoglycan biosynthesis - Dokdonia sp. MED134 
+dok00561             Glycerolipid metabolism - Dokdonia sp. MED134 
+dok00564             Glycerophospholipid metabolism - Dokdonia sp. MED134 
+dok00592             alpha-Linolenic acid metabolism - Dokdonia sp. MED134 
+dok00620             Pyruvate metabolism - Dokdonia sp. MED134 
+dok00623             Toluene degradation - Dokdonia sp. MED134 
+dok00625             Chloroalkane and chloroalkene degradation - Dokdonia sp. MED134 
+dok00630             Glyoxylate and dicarboxylate metabolism - Dokdonia sp. MED134 
+dok00633             Nitrotoluene degradation - Dokdonia sp. MED134 
+dok00640             Propanoate metabolism - Dokdonia sp. MED134 
+dok00643             Styrene degradation - Dokdonia sp. MED134 
+dok00650             Butanoate metabolism - Dokdonia sp. MED134 
+dok00660             C5-Branched dibasic acid metabolism - Dokdonia sp. MED134 
+dok00670             One carbon pool by folate - Dokdonia sp. MED134 
+dok00680             Methane metabolism - Dokdonia sp. MED134 
+dok00730             Thiamine metabolism - Dokdonia sp. MED134 
+dok00740             Riboflavin metabolism - Dokdonia sp. MED134 
+dok00750             Vitamin B6 metabolism - Dokdonia sp. MED134 
+dok00760             Nicotinate and nicotinamide metabolism - Dokdonia sp. MED134 
+dok00770             Pantothenate and CoA biosynthesis - Dokdonia sp. MED134 
+dok00780             Biotin metabolism - Dokdonia sp. MED134 
+dok00785             Lipoic acid metabolism - Dokdonia sp. MED134 
+dok00790             Folate biosynthesis - Dokdonia sp. MED134 
+dok00860             Porphyrin and chlorophyll metabolism - Dokdonia sp. MED134 
+dok00900             Terpenoid backbone biosynthesis - Dokdonia sp. MED134 
+dok00906             Carotenoid biosynthesis - Dokdonia sp. MED134 
+dok00910             Nitrogen metabolism - Dokdonia sp. MED134 
+dok00920             Sulfur metabolism - Dokdonia sp. MED134 
+dok00970             Aminoacyl-tRNA biosynthesis - Dokdonia sp. MED134 
+dok01040             Biosynthesis of unsaturated fatty acids - Dokdonia sp. MED134 
+dok01100             Metabolic pathways - Dokdonia sp. MED134 
+dok01110             Biosynthesis of secondary metabolites - Dokdonia sp. MED134 
+dok01120             Microbial metabolism in diverse environments - Dokdonia sp. MED134 
+dok01200             Carbon metabolism - Dokdonia sp. MED134 
+dok01210             2-Oxocarboxylic acid metabolism - Dokdonia sp. MED134 
+dok01212             Fatty acid metabolism - Dokdonia sp. MED134 
+dok01220             Degradation of aromatic compounds - Dokdonia sp. MED134 
+dok01230             Biosynthesis of amino acids - Dokdonia sp. MED134 
+dok01240             Biosynthesis of cofactors - Dokdonia sp. MED134 
+dok01501             beta-Lactam resistance - Dokdonia sp. MED134 
+dok01502             Vancomycin resistance - Dokdonia sp. MED134 
+dok01503             Cationic antimicrobial peptide (CAMP) resistance - Dokdonia sp. MED134 
+dok02010             ABC transporters - Dokdonia sp. MED134 
+dok02020             Two-component system - Dokdonia sp. MED134 
+dok02024             Quorum sensing - Dokdonia sp. MED134 
+dok02030             Bacterial chemotaxis - Dokdonia sp. MED134 
+dok02040             Flagellar assembly - Dokdonia sp. MED134 
+dok03010             Ribosome - Dokdonia sp. MED134 
+dok03018             RNA degradation - Dokdonia sp. MED134 
+dok03020             RNA polymerase - Dokdonia sp. MED134 
+dok03030             DNA replication - Dokdonia sp. MED134 
+dok03060             Protein export - Dokdonia sp. MED134 
+dok03070             Bacterial secretion system - Dokdonia sp. MED134 
+dok03410             Base excision repair - Dokdonia sp. MED134 
+dok03420             Nucleotide excision repair - Dokdonia sp. MED134 
+dok03430             Mismatch repair - Dokdonia sp. MED134 
+dok03440             Homologous recombination - Dokdonia sp. MED134 
+dok04122             Sulfur relay system - Dokdonia sp. MED134 
