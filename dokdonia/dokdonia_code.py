@@ -2,39 +2,18 @@ from Bio import SeqIO
 import pandas as pd
 import numpy as np
 import random
-import pickle
 import os
 import re
 from subprocess import call
-from sklearn.metrics import silhouette_samples, silhouette_score
+from sklearn.metrics import silhouette_samples
 from diffexpr.py_deseq import py_DESeq2
 from rpy2.rinterface_lib.callbacks import logger as rpy2_logger
 from rpy2.robjects import Formula
 from matplotlib import pyplot as plt
 import logging
 
-
 from staticinteract import StaticInteract, DropDownWidget, RangeWidget
 rpy2_logger.setLevel(logging.ERROR)
-
-
-def saveToPickleFile(python_object, path_to_file='object.pkl'):
-    """
-    Save python object to pickle file
-    """
-    out_file = open(path_to_file,'wb')
-    pickle.dump(python_object, out_file)
-    out_file.close()
-    
-    
-def readFromPickleFile(path_to_file='object.pkl'):
-    """
-    Load python object from pickle file.
-    Returns python object.
-    """
-    in_file = open(path_to_file,'rb')
-    python_object = pickle.load(in_file)
-    return python_object
 
 
 class GenomeGBK:

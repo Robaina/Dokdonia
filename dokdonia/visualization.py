@@ -5,19 +5,30 @@ import re
 
 from staticinteract import StaticInteract, DropDownWidget, RangeWidget
 
-class PathwayPlotter:
-    """
-    Methods  to plot pathway representation results
-    """
-    def __init(self):
-        pass
 
 
 def extractKoPathwayName(Ko_str):
     return re.sub('\[.*?\]', '', Ko_str).strip()
 
+def plotClusters(pdata, clusters):
+    n_rows = int(np.ceil(len(clusters) / 2))
+    fig, axes = plt.subplots(nrows=n_rows, ncols=2)
+    plt.subplots_adjust(hspace=0.3)
+    coords = list(np.ndindex((n_rows, 2)))
+    for n, cluster_id in enumerate(clusters):
+        i, j = coords[n]
+        try:
+            axis = axes[i, j]
+        except Exception:
+            axis = axes[j]
+        cluster = clusters[cluster_id]
+        pdata[pdata.index.isin(cluster)].transpose().plot(
+            legend=False, figsize=(15, 18), title=f'{cluster_id}, size={len(cluster)}',
+            ax=axis, color='#9a9a9a', linewidth=0.8,
+            marker='.', markerfacecolor='#ee9929', markersize=12)
+    plt.show()
 
-# Plotting functions
+    
 def plotClusterData(pdata, cluster, ax=None, cluster_id=None):
     pdata[pdata.index.isin(cluster)].transpose().plot(
         legend=False, title=f'{cluster_id}, size={len(cluster)}',
