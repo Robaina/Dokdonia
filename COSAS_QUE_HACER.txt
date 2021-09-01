@@ -1,0 +1,15 @@
+1. Ver si los genes DE con L/D están en algún cluster, comentar su patrón con la temperatura. Cómo le afecta la temperatura a la rodopsina?
+
+2. Eliminar los genes DE L/D del dataset y tratar las condiciones L/D como replicates para juntar todos los datos. Hacer el análisis de permutación con el agregado.
+
+3. Hacer figura para el paper: stacked plot + clústeres agregados a la derecha.
+
+4. Mirar qué enzimas en los clústeres tienen rango de temperaturas en BRENDA para identificar otros patrones similares a la que incorpora NH3.
+
+5. Tener en cuenta que la fuente de carbono fue la Alanina, y que estaba en concentraciones superiores al minimo para observar cambios entre L y D (según trabajo de Kim). Palovaara et al, también cultivó Dokdonia con Alanina.
+
+6. Mirar si las enzimas anapleróticas siguen algún patrón, como la PEP carboxykinase que sigue el C6. En este último caso, PEP carboxykinase interviene en la gluconeogénesis, necesaria porque la fuente de carbono es la Alanina.
+
+7. Mirar la conexión entre el oxígeno y el Two-component system, a más temperatura menos oxígeno disuelto, y parece que es necesario.
+
+8. Muchos más ribosomas podrían desbalancear la estequiometría de N y P.

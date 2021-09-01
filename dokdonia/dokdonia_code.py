@@ -12,8 +12,9 @@ from rpy2.rinterface_lib.callbacks import logger as rpy2_logger
 from rpy2.robjects import Formula
 from matplotlib import pyplot as plt
 import logging
-from ipywidgets_New.interact import StaticInteract
-from ipywidgets_New.widgets import DropDownWidget, RangeWidget
+
+
+from staticinteract import StaticInteract, DropDownWidget, RangeWidget
 rpy2_logger.setLevel(logging.ERROR)
 
 
