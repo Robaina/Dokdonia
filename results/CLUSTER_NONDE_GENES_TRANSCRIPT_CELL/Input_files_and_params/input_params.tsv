@@ -1,6 +1,6 @@
 Methods	[['k-means']]
 K values (Ks)	[4, 8, 12, 16, 20]
-Tightness weight	4.0
+Tightness weight	3.0
 Q3s outliers threshold	2.0
 Genes included if at least in datasets	1
 Filtering: Data value threshold	-inf

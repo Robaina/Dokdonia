@@ -1,5 +1,0 @@
-Para ejecutar Pathway Tools:
-Ir a to root the usuario y pathwaytools/pathwaytools
-
-Para acceder al database de Dokdonia tienes que ir a:
-File > Available Databases y seleccionar Dokdonia.
