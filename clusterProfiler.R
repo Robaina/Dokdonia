@@ -27,8 +27,8 @@ counts_path <- paste0(work_dir, "data/DokdoniaCounts.csv")
 total_genes <- read.delim(counts_path, sep=",", header=FALSE)[-1, 1]
 
 # clusters_path <- paste0(work_dir, "results/CLUSTER_ALL_GENES_TRANSCRIPT_CELL/Clusters_Objects.tsv")
-# clusters_path <- paste0(work_dir, "results/CLUSTER_NONDE_GENES_TRANSCRIPT_CELL/Clusters_Objects.tsv")
-clusters_path <- paste0(work_dir, "results/CLUSTER_ALL_GENES_TPM/Clusters_Objects.tsv")
+clusters_path <- paste0(work_dir, "results/CLUSTER_NONDE_GENES_TRANSCRIPT_CELL/Clusters_Objects.tsv")
+# clusters_path <- paste0(work_dir, "results/CLUSTER_ALL_GENES_TPM/Clusters_Objects.tsv")
 clusters <- read.delim(clusters_path, sep="\t", header=FALSE)
 
 cluster_genes <- lapply(clusters[-(1:2),], function(cluster) {cluster[cluster != ""];})
@@ -43,7 +43,7 @@ cp_ora <- compareCluster(
   geneClusters = cluster_genes, 
   fun = "enrichKEGG", # ORA function to apply to each cluster
   organism = 'dok',
-  pvalueCutoff = 0.05,
+  pvalueCutoff = 0.1,
   qvalueCutoff = 1,
   universe = universe,
   minGSSize = 5,
@@ -51,7 +51,7 @@ cp_ora <- compareCluster(
 )
 
 # Export results for all clusters
-write.csv(cp_ora@compareClusterResult, "enrichment_results/results_all_genes_TPM.csv", row.names=FALSE)
+write.csv(cp_ora@compareClusterResult, "enrichment_results/results_non_DE_genes.csv", row.names=FALSE)
 
 # Visualization
 # urls <- vector()
