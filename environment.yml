@@ -1,0 +1,17 @@
+name: dokdonia
+channels:
+  - defaults
+  - bioconda
+  - conda-forge
+dependencies:
+  - python >= 3.9
+  - ipykernel
+  - biopython
+  - numpy
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - r-base
+  - tzlocal
+  - rpy2
+  - bioconductor-deseq2

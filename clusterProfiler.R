@@ -23,8 +23,8 @@ options(clusterProfiler.download.method = "wget")
 work_dir <- "/home/robaina/Documents/Aquifex/Dokdonia/"
 
 
-counts_path <- paste0(work_dir, "data/DokdoniaCounts.csv")
-total_genes <- read.delim(counts_path, sep=",", header=FALSE)[-1, 1]
+# counts_path <- paste0(work_dir, "data/DokdoniaCounts.csv")
+# total_genes <- read.delim(counts_path, sep=",", header=FALSE)[-1, 1]
 
 # clusters_path <- paste0(work_dir, "results/CLUSTER_ALL_GENES_TRANSCRIPT_CELL/Clusters_Objects.tsv")
 clusters_path <- paste0(work_dir, "results/CLUSTER_NONDE_GENES_TRANSCRIPT_CELL/Clusters_Objects.tsv")
