@@ -6,15 +6,14 @@ channels:
 dependencies:
   - python >= 3.9
   - pip
-  - biopython
-  - numpy
-  - pandas
-  - matplotlib
-  - scikit-learn
   - r-base
   - tzlocal
-  - rpy2
-  - bioconductor-deseq2
   - pip:
+    - numpy
+    - matplotlib
+    - biopython
+    - rpy2
+    - scikit-learn
+    - pandas
     - clust
     - ipykernel
