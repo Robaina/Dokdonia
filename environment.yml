@@ -5,7 +5,7 @@ channels:
   - conda-forge
 dependencies:
   - python >= 3.9
-  - ipykernel
+  - pip
   - biopython
   - numpy
   - pandas
@@ -15,3 +15,6 @@ dependencies:
   - tzlocal
   - rpy2
   - bioconductor-deseq2
+  - pip:
+    - clust
+    - ipykernel
