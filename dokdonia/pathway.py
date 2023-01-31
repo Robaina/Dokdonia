@@ -56,7 +56,7 @@ def show_pathways_in_ranked_genes(
     gbk: GenomeGBK,
     gene_pathways: dict,
     gene_systems: dict,
-    n: int = 10,
+    n: int = None,
 ) -> pd.DataFrame:
     """Show KEGG pathays and ranked value for ranked gene dict
 
@@ -67,6 +67,8 @@ def show_pathways_in_ranked_genes(
     Returns:
         pd.DataFrame: _description_
     """
+    if n is None:
+        n = len(ranked_genes)
     ranked_pathways = {
         "gene_id": [],
         "product": [],
