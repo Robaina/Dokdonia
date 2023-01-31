@@ -51,6 +51,43 @@ class GenomeGBK:
             raise ValueError(f"Enzyme {ec_number} not found in GBK")
 
 
+def show_pathways_in_ranked_genes(
+    ranked_genes: dict,
+    gbk: GenomeGBK,
+    gene_pathways: dict,
+    gene_systems: dict,
+    n: int = 10,
+) -> pd.DataFrame:
+    """Show KEGG pathays and ranked value for ranked gene dict
+
+    Args:
+        ranked_genes (dict): _description_
+        n (int, optional): _description_. Defaults to 10.
+
+    Returns:
+        pd.DataFrame: _description_
+    """
+    ranked_pathways = {
+        "gene_id": [],
+        "product": [],
+        "subsystem": [],
+        "system": [],
+        "value": [],
+    }
+    for gene_id, value in list(ranked_genes.items())[:n]:
+        gbk_product = gbk.getGeneInfo(gene_id)["product"][0]
+        subsystem = (
+            gene_pathways[gene_id] if gene_id in gene_pathways else "Unspecified"
+        )
+        system = gene_systems[gene_id] if gene_id in gene_systems else "Unspecified"
+        ranked_pathways["gene_id"].append(gene_id)
+        ranked_pathways["product"].append(gbk_product)
+        ranked_pathways["subsystem"].append(subsystem)
+        ranked_pathways["system"].append(system)
+        ranked_pathways["value"].append(value)
+    return pd.DataFrame.from_dict(ranked_pathways).set_index("gene_id")
+
+
 def downloadKEGGpathwaysForID(KEGG_entry_ID: str) -> dict:
     """
     KEGG_estry_ID: genome entry ID or organism code within KEGG's database.
