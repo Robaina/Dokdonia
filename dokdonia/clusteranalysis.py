@@ -126,7 +126,7 @@ def rankGenesWithinClusters(clusters, data, method: str = "silhouette"):
     if "sil" in method:
         return rankGenesWithinClustersUsingSilhouette(clusters, data)
     else:
-        return
+        return rankGenesWithinClustersAverageExpression(clusters, data)
 
 
 def rankGenesWithinClustersUsingSilhouette(clusters, data):
