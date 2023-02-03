@@ -1,6 +1,7 @@
 #!/usr/bin/env Rscript
 args <- commandArgs(trailingOnly=TRUE)
 condition <- args[1]
+clusters_path <- args[2]
 
 library(clusterProfiler)
 options(clusterProfiler.download.method = "wget")
@@ -8,7 +9,7 @@ options(clusterProfiler.download.method = "wget")
 
 work_dir <- "/home/robaina/Documents/Aquifex/Dokdonia/"
 
-clusters_path <- paste0(work_dir, "results/", condition, "/Clusters_Objects.tsv")
+# clusters_path <- paste0(work_dir, "results/", condition, "/Clusters_Objects.tsv")
 clusters <- read.delim(clusters_path, sep="\t", header=FALSE)
 
 cluster_genes <- lapply(clusters[-(1:2),], function(cluster) {cluster[cluster != ""];})
