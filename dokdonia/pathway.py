@@ -90,6 +90,37 @@ def show_pathways_in_ranked_genes(
     return pd.DataFrame.from_dict(ranked_pathways).set_index("gene_id")
 
 
+def add_pathways_to_deseq_df(
+    deseq_result: pd.DataFrame,
+    gbk: GenomeGBK,
+    gene_pathways: dict,
+    gene_systems: dict,
+) -> pd.DataFrame:
+    """Add KEGG pathays to deseq results"""
+    pathways = {
+        "gene_id": [],
+        "product": [],
+        "subsystem": [],
+        "system": [],
+    }
+    for i, row in deseq_result.iterrows():
+        gene_id = row.name
+        gbk_product = gbk.getGeneInfo(gene_id)["product"][0]
+        subsystem = (
+            gene_pathways[gene_id] if gene_id in gene_pathways else "Unspecified"
+        )
+        system = gene_systems[gene_id] if gene_id in gene_systems else "Unspecified"
+        pathways["gene_id"].append(gene_id)
+        pathways["product"].append(gbk_product)
+        pathways["subsystem"].append(subsystem)
+        pathways["system"].append(system)
+    for k, v in pathways.items():
+        deseq_result[k] = v
+    df = deseq_result.drop(["index", "gene_id"], axis=1)
+    df.index.name = "gene_id"
+    return df
+
+
 def downloadKEGGpathwaysForID(KEGG_entry_ID: str) -> dict:
     """
     KEGG_estry_ID: genome entry ID or organism code within KEGG's database.
