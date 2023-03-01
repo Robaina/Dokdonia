@@ -1,18 +1,17 @@
 #!/usr/bin/env Rscript
-args <- commandArgs(trailingOnly=TRUE)
+args <- commandArgs(trailingOnly = TRUE)
 condition <- args[1]
 clusters_path <- args[2]
+results_dir <- args[3]
 
 library(clusterProfiler)
 options(clusterProfiler.download.method = "wget")
 
 
-work_dir <- "/home/robaina/Documents/Aquifex/Dokdonia/"
-
-# clusters_path <- paste0(work_dir, "results/", condition, "/Clusters_Objects.tsv")
-clusters <- read.delim(clusters_path, sep="\t", header=FALSE)
-
-cluster_genes <- lapply(clusters[-(1:2),], function(cluster) {cluster[cluster != ""];})
+clusters <- read.delim(clusters_path, sep = "\t", header = FALSE)
+cluster_genes <- lapply(clusters[-(1:2), ], function(cluster) {
+  cluster[cluster != ""]
+})
 universe <- unlist(cluster_genes)
 
 # Tutorial:
@@ -22,7 +21,7 @@ universe <- unlist(cluster_genes)
 #  geneList is a named vector containing log2 fold changes
 #  red genes in KEGG are DE genes in our dataset
 
-# TODO: 
+# TODO:
 # """
 # 1. Create nested list of clusters
 # 2. Add one cluster with all genes not included in any other cluster
@@ -31,9 +30,9 @@ universe <- unlist(cluster_genes)
 # """
 
 cp_ora <- compareCluster(
-  geneClusters = cluster_genes, 
+  geneClusters = cluster_genes,
   fun = "enrichKEGG", # ORA function to apply to each cluster
-  organism = 'dok',
+  organism = "dok",
   pvalueCutoff = 0.1,
   qvalueCutoff = 1,
   universe = universe,
@@ -42,4 +41,8 @@ cp_ora <- compareCluster(
 )
 
 # Export results for all clusters
-write.csv(cp_ora@compareClusterResult, paste0("results/enrichment_results/results_", condition, ".csv"), row.names=FALSE)
+write.csv(
+  cp_ora@compareClusterResult,
+  paste0(results_dir, "/results_", condition, ".csv"),
+  row.names = FALSE
+)
