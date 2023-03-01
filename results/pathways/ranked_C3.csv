@@ -1,9 +1,49 @@
 gene_id,product,subsystem,system,value
-MED134_11371,"molybdopterin oxidoreductase, iron-sulfur binding subunit",Unspecified,Unspecified,33111.7164780055
-MED134_11401,"cytochrome c oxidase, subunit II",['00190 Oxidative phosphorylation [PATH:dok00190]'],['09102 Energy metabolism'],9632.087575361616
-MED134_05359,ATP-dependent Clp protease,Unspecified,Unspecified,9137.936012949633
-MED134_12621,fatty acid desaturase,Unspecified,Unspecified,8260.266074741961
-MED134_07706,dihydrolipoyllysine-residue succinyltransferase component of 2-oxoglutarate dehydrogenase complex,"['00020 Citrate cycle (TCA cycle) [PATH:dok00020]', '00310 Lysine degradation [PATH:dok00310]', '00380 Tryptophan metabolism [PATH:dok00380]']","['09101 Carbohydrate metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism']",6650.554051804588
-MED134_11976,2-isopropylmalate synthase,"['00620 Pyruvate metabolism [PATH:dok00620]', '00290 Valine, leucine and isoleucine biosynthesis [PATH:dok00290]']","['09101 Carbohydrate metabolism', '09105 Amino acid metabolism']",5834.59313308484
-MED134_11516,hypothetical protein,Unspecified,Unspecified,5406.432684495412
-MED134_01450,valine-tRNA ligase,['00970 Aminoacyl-tRNA biosynthesis [PATH:dok00970]'],['09122 Translation'],5080.654314009785
+MED134_02425,DNA-directed RNA polymerase beta' chain,['03020 RNA polymerase [PATH:dok03020]'],['09121 Transcription'],37575.44449798916
+MED134_02420,DNA-directed RNA polymerase beta chain,['03020 RNA polymerase [PATH:dok03020]'],['09121 Transcription'],35879.08362966403
+MED134_02950,30S ribosomal protein S1,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],31791.69289250141
+MED134_00540,50S ribosomal protein L13,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],16723.109724162718
+MED134_02405,50S ribosomal protein L1,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],16266.291179667196
+MED134_12441,30S ribosomal protein S3,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],16175.481736748698
+MED134_10855,cold shock domain protein CspD,Unspecified,Unspecified,13868.200218416216
+MED134_12416,50S ribosomal protein L4,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],13279.20961050126
+MED134_02415,50S ribosomal protein L7/L12,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],12727.829092640564
+MED134_08871,metallopeptidase family M36,Unspecified,Unspecified,12682.943675720864
+MED134_00635,hypothetical protein,Unspecified,Unspecified,12330.606800941176
+MED134_07661,30S ribosomal protein S16,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],11512.935898774684
+MED134_12391,30S ribosomal protein S12,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],10301.632593279266
+MED134_10371,DNA-binding protein HU,Unspecified,Unspecified,10224.156767581682
+MED134_00640,50S ribosomal protein L32,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],10086.68091643221
+MED134_05104,30S ribosomal protein S6,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],9549.46754691614
+MED134_10376,"ribonuclease, Rne/Rng family",Unspecified,Unspecified,9243.888103773324
+MED134_05109,30S ribosomal protein S18,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],8834.44842626377
+MED134_12421,50S ribosomal protein L23,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],8821.144354021217
+MED134_12436,50S ribosomal protein L22,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],8660.046918052625
+MED134_04064,50S ribosomal protein L34,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],8319.751897666034
+MED134_08401,"50S ribosomal protein L25, Ctc-form",['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],7773.795868009391
+MED134_02395,transcriptional antitermination factor NusG,Unspecified,Unspecified,7672.362282744017
+MED134_01890,hypothetical protein,Unspecified,Unspecified,6531.148560512381
+MED134_03869,50S ribosomal protein L31,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],6521.653886035628
+MED134_02245,50S ribosomal protein L28,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],6516.76565076951
+MED134_12451,50S ribosomal protein L29,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],5838.759961863095
+MED134_01005,translation initiation factor IF-3,Unspecified,Unspecified,5565.781510445504
+MED134_01385,hypothetical protein,Unspecified,Unspecified,5560.432906593584
+MED134_03589,methylmalonyl-CoA mutase,Unspecified,Unspecified,5518.878853736575
+MED134_14156,prolyl-tRNA synthetase,['00970 Aminoacyl-tRNA biosynthesis [PATH:dok00970]'],['09122 Translation'],5381.017431351477
+MED134_01655,30S ribosomal protein S15,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],5260.943971227611
+MED134_12516,translation initiation factor IF-1,Unspecified,Unspecified,5239.753658945905
+MED134_12491,50S ribosomal protein L18,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],5218.858480061473
+MED134_03065,hypothetical protein,Unspecified,Unspecified,4734.956813552192
+MED134_00820,hypothetical protein,Unspecified,Unspecified,4715.028031718425
+MED134_12476,30S ribosomal protein S14,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],4675.235534286124
+MED134_08071,hypothetical protein,Unspecified,Unspecified,4574.891433647262
+MED134_02390,preprotein translocase subunit SecE,"['03060 Protein export [PATH:dok03060]', '03070 Bacterial secretion system [PATH:dok03070]', '02024 Quorum sensing [PATH:dok02024]']","['09123 Folding, sorting and degradation', '09131 Membrane transport', '09145 Cellular community - prokaryotes']",4249.196349234971
+MED134_10865,aspartyl-tRNA synthetase,['00970 Aminoacyl-tRNA biosynthesis [PATH:dok00970]'],['09122 Translation'],4206.886148943624
+MED134_10056,carbonic anhydrase,['00910 Nitrogen metabolism [PATH:dok00910]'],['09102 Energy metabolism'],4184.187653150151
+MED134_14411,IMP dehydrogenase,['00230 Purine metabolism [PATH:dok00230]'],['09104 Nucleotide metabolism'],3944.830348166117
+MED134_00585,GTP-binding protein LepA,Unspecified,Unspecified,3854.212228593088
+MED134_07436,TonB dependent/ligand-gated channel,Unspecified,Unspecified,3851.7826399450473
+MED134_10036,"phenylalanyl-tRNA synthetase, alpha subunit",['00970 Aminoacyl-tRNA biosynthesis [PATH:dok00970]'],['09122 Translation'],3849.094520729541
+MED134_00500,inner membrane transporter,Unspecified,Unspecified,3835.6588794695913
+MED134_11836,lysyl-tRNA synthetase,['00970 Aminoacyl-tRNA biosynthesis [PATH:dok00970]'],['09122 Translation'],3832.8401185506527
+MED134_07541,ATP-dependent Clp protease proteolytic subunit,Unspecified,Unspecified,3807.238763151088

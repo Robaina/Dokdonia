@@ -1,2 +1,9 @@
 gene_id,product,subsystem,system,value
-MED134_09356,hypothetical protein,Unspecified,Unspecified,4786.486442792109
+MED134_05129,hypothetical protein,Unspecified,Unspecified,17510.981587678874
+MED134_01340,hypothetical protein,Unspecified,Unspecified,16440.785810306486
+MED134_05084,hypothetical protein,Unspecified,Unspecified,13254.221274495616
+MED134_07389,hypothetical protein,Unspecified,Unspecified,10910.352316041524
+MED134_00130,electron transfer flavoprotein beta-subunit,Unspecified,Unspecified,6112.998148169666
+MED134_00265,aldehyde dehydrogenase family protein,"['00250 Alanine, aspartate and glutamate metabolism [PATH:dok00250]', '00330 Arginine and proline metabolism [PATH:dok00330]']","['09105 Amino acid metabolism', '09105 Amino acid metabolism']",5483.776837735578
+MED134_00125,electron transfer flavoprotein alpha subunit,Unspecified,Unspecified,5038.537574618555
+MED134_06239,acyl-CoA dehydrogenase,Unspecified,Unspecified,4868.744365817511

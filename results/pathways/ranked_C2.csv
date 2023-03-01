@@ -1,3 +1,11 @@
 gene_id,product,subsystem,system,value
+MED134_11371,"molybdopterin oxidoreductase, iron-sulfur binding subunit",Unspecified,Unspecified,33111.7164780055
+MED134_11401,"cytochrome c oxidase, subunit II",['00190 Oxidative phosphorylation [PATH:dok00190]'],['09102 Energy metabolism'],9632.087575361616
+MED134_05359,ATP-dependent Clp protease,Unspecified,Unspecified,9137.936012949633
+MED134_12621,fatty acid desaturase,Unspecified,Unspecified,8260.266074741961
 MED134_12576,citrate synthase,"['00020 Citrate cycle (TCA cycle) [PATH:dok00020]', '00630 Glyoxylate and dicarboxylate metabolism [PATH:dok00630]']","['09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism']",8113.196894072484
+MED134_07706,dihydrolipoyllysine-residue succinyltransferase component of 2-oxoglutarate dehydrogenase complex,"['00020 Citrate cycle (TCA cycle) [PATH:dok00020]', '00310 Lysine degradation [PATH:dok00310]', '00380 Tryptophan metabolism [PATH:dok00380]']","['09101 Carbohydrate metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism']",6650.554051804588
+MED134_11976,2-isopropylmalate synthase,"['00620 Pyruvate metabolism [PATH:dok00620]', '00290 Valine, leucine and isoleucine biosynthesis [PATH:dok00290]']","['09101 Carbohydrate metabolism', '09105 Amino acid metabolism']",5834.59313308484
+MED134_11516,hypothetical protein,Unspecified,Unspecified,5406.432684495412
+MED134_01450,valine-tRNA ligase,['00970 Aminoacyl-tRNA biosynthesis [PATH:dok00970]'],['09122 Translation'],5080.654314009785
 MED134_12746,cell division protein FtsZ,Unspecified,Unspecified,4554.188854647245
