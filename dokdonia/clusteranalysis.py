@@ -71,8 +71,10 @@ def getGeneClusters(
     cluster_tightness=1,
     replicates_file=None,
     normalization_file=None,
+    scaling_factor = 1e4
 ):
     "Returns dict with Clust gene clusters"
+    clust_data = clust_data.multiply(scaling_factor)  # scale to avoid numerical issues
     writeClustInputFiles(clust_data, path_to_wd)
     runClust(
         path_to_wd=path_to_wd,
