@@ -1,0 +1,3 @@
+gene_id,product,subsystem,system,value
+MED134_12576,citrate synthase,"['00020 Citrate cycle (TCA cycle) [PATH:dok00020]', '00630 Glyoxylate and dicarboxylate metabolism [PATH:dok00630]']","['09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism']",8113.196894072484
+MED134_12746,cell division protein FtsZ,Unspecified,Unspecified,4554.188854647245

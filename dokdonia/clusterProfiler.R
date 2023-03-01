@@ -5,7 +5,7 @@ clusters_path <- args[2]
 results_dir <- args[3]
 
 library(clusterProfiler)
-options(clusterProfiler.download.method = "wget")
+# options(clusterProfiler.download.method = "wget")
 
 
 clusters <- read.delim(clusters_path, sep = "\t", header = FALSE)

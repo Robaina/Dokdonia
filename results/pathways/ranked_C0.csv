@@ -1,0 +1,36 @@
+gene_id,product,subsystem,system,value
+MED134_02595,hypothetical protein,Unspecified,Unspecified,36492.60041422796
+MED134_01190,gliding motility protein GldK,Unspecified,Unspecified,15022.50210356466
+MED134_12046,gliding motility protein GldJ,Unspecified,Unspecified,14396.764145157937
+MED134_04954,hypothetical protein,Unspecified,Unspecified,13583.27527907213
+MED134_05369,hypothetical protein,Unspecified,Unspecified,13547.16977512811
+MED134_11471,periplasmic protein TonB,Unspecified,Unspecified,12998.666990879075
+MED134_14141,isocitrate dehydrogenase,"['00020 Citrate cycle (TCA cycle) [PATH:dok00020]', '00480 Glutathione metabolism [PATH:dok00480]']","['09101 Carbohydrate metabolism', '09106 Metabolism of other amino acids']",10705.15314132269
+MED134_11366,cytochrome c,Unspecified,Unspecified,9671.81475084798
+MED134_00825,hypothetical protein,Unspecified,Unspecified,9471.42459419287
+MED134_13511,preprotein translocase subunit SecA,"['03060 Protein export [PATH:dok03060]', '03070 Bacterial secretion system [PATH:dok03070]', '02024 Quorum sensing [PATH:dok02024]']","['09123 Folding, sorting and degradation', '09131 Membrane transport', '09145 Cellular community - prokaryotes']",9429.906069215664
+MED134_11165,ribonucleoside-diphosphate reductase small chain,"['00230 Purine metabolism [PATH:dok00230]', '00240 Pyrimidine metabolism [PATH:dok00240]']","['09104 Nucleotide metabolism', '09104 Nucleotide metabolism']",8966.128111626334
+MED134_12246,hypothetical protein,Unspecified,Unspecified,7964.387922533738
+MED134_05219,TonB dependent/ligand-gated channel,Unspecified,Unspecified,7729.769970063542
+MED134_09621,hypothetical protein,Unspecified,Unspecified,7700.461250533218
+MED134_04199,"DNA polymerase III, beta subunit","['03030 DNA replication [PATH:dok03030]', '03430 Mismatch repair [PATH:dok03430]', '03440 Homologous recombination [PATH:dok03440]']","['09124 Replication and repair', '09124 Replication and repair', '09124 Replication and repair']",7078.382209187375
+MED134_02355,sodium:alanine symporter family protein,Unspecified,Unspecified,6955.898275197229
+MED134_04959,"preprotein translocase, YajC subunit","['03060 Protein export [PATH:dok03060]', '03070 Bacterial secretion system [PATH:dok03070]', '02024 Quorum sensing [PATH:dok02024]']","['09123 Folding, sorting and degradation', '09131 Membrane transport', '09145 Cellular community - prokaryotes']",6954.882886375353
+MED134_11456,gliding motility protein SprA,Unspecified,Unspecified,6767.569690838595
+MED134_02820,dihydrolipoyl dehydrogenase,"['00010 Glycolysis / Gluconeogenesis [PATH:dok00010]', '00020 Citrate cycle (TCA cycle) [PATH:dok00020]', '00620 Pyruvate metabolism [PATH:dok00620]', '00630 Glyoxylate and dicarboxylate metabolism [PATH:dok00630]', '00640 Propanoate metabolism [PATH:dok00640]', '00260 Glycine, serine and threonine metabolism [PATH:dok00260]', '00280 Valine, leucine and isoleucine degradation [PATH:dok00280]', '00310 Lysine degradation [PATH:dok00310]', '00380 Tryptophan metabolism [PATH:dok00380]']","['09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism']",6664.291019086064
+MED134_13946,chromosomal replication initiator protein DnaA,['02020 Two-component system [PATH:dok02020]'],['09132 Signal transduction'],6368.275679923162
+MED134_09101,superoxide dismutase,Unspecified,Unspecified,6351.112671852828
+MED134_05279,hypothetical protein,Unspecified,Unspecified,5956.823563504605
+MED134_09996,large-conductance mechanosensitive channel,Unspecified,Unspecified,5631.739179863178
+MED134_04754,DNA topoisomerase IV subunit A,Unspecified,Unspecified,5460.622375551017
+MED134_08006,biotin synthase,['00780 Biotin metabolism [PATH:dok00780]'],['09108 Metabolism of cofactors and vitamins'],5212.068509382052
+MED134_12556,carbamoyl-phosphate synthase small chain,"['00240 Pyrimidine metabolism [PATH:dok00240]', '00250 Alanine, aspartate and glutamate metabolism [PATH:dok00250]']","['09104 Nucleotide metabolism', '09105 Amino acid metabolism']",5059.256189208733
+MED134_02340,ATP-dependent DNA helicase RecQ,['03018 RNA degradation [PATH:dok03018]'],"['09123 Folding, sorting and degradation']",4911.229467556922
+MED134_03724,putative iron-sulfur-binding reductase,Unspecified,Unspecified,4653.55177471457
+MED134_05214,outer membrane protein,Unspecified,Unspecified,4489.880382212904
+MED134_01520,acetyl-CoA carboxylase carboxyl transferase subunit alpha,"['00620 Pyruvate metabolism [PATH:dok00620]', '00640 Propanoate metabolism [PATH:dok00640]', '00061 Fatty acid biosynthesis [PATH:dok00061]']","['09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09103 Lipid metabolism']",4441.682701878369
+MED134_04329,TonB dependent/ligand-gated channel,Unspecified,Unspecified,4307.580084529125
+MED134_00555,DNA-directed DNA polymerase,"['03030 DNA replication [PATH:dok03030]', '03410 Base excision repair [PATH:dok03410]', '03420 Nucleotide excision repair [PATH:dok03420]', '03440 Homologous recombination [PATH:dok03440]']","['09124 Replication and repair', '09124 Replication and repair', '09124 Replication and repair', '09124 Replication and repair']",4106.7505782525695
+MED134_12831,"RNA polymerase sigma factor, sigma-70 family",Unspecified,Unspecified,4005.454486719257
+MED134_11896,HD superfamily phosphohydrolase,['03018 RNA degradation [PATH:dok03018]'],"['09123 Folding, sorting and degradation']",3968.904943420109
+MED134_09156,peptidase families S8 and S53,Unspecified,Unspecified,3841.299631613423
