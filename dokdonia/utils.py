@@ -5,6 +5,7 @@ import subprocess
 from pathlib import Path
 
 import pandas as pd
+import numpy as np
 
 
 def saveToPickleFile(python_object, path_to_file="object.pkl"):
