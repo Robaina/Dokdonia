@@ -1,3 +1,89 @@
 gene_id,product,subsystem,system,value
-MED134_11356,translation initiation factor IF-2,Unspecified,Unspecified,9995.297361939
-MED134_13806,GTP-binding elongation factor family protein TypA/BipA,Unspecified,Unspecified,4570.709302772011
+MED134_11356,translation initiation factor IF-2,Unspecified,Unspecified,0.9995297361939
+MED134_13806,GTP-binding elongation factor family protein TypA/BipA,Unspecified,Unspecified,0.4705663485080729
+MED134_09221,ribonuclease R,['03018 RNA degradation [PATH:dok03018]'],"['09123 Folding, sorting and degradation']",0.3718248026611603
+MED134_06549,peptidylprolyl isomerase,Unspecified,Unspecified,0.348006691085802
+MED134_01430,hypothetical protein,Unspecified,Unspecified,0.2775363317140836
+MED134_13116,transketolase-like protein,['00030 Pentose phosphate pathway [PATH:dok00030]'],['09101 Carbohydrate metabolism'],0.2753991315013336
+MED134_01870,arginine-tRNA ligase,['00970 Aminoacyl-tRNA biosynthesis [PATH:dok00970]'],['09122 Translation'],0.266611810837277
+MED134_14226,6-phosphogluconate dehydrogenase,"['00030 Pentose phosphate pathway [PATH:dok00030]', '00480 Glutathione metabolism [PATH:dok00480]']","['09101 Carbohydrate metabolism', '09106 Metabolism of other amino acids']",0.2559592469708041
+MED134_07506,GTP-binding protein EngA,Unspecified,Unspecified,0.1976255594981815
+MED134_03564,orotidine-5'-phosphate decarboxylase,['00240 Pyrimidine metabolism [PATH:dok00240]'],['09104 Nucleotide metabolism'],0.1792556755898211
+MED134_05054,DEAD/DEAH box helicase,['03018 RNA degradation [PATH:dok03018]'],"['09123 Folding, sorting and degradation']",0.1616415418617589
+MED134_12196,GTP-binding protein,Unspecified,Unspecified,0.1546696404825787
+MED134_03729,hypothetical protein,Unspecified,Unspecified,0.1409433130137649
+MED134_10925,two-component system response regulator,['02020 Two-component system [PATH:dok02020]'],['09132 Signal transduction'],0.1403200745937358
+MED134_14341,DEAD/DEAH box helicase,['03018 RNA degradation [PATH:dok03018]'],"['09123 Folding, sorting and degradation']",0.135959085275288
+MED134_01420,hypothetical protein,Unspecified,Unspecified,0.1353837304706354
+MED134_08961,hypothetical protein,Unspecified,Unspecified,0.1352019836089181
+MED134_14066,putative RNA methylase family UPF0020,Unspecified,Unspecified,0.1321919696891144
+MED134_08036,M61 glycyl aminopeptidase,Unspecified,Unspecified,0.1259430938735038
+MED134_04944,"ABC transporter, ATP-binding and permease protein",['02010 ABC transporters [PATH:dok02010]'],['09131 Membrane transport'],0.1199812208687745
+MED134_14527,calcineurin-like phosphoesterase,Unspecified,Unspecified,0.113609909523693
+MED134_14767,3-dehydroquinate synthase,"['00400 Phenylalanine, tyrosine and tryptophan biosynthesis [PATH:dok00400]']",['09105 Amino acid metabolism'],0.1124877407988337
+MED134_05789,peptidase family M13,Unspecified,Unspecified,0.10540646919023841
+MED134_14001,hypothetical protein,Unspecified,Unspecified,0.1032008272137906
+MED134_07456,outer membrane efflux protein,"['03070 Bacterial secretion system [PATH:dok03070]', '02020 Two-component system [PATH:dok02020]', '01501 beta-Lactam resistance [PATH:dok01501]', '01503 Cationic antimicrobial peptide (CAMP) resistance [PATH:dok01503]']","['09131 Membrane transport', '09132 Signal transduction', '09175 Drug resistance: antimicrobial', '09175 Drug resistance: antimicrobial']",0.09492541586533701
+MED134_01800,polyprenyl synthetase,['00900 Terpenoid backbone biosynthesis [PATH:dok00900]'],['09109 Metabolism of terpenoids and polyketides'],0.0932911806470398
+MED134_11245,glycosyl transferase family 2,Unspecified,Unspecified,0.0931892230725622
+MED134_02470,hypothetical protein,Unspecified,Unspecified,0.0833964493527479
+MED134_03894,hypothetical protein,Unspecified,Unspecified,0.0806324757282489
+MED134_05384,HD family protein,Unspecified,Unspecified,0.0805284941169892
+MED134_12951,radical SAM superfamily protein,['00790 Folate biosynthesis [PATH:dok00790]'],['09108 Metabolism of cofactors and vitamins'],0.0767960846826207
+MED134_05049,hypothetical protein,Unspecified,Unspecified,0.0765783416033339
+MED134_14326,hypothetical protein,Unspecified,Unspecified,0.0713362798672294
+MED134_10900,NAD dependent epimerase/dehydratase family protein,Unspecified,Unspecified,0.0694970699947386
+MED134_09931,hypothetical protein,Unspecified,Unspecified,0.069229193070317
+MED134_06064,exodeoxyribonuclease V alpha chain,Unspecified,Unspecified,0.0661305638201605
+MED134_05284,metallo-beta-lactamase superfamily protein,Unspecified,Unspecified,0.0586623374788551
+MED134_00150,inorganic H+ pyrophosphatase,Unspecified,Unspecified,0.05560509343392311
+MED134_13046,hypothetical protein,Unspecified,Unspecified,0.05373019585697459
+MED134_14612,hypothetical protein,Unspecified,Unspecified,0.0453897901468978
+MED134_08336,D-3-phosphoglycerate dehydrogenase,"['00680 Methane metabolism [PATH:dok00680]', '00260 Glycine, serine and threonine metabolism [PATH:dok00260]', '00270 Cysteine and methionine metabolism [PATH:dok00270]']","['09102 Energy metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism']",0.0447112782959929
+MED134_13421,small-conductance mechanosensitive channel,Unspecified,Unspecified,0.0435923307682517
+MED134_01295,hypothetical protein,Unspecified,Unspecified,0.0424757010007683
+MED134_14441,hypothetical protein,Unspecified,Unspecified,0.0420619794455907
+MED134_07876,two-component system response regulator,Unspecified,Unspecified,0.0402045967285821
+MED134_13456,hypothetical protein,Unspecified,Unspecified,0.0376712334339544
+MED134_02430,hypothetical protein,Unspecified,Unspecified,0.0369718912291161
+MED134_06284,major facilitator superfamily permease,Unspecified,Unspecified,0.0364331317930973
+MED134_10041,hypothetical protein,Unspecified,Unspecified,0.0364049306020935
+MED134_03954,CrcB-like protein,Unspecified,Unspecified,0.0357933127756866
+MED134_05794,hypothetical protein,Unspecified,Unspecified,0.0347872304706403
+MED134_05419,zinc carboxypeptidase,Unspecified,Unspecified,0.0338244253329568
+MED134_03075,hypothetical protein,Unspecified,Unspecified,0.033801539900516
+MED134_09186,ribonuclease P protein component,Unspecified,Unspecified,0.0318823339669646
+MED134_06564,hypothetical protein,Unspecified,Unspecified,0.0311892397502915
+MED134_04389,DJ-1/PfpI family protein,Unspecified,Unspecified,0.029465739024037704
+MED134_08316,"transcription regulator, ArsR family",Unspecified,Unspecified,0.029408559685969497
+MED134_01700,D-tyrosyl-tRNA(Tyr) deacylase,Unspecified,Unspecified,0.0291598663006048
+MED134_00380,hypothetical protein,Unspecified,Unspecified,0.028429367770216697
+MED134_09461,hypothetical protein,Unspecified,Unspecified,0.027589872442232002
+MED134_09886,peptide chain release factor,Unspecified,Unspecified,0.026777267503540703
+MED134_07516,LysE type translocator,Unspecified,Unspecified,0.0265837901371856
+MED134_05814,chaperone protein DnaJ,Unspecified,Unspecified,0.026369870735910503
+MED134_03599,hypothetical protein,Unspecified,Unspecified,0.0260838438290039
+MED134_03744,hypothetical protein,Unspecified,Unspecified,0.025967111490971802
+MED134_10740,two-component system response regulator,Unspecified,Unspecified,0.0258756615790157
+MED134_04219,nitroreductase family protein,Unspecified,Unspecified,0.025859364140386903
+MED134_10555,hypothetical protein,Unspecified,Unspecified,0.0258335117123626
+MED134_02865,large-conductance mechanosensitive channel,Unspecified,Unspecified,0.0227213077855568
+MED134_08561,metallo-beta-lactamase superfamily protein,Unspecified,Unspecified,0.0210116419861598
+MED134_06279,hypothetical protein,Unspecified,Unspecified,0.020005091425271505
+MED134_10735,hypothetical protein,Unspecified,Unspecified,0.0189895982464603
+MED134_10281,hypothetical protein,Unspecified,Unspecified,0.018026822705896305
+MED134_17085,23S rRNA-intervening sequence protein,Unspecified,Unspecified,0.0171543619058627
+MED134_09256,hypothetical protein,Unspecified,Unspecified,0.0171047072145606
+MED134_05429,cAMP-binding protein,Unspecified,Unspecified,0.0170128139286896
+MED134_01620,hypothetical protein,Unspecified,Unspecified,0.0162112543419446
+MED134_09806,major facilitator superfamily protein,Unspecified,Unspecified,0.015752141288026
+MED134_11301,hypothetical protein,Unspecified,Unspecified,0.015555580254947
+MED134_00715,hypothetical protein,Unspecified,Unspecified,0.0138142839577515
+MED134_05469,"RNA polymerase sigma factor, sigma-70 family",Unspecified,Unspecified,0.0126020234534243
+MED134_10610,penicillinase repressor,['01501 beta-Lactam resistance [PATH:dok01501]'],['09175 Drug resistance: antimicrobial'],0.0125061082522156
+MED134_11816,"transcription regulator, AraC family",Unspecified,Unspecified,0.011976576401731
+MED134_14637,hypothetical protein,Unspecified,Unspecified,0.0110414289073615
+MED134_02495,hypothetical protein,Unspecified,Unspecified,0.0087505201884871
+MED134_09166,hypothetical protein,Unspecified,Unspecified,0.0078235920451681
+MED134_12161,NAD dependent epimerase/dehydratase family protein,Unspecified,Unspecified,0.0028634650220549
+MED134_01625,hypothetical protein,Unspecified,Unspecified,0.0023311406827942003
