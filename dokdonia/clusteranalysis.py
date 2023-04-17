@@ -57,6 +57,8 @@ def runClust(
     if normalization_file is None:
         call_list.append("-n")
         call_list.append(os.path.join(path_to_wd, "clust_no_normalization.txt"))
+    elif normalization_file is "auto":
+        pass
     else:
         call_list.append("-n")
         call_list.append(os.path.join(path_to_wd, normalization_file))
@@ -71,7 +73,7 @@ def getGeneClusters(
     cluster_tightness=1,
     replicates_file=None,
     normalization_file=None,
-    scaling_factor = 1e4
+    scaling_factor=1e4,
 ):
     "Returns dict with Clust gene clusters"
     clust_data = clust_data.multiply(scaling_factor)  # scale to avoid numerical issues
@@ -91,6 +93,27 @@ def getGeneClusters(
         f"C{i}": clusters.iloc[:, i].dropna().values.tolist()
         for i in range(clusters.shape[1])
     }
+
+
+def groupDataByTemperature(
+    data: pd.DataFrame, statistic="mean", normalize=True
+) -> pd.DataFrame:
+    """
+    Group data by temperature
+    """
+    if statistic == "mean":
+        data = data.groupby(
+            data.columns.str.extract(r"_(\d+)_", expand=False), axis=1
+        ).mean()
+    elif statistic == "median":
+        data = data.groupby(
+            data.columns.str.extract(r"_(\d+)_", expand=False), axis=1
+        ).median()
+    else:
+        raise ValueError(f"Unknown statistic: {statistic}")
+    if normalize:
+        data = data.div(data.max(axis=1), axis=0)
+    return data
 
 
 def computeGeneSilhouettes(clusters, data):

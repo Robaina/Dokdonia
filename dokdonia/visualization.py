@@ -10,6 +10,7 @@ from staticinteract import StaticInteract, DropDownWidget, RangeWidget
 def extractKoPathwayName(Ko_str):
     return re.sub('\[.*?\]', '', Ko_str).strip()
 
+
 def plotClusters(pdata, clusters, outfile: str = None):
     n_rows = int(np.ceil(len(clusters) / 2))
     fig, axes = plt.subplots(nrows=n_rows, ncols=2)
@@ -30,7 +31,7 @@ def plotClusters(pdata, clusters, outfile: str = None):
         plt.savefig(outfile, dpi=300)
     plt.show()
 
-    
+
 def plotClusterData(pdata, cluster, ax=None, cluster_id=None):
     pdata[pdata.index.isin(cluster)].transpose().plot(
         legend=False, title=f'{cluster_id}, size={len(cluster)}',
