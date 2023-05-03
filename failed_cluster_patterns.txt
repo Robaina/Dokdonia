@@ -1,0 +1,11 @@
+C2:
+("MED134_07706", "dihydrolipoyllysine-residue succinyltransferase component of 2-oxoglutarate dehydrogenase complex") -> rather the opposite: C5
+("MED134_11401", "cytochrome c oxidase, subunit II") -> opposite, similar to C5
+
+C3:
+("MED134_11836", "lysyl-tRNA synthetase") -> Similar to C1
+("MED134_08936", "tryptophanyl-tRNA synthetase") -> Similar to C1
+("MED134_10540", "crossover junction endodeoxyribonuclease RuvC") -> Similar to C1
+
+C5:
+("MED134_14787","alanine dehydrogenase") -> TC not aligned.
