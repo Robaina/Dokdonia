@@ -1,3 +1,4 @@
+from __future__ import annotations
 import pandas as pd
 import numpy as np
 from diffexpr.py_deseq import py_DESeq2
@@ -57,6 +58,117 @@ def getTranscriptsPerCell(counts, avg_st_ratios, abundance_meta):
         ].values[0]
         avg_ratio = avg_st_ratios[cond_id]["average"]
         n_counts[cond_id] = (n_counts[cond_id] * avg_ratio) / n_cells
+
+    return n_counts
+
+
+def get_transcript_cell(counts, abundance_meta, cond_outs: list[str] = None):
+    """
+    Get total cell abundance for a condition
+    """
+    if cond_outs is None:
+        cond_outs = [
+            "D_25_R1",
+            "L_18_R4",
+            "D_18_R4",
+        ]  # no average standard ratio data for this condition
+    conditions = abundance_meta["Sample"].values.tolist()
+    for cond_out in cond_outs:
+        conditions.remove(cond_out)
+
+    n_counts = counts[counts.columns.intersection(conditions + ["index"])].copy()
+    for cond_id in conditions:
+        n_cells = abundance_meta[abundance_meta["Sample"] == cond_id][
+            "Total_cell_abundance"
+        ].values[0]
+        avg_ratio = abundance_meta[abundance_meta["Sample"] == cond_id][
+            "Avg_Standard_ratio"
+        ].values[0]
+        n_counts[cond_id] = (n_counts[cond_id] * avg_ratio) / n_cells
+
+    return n_counts
+
+
+def get_transcripts_volume(
+    counts, abundance_meta, cond_outs: list[str] = None
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """
+    Get total cell abundance for a condition
+    """
+    if "Sample" not in abundance_meta.columns:
+        abundance_meta["Sample"] = (
+            abundance_meta["Light/Dark"]
+            + "_"
+            + abundance_meta["Temperature"].astype(str)
+            + "_"
+            + abundance_meta["Replicate"]
+        )
+    if cond_outs is None:
+        cond_outs = ["D_25_R1"]  # no average standard ratio data for this condition
+    conditions = abundance_meta["Sample"].values.tolist()
+    for cond_out in cond_outs:
+        conditions.remove(cond_out)
+
+    n_counts = counts[counts.columns.intersection(conditions + ["index"])].copy()
+    n_counts_biovol = counts[counts.columns.intersection(conditions + ["index"])].copy()
+    for cond_id in conditions:
+        n_cells = abundance_meta[abundance_meta["Sample"] == cond_id][
+            "Total abundance (cells)"
+        ].values[0]
+        biovolume = abundance_meta[abundance_meta["Sample"] == cond_id][
+            "Total biovolume (um3)"
+        ].values[0]
+        avg_ratio = abundance_meta[abundance_meta["Sample"] == cond_id][
+            "Avg_Standard_ratio"
+        ].values[0]
+        n_counts[cond_id] = (n_counts[cond_id] * avg_ratio) / n_cells
+        n_counts_biovol[cond_id] = (n_counts_biovol[cond_id] * avg_ratio) / biovolume
+
+    return n_counts, n_counts_biovol
+
+
+def scale_counts_by_internal_standard(counts, abundance_meta):
+    """
+    Get total cell abundance for a condition
+    """
+    cond_outs = [
+        "D_25_R1",
+        "L_18_R4",
+        "D_18_R4",
+    ]  # no average standard ratio data for this condition
+    conditions = abundance_meta["Sample"].values.tolist()
+    for cond_out in cond_outs:
+        conditions.remove(cond_out)
+
+    n_counts = counts[counts.columns.intersection(conditions + ["index"])].copy()
+    for cond_id in conditions:
+        avg_ratio = abundance_meta[abundance_meta["Sample"] == cond_id][
+            "Avg_Standard_ratio"
+        ].values[0]
+        n_counts[cond_id] = n_counts[cond_id] * avg_ratio
+
+    return n_counts
+
+
+def scale_counts_by_cell_abundance(counts, abundance_meta):
+    """
+    Get total cell abundance for a condition
+    """
+    cond_outs = [
+        "D_25_R1",
+        "L_18_R4",
+        "D_18_R4",
+    ]  # no average standard ratio data for this condition
+    conditions = abundance_meta["Sample"].values.tolist()
+    for cond_out in cond_outs:
+        conditions.remove(cond_out)
+
+    n_counts = counts[counts.columns.intersection(conditions + ["index"])].copy()
+    for cond_id in conditions:
+        n_cells = abundance_meta[abundance_meta["Sample"] == cond_id][
+            "Total_cell_abundance"
+        ].values[0]
+        n_counts[cond_id] = (n_counts[cond_id]) / n_cells
 
     return n_counts
 

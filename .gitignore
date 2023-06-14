@@ -26,3 +26,4 @@ cluster_plots/*
 deseq2_TC_figs/*
 deseq2_Zscores_TC_figs/*
 results_DS2_Z/*
+results/clust/*
