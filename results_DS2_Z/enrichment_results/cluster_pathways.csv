@@ -1,9 +1,0 @@
-Cluster,ID,Description,GeneRatio,pvalue,p.adjust
-C1,dok03010,Ribosome - Dokdonia sp. MED134,37/118,1.23030679015668e-08,4.42910444456404e-07
-C1,dok00970,Aminoacyl-tRNA biosynthesis - Dokdonia sp. MED134,10/118,0.0031207507223646,0.0561735130025628
-C5,dok00220,Arginine biosynthesis - Dokdonia sp. MED134,7/19,3.66809216941911e-08,7.70299355578012e-07
-C5,dok01230,Biosynthesis of amino acids - Dokdonia sp. MED134,9/19,1.74719876278854e-05,0.0001834558700927
-C5,dok01210,2-Oxocarboxylic acid metabolism - Dokdonia sp. MED134,5/19,0.0001602046056541,0.0011214322395789
-C5,dok00250,"Alanine, aspartate and glutamate metabolism - Dokdonia sp. MED134",5/19,0.0005318746854516,0.0027923420986209
-C5,dok01110,Biosynthesis of secondary metabolites - Dokdonia sp. MED134,11/19,0.0023464901207251,0.0098552585070456
-C5,dok01100,Metabolic pathways - Dokdonia sp. MED134,15/19,0.0226927946150955,0.0794247811528342

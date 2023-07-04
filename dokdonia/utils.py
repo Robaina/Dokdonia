@@ -50,12 +50,13 @@ def terminal_execute(
     )
     return output
 
+
 def compute_replicate_averages(
-        data: pd.DataFrame,
-        method: str = "mean",
-        temperatures: list[int] = [10, 18, 25, 34],
-        conditions: list[str] = ["L", "D"]
-        ) -> pd.DataFrame:
+    data: pd.DataFrame,
+    method: str = "mean",
+    temperatures: list[int] = [10, 18, 25, 34],
+    conditions: list[str] = ["L", "D"],
+) -> pd.DataFrame:
     """
     Compute average expression among replicates and / or light/dark
     """
@@ -65,36 +66,86 @@ def compute_replicate_averages(
         for temp in temperatures:
             colpattern = f"{condition}_{temp}"
             if "mean" in method:
-                series = data.loc[:, [col for col in data.columns if colpattern in col]].mean(axis=1)
+                series = data.loc[
+                    :, [col for col in data.columns if colpattern in col]
+                ].mean(axis=1)
             else:
-                series = data.loc[:, [col for col in data.columns if colpattern in col]].median(axis=1)
+                series = data.loc[
+                    :, [col for col in data.columns if colpattern in col]
+                ].median(axis=1)
             series.name = colpattern
-            data_dict[condition].append(
-                series
-                )
+            data_dict[condition].append(series)
     return (pd.DataFrame(data_dict[c]).transpose() for c in conditions)
 
+
 def merge_two_conditions(
-    data: pd.DataFrame,
-    method: str = "mean",
-    conditions: list[str] = ["L", "D"]
-    ) -> pd.DataFrame:
+    data: pd.DataFrame, method: str = "mean", conditions: list[str] = ["L", "D"]
+) -> pd.DataFrame:
     """
     Collapse dataframe columns by condition, either computing the mean or the median.
     All columns named equally after condition removed will be merged.
     """
     data_list = []
     unique_left_conditions = np.unique(
-        [col.strip(conditions[0]).strip(conditions[1]).strip("_") for col in data.columns]
-        )
+        [
+            col.strip(conditions[0]).strip(conditions[1]).strip("_")
+            for col in data.columns
+        ]
+    )
     for condition in unique_left_conditions:
         colpattern = condition
         if "mean" in method:
-            series = data.loc[:, [col for col in data.columns if colpattern in col]].mean(axis=1)
+            series = data.loc[
+                :, [col for col in data.columns if colpattern in col]
+            ].mean(axis=1)
         else:
-            series = data.loc[:, [col for col in data.columns if colpattern in col]].median(axis=1)
+            series = data.loc[
+                :, [col for col in data.columns if colpattern in col]
+            ].median(axis=1)
         series.name = colpattern
-        data_list.append(
-            series
-            )
+        data_list.append(series)
     return pd.DataFrame(data_list).transpose()
+
+
+def sort_dict_by_values(dictionary: dict, reverse: bool = False) -> dict:
+    """
+    Sort dictionary by values
+    """
+    return dict(sorted(dictionary.items(), key=lambda item: item[1], reverse=reverse))
+
+
+def take_average_values(df, method="median"):
+    index_name = df.index.name
+    df_long = df.reset_index().melt(
+        id_vars=index_name, var_name="Column", value_name="Value"
+    )
+    df_long["Temperature"] = df_long["Column"].str.extract("_(\d+)_")
+    df_long["Temperature"] = pd.to_numeric(df_long["Temperature"])
+
+    if method == "mean":
+        aggregated_values = (
+            df_long.groupby([index_name, "Temperature"])["Value"].mean().reset_index()
+        )
+    elif method == "median":
+        aggregated_values = (
+            df_long.groupby([index_name, "Temperature"])["Value"].median().reset_index()
+        )
+    else:
+        raise ValueError("Invalid method. Please use 'mean' or 'median'.")
+
+    return aggregated_values.pivot_table(
+        index=index_name, columns="Temperature", values="Value"
+    )
+
+
+def z_normalize(df):
+    return df.apply(lambda x: (x - x.mean()) / x.std(ddof=0), axis=1)
+
+
+def log2_normalize(df):
+    return df.applymap(np.log2)
+
+
+def quantile_normalize(df):
+    rank_mean = df.stack().groupby(df.rank(method="first").stack().astype(int)).mean()
+    return df.rank(method="min").stack().astype(int).map(rank_mean).unstack()

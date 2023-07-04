@@ -79,7 +79,7 @@ def get_transcript_cell(counts, abundance_meta, cond_outs: list[str] = None):
     n_counts = counts[counts.columns.intersection(conditions + ["index"])].copy()
     for cond_id in conditions:
         n_cells = abundance_meta[abundance_meta["Sample"] == cond_id][
-            "Total_cell_abundance"
+            "Total abundance (cells)"
         ].values[0]
         avg_ratio = abundance_meta[abundance_meta["Sample"] == cond_id][
             "Avg_Standard_ratio"

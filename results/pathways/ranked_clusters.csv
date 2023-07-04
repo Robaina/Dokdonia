@@ -1,0 +1,1205 @@
+gene_id,cluster,product,subsystem,system,value
+MED134_02420,C1,DNA-directed RNA polymerase beta chain,['03020 RNA polymerase [PATH:dok03020]'],['09121 Transcription'],127696.41171000106
+MED134_02950,C1,30S ribosomal protein S1,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],109380.29296434193
+MED134_12401,C1,elongation factor EF-G,Unspecified,Unspecified,95336.1177277597
+MED134_11371,C1,"molybdopterin oxidoreductase, iron-sulfur binding subunit",Unspecified,Unspecified,90873.5859705528
+MED134_14186,C1,DNA-binding protein HU-beta,Unspecified,Unspecified,86298.1393675777
+MED134_12541,C1,"DNA-directed RNA polymerase, alpha subunit",['03020 RNA polymerase [PATH:dok03020]'],['09121 Transcription'],60551.89516898048
+MED134_00530,C1,30S ribosomal protein S2,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],58358.25835350824
+MED134_00540,C1,50S ribosomal protein L13,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],55424.16446894953
+MED134_08871,C1,metallopeptidase family M36,Unspecified,Unspecified,55384.55755258166
+MED134_12536,C1,30S ribosomal protein S4,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],52164.728777335025
+MED134_02405,C1,50S ribosomal protein L1,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],51480.030337758726
+MED134_10855,C1,cold shock domain protein CspD,Unspecified,Unspecified,48655.57956589775
+MED134_12426,C1,50S ribosomal protein L2,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],46230.358252621474
+MED134_12511,C1,preprotein translocase SecY subunit,"['03060 Protein export [PATH:dok03060]', '03070 Bacterial secretion system [PATH:dok03070]', '02024 Quorum sensing [PATH:dok02024]']","['09123 Folding, sorting and degradation', '09131 Membrane transport', '09145 Cellular community - prokaryotes']",46060.01696496196
+MED134_12441,C1,30S ribosomal protein S3,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],45787.95587200158
+MED134_07661,C1,30S ribosomal protein S16,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],42007.69999274725
+MED134_12416,C1,50S ribosomal protein L4,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],41217.88183751517
+MED134_02410,C1,50S ribosomal protein L10,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],40596.73102660327
+MED134_11155,C4,succinate dehydrogenase flavoprotein subunit,"['00020 Citrate cycle (TCA cycle) [PATH:dok00020]', '00650 Butanoate metabolism [PATH:dok00650]', '00190 Oxidative phosphorylation [PATH:dok00190]']","['09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09102 Energy metabolism']",39932.929736821025
+MED134_00845,C1,peptidylprolyl isomerase,Unspecified,Unspecified,39813.05411779713
+MED134_08061,C1,"ATP synthase F1, beta subunit",['00190 Oxidative phosphorylation [PATH:dok00190]'],['09102 Energy metabolism'],38977.27185825687
+MED134_00535,C1,30S ribosomal protein S9,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],38544.76809227908
+MED134_10371,C1,DNA-binding protein HU,Unspecified,Unspecified,37132.2436443567
+MED134_05114,C1,50S ribosomal protein L9,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],36914.89193107185
+MED134_11471,C3,periplasmic protein TonB,Unspecified,Unspecified,35929.688362788445
+MED134_12396,C1,30S ribosomal protein S7,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],35589.543302069666
+MED134_05104,C1,30S ribosomal protein S6,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],35065.43509959358
+MED134_12526,C1,30S ribosomal protein S13,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],34442.022476923
+MED134_04954,C0,hypothetical protein,Unspecified,Unspecified,33930.39863744497
+MED134_00640,C1,50S ribosomal protein L32,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],33383.78077184681
+MED134_12391,C1,30S ribosomal protein S12,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],33066.73243574703
+MED134_12461,C1,50S ribosomal protein L14,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],32885.388780958296
+MED134_11356,C1,translation initiation factor IF-2,Unspecified,Unspecified,31960.11061861949
+MED134_05109,C1,30S ribosomal protein S18,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],31901.143980138306
+MED134_07711,C1,2-oxoglutarate dehydrogenase E1 component,"['00020 Citrate cycle (TCA cycle) [PATH:dok00020]', '00785 Lipoic acid metabolism [PATH:dok00785]']","['09101 Carbohydrate metabolism', '09108 Metabolism of cofactors and vitamins']",30579.990430864957
+MED134_09706,C4,choline dehydrogenase,Unspecified,Unspecified,30500.856204248634
+MED134_10061,C1,sulfate permease,Unspecified,Unspecified,30317.31391019447
+MED134_12446,C1,50S ribosomal protein L16,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],30299.891030543884
+MED134_12546,C1,50S ribosomal protein L17,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],30069.5649595356
+MED134_12981,C0,DNA gyrase subunit B,Unspecified,Unspecified,28342.92961914846
+MED134_12486,C1,50S ribosomal protein L6,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],28202.3620496223
+MED134_12421,C1,50S ribosomal protein L23,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],27969.157799691784
+MED134_12471,C1,50S ribosomal protein L5,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],27955.878525519125
+MED134_14141,C0,isocitrate dehydrogenase,"['00020 Citrate cycle (TCA cycle) [PATH:dok00020]', '00480 Glutathione metabolism [PATH:dok00480]']","['09101 Carbohydrate metabolism', '09106 Metabolism of other amino acids']",27808.80514274254
+MED134_11366,C1,cytochrome c,Unspecified,Unspecified,27431.400913069534
+MED134_12456,C1,30S ribosomal protein S17,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],27431.22139328147
+MED134_08401,C1,"50S ribosomal protein L25, Ctc-form",['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],27412.392226767857
+MED134_12271,C3,hypothetical protein,Unspecified,Unspecified,27273.217943142117
+MED134_11401,C4,"cytochrome c oxidase, subunit II",['00190 Oxidative phosphorylation [PATH:dok00190]'],['09102 Energy metabolism'],27163.48483286031
+MED134_05359,C4,ATP-dependent Clp protease,Unspecified,Unspecified,26681.033682007434
+MED134_12496,C1,30S ribosomal protein S5,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],26643.121067980228
+MED134_12436,C1,50S ribosomal protein L22,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],25481.8459820263
+MED134_12466,C1,50S ribosomal protein L24,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],25434.154827924387
+MED134_07546,C1,FKBP-type peptidyl-prolyl cis-transisomerase,Unspecified,Unspecified,24690.276582843013
+MED134_03419,C1,hypothetical protein,Unspecified,Unspecified,24440.390562897686
+MED134_12411,C1,50S ribosomal protein L3,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],23791.997446523725
+MED134_11165,C0,ribonucleoside-diphosphate reductase small chain,"['00230 Purine metabolism [PATH:dok00230]', '00240 Pyrimidine metabolism [PATH:dok00240]']","['09104 Nucleotide metabolism', '09104 Nucleotide metabolism']",23539.652004286796
+MED134_01890,C1,hypothetical protein,Unspecified,Unspecified,23495.165860595287
+MED134_02245,C1,50S ribosomal protein L28,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],23254.29525403786
+MED134_12481,C1,30S ribosomal protein S8,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],23254.21992099665
+MED134_12576,C1,citrate synthase,"['00020 Citrate cycle (TCA cycle) [PATH:dok00020]', '00630 Glyoxylate and dicarboxylate metabolism [PATH:dok00630]']","['09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism']",22754.94739569808
+MED134_13701,C1,"succinyl-CoA synthetase, beta subunit","['00020 Citrate cycle (TCA cycle) [PATH:dok00020]', '00640 Propanoate metabolism [PATH:dok00640]', '00660 C5-Branched dibasic acid metabolism [PATH:dok00660]']","['09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism']",22707.114697247365
+MED134_05989,C4,nucleotide sugar dehydrogenase,"['00520 Amino sugar and nucleotide sugar metabolism [PATH:dok00520]', '00541 O-Antigen nucleotide sugar biosynthesis [PATH:dok00541]', '02020 Two-component system [PATH:dok02020]']","['09101 Carbohydrate metabolism', '09107 Glycan biosynthesis and metabolism', '09132 Signal transduction']",22468.782000676816
+MED134_11386,C4,cytochrome c1,Unspecified,Unspecified,22302.56023590557
+MED134_12431,C1,30S ribosomal protein S19,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],22164.961458783386
+MED134_08066,C1,glutamine-fructose-6-phosphate transaminase (isomerizing),"['00520 Amino sugar and nucleotide sugar metabolism [PATH:dok00520]', '00250 Alanine, aspartate and glutamate metabolism [PATH:dok00250]']","['09101 Carbohydrate metabolism', '09105 Amino acid metabolism']",20859.732696966777
+MED134_12246,C3,hypothetical protein,Unspecified,Unspecified,20617.33847667872
+MED134_01655,C1,30S ribosomal protein S15,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],19808.44650715981
+MED134_09621,C3,hypothetical protein,Unspecified,Unspecified,19685.415387268768
+MED134_02820,C1,dihydrolipoyl dehydrogenase,"['00010 Glycolysis / Gluconeogenesis [PATH:dok00010]', '00020 Citrate cycle (TCA cycle) [PATH:dok00020]', '00620 Pyruvate metabolism [PATH:dok00620]', '00630 Glyoxylate and dicarboxylate metabolism [PATH:dok00630]', '00640 Propanoate metabolism [PATH:dok00640]', '00260 Glycine, serine and threonine metabolism [PATH:dok00260]', '00280 Valine, leucine and isoleucine degradation [PATH:dok00280]', '00310 Lysine degradation [PATH:dok00310]', '00380 Tryptophan metabolism [PATH:dok00380]', '00785 Lipoic acid metabolism [PATH:dok00785]']","['09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09108 Metabolism of cofactors and vitamins']",19650.087111235553
+MED134_05994,C4,UDP-N-acetylglucosamine 2-epimerase,"['00520 Amino sugar and nucleotide sugar metabolism [PATH:dok00520]', '00541 O-Antigen nucleotide sugar biosynthesis [PATH:dok00541]', '02020 Two-component system [PATH:dok02020]']","['09101 Carbohydrate metabolism', '09107 Glycan biosynthesis and metabolism', '09132 Signal transduction']",19590.279415022676
+MED134_04199,C2,"DNA polymerase III, beta subunit","['03030 DNA replication [PATH:dok03030]', '03430 Mismatch repair [PATH:dok03430]', '03440 Homologous recombination [PATH:dok03440]']","['09124 Replication and repair', '09124 Replication and repair', '09124 Replication and repair']",19542.22482940441
+MED134_01385,C1,hypothetical protein,Unspecified,Unspecified,19415.223709965678
+MED134_04769,C1,hypothetical protein,Unspecified,Unspecified,18780.94917798655
+MED134_11050,C1,FeS assembly protein SufB,Unspecified,Unspecified,18526.128636792026
+MED134_03484,C4,glutamate-ammonia ligase,"['00630 Glyoxylate and dicarboxylate metabolism [PATH:dok00630]', '00910 Nitrogen metabolism [PATH:dok00910]', '00250 Alanine, aspartate and glutamate metabolism [PATH:dok00250]', '00220 Arginine biosynthesis [PATH:dok00220]', '02020 Two-component system [PATH:dok02020]']","['09101 Carbohydrate metabolism', '09102 Energy metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09132 Signal transduction']",18261.01905953751
+MED134_01005,C1,translation initiation factor IF-3,Unspecified,Unspecified,17710.517342859734
+MED134_04959,C0,"preprotein translocase, YajC subunit","['03060 Protein export [PATH:dok03060]', '03070 Bacterial secretion system [PATH:dok03070]', '02024 Quorum sensing [PATH:dok02024]']","['09123 Folding, sorting and degradation', '09131 Membrane transport', '09145 Cellular community - prokaryotes']",17598.689671497195
+MED134_09101,C0,superoxide dismutase,Unspecified,Unspecified,17395.851168624024
+MED134_14156,C1,prolyl-tRNA synthetase,['00970 Aminoacyl-tRNA biosynthesis [PATH:dok00970]'],['09122 Translation'],17318.074230314636
+MED134_11636,C1,alanyl-tRNA synthetase,['00970 Aminoacyl-tRNA biosynthesis [PATH:dok00970]'],['09122 Translation'],17267.449253744362
+MED134_04259,C1,phenylalanyl-tRNA synthetase beta chain,['00970 Aminoacyl-tRNA biosynthesis [PATH:dok00970]'],['09122 Translation'],17254.825169663614
+MED134_15519,C1,hypothetical protein,Unspecified,Unspecified,16875.86694897082
+MED134_05219,C0,TonB dependent/ligand-gated channel,Unspecified,Unspecified,16746.647728035132
+MED134_12406,C1,30S ribosomal protein S10,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],16689.024108774986
+MED134_12451,C1,50S ribosomal protein L29,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],16650.93385567353
+MED134_01760,C0,S-adenosylmethionine:tRNA ribosyltransferase-isomerase,Unspecified,Unspecified,16246.12668422162
+MED134_05279,C2,hypothetical protein,Unspecified,Unspecified,15782.46882636301
+MED134_12491,C1,50S ribosomal protein L18,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],15412.536575309743
+MED134_11381,C4,hypothetical protein,Unspecified,Unspecified,15359.447140400855
+MED134_04069,C1,"carbamoyl-phosphate synthase, large subunit","['00240 Pyrimidine metabolism [PATH:dok00240]', '00250 Alanine, aspartate and glutamate metabolism [PATH:dok00250]']","['09104 Nucleotide metabolism', '09105 Amino acid metabolism']",15225.236527035271
+MED134_05434,C1,phosphoribosylformylglycinamidine synthase,['00230 Purine metabolism [PATH:dok00230]'],['09104 Nucleotide metabolism'],15171.226350763976
+MED134_11516,C4,hypothetical protein,Unspecified,Unspecified,14993.241993859985
+MED134_00820,C1,hypothetical protein,Unspecified,Unspecified,14743.35862362371
+MED134_12476,C1,30S ribosomal protein S14,['03010 Ribosome [PATH:dok03010]'],['09122 Translation'],14660.401028226968
+MED134_13806,C4,GTP-binding elongation factor family protein TypA/BipA,Unspecified,Unspecified,14360.350123910692
+MED134_12681,C4,alpha/beta hydrolase,Unspecified,Unspecified,14249.835502856507
+MED134_14411,C1,IMP dehydrogenase,['00230 Purine metabolism [PATH:dok00230]'],['09104 Nucleotide metabolism'],14211.531691797793
+MED134_08006,C2,biotin synthase,['00780 Biotin metabolism [PATH:dok00780]'],['09108 Metabolism of cofactors and vitamins'],13992.634346643106
+MED134_01450,C4,valine-tRNA ligase,['00970 Aminoacyl-tRNA biosynthesis [PATH:dok00970]'],['09122 Translation'],13911.235594500125
+MED134_03065,C1,hypothetical protein,Unspecified,Unspecified,13899.095202326607
+MED134_01255,C4,hypothetical protein,Unspecified,Unspecified,13850.705615238327
+MED134_14692,C1,transcription termination factor Rho,['03018 RNA degradation [PATH:dok03018]'],"['09123 Folding, sorting and degradation']",13781.345922763732
+MED134_09996,C0,large-conductance mechanosensitive channel,Unspecified,Unspecified,13578.51221485393
+MED134_08071,C1,hypothetical protein,Unspecified,Unspecified,13526.92052549205
+MED134_05514,C4,cold shock domain protein CspD,Unspecified,Unspecified,13485.396675638669
+MED134_08146,C4,glycyl-tRNA synthetase,['00970 Aminoacyl-tRNA biosynthesis [PATH:dok00970]'],['09122 Translation'],13421.309462126537
+MED134_10056,C1,carbonic anhydrase,['00910 Nitrogen metabolism [PATH:dok00910]'],['09102 Energy metabolism'],13343.02403650172
+MED134_04754,C0,DNA topoisomerase IV subunit A,Unspecified,Unspecified,13328.51915461674
+MED134_01135,C2,TCP-1/cpn60 chaperonin family protein,['03018 RNA degradation [PATH:dok03018]'],"['09123 Folding, sorting and degradation']",13292.845496559243
+MED134_01545,C4,hypothetical protein,Unspecified,Unspecified,13286.99002225478
+MED134_09356,C4,hypothetical protein,Unspecified,Unspecified,13264.23219679729
+MED134_12556,C0,carbamoyl-phosphate synthase small chain,"['00240 Pyrimidine metabolism [PATH:dok00240]', '00250 Alanine, aspartate and glutamate metabolism [PATH:dok00250]']","['09104 Nucleotide metabolism', '09105 Amino acid metabolism']",12968.069377340551
+MED134_01520,C3,acetyl-CoA carboxylase carboxyl transferase subunit alpha,"['00620 Pyruvate metabolism [PATH:dok00620]', '00640 Propanoate metabolism [PATH:dok00640]', '00061 Fatty acid biosynthesis [PATH:dok00061]']","['09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09103 Lipid metabolism']",12955.678100636258
+MED134_00585,C1,GTP-binding protein LepA,Unspecified,Unspecified,12864.650638711102
+MED134_09711,C4,hypothetical protein,Unspecified,Unspecified,12780.236852431808
+MED134_08406,C1,ribose-phosphate pyrophosphokinase,"['00030 Pentose phosphate pathway [PATH:dok00030]', '00230 Purine metabolism [PATH:dok00230]']","['09101 Carbohydrate metabolism', '09104 Nucleotide metabolism']",12725.300475461223
+MED134_07536,C1,ATP-dependent Clp protease ATP-binding subunit,Unspecified,Unspecified,12620.850505096563
+MED134_01425,C4,"AAA-metalloprotease FtsH, with ATPase domain",Unspecified,Unspecified,12605.15420020821
+MED134_11836,C1,lysyl-tRNA synthetase,['00970 Aminoacyl-tRNA biosynthesis [PATH:dok00970]'],['09122 Translation'],12541.975293964842
+MED134_09766,C0,hypothetical protein,Unspecified,Unspecified,12497.385577766818
+MED134_17896,C1,8-amino-7-oxononanoate synthase,"['00260 Glycine, serine and threonine metabolism [PATH:dok00260]']",['09105 Amino acid metabolism'],12316.798034580734
+MED134_03724,C0,putative iron-sulfur-binding reductase,Unspecified,Unspecified,12247.259596529662
+MED134_11035,C4,FeS assembly ATPase SufC,Unspecified,Unspecified,12237.387742335346
+MED134_10865,C1,aspartyl-tRNA synthetase,['00970 Aminoacyl-tRNA biosynthesis [PATH:dok00970]'],['09122 Translation'],12217.032402844647
+MED134_06129,C1,cold shock domain protein CspD,Unspecified,Unspecified,12088.248776842978
+MED134_08076,C1,glycogen synthase,['00500 Starch and sucrose metabolism [PATH:dok00500]'],['09101 Carbohydrate metabolism'],11828.478902066474
+MED134_12746,C0,cell division protein FtsZ,Unspecified,Unspecified,11668.588759858058
+MED134_14091,C1,aminotransferase class-III,['00330 Arginine and proline metabolism [PATH:dok00330]'],['09105 Amino acid metabolism'],11625.42782173197
+MED134_07541,C1,ATP-dependent Clp protease proteolytic subunit,Unspecified,Unspecified,11583.292148141796
+MED134_09251,C1,glutaminyl-tRNA synthetase,['00970 Aminoacyl-tRNA biosynthesis [PATH:dok00970]'],['09122 Translation'],11307.441169488007
+MED134_10036,C1,"phenylalanyl-tRNA synthetase, alpha subunit",['00970 Aminoacyl-tRNA biosynthesis [PATH:dok00970]'],['09122 Translation'],11267.791638863315
+MED134_03429,C1,OmpA family protein,Unspecified,Unspecified,11208.489949005037
+MED134_07636,C2,hypothetical protein,Unspecified,Unspecified,11132.700466893555
+MED134_00500,C1,inner membrane transporter,Unspecified,Unspecified,11052.58303931163
+MED134_04329,C0,TonB dependent/ligand-gated channel,Unspecified,Unspecified,11019.354669017983
+MED134_00555,C0,DNA-directed DNA polymerase,"['03030 DNA replication [PATH:dok03030]', '03410 Base excision repair [PATH:dok03410]', '03420 Nucleotide excision repair [PATH:dok03420]', '03440 Homologous recombination [PATH:dok03440]']","['09124 Replication and repair', '09124 Replication and repair', '09124 Replication and repair', '09124 Replication and repair']",10986.149650177631
+MED134_11896,C0,HD superfamily phosphohydrolase,['03018 RNA degradation [PATH:dok03018]'],"['09123 Folding, sorting and degradation']",10774.380436795334
+MED134_13101,C1,hypothetical protein,Unspecified,Unspecified,10610.38628549101
+MED134_11796,C1,hypothetical protein,Unspecified,Unspecified,10227.00193386868
+MED134_09221,C1,ribonuclease R,['03018 RNA degradation [PATH:dok03018]'],"['09123 Folding, sorting and degradation']",10181.643631622253
+MED134_11351,C1,transcription elongation protein NusA,Unspecified,Unspecified,10177.277698882039
+MED134_09441,C2,phosphoribosylamine-glycine ligase,['00230 Purine metabolism [PATH:dok00230]'],['09104 Nucleotide metabolism'],10102.054517219083
+MED134_06549,C1,peptidylprolyl isomerase,Unspecified,Unspecified,10062.153281735318
+MED134_07144,C1,cytochrome c assembly protein,Unspecified,Unspecified,10059.123518690008
+MED134_14216,C2,UDP-N-acetylglucosamine1- carboxyvinyltransferase,"['00520 Amino sugar and nucleotide sugar metabolism [PATH:dok00520]', '00550 Peptidoglycan biosynthesis [PATH:dok00550]']","['09101 Carbohydrate metabolism', '09107 Glycan biosynthesis and metabolism']",9959.939237772265
+MED134_00865,C1,oligopeptide transporter,Unspecified,Unspecified,9941.800936774045
+MED134_09156,C0,peptidase families S8 and S53,Unspecified,Unspecified,9897.527832991904
+MED134_09091,C1,PfkB family carbohydrate kinase,Unspecified,Unspecified,9874.382363178593
+MED134_03659,C0,UvrD/REP helicase,"['03420 Nucleotide excision repair [PATH:dok03420]', '03430 Mismatch repair [PATH:dok03430]']","['09124 Replication and repair', '09124 Replication and repair']",9855.025774182424
+MED134_12616,C4,aminotransferase class I and II,"['00250 Alanine, aspartate and glutamate metabolism [PATH:dok00250]', '00270 Cysteine and methionine metabolism [PATH:dok00270]', '00220 Arginine biosynthesis [PATH:dok00220]', '00330 Arginine and proline metabolism [PATH:dok00330]', '00350 Tyrosine metabolism [PATH:dok00350]', '00360 Phenylalanine metabolism [PATH:dok00360]', '00400 Phenylalanine, tyrosine and tryptophan biosynthesis [PATH:dok00400]', '00401 Novobiocin biosynthesis [PATH:dok00401]']","['09105 Amino acid metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09110 Biosynthesis of other secondary metabolites']",9848.445225516083
+MED134_03559,C1,peptide chain release factor 1,Unspecified,Unspecified,9797.598996516457
+MED134_08271,C1,hypothetical protein,Unspecified,Unspecified,9547.667442443604
+MED134_06494,C0,DNA polymerase III subunit gamma/tau,"['03030 DNA replication [PATH:dok03030]', '03430 Mismatch repair [PATH:dok03430]', '03440 Homologous recombination [PATH:dok03440]']","['09124 Replication and repair', '09124 Replication and repair', '09124 Replication and repair']",9510.714070500091
+MED134_05934,C0,polysaccharide biosynthesis protein,Unspecified,Unspecified,9391.221369962877
+MED134_05214,C0,outer membrane protein,Unspecified,Unspecified,9250.606719617277
+MED134_05939,C4,DegT/DnrJ/EryC1/StrS aminotransferase family protein,Unspecified,Unspecified,8995.922771261932
+MED134_09321,C4,phosphoglycerate kinase,['00010 Glycolysis / Gluconeogenesis [PATH:dok00010]'],['09101 Carbohydrate metabolism'],8945.141772218718
+MED134_06589,C2,serine hydroxymethyltransferase,"['00630 Glyoxylate and dicarboxylate metabolism [PATH:dok00630]', '00680 Methane metabolism [PATH:dok00680]', '00260 Glycine, serine and threonine metabolism [PATH:dok00260]', '00460 Cyanoamino acid metabolism [PATH:dok00460]', '00670 One carbon pool by folate [PATH:dok00670]']","['09101 Carbohydrate metabolism', '09102 Energy metabolism', '09105 Amino acid metabolism', '09106 Metabolism of other amino acids', '09108 Metabolism of cofactors and vitamins']",8943.131269333371
+MED134_00510,C0,ribosome recycling factor,Unspecified,Unspecified,8835.548061179808
+MED134_02110,C1,"DNA-directed RNA polymerase, omega subunit",Unspecified,Unspecified,8792.632626997332
+MED134_01460,C0,aminotransferase class I and II,"['00250 Alanine, aspartate and glutamate metabolism [PATH:dok00250]', '00270 Cysteine and methionine metabolism [PATH:dok00270]', '00220 Arginine biosynthesis [PATH:dok00220]', '00330 Arginine and proline metabolism [PATH:dok00330]', '00350 Tyrosine metabolism [PATH:dok00350]', '00360 Phenylalanine metabolism [PATH:dok00360]', '00400 Phenylalanine, tyrosine and tryptophan biosynthesis [PATH:dok00400]', '00401 Novobiocin biosynthesis [PATH:dok00401]']","['09105 Amino acid metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09110 Biosynthesis of other secondary metabolites']",8781.713073620895
+MED134_11045,C1,metallo-beta-lactamase superfamily protein,['02024 Quorum sensing [PATH:dok02024]'],['09145 Cellular community - prokaryotes'],8741.831819690171
+MED134_07299,C4,aminomethyltransferase,"['00630 Glyoxylate and dicarboxylate metabolism [PATH:dok00630]', '00260 Glycine, serine and threonine metabolism [PATH:dok00260]', '00785 Lipoic acid metabolism [PATH:dok00785]', '00670 One carbon pool by folate [PATH:dok00670]']","['09101 Carbohydrate metabolism', '09105 Amino acid metabolism', '09108 Metabolism of cofactors and vitamins', '09108 Metabolism of cofactors and vitamins']",8665.159656553074
+MED134_05404,C1,"excinuclease ABC, A subunit",['03420 Nucleotide excision repair [PATH:dok03420]'],['09124 Replication and repair'],8530.324541867863
+MED134_04749,C0,DNA topoisomerase IV subunit B,Unspecified,Unspecified,8522.98091081011
+MED134_13116,C1,transketolase-like protein,['00030 Pentose phosphate pathway [PATH:dok00030]'],['09101 Carbohydrate metabolism'],8235.554152840512
+MED134_00515,C2,uridylate kinase,['00240 Pyrimidine metabolism [PATH:dok00240]'],['09104 Nucleotide metabolism'],8214.156716255377
+MED134_06594,C4,fumarylacetoacetase,"['00350 Tyrosine metabolism [PATH:dok00350]', '00643 Styrene degradation [PATH:dok00643]']","['09105 Amino acid metabolism', '09111 Xenobiotics biodegradation and metabolism']",8164.957611686553
+MED134_14426,C1,60 KD inner membrane protein,"['03060 Protein export [PATH:dok03060]', '03070 Bacterial secretion system [PATH:dok03070]', '02024 Quorum sensing [PATH:dok02024]']","['09123 Folding, sorting and degradation', '09131 Membrane transport', '09145 Cellular community - prokaryotes']",8008.812302931587
+MED134_08896,C2,penicillin-binding protein 1A,"['00550 Peptidoglycan biosynthesis [PATH:dok00550]', '01501 beta-Lactam resistance [PATH:dok01501]']","['09107 Glycan biosynthesis and metabolism', '09175 Drug resistance: antimicrobial']",7937.238725789364
+MED134_02520,C1,X-Pro dipeptidyl-peptidase (S15 family),Unspecified,Unspecified,7919.499355656062
+MED134_08011,C1,beta-ketoacyl-acyl-carrier-protein synthase II,"['00061 Fatty acid biosynthesis [PATH:dok00061]', '00780 Biotin metabolism [PATH:dok00780]']","['09103 Lipid metabolism', '09108 Metabolism of cofactors and vitamins']",7716.721467957061
+MED134_12646,C2,DNA primase,['03030 DNA replication [PATH:dok03030]'],['09124 Replication and repair'],7688.235175659842
+MED134_05959,C3,glycosyl transferases group 1,Unspecified,Unspecified,7656.7916715884185
+MED134_03684,C0,OmpA family protein,"['02030 Bacterial chemotaxis [PATH:dok02030]', '02040 Flagellar assembly [PATH:dok02040]']","['09142 Cell motility', '09142 Cell motility']",7656.418041725799
+MED134_13111,C1,transketolase-like protein,['00030 Pentose phosphate pathway [PATH:dok00030]'],['09101 Carbohydrate metabolism'],7641.920830781129
+MED134_01430,C4,hypothetical protein,Unspecified,Unspecified,7634.848303387718
+MED134_09281,C4,glutamyl-tRNA synthetase,"['00860 Porphyrin metabolism [PATH:dok00860]', '00970 Aminoacyl-tRNA biosynthesis [PATH:dok00970]']","['09108 Metabolism of cofactors and vitamins', '09122 Translation']",7615.132126707858
+MED134_14166,C0,outer membrane protein transport protein (OMPP1/FadL/TodX),Unspecified,Unspecified,7558.067919915571
+MED134_14226,C1,6-phosphogluconate dehydrogenase,"['00030 Pentose phosphate pathway [PATH:dok00030]', '00480 Glutathione metabolism [PATH:dok00480]']","['09101 Carbohydrate metabolism', '09106 Metabolism of other amino acids']",7449.607655145672
+MED134_10106,C0,MoxR-like ATPase,Unspecified,Unspecified,7407.625136101951
+MED134_04374,C0,hypothetical protein,Unspecified,Unspecified,7407.0871591934865
+MED134_01870,C1,arginine-tRNA ligase,['00970 Aminoacyl-tRNA biosynthesis [PATH:dok00970]'],['09122 Translation'],7299.907956685711
+MED134_03045,C0,hypothetical protein,Unspecified,Unspecified,7182.724499323111
+MED134_06569,C1,outer membrane protein (OmpH-like),Unspecified,Unspecified,7129.383710589442
+MED134_07446,C4,putative copper/silver resistance-related permease,Unspecified,Unspecified,7093.792206766217
+MED134_08926,C1,hypothetical protein,Unspecified,Unspecified,7076.221322657507
+MED134_12191,C1,adenylate kinase,"['00230 Purine metabolism [PATH:dok00230]', '00730 Thiamine metabolism [PATH:dok00730]']","['09104 Nucleotide metabolism', '09108 Metabolism of cofactors and vitamins']",7064.306571822812
+MED134_11140,C0,metallopeptidase family M24,Unspecified,Unspecified,7001.897706242886
+MED134_01945,C0,chromosome partitioning protein parB,Unspecified,Unspecified,6951.281441980957
+MED134_14231,C4,glucose-6-phosphate 1-dehydrogenase,"['00030 Pentose phosphate pathway [PATH:dok00030]', '00480 Glutathione metabolism [PATH:dok00480]']","['09101 Carbohydrate metabolism', '09106 Metabolism of other amino acids']",6940.34664344601
+MED134_10920,C1,hypothetical protein,Unspecified,Unspecified,6938.082303780244
+MED134_10840,C0,diphosphomevalonate decarboxylase,['00900 Terpenoid backbone biosynthesis [PATH:dok00900]'],['09109 Metabolism of terpenoids and polyketides'],6874.309646196681
+MED134_05999,C1,UDP-glucose 6-dehydrogenase,"['00040 Pentose and glucuronate interconversions [PATH:dok00040]', '00053 Ascorbate and aldarate metabolism [PATH:dok00053]', '00520 Amino sugar and nucleotide sugar metabolism [PATH:dok00520]', '00541 O-Antigen nucleotide sugar biosynthesis [PATH:dok00541]']","['09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09107 Glycan biosynthesis and metabolism']",6868.968419681365
+MED134_12346,C0,hypothetical protein,Unspecified,Unspecified,6845.005804023984
+MED134_14507,C2,AhpC/TSA family protein,Unspecified,Unspecified,6843.502814878428
+MED134_07591,C1,undecaprenyl pyrophosphate synthetase,"['00550 Peptidoglycan biosynthesis [PATH:dok00550]', '00900 Terpenoid backbone biosynthesis [PATH:dok00900]']","['09107 Glycan biosynthesis and metabolism', '09109 Metabolism of terpenoids and polyketides']",6835.146059391094
+MED134_13091,C0,pyrimidine operon attenuation protein / uracil phosphoribosyltransferase,['00240 Pyrimidine metabolism [PATH:dok00240]'],['09104 Nucleotide metabolism'],6791.482773911521
+MED134_06289,C0,hydroxymethylglutaryl-CoA lyase,"['00650 Butanoate metabolism [PATH:dok00650]', '00280 Valine, leucine and isoleucine degradation [PATH:dok00280]', '00907 Pinene, camphor and geraniol degradation [PATH:dok00907]']","['09101 Carbohydrate metabolism', '09105 Amino acid metabolism', '09109 Metabolism of terpenoids and polyketides']",6704.819483375865
+MED134_13906,C3,metal-dependent amidohydrolase,Unspecified,Unspecified,6672.588791448799
+MED134_07586,C1,hypothetical protein,Unspecified,Unspecified,6628.9164020882
+MED134_08986,C0,DnaK suppressor protein,Unspecified,Unspecified,6623.685574203489
+MED134_03424,C1,hypothetical protein,Unspecified,Unspecified,6598.787099667153
+MED134_06794,C0,two-component system sensor histidine kinase,Unspecified,Unspecified,6554.892613155728
+MED134_14802,C1,peptide chain release factor RF-3,Unspecified,Unspecified,6538.264654594041
+MED134_04314,C4,bifunctional aspartokinase/homoserine dehydrogenase 1,"['00260 Glycine, serine and threonine metabolism [PATH:dok00260]', '00270 Cysteine and methionine metabolism [PATH:dok00270]', '00300 Lysine biosynthesis [PATH:dok00300]', '00261 Monobactam biosynthesis [PATH:dok00261]']","['09105 Amino acid metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09110 Biosynthesis of other secondary metabolites']",6537.88195393918
+MED134_04404,C4,zinc carboxypeptidase,Unspecified,Unspecified,6532.373510390592
+MED134_02285,C1,GTP cyclohydrolase I,['00790 Folate biosynthesis [PATH:dok00790]'],['09108 Metabolism of cofactors and vitamins'],6523.216376102157
+MED134_12601,C1,hypothetical protein,Unspecified,Unspecified,6495.6059224875735
+MED134_03749,C0,beta-hexosaminidase,"['00520 Amino sugar and nucleotide sugar metabolism [PATH:dok00520]', '01501 beta-Lactam resistance [PATH:dok01501]']","['09101 Carbohydrate metabolism', '09175 Drug resistance: antimicrobial']",6381.9746705494545
+MED134_06544,C1,MoxR-like ATPase,Unspecified,Unspecified,6361.744130557464
+MED134_02480,C2,phosphoribosylaminoimidazolesuccinocarboxamidesy nthase,['00230 Purine metabolism [PATH:dok00230]'],['09104 Nucleotide metabolism'],6340.183009955019
+MED134_02930,C3,hypothetical protein,Unspecified,Unspecified,6313.481751066918
+MED134_07441,C1,outer membrane protein,Unspecified,Unspecified,6285.687775524506
+MED134_08936,C1,tryptophanyl-tRNA synthetase,['00970 Aminoacyl-tRNA biosynthesis [PATH:dok00970]'],['09122 Translation'],6235.562638345795
+MED134_08921,C1,"RNA polymerase sigma factor, sigma-70 family",Unspecified,Unspecified,6199.910644627673
+MED134_04234,C1,transaldolase,['00030 Pentose phosphate pathway [PATH:dok00030]'],['09101 Carbohydrate metabolism'],6199.306851111614
+MED134_04674,C3,2OG-Fe(II) oxygenase superfamily protein,Unspecified,Unspecified,6192.00070576501
+MED134_04844,C4,short chain dehydrogenase,"['00061 Fatty acid biosynthesis [PATH:dok00061]', '00780 Biotin metabolism [PATH:dok00780]']","['09103 Lipid metabolism', '09108 Metabolism of cofactors and vitamins']",6189.374435684715
+MED134_10990,C0,hypothetical protein,Unspecified,Unspecified,6188.860347495973
+MED134_12131,C4,3-oxoacyl-[acyl-carrier-protein] synthase III,['00061 Fatty acid biosynthesis [PATH:dok00061]'],['09103 Lipid metabolism'],6179.211545992695
+MED134_07506,C1,GTP-binding protein EngA,Unspecified,Unspecified,6148.19346285976
+MED134_06639,C3,hypothetical protein,Unspecified,Unspecified,6110.481529821447
+MED134_14016,C2,hypothetical protein,Unspecified,Unspecified,6055.204480933837
+MED134_03030,C3,zinc carboxypeptidase,Unspecified,Unspecified,6050.771900887594
+MED134_03110,C4,"3,4-dihydroxy-2-butanone 4-phosphate synthase/GTP cyclohydrolase","['00740 Riboflavin metabolism [PATH:dok00740]', '00790 Folate biosynthesis [PATH:dok00790]']","['09108 Metabolism of cofactors and vitamins', '09108 Metabolism of cofactors and vitamins']",6039.436103504911
+MED134_13516,C1,hypothetical protein,Unspecified,Unspecified,5898.163447185997
+MED134_09301,C0,glucose inhibited division protein A,Unspecified,Unspecified,5894.568446903808
+MED134_09361,C4,hypothetical protein,Unspecified,Unspecified,5885.220889682221
+MED134_03399,C2,beta-ketoacyl-acyl-carrier-protein synthase III,['00061 Fatty acid biosynthesis [PATH:dok00061]'],['09103 Lipid metabolism'],5780.580512402954
+MED134_12741,C0,cell division protein FtsA,Unspecified,Unspecified,5760.297198263885
+MED134_03734,C1,hypothetical protein,Unspecified,Unspecified,5576.511871316682
+MED134_06644,C1,putative copper/silver resistance-related permease,['02020 Two-component system [PATH:dok02020]'],['09132 Signal transduction'],5548.697547311689
+MED134_03469,C1,ferric uptake regulator family protein,Unspecified,Unspecified,5521.458041206287
+MED134_12551,C0,hypothetical protein,Unspecified,Unspecified,5501.618901001286
+MED134_10016,C1,prolyl oligopeptidase,Unspecified,Unspecified,5499.847715759339
+MED134_09691,C4,oxidoreductase family protein,Unspecified,Unspecified,5481.881108186672
+MED134_00025,C0,DegT/DnrJ/EryC1/StrS aminotransferase family protein,"['00520 Amino sugar and nucleotide sugar metabolism [PATH:dok00520]', '00541 O-Antigen nucleotide sugar biosynthesis [PATH:dok00541]']","['09101 Carbohydrate metabolism', '09107 Glycan biosynthesis and metabolism']",5442.1207868151205
+MED134_03169,C3,Na+/H+ antiporter NhaC,Unspecified,Unspecified,5432.063856391969
+MED134_09126,C0,universal stress protein UspA,Unspecified,Unspecified,5418.464777215853
+MED134_02500,C1,propionyl-CoA carboxylase beta chain,"['00280 Valine, leucine and isoleucine degradation [PATH:dok00280]']",['09105 Amino acid metabolism'],5412.006111867908
+MED134_12991,C3,UDP-N-acetylmuramate: L-alanyl-gamma-D-glutamyl-meso-diaminopimelate ligase,Unspecified,Unspecified,5346.137324717091
+MED134_02240,C0,CinA-like protein,['00760 Nicotinate and nicotinamide metabolism [PATH:dok00760]'],['09108 Metabolism of cofactors and vitamins'],5337.4197523372295
+MED134_01835,C0,potassium uptake protein,Unspecified,Unspecified,5327.4673594057895
+MED134_04849,C1,hypothetical protein,Unspecified,Unspecified,5300.254141707488
+MED134_05954,C3,sugar transferase,Unspecified,Unspecified,5288.109898760449
+MED134_04429,C1,imidazole glycerol phosphate synthase subunit HisF,['00340 Histidine metabolism [PATH:dok00340]'],['09105 Amino acid metabolism'],5278.30141781975
+MED134_04154,C4,hypothetical protein,Unspecified,Unspecified,5249.341230983304
+MED134_04254,C0,hypothetical protein,Unspecified,Unspecified,5238.785310226693
+MED134_12796,C0,metallo-beta-lactamase superfamily protein,['00620 Pyruvate metabolism [PATH:dok00620]'],['09101 Carbohydrate metabolism'],5226.282323285253
+MED134_08216,C0,catalase/peroxidase HPI,"['00360 Phenylalanine metabolism [PATH:dok00360]', '00380 Tryptophan metabolism [PATH:dok00380]']","['09105 Amino acid metabolism', '09105 Amino acid metabolism']",5216.362242601632
+MED134_01505,C1,tRNA-guanine transglycosylase,Unspecified,Unspecified,5190.417427034014
+MED134_09096,C4,amidophosphoribosyltransferase,"['00230 Purine metabolism [PATH:dok00230]', '00250 Alanine, aspartate and glutamate metabolism [PATH:dok00250]']","['09104 Nucleotide metabolism', '09105 Amino acid metabolism']",5188.180907524702
+MED134_11180,C4,phosphate sodium symporter,Unspecified,Unspecified,5185.239307938679
+MED134_05684,C0,hypothetical protein,Unspecified,Unspecified,5185.233052073656
+MED134_04634,C3,DNA mismatch repair protein MutS,['03430 Mismatch repair [PATH:dok03430]'],['09124 Replication and repair'],5174.346787730053
+MED134_03549,C1,phosphoribosylformylglycinamidine cyclo-ligase,['00230 Purine metabolism [PATH:dok00230]'],['09104 Nucleotide metabolism'],5171.397237116031
+MED134_11025,C1,cysteine desulfurase,['00450 Selenocompound metabolism [PATH:dok00450]'],['09106 Metabolism of other amino acids'],5144.981692443933
+MED134_06369,C2,hypothetical protein,Unspecified,Unspecified,5137.219238067375
+MED134_13541,C4,"ABC transporter, ATP-binding protein",Unspecified,Unspecified,5129.97973188663
+MED134_02615,C0,phosphatidate phosphatase,Unspecified,Unspecified,5123.144486336012
+MED134_00045,C0,DNA binding helix-turn helix protein,Unspecified,Unspecified,5106.928231847106
+MED134_04194,C1,peptidase family M28,Unspecified,Unspecified,5099.288708200106
+MED134_12176,C2,peptidyl-dipeptidase,Unspecified,Unspecified,5094.326530021751
+MED134_09341,C1,"twin arginine-targeting protein translocase, TatA/E family","['03060 Protein export [PATH:dok03060]', '03070 Bacterial secretion system [PATH:dok03070]']","['09123 Folding, sorting and degradation', '09131 Membrane transport']",5093.772890409164
+MED134_05054,C1,DEAD/DEAH box helicase,['03018 RNA degradation [PATH:dok03018]'],"['09123 Folding, sorting and degradation']",5043.738670218414
+MED134_11040,C1,hypothetical protein,Unspecified,Unspecified,5028.229853115379
+MED134_04604,C1,hypothetical protein,Unspecified,Unspecified,5000.726096179755
+MED134_04949,C4,NusB family protein,Unspecified,Unspecified,4973.444925802556
+MED134_04434,C1,histidine biosynthesis bifunctional protein HisIE,['00340 Histidine metabolism [PATH:dok00340]'],['09105 Amino acid metabolism'],4967.875092209106
+MED134_03564,C1,orotidine-5'-phosphate decarboxylase,['00240 Pyrimidine metabolism [PATH:dok00240]'],['09104 Nucleotide metabolism'],4927.132466311326
+MED134_03859,C1,glycosyl transferase family 2,Unspecified,Unspecified,4919.8847864658965
+MED134_13441,C0,peptidase family M28,Unspecified,Unspecified,4894.777422028636
+MED134_14792,C1,cystathionine beta-synthase,"['00260 Glycine, serine and threonine metabolism [PATH:dok00260]', '00270 Cysteine and methionine metabolism [PATH:dok00270]']","['09105 Amino acid metabolism', '09105 Amino acid metabolism']",4864.020772264574
+MED134_14176,C0,alpha-amylase,['00500 Starch and sucrose metabolism [PATH:dok00500]'],['09101 Carbohydrate metabolism'],4842.609263661255
+MED134_06874,C1,DNA adenine methylase,Unspecified,Unspecified,4833.012131369796
+MED134_05449,C1,NOL1/NOP2/sun family protein,Unspecified,Unspecified,4801.398365510455
+MED134_05694,C2,DEAD/DEAH box helicase,Unspecified,Unspecified,4792.31465935101
+MED134_05259,C2,"RNA polymerase sigma factor, sigma-70 family",Unspecified,Unspecified,4731.728854734523
+MED134_06449,C1,peptidase family M20/M25/M40,Unspecified,Unspecified,4699.099166264605
+MED134_07064,C0,type I site-specific deoxyribonuclease,Unspecified,Unspecified,4694.451644539946
+MED134_00170,C3,deoxynucleoside kinase family protein,"['00230 Purine metabolism [PATH:dok00230]', '00240 Pyrimidine metabolism [PATH:dok00240]']","['09104 Nucleotide metabolism', '09104 Nucleotide metabolism']",4657.274059390927
+MED134_11346,C1,hypothetical protein,Unspecified,Unspecified,4639.498605462011
+MED134_12196,C1,GTP-binding protein,Unspecified,Unspecified,4625.441569446826
+MED134_12996,C1,signal recognition particle-docking protein FtsY,"['03060 Protein export [PATH:dok03060]', '03070 Bacterial secretion system [PATH:dok03070]', '02024 Quorum sensing [PATH:dok02024]']","['09123 Folding, sorting and degradation', '09131 Membrane transport', '09145 Cellular community - prokaryotes']",4610.116649497579
+MED134_13011,C1,MiaB-like tRNA modifying enzyme YliG,Unspecified,Unspecified,4603.166791665588
+MED134_09161,C3,peptidase family M1,Unspecified,Unspecified,4594.21778810642
+MED134_11501,C1,protoheme IX farnesyltransferase,"['00190 Oxidative phosphorylation [PATH:dok00190]', '00860 Porphyrin metabolism [PATH:dok00860]']","['09102 Energy metabolism', '09108 Metabolism of cofactors and vitamins']",4539.800648649011
+MED134_10461,C1,peptidase family M50,Unspecified,Unspecified,4485.9990720355145
+MED134_00485,C4,hypothetical protein,Unspecified,Unspecified,4459.437359352765
+MED134_08361,C1,magnesium ion transporter,Unspecified,Unspecified,4455.196213413482
+MED134_06174,C2,gamma-glutamyltranspeptidase,"['00430 Taurine and hypotaurine metabolism [PATH:dok00430]', '00460 Cyanoamino acid metabolism [PATH:dok00460]', '00480 Glutathione metabolism [PATH:dok00480]']","['09106 Metabolism of other amino acids', '09106 Metabolism of other amino acids', '09106 Metabolism of other amino acids']",4431.021970385617
+MED134_09681,C4,endonuclease IV,Unspecified,Unspecified,4429.132961602139
+MED134_05784,C1,cold shock domain protein CspD,Unspecified,Unspecified,4425.658137725923
+MED134_09146,C1,cell volume regulation protein A,Unspecified,Unspecified,4417.331001745155
+MED134_01390,C1,NIF3 (NGG1p interacting factor 3),Unspecified,Unspecified,4395.747875770008
+MED134_01840,C0,potassium uptake protein TrkH,Unspecified,Unspecified,4385.139187016154
+MED134_13136,C0,zinc carboxypeptidase,Unspecified,Unspecified,4368.1773953641
+MED134_00630,C1,pyridoxal phosphate biosynthetic protein PdxA,Unspecified,Unspecified,4357.624542915557
+MED134_10101,C0,hypothetical protein,Unspecified,Unspecified,4345.571693948135
+MED134_04224,C0,thioredoxin family protein,Unspecified,Unspecified,4335.753820820821
+MED134_00140,C1,hypothetical protein,Unspecified,Unspecified,4318.064423093743
+MED134_14717,C1,sulfate permease,Unspecified,Unspecified,4293.977388198064
+MED134_11631,C0,peptidase family M23,Unspecified,Unspecified,4287.69732647785
+MED134_06339,C1,hypothetical protein,Unspecified,Unspecified,4284.508270724543
+MED134_03394,C0,hypothetical protein,Unspecified,Unspecified,4265.4012060119685
+MED134_12361,C1,SpoU rRNA methylase family protein,Unspecified,Unspecified,4239.995944767983
+MED134_10076,C0,aerotolerance-related exported protein BatD,Unspecified,Unspecified,4237.466223403326
+MED134_14341,C1,DEAD/DEAH box helicase,['03018 RNA degradation [PATH:dok03018]'],"['09123 Folding, sorting and degradation']",4231.993947727527
+MED134_01690,C4,hypothetical protein,Unspecified,Unspecified,4218.315983593187
+MED134_06889,C0,hypothetical protein,Unspecified,Unspecified,4207.2319510094185
+MED134_02185,C3,3-hydroxyacyl-CoA dehydrogenase,"['00650 Butanoate metabolism [PATH:dok00650]', '00360 Phenylalanine metabolism [PATH:dok00360]', '00362 Benzoate degradation [PATH:dok00362]']","['09101 Carbohydrate metabolism', '09105 Amino acid metabolism', '09111 Xenobiotics biodegradation and metabolism']",4202.523497022809
+MED134_00020,C2,metal-dependent amidohydrolase,Unspecified,Unspecified,4195.649678742671
+MED134_05309,C1,hypothetical protein,Unspecified,Unspecified,4144.672598827028
+MED134_11466,C3,VanZ like family protein,Unspecified,Unspecified,4140.617388168446
+MED134_09001,C4,two-component system response regulator,Unspecified,Unspecified,4089.0731561597127
+MED134_00745,C0,hypothetical protein,Unspecified,Unspecified,4082.033511397174
+MED134_08111,C3,aldo/keto reductase family protein,Unspecified,Unspecified,4055.5506474377044
+MED134_02855,C2,peptidase family M48,Unspecified,Unspecified,4023.37090968989
+MED134_03729,C1,hypothetical protein,Unspecified,Unspecified,4014.191141034363
+MED134_09986,C4,thymidine kinase,['00240 Pyrimidine metabolism [PATH:dok00240]'],['09104 Nucleotide metabolism'],4000.724028753235
+MED134_07791,C2,hypothetical protein,Unspecified,Unspecified,3974.9317598674165
+MED134_01435,C1,phosphatidate cytidylyltransferase,['00564 Glycerophospholipid metabolism [PATH:dok00564]'],['09103 Lipid metabolism'],3949.4200910418067
+MED134_11240,C1,pseudouridylate synthase,Unspecified,Unspecified,3878.48478799143
+MED134_12041,C0,"UDP-N-acetylmuramoylalanyl-D-glutamyl-2, 6-diaminopimelate-D-alanyl-D-alanyl ligase","['00300 Lysine biosynthesis [PATH:dok00300]', '00550 Peptidoglycan biosynthesis [PATH:dok00550]', '01502 Vancomycin resistance [PATH:dok01502]']","['09105 Amino acid metabolism', '09107 Glycan biosynthesis and metabolism', '09175 Drug resistance: antimicrobial']",3848.1633794327518
+MED134_04944,C1,"ABC transporter, ATP-binding and permease protein",['02010 ABC transporters [PATH:dok02010]'],['09131 Membrane transport'],3837.8352637435955
+MED134_02190,C3,"oxidoreductase, Gfo/Idh/MocA family",Unspecified,Unspecified,3820.7711670631584
+MED134_02225,C1,"DNA polymerase III, epsilon subunit","['03030 DNA replication [PATH:dok03030]', '03430 Mismatch repair [PATH:dok03430]', '03440 Homologous recombination [PATH:dok03440]']","['09124 Replication and repair', '09124 Replication and repair', '09124 Replication and repair']",3819.104567074807
+MED134_08961,C4,hypothetical protein,Unspecified,Unspecified,3803.634368512662
+MED134_00105,C2,thymidylate synthase,"['00240 Pyrimidine metabolism [PATH:dok00240]', '00670 One carbon pool by folate [PATH:dok00670]']","['09104 Nucleotide metabolism', '09108 Metabolism of cofactors and vitamins']",3792.343222619978
+MED134_09336,C3,hypothetical protein,Unspecified,Unspecified,3765.7481030076515
+MED134_01420,C1,hypothetical protein,Unspecified,Unspecified,3763.5269214366526
+MED134_11055,C1,scaffold protein for iron-sulfur cluster assembly,Unspecified,Unspecified,3741.100706478123
+MED134_04409,C3,ROK family protein,"['00010 Glycolysis / Gluconeogenesis [PATH:dok00010]', '00520 Amino sugar and nucleotide sugar metabolism [PATH:dok00520]']","['09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism']",3738.5357548374072
+MED134_10096,C0,hypothetical protein,Unspecified,Unspecified,3728.048246147295
+MED134_01220,C1,"ABC transporter, ATP-binding protein",Unspecified,Unspecified,3725.5897654774203
+MED134_03844,C1,lipid A export ATP-binding/permease protein MsbA,['02010 ABC transporters [PATH:dok02010]'],['09131 Membrane transport'],3709.2686077893222
+MED134_09876,C1,NAD dependent epimerase/dehydratase family protein,Unspecified,Unspecified,3697.9350787896387
+MED134_14066,C1,putative RNA methylase family UPF0020,Unspecified,Unspecified,3682.644155614449
+MED134_06669,C4,"efflux transporter, RND family, MFP subunit",['02020 Two-component system [PATH:dok02020]'],['09132 Signal transduction'],3674.196041615078
+MED134_08911,C0,hypothetical protein,Unspecified,Unspecified,3667.612053692323
+MED134_14522,C0,metal dependent phosphohydrolase,Unspecified,Unspecified,3657.4198720304494
+MED134_01695,C1,putative GTPase,['00730 Thiamine metabolism [PATH:dok00730]'],['09108 Metabolism of cofactors and vitamins'],3652.4472896687103
+MED134_12596,C1,phosphoribosylglycinamide formyltransferase 2,['00230 Purine metabolism [PATH:dok00230]'],['09104 Nucleotide metabolism'],3634.423178189169
+MED134_05124,C4,DEAD/DEAH box helicase,Unspecified,Unspecified,3627.0173169969194
+MED134_05789,C1,peptidase family M13,Unspecified,Unspecified,3626.8767582671844
+MED134_06789,C0,hypothetical protein,Unspecified,Unspecified,3611.3887732762823
+MED134_03754,C0,glycosyl transferase group 1,Unspecified,Unspecified,3602.229678251272
+MED134_04179,C1,imidazolonepropionase,['00340 Histidine metabolism [PATH:dok00340]'],['09105 Amino acid metabolism'],3581.626501486111
+MED134_00750,C0,purine nucleoside phosphorylase,"['00230 Purine metabolism [PATH:dok00230]', '00760 Nicotinate and nicotinamide metabolism [PATH:dok00760]']","['09104 Nucleotide metabolism', '09108 Metabolism of cofactors and vitamins']",3580.1883521543245
+MED134_07024,C3,DNA adenine methylase,Unspecified,Unspecified,3572.492628038396
+MED134_01090,C0,hypothetical protein,Unspecified,Unspecified,3558.410721969698
+MED134_07641,C4,NifU-like protein,Unspecified,Unspecified,3556.762830739096
+MED134_05314,C4,two-component system sensor histidine kinase,Unspecified,Unspecified,3544.61861137551
+MED134_01265,C4,GTP-binding protein Era,Unspecified,Unspecified,3526.3457105964735
+MED134_01480,C0,hypothetical protein,Unspecified,Unspecified,3521.289175177899
+MED134_02120,C0,hypothetical protein,Unspecified,Unspecified,3494.1549235112293
+MED134_02170,C1,exonuclease family protein,"['03030 DNA replication [PATH:dok03030]', '03430 Mismatch repair [PATH:dok03430]', '03440 Homologous recombination [PATH:dok03440]']","['09124 Replication and repair', '09124 Replication and repair', '09124 Replication and repair']",3486.8488090779438
+MED134_08036,C1,M61 glycyl aminopeptidase,Unspecified,Unspecified,3454.4625141671263
+MED134_03459,C3,hypothetical protein,Unspecified,Unspecified,3450.593530408106
+MED134_10750,C1,fructokinase,"['00051 Fructose and mannose metabolism [PATH:dok00051]', '00500 Starch and sucrose metabolism [PATH:dok00500]', '00520 Amino sugar and nucleotide sugar metabolism [PATH:dok00520]']","['09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism']",3439.1105175101766
+MED134_11651,C4,phenylalanine-4-hydroxylase,"['00360 Phenylalanine metabolism [PATH:dok00360]', '00400 Phenylalanine, tyrosine and tryptophan biosynthesis [PATH:dok00400]', '00790 Folate biosynthesis [PATH:dok00790]']","['09105 Amino acid metabolism', '09105 Amino acid metabolism', '09108 Metabolism of cofactors and vitamins']",3417.9084085747963
+MED134_01585,C0,hypothetical protein,Unspecified,Unspecified,3408.3941171093
+MED134_12011,C1,L-serine deaminase,"['00260 Glycine, serine and threonine metabolism [PATH:dok00260]', '00270 Cysteine and methionine metabolism [PATH:dok00270]']","['09105 Amino acid metabolism', '09105 Amino acid metabolism']",3398.298813988833
+MED134_05394,C0,hypothetical protein,Unspecified,Unspecified,3371.5412618418686
+MED134_14527,C1,calcineurin-like phosphoesterase,Unspecified,Unspecified,3367.0811526719363
+MED134_00855,C1,hydroxymethylglutaryl-CoA reductase,['00900 Terpenoid backbone biosynthesis [PATH:dok00900]'],['09109 Metabolism of terpenoids and polyketides'],3335.8080675844967
+MED134_13891,C1,hypothetical protein,Unspecified,Unspecified,3325.6543609077735
+MED134_04854,C1,SPFH/band 7 family protein,Unspecified,Unspecified,3308.366441974216
+MED134_09056,C2,two-component system sensor histidine kinase,Unspecified,Unspecified,3302.850484422107
+MED134_14001,C1,hypothetical protein,Unspecified,Unspecified,3294.032105170598
+MED134_07716,C0,hypothetical protein,Unspecified,Unspecified,3282.4156893639174
+MED134_08376,C1,hypothetical protein,Unspecified,Unspecified,3282.1319800568717
+MED134_03374,C4,"ABC transporter, ATP-binding and permease protein",['02010 ABC transporters [PATH:dok02010]'],['09131 Membrane transport'],3265.6075701751383
+MED134_02175,C0,alanine racemase domain-containing protein,Unspecified,Unspecified,3256.4029621111395
+MED134_00945,C2,hypothetical protein,Unspecified,Unspecified,3199.7739438332283
+MED134_01895,C1,riboflavin synthase beta chain,['00740 Riboflavin metabolism [PATH:dok00740]'],['09108 Metabolism of cofactors and vitamins'],3198.4742076935054
+MED134_00390,C4,thioredoxin family protein,Unspecified,Unspecified,3182.8429026796102
+MED134_04784,C3,"transcription regulator, AraC family",Unspecified,Unspecified,3180.679642335744
+MED134_04204,C0,gliding motility protein GldG,Unspecified,Unspecified,3179.3819669923173
+MED134_00830,C1,hypothetical protein,Unspecified,Unspecified,3167.043933521114
+MED134_04779,C0,"transcription regulator, AraC family",Unspecified,Unspecified,3164.860946488336
+MED134_04249,C2,hypothetical protein,Unspecified,Unspecified,3163.363734862033
+MED134_09021,C1,ribosomal protein S6 modification protein,Unspecified,Unspecified,3159.747973039728
+MED134_09151,C4,metallo-beta-lactamase superfamily protein,Unspecified,Unspecified,3149.5848651754595
+MED134_00600,C1,dihydrouridine synthase (Dus),Unspecified,Unspecified,3140.2437366319164
+MED134_10161,C2,TonB dependent/ligand-gated channel,Unspecified,Unspecified,3113.0449911092974
+MED134_04184,C1,Cys/Met metabolism PLP-dependent enzyme,"['00270 Cysteine and methionine metabolism [PATH:dok00270]', '00450 Selenocompound metabolism [PATH:dok00450]']","['09105 Amino acid metabolism', '09106 Metabolism of other amino acids']",3099.721403357811
+MED134_05274,C0,redoxin,Unspecified,Unspecified,3092.547492925004
+MED134_01140,C2,chaperonin 10 Kd subunit,Unspecified,Unspecified,3079.5799225501305
+MED134_00785,C3,hypothetical protein,Unspecified,Unspecified,3077.643393311827
+MED134_14767,C1,3-dehydroquinate synthase,"['00400 Phenylalanine, tyrosine and tryptophan biosynthesis [PATH:dok00400]']",['09105 Amino acid metabolism'],3066.3407330863683
+MED134_03839,C0,hypothetical protein,Unspecified,Unspecified,3062.610381187428
+MED134_05444,C1,endonuclease I,Unspecified,Unspecified,3059.6964725341013
+MED134_06894,C0,type I site-specific deoxyribonuclease,Unspecified,Unspecified,3048.001324261558
+MED134_01935,C3,dihydrodipicolinate reductase,"['00300 Lysine biosynthesis [PATH:dok00300]', '00261 Monobactam biosynthesis [PATH:dok00261]']","['09105 Amino acid metabolism', '09110 Biosynthesis of other secondary metabolites']",3041.1325277579945
+MED134_00385,C4,thioredoxin family protein,Unspecified,Unspecified,3033.2839411408286
+MED134_09211,C1,ribose 5-phosphate isomerase B,"['00030 Pentose phosphate pathway [PATH:dok00030]', '00051 Fructose and mannose metabolism [PATH:dok00051]']","['09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism']",3025.416226324889
+MED134_07581,C3,putative inorganic polyphosphate/ATP-NAD kinase,['00760 Nicotinate and nicotinamide metabolism [PATH:dok00760]'],['09108 Metabolism of cofactors and vitamins'],2981.6755738113507
+MED134_12366,C4,hypothetical protein,Unspecified,Unspecified,2979.62244148437
+MED134_02955,C0,hypothetical protein,Unspecified,Unspecified,2965.8101630948704
+MED134_07521,C1,hypothetical protein,Unspecified,Unspecified,2952.4036121315785
+MED134_04049,C0,"excinuclease ABC, B subunit",['03420 Nucleotide excision repair [PATH:dok03420]'],['09124 Replication and repair'],2952.392171185508
+MED134_12356,C4,rhomboid family protein,Unspecified,Unspecified,2932.0806745017317
+MED134_04079,C3,DNA recombination protein RmuC,Unspecified,Unspecified,2929.1919496573832
+MED134_07451,C4,"efflux transporter, RND family, MFP subunit","['01501 beta-Lactam resistance [PATH:dok01501]', '01503 Cationic antimicrobial peptide (CAMP) resistance [PATH:dok01503]']","['09175 Drug resistance: antimicrobial', '09175 Drug resistance: antimicrobial']",2921.351790826263
+MED134_03489,C4,glutamate-ammonia ligase,"['00630 Glyoxylate and dicarboxylate metabolism [PATH:dok00630]', '00910 Nitrogen metabolism [PATH:dok00910]', '00250 Alanine, aspartate and glutamate metabolism [PATH:dok00250]', '00220 Arginine biosynthesis [PATH:dok00220]', '02020 Two-component system [PATH:dok02020]']","['09101 Carbohydrate metabolism', '09102 Energy metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09132 Signal transduction']",2914.979173217688
+MED134_12226,C3,hypothetical protein,Unspecified,Unspecified,2911.3482002382925
+MED134_02235,C0,hypothetical protein,Unspecified,Unspecified,2905.3078288698803
+MED134_11601,C1,hypothetical protein,Unspecified,Unspecified,2896.1538148525688
+MED134_07776,C3,hypothetical protein,Unspecified,Unspecified,2879.308025734945
+MED134_12936,C1,kynureninase,['00380 Tryptophan metabolism [PATH:dok00380]'],['09105 Amino acid metabolism'],2879.106265785043
+MED134_10321,C1,"saccharopine dehydrogenase (NADP+, L-glutamate forming)",Unspecified,Unspecified,2865.276414199045
+MED134_04324,C3,hypothetical protein,Unspecified,Unspecified,2860.364079436752
+MED134_10301,C3,hypothetical protein,Unspecified,Unspecified,2849.7595360140895
+MED134_08886,C1,"3-oxoacid CoA-transferase, B subunit","['00650 Butanoate metabolism [PATH:dok00650]', '00280 Valine, leucine and isoleucine degradation [PATH:dok00280]']","['09101 Carbohydrate metabolism', '09105 Amino acid metabolism']",2836.1465551260117
+MED134_12341,C2,hypothetical protein,Unspecified,Unspecified,2830.875733704455
+MED134_09121,C3,putative DNA repair protein,Unspecified,Unspecified,2827.8389102940005
+MED134_07666,C1,hypothetical protein,Unspecified,Unspecified,2827.05484385247
+MED134_08161,C3,hypothetical protein,Unspecified,Unspecified,2818.2582100152204
+MED134_03689,C1,glycosyl transferase family 2,Unspecified,Unspecified,2812.937818301901
+MED134_04019,C3,serine carboxypeptidase,Unspecified,Unspecified,2804.307112853263
+MED134_07014,C3,DNA adenine methylase,Unspecified,Unspecified,2789.986439346868
+MED134_12351,C1,ATPase family associated with various cellular activities (AAA),Unspecified,Unspecified,2778.3908922643213
+MED134_11245,C1,glycosyl transferase family 2,Unspecified,Unspecified,2776.301146772096
+MED134_12926,C1,kynurenine 3-monooxygenase,['00380 Tryptophan metabolism [PATH:dok00380]'],['09105 Amino acid metabolism'],2773.089018321427
+MED134_05294,C3,phospholipase/carboxylesterase,Unspecified,Unspecified,2768.9066559866233
+MED134_10031,C4,hypothetical protein,Unspecified,Unspecified,2763.09552977805
+MED134_04139,C0,peptidase family M1,Unspecified,Unspecified,2762.1800207834463
+MED134_02780,C1,CAAX amino terminal protease family,Unspecified,Unspecified,2758.3847394920786
+MED134_10870,C0,hypothetical protein,Unspecified,Unspecified,2755.3730404131784
+MED134_11981,C4,hypothetical protein,Unspecified,Unspecified,2754.283270479479
+MED134_02030,C3,hypothetical protein,Unspecified,Unspecified,2749.2394810534634
+MED134_00940,C2,biopolymer transport protein ExbD/TolR,Unspecified,Unspecified,2748.722147864977
+MED134_13411,C4,sulfate/thiosulfate import ATP-binding protein CysA,Unspecified,Unspecified,2746.8626827923413
+MED134_14081,C4,"RNA methyltransferase, TrmA family",Unspecified,Unspecified,2734.505526446802
+MED134_07491,C0,hypothetical protein,Unspecified,Unspecified,2731.5866788669587
+MED134_03884,C0,bifunctional protein folD,['00670 One carbon pool by folate [PATH:dok00670]'],['09108 Metabolism of cofactors and vitamins'],2721.4983154819265
+MED134_04804,C1,HD superfamily phosphohydrolase,Unspecified,Unspecified,2708.0810728304623
+MED134_01800,C1,polyprenyl synthetase,['00900 Terpenoid backbone biosynthesis [PATH:dok00900]'],['09109 Metabolism of terpenoids and polyketides'],2707.436639339863
+MED134_09051,C4,hypothetical protein,Unspecified,Unspecified,2692.5006652847424
+MED134_09991,C4,alanine racemase,"['00470 D-Amino acid metabolism [PATH:dok00470]', '01502 Vancomycin resistance [PATH:dok01502]']","['09106 Metabolism of other amino acids', '09175 Drug resistance: antimicrobial']",2676.0225254933002
+MED134_08366,C1,dimethyladenosine transferase,Unspecified,Unspecified,2661.124321792968
+MED134_02835,C4,"glycogen/starch synthase, ADP-glucose type",['00500 Starch and sucrose metabolism [PATH:dok00500]'],['09101 Carbohydrate metabolism'],2660.0051152474307
+MED134_09956,C4,hypothetical protein,Unspecified,Unspecified,2657.7321435517174
+MED134_11856,C0,hypothetical protein,Unspecified,Unspecified,2653.8201602240833
+MED134_07456,C1,outer membrane efflux protein,"['03070 Bacterial secretion system [PATH:dok03070]', '02020 Two-component system [PATH:dok02020]', '01501 beta-Lactam resistance [PATH:dok01501]', '01503 Cationic antimicrobial peptide (CAMP) resistance [PATH:dok01503]']","['09131 Membrane transport', '09132 Signal transduction', '09175 Drug resistance: antimicrobial', '09175 Drug resistance: antimicrobial']",2645.3135451524713
+MED134_01510,C1,putative permease YjgP/YjgQ family,['02010 ABC transporters [PATH:dok02010]'],['09131 Membrane transport'],2619.945944020391
+MED134_13711,C1,ribosomal protein L11 methyltransferase,Unspecified,Unspecified,2607.513973168894
+MED134_13176,C2,hypothetical protein,Unspecified,Unspecified,2596.9681755226293
+MED134_07946,C3,acetate-CoA ligase,"['00010 Glycolysis / Gluconeogenesis [PATH:dok00010]', '00620 Pyruvate metabolism [PATH:dok00620]', '00630 Glyoxylate and dicarboxylate metabolism [PATH:dok00630]', '00640 Propanoate metabolism [PATH:dok00640]', '00680 Methane metabolism [PATH:dok00680]']","['09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09102 Energy metabolism']",2594.662031946875
+MED134_11326,C0,polysaccharide deacetylase,Unspecified,Unspecified,2588.0892780617523
+MED134_11451,C1,Holliday junction ATP-dependent DNA helicase RuvA,['03440 Homologous recombination [PATH:dok03440]'],['09124 Replication and repair'],2584.2016829279773
+MED134_12076,C1,peptidase family M28,Unspecified,Unspecified,2570.512795351987
+MED134_09236,C3,LysE type translocator,Unspecified,Unspecified,2567.101764839321
+MED134_08186,C4,hypothetical protein,Unspecified,Unspecified,2550.1440475943436
+MED134_05329,C3,hypothetical protein,Unspecified,Unspecified,2547.0142043195624
+MED134_04414,C0,hypothetical protein,Unspecified,Unspecified,2525.743501439838
+MED134_00950,C0,tetrahydrofolate synthase,['00790 Folate biosynthesis [PATH:dok00790]'],['09108 Metabolism of cofactors and vitamins'],2516.5358542853755
+MED134_02325,C1,carboxymuconolactone decarboxylase family protein,Unspecified,Unspecified,2513.8639674254173
+MED134_09716,C4,xylose isomerase-like protein,Unspecified,Unspecified,2513.127068089798
+MED134_00885,C1,lipid-A-disaccharide synthase,['00540 Lipopolysaccharide biosynthesis [PATH:dok00540]'],['09107 Glycan biosynthesis and metabolism'],2507.9760147757715
+MED134_01365,C4,3-deoxy-8-phosphooctulonate synthase,['00540 Lipopolysaccharide biosynthesis [PATH:dok00540]'],['09107 Glycan biosynthesis and metabolism'],2504.9701495447102
+MED134_06554,C1,hypothetical protein,Unspecified,Unspecified,2501.5248275381855
+MED134_05029,C0,hypothetical protein,Unspecified,Unspecified,2499.0335221562354
+MED134_14126,C0,peptidase family M23,Unspecified,Unspecified,2479.7171392323726
+MED134_00570,C0,glycosyl hydrolase family 92,Unspecified,Unspecified,2478.4701984001813
+MED134_01665,C0,gliding motility protein GldA,Unspecified,Unspecified,2473.6535042396
+MED134_03714,C0,N-acetylmuramoyl-L-alanine amidase,['01503 Cationic antimicrobial peptide (CAMP) resistance [PATH:dok01503]'],['09175 Drug resistance: antimicrobial'],2448.198146082991
+MED134_06684,C3,putative zinc-transporting P-type ATPase,Unspecified,Unspecified,2440.9630754460795
+MED134_01045,C0,penicillin-binding protein 2,"['00550 Peptidoglycan biosynthesis [PATH:dok00550]', '01501 beta-Lactam resistance [PATH:dok01501]']","['09107 Glycan biosynthesis and metabolism', '09175 Drug resistance: antimicrobial']",2433.80096419405
+MED134_02470,C1,hypothetical protein,Unspecified,Unspecified,2426.40982884869
+MED134_09926,C1,hypothetical protein,Unspecified,Unspecified,2400.4986250573975
+MED134_00060,C3,dihydrofolate reductase,"['00790 Folate biosynthesis [PATH:dok00790]', '00670 One carbon pool by folate [PATH:dok00670]']","['09108 Metabolism of cofactors and vitamins', '09108 Metabolism of cofactors and vitamins']",2400.1934030165494
+MED134_07074,C0,ATPase family associated with various cellular activities (AAA),Unspecified,Unspecified,2399.937497031057
+MED134_02085,C4,calcineurin-like phosphoesterase,"['00230 Purine metabolism [PATH:dok00230]', '00240 Pyrimidine metabolism [PATH:dok00240]', '00760 Nicotinate and nicotinamide metabolism [PATH:dok00760]']","['09104 Nucleotide metabolism', '09104 Nucleotide metabolism', '09108 Metabolism of cofactors and vitamins']",2393.114292723676
+MED134_07656,C1,16S rRNA processing protein RimM,Unspecified,Unspecified,2356.3195146177345
+MED134_01320,C4,hypothetical protein,Unspecified,Unspecified,2354.2429287119885
+MED134_03894,C1,hypothetical protein,Unspecified,Unspecified,2349.738743407871
+MED134_13871,C0,cell division ATP-binding protein FtsE,['02010 ABC transporters [PATH:dok02010]'],['09131 Membrane transport'],2347.626899058522
+MED134_00505,C1,hypothetical protein,Unspecified,Unspecified,2344.7940269442333
+MED134_07476,C2,"7, 8-dihydro-6-hydroxymethylpterin-pyrophosphokinase (HPPK)/deoxynucleoside kinase",Unspecified,Unspecified,2341.5624329584616
+MED134_09921,C2,ArsC family protein,Unspecified,Unspecified,2339.801797806137
+MED134_05384,C1,HD family protein,Unspecified,Unspecified,2327.469967737037
+MED134_00210,C2,TonB dependent/ligand-gated channel,Unspecified,Unspecified,2326.2837560501157
+MED134_04379,C0,ArsC family protein,Unspecified,Unspecified,2324.51358287726
+MED134_07721,C0,hypothetical protein,Unspecified,Unspecified,2319.3886513545713
+MED134_03449,C0,transglycosylase SLT,Unspecified,Unspecified,2317.518629695791
+MED134_00440,C2,sodium/solute symporter,Unspecified,Unspecified,2316.5373165942
+MED134_03095,C4,hypothetical protein,Unspecified,Unspecified,2293.688000779529
+MED134_05064,C1,hypothetical protein,Unspecified,Unspecified,2286.50290254225
+MED134_07189,C3,sodium/solute symporter,Unspecified,Unspecified,2284.0933257619276
+MED134_04759,C0,hypothetical protein,Unspecified,Unspecified,2279.4975222733906
+MED134_08946,C4,calcineurin-like phosphoesterase,['00540 Lipopolysaccharide biosynthesis [PATH:dok00540]'],['09107 Glycan biosynthesis and metabolism'],2277.331196364281
+MED134_02940,C0,transglutaminase-like superfamily protein,Unspecified,Unspecified,2270.001766329955
+MED134_01350,C0,hypothetical protein,Unspecified,Unspecified,2262.0703545634033
+MED134_08536,C0,hypothetical protein,Unspecified,Unspecified,2252.086385539682
+MED134_00360,C0,ApbE family protein,Unspecified,Unspecified,2250.3135206385896
+MED134_05209,C0,peptidase family M20/M25/M40,Unspecified,Unspecified,2246.3444150035784
+MED134_03409,C0,hypothetical protein,Unspecified,Unspecified,2231.6983456582802
+MED134_06359,C0,hypothetical protein,Unspecified,Unspecified,2214.964640494009
+MED134_08166,C0,carbon-nitrogen hydrolase,Unspecified,Unspecified,2208.025079459614
+MED134_07611,C0,Asp/Glu/hydantoin racemase,['00470 D-Amino acid metabolism [PATH:dok00470]'],['09106 Metabolism of other amino acids'],2203.4945605435505
+MED134_10755,C1,sugar transporter,Unspecified,Unspecified,2198.181479013225
+MED134_01240,C3,outer membrane efflux protein,"['03070 Bacterial secretion system [PATH:dok03070]', '02020 Two-component system [PATH:dok02020]', '01501 beta-Lactam resistance [PATH:dok01501]', '01503 Cationic antimicrobial peptide (CAMP) resistance [PATH:dok01503]']","['09131 Membrane transport', '09132 Signal transduction', '09175 Drug resistance: antimicrobial', '09175 Drug resistance: antimicrobial']",2194.310843276773
+MED134_03819,C1,S-adenosylmethionine-dependentmethyltransferase,Unspecified,Unspecified,2189.8765716908456
+MED134_12951,C1,radical SAM superfamily protein,['00790 Folate biosynthesis [PATH:dok00790]'],['09108 Metabolism of cofactors and vitamins'],2170.0573670115546
+MED134_14311,C0,cytochrome oxidase assembly protein,"['00190 Oxidative phosphorylation [PATH:dok00190]', '00860 Porphyrin metabolism [PATH:dok00860]', '02020 Two-component system [PATH:dok02020]']","['09102 Energy metabolism', '09108 Metabolism of cofactors and vitamins', '09132 Signal transduction']",2168.752773749109
+MED134_13066,C3,beta-carotene hydroxylase,['00906 Carotenoid biosynthesis [PATH:dok00906]'],['09109 Metabolism of terpenoids and polyketides'],2162.214739348008
+MED134_14041,C3,hypothetical protein,Unspecified,Unspecified,2153.733766688584
+MED134_03229,C2,"putative addiction module antidote protein, CC2985 family",Unspecified,Unspecified,2151.802414480031
+MED134_01325,C4,asparaginase,"['00250 Alanine, aspartate and glutamate metabolism [PATH:dok00250]', '00460 Cyanoamino acid metabolism [PATH:dok00460]']","['09105 Amino acid metabolism', '09106 Metabolism of other amino acids']",2144.940325247797
+MED134_01415,C0,biotin/lipoate A/B protein ligase family protein,['00780 Biotin metabolism [PATH:dok00780]'],['09108 Metabolism of cofactors and vitamins'],2135.2311963775983
+MED134_02845,C4,"1,4-alpha-glucan branching enzyme",['00500 Starch and sucrose metabolism [PATH:dok00500]'],['09101 Carbohydrate metabolism'],2129.1138123288647
+MED134_08996,C4,lipoprotein signal peptidase,['03060 Protein export [PATH:dok03060]'],"['09123 Folding, sorting and degradation']",2111.410200110198
+MED134_10271,C0,putative neutral zinc metallopeptidase,Unspecified,Unspecified,2110.245645800987
+MED134_09686,C4,hypothetical protein,Unspecified,Unspecified,2105.1988382824966
+MED134_12816,C3,cysteine synthase B,['00270 Cysteine and methionine metabolism [PATH:dok00270]'],['09105 Amino acid metabolism'],2094.3571528063158
+MED134_11946,C4,argininosuccinate lyase,"['00250 Alanine, aspartate and glutamate metabolism [PATH:dok00250]', '00220 Arginine biosynthesis [PATH:dok00220]']","['09105 Amino acid metabolism', '09105 Amino acid metabolism']",2092.969677982829
+MED134_03874,C0,papain family cysteine protease,Unspecified,Unspecified,2091.967003950546
+MED134_08576,C3,deacetylase,Unspecified,Unspecified,2086.4360964989673
+MED134_01885,C1,DNA replication and repair protein RecF,['03440 Homologous recombination [PATH:dok03440]'],['09124 Replication and repair'],2082.2993633404744
+MED134_09931,C1,hypothetical protein,Unspecified,Unspecified,2075.5784893475548
+MED134_12006,C1,hypothetical protein,Unspecified,Unspecified,2071.8834914172776
+MED134_05049,C4,hypothetical protein,Unspecified,Unspecified,2068.796758657485
+MED134_03055,C1,hypothetical protein,Unspecified,Unspecified,2056.198282684015
+MED134_11851,C3,lipoate-protein ligase B,['00785 Lipoic acid metabolism [PATH:dok00785]'],['09108 Metabolism of cofactors and vitamins'],2055.8587541838506
+MED134_06664,C4,hypothetical protein,Unspecified,Unspecified,2046.9813324320621
+MED134_17467,C0,hypothetical protein,Unspecified,Unspecified,2045.364200117362
+MED134_09631,C0,hypothetical protein,Unspecified,Unspecified,2042.449147419839
+MED134_14346,C1,metallo-beta-lactamase superfamily protein,['01501 beta-Lactam resistance [PATH:dok01501]'],['09175 Drug resistance: antimicrobial'],2037.8181507210074
+MED134_02985,C1,peptide deformylase,Unspecified,Unspecified,2037.1885159026656
+MED134_05184,C1,hypothetical protein,Unspecified,Unspecified,2033.700289491876
+MED134_12771,C0,DPS family protein,Unspecified,Unspecified,2032.4549102308654
+MED134_13401,C1,GrpE protein,Unspecified,Unspecified,2031.4387076383355
+MED134_13916,C0,tetrapyrrole (corrin/porphyrin) methylase family protein,Unspecified,Unspecified,2023.1714517676762
+MED134_12591,C1,hypothetical protein,Unspecified,Unspecified,2021.111012955765
+MED134_10021,C1,glycerol-3-phosphate dehydrogenase (NAD(P)+),['00564 Glycerophospholipid metabolism [PATH:dok00564]'],['09103 Lipid metabolism'],2015.941013781162
+MED134_05529,C1,hypothetical protein,Unspecified,Unspecified,2011.2719693243785
+MED134_11541,C0,TonB dependent/ligand-gated channel,Unspecified,Unspecified,2006.1071527727217
+MED134_07304,C1,dTDP-4-dehydrorhamnose reductase,Unspecified,Unspecified,1998.9452824433417
+MED134_11881,C0,N-acetylmuramic acid 6-phosphate etherase,['00520 Amino sugar and nucleotide sugar metabolism [PATH:dok00520]'],['09101 Carbohydrate metabolism'],1998.8163123057002
+MED134_12061,C1,cytidine deaminase,['00240 Pyrimidine metabolism [PATH:dok00240]'],['09104 Nucleotide metabolism'],1997.9886597873092
+MED134_04119,C2,peptidase family S41,Unspecified,Unspecified,1994.8509582223815
+MED134_14326,C1,hypothetical protein,Unspecified,Unspecified,1992.7638530170461
+MED134_13416,C4,"ABC transporter, permease protein",Unspecified,Unspecified,1953.8845613082985
+MED134_12756,C2,OmpA family protein,Unspecified,Unspecified,1947.8575344027859
+MED134_05539,C4,"DNA polymerase III, epsilon subunit","['03030 DNA replication [PATH:dok03030]', '03430 Mismatch repair [PATH:dok03430]', '03440 Homologous recombination [PATH:dok03440]']","['09124 Replication and repair', '09124 Replication and repair', '09124 Replication and repair']",1944.9894033693506
+MED134_03789,C0,haloacid dehalogenase-like hydrolase,Unspecified,Unspecified,1944.6636871458168
+MED134_11531,C2,hypothetical protein,Unspecified,Unspecified,1943.4260932155712
+MED134_08151,C3,hypothetical protein,Unspecified,Unspecified,1939.6709524017965
+MED134_06064,C4,exodeoxyribonuclease V alpha chain,Unspecified,Unspecified,1938.7618005965924
+MED134_11506,C4,cytochrome c oxidase subunit III,['00190 Oxidative phosphorylation [PATH:dok00190]'],['09102 Energy metabolism'],1935.5765994279816
+MED134_13686,C3,sugar transferase family protein,Unspecified,Unspecified,1916.0489960022574
+MED134_12206,C0,hypothetical protein,Unspecified,Unspecified,1909.7186180497138
+MED134_02060,C1,"methyltransferase, HemK family",Unspecified,Unspecified,1905.012283158678
+MED134_14181,C1,"1,4-dihydroxy-2-naphthoateoctaprenyltransferase",['00130 Ubiquinone and other terpenoid-quinone biosynthesis [PATH:dok00130]'],['09108 Metabolism of cofactors and vitamins'],1904.6886789440696
+MED134_10900,C1,NAD dependent epimerase/dehydratase family protein,Unspecified,Unspecified,1900.6381258325684
+MED134_14782,C1,hypothetical protein,Unspecified,Unspecified,1898.882503436961
+MED134_14381,C1,DEAD/DEAH box helicase,['03018 RNA degradation [PATH:dok03018]'],"['09123 Folding, sorting and degradation']",1886.1293709086235
+MED134_11286,C1,glycosyl transferase family 2,Unspecified,Unspecified,1870.3739258913038
+MED134_03354,C2,DisA protein,Unspecified,Unspecified,1866.1632215909663
+MED134_14071,C4,hypothetical protein,Unspecified,Unspecified,1862.4536755357517
+MED134_07264,C3,cyclophilin type peptidyl-prolyl cis-trans isomerase/CLD,Unspecified,Unspecified,1862.0602448243635
+MED134_08991,C1,hypothetical protein,Unspecified,Unspecified,1858.4878403160574
+MED134_11591,C0,small-conductance mechanosensitive channel,Unspecified,Unspecified,1857.670692597124
+MED134_10086,C0,aerotolerance-related exported protein BatB,Unspecified,Unspecified,1854.9322353829925
+MED134_06079,C1,hypothetical protein,Unspecified,Unspecified,1850.2238743814746
+MED134_10091,C0,aerotolerance-related exported protein BatA,Unspecified,Unspecified,1847.1322723770545
+MED134_05559,C0,hypothetical protein,Unspecified,Unspecified,1846.838895687249
+MED134_12911,C4,aldehyde dehydrogenase family protein,"['00380 Tryptophan metabolism [PATH:dok00380]', '00362 Benzoate degradation [PATH:dok00362]']","['09105 Amino acid metabolism', '09111 Xenobiotics biodegradation and metabolism']",1831.0207231386157
+MED134_12311,C4,haloacid dehalogenase-like hydrolase,Unspecified,Unspecified,1825.1367171602014
+MED134_02525,C0,magnesium chelatase subunit ChlI,Unspecified,Unspecified,1822.9711080179047
+MED134_04669,C2,translation initiation factor SUI1,Unspecified,Unspecified,1819.0550455085363
+MED134_12861,C0,hypothetical protein,Unspecified,Unspecified,1808.0629287365466
+MED134_05119,C4,hypothetical protein,Unspecified,Unspecified,1807.4590511245838
+MED134_02860,C4,major facilitator superfamily permease,Unspecified,Unspecified,1794.9327156588188
+MED134_10980,C0,hypothetical protein,Unspecified,Unspecified,1794.230245602988
+MED134_14752,C0,zinc carboxypeptidase,Unspecified,Unspecified,1788.2398574115675
+MED134_13276,C3,redoxin,Unspecified,Unspecified,1788.1169946256869
+MED134_08816,C0,coproporphyrinogen III oxidase,['00860 Porphyrin metabolism [PATH:dok00860]'],['09108 Metabolism of cofactors and vitamins'],1780.3675827560737
+MED134_05669,C2,hypothetical protein,Unspecified,Unspecified,1777.4196514526272
+MED134_13866,C3,glycosyl transferase family 2,Unspecified,Unspecified,1771.142358039725
+MED134_03504,C4,hypothetical protein,Unspecified,Unspecified,1766.5966039048249
+MED134_13366,C1,hypothetical protein,Unspecified,Unspecified,1763.3322103335354
+MED134_03854,C0,hypothetical protein,Unspecified,Unspecified,1752.960171732179
+MED134_10131,C1,two-component system sensor histidine kinase,['02020 Two-component system [PATH:dok02020]'],['09132 Signal transduction'],1749.1516476226416
+MED134_06959,C0,hypothetical protein,Unspecified,Unspecified,1744.1133542953935
+MED134_02805,C0,phage integrase family protein,Unspecified,Unspecified,1743.1921982102099
+MED134_03319,C0,trypsin-like serine protease,"['02020 Two-component system [PATH:dok02020]', '01503 Cationic antimicrobial peptide (CAMP) resistance [PATH:dok01503]']","['09132 Signal transduction', '09175 Drug resistance: antimicrobial']",1735.9609594830822
+MED134_07461,C1,"transcription regulator, TetR family",Unspecified,Unspecified,1721.0043436131937
+MED134_07029,C3,type I site-specific deoxyribonuclease,Unspecified,Unspecified,1714.0697167238895
+MED134_07194,C0,oxidoreductase family protein,Unspecified,Unspecified,1711.3609519065817
+MED134_09026,C1,hypothetical protein,Unspecified,Unspecified,1709.6344800739575
+MED134_11926,C4,acetylornithine aminotransferase,"['00300 Lysine biosynthesis [PATH:dok00300]', '00220 Arginine biosynthesis [PATH:dok00220]']","['09105 Amino acid metabolism', '09105 Amino acid metabolism']",1708.7656078609061
+MED134_14191,C1,methionyl-tRNA formyltransferase,"['00670 One carbon pool by folate [PATH:dok00670]', '00970 Aminoacyl-tRNA biosynthesis [PATH:dok00970]']","['09108 Metabolism of cofactors and vitamins', '09122 Translation']",1706.385512135063
+MED134_08716,C2,TonB dependent/ligand-gated channel,Unspecified,Unspecified,1703.6702797564312
+MED134_02830,C4,peptide-methionine (R)-S-oxide reductase,Unspecified,Unspecified,1701.647082451551
+MED134_05269,C0,HhH-GPD superfamily base excision DNA repair protein,['03410 Base excision repair [PATH:dok03410]'],['09124 Replication and repair'],1700.5098104576061
+MED134_03379,C1,pseudouridylate synthase,Unspecified,Unspecified,1685.362727782085
+MED134_05779,C4,hypothetical protein,Unspecified,Unspecified,1672.8879116010146
+MED134_00675,C4,NADH dehydrogenase,Unspecified,Unspecified,1667.0994891841592
+MED134_05519,C4,pseudouridylate synthase,Unspecified,Unspecified,1666.0334561506224
+MED134_02065,C4,UPF0717 protein,Unspecified,Unspecified,1659.41497312028
+MED134_03674,C4,YrdC protein,Unspecified,Unspecified,1651.380956531802
+MED134_11911,C4,argininosuccinate synthase,"['00250 Alanine, aspartate and glutamate metabolism [PATH:dok00250]', '00220 Arginine biosynthesis [PATH:dok00220]']","['09105 Amino acid metabolism', '09105 Amino acid metabolism']",1647.9419046909827
+MED134_03060,C1,shikimate dehydrogenase,Unspecified,Unspecified,1647.0727677480795
+MED134_14446,C1,hypothetical protein,Unspecified,Unspecified,1635.463747899368
+MED134_06649,C1,outer membrane efflux protein,Unspecified,Unspecified,1630.7843858082285
+MED134_02785,C1,O-succinylbenzoate-CoA ligase,['00130 Ubiquinone and other terpenoid-quinone biosynthesis [PATH:dok00130]'],['09108 Metabolism of cofactors and vitamins'],1624.6726454252262
+MED134_05284,C1,metallo-beta-lactamase superfamily protein,Unspecified,Unspecified,1620.9477777746447
+MED134_03289,C3,hypothetical protein,Unspecified,Unspecified,1620.5216875023982
+MED134_09896,C2,alpha/beta hydrolase,Unspecified,Unspecified,1618.7976123447138
+MED134_05809,C4,DEAD/DEAH box helicase,['03018 RNA degradation [PATH:dok03018]'],"['09123 Folding, sorting and degradation']",1615.7038191129482
+MED134_16069,C4,GCN5-related N-acetyltransferase,Unspecified,Unspecified,1608.3347848518822
+MED134_08371,C1,hypothetical protein,Unspecified,Unspecified,1605.9927491819108
+MED134_13451,C1,multidrug resistance protein,Unspecified,Unspecified,1604.2908420503004
+MED134_01155,C4,hypothetical protein,Unspecified,Unspecified,1595.9714807214102
+MED134_07269,C0,SpoU rRNA methylase family protein,Unspecified,Unspecified,1590.8380175329144
+MED134_08541,C0,phage integrase family protein,Unspecified,Unspecified,1587.5217902761883
+MED134_05574,C0,flavin containing amine oxidoreductase,Unspecified,Unspecified,1586.839872968715
+MED134_13016,C2,hypothetical protein,Unspecified,Unspecified,1586.7777599172116
+MED134_05619,C4,hypothetical protein,Unspecified,Unspecified,1585.5171214076422
+MED134_13046,C1,hypothetical protein,Unspecified,Unspecified,1570.2512097010217
+MED134_13461,C1,PAP2 superfamily protein,"['00550 Peptidoglycan biosynthesis [PATH:dok00550]', '00552 Teichoic acid biosynthesis [PATH:dok00552]']","['09107 Glycan biosynthesis and metabolism', '09107 Glycan biosynthesis and metabolism']",1570.120825900873
+MED134_00150,C1,inorganic H+ pyrophosphatase,Unspecified,Unspecified,1567.1091454095558
+MED134_07164,C0,Maf-like protein,['00240 Pyrimidine metabolism [PATH:dok00240]'],['09104 Nucleotide metabolism'],1566.830933543828
+MED134_09306,C0,methyltransferase family protein,Unspecified,Unspecified,1563.798725618608
+MED134_09296,C3,hypothetical protein,Unspecified,Unspecified,1560.30343692722
+MED134_07054,C0,hypothetical protein,Unspecified,Unspecified,1559.5161963938535
+MED134_00610,C1,ribosome-binding factor A,Unspecified,Unspecified,1555.9622152738527
+MED134_12236,C0,hypothetical protein,Unspecified,Unspecified,1551.8104608716803
+MED134_09871,C1,hypothetical protein,Unspecified,Unspecified,1550.3893439259932
+MED134_05069,C1,putative SPOUT methyltransferase,Unspecified,Unspecified,1546.2158203503654
+MED134_07651,C1,methyltransferase,Unspecified,Unspecified,1544.3650933199815
+MED134_00355,C0,hypothetical protein,Unspecified,Unspecified,1534.5302978757352
+MED134_11931,C4,ornithine carbamoyltransferase,Unspecified,Unspecified,1526.6788520169607
+MED134_03509,C1,hypothetical protein,Unspecified,Unspecified,1525.3705770534834
+MED134_07786,C3,endonuclease/exonuclease/phosphatase family protein,Unspecified,Unspecified,1518.7253680859917
+MED134_03769,C0,hypothetical protein,Unspecified,Unspecified,1518.4579656594692
+MED134_03184,C2,CAAX amino terminal protease family,Unspecified,Unspecified,1506.8254183429856
+MED134_13056,C0,glycosyl transferase family 2,Unspecified,Unspecified,1503.6197562807283
+MED134_06269,C1,peptidase family M28,Unspecified,Unspecified,1491.1334866823727
+MED134_03614,C3,hypothetical protein,Unspecified,Unspecified,1488.2014844289556
+MED134_05764,C4,hypothetical protein,Unspecified,Unspecified,1485.2755744396673
+MED134_07174,C2,Mg and Co transport protein CorA,Unspecified,Unspecified,1482.7031942211045
+MED134_10071,C0,aerotolerance-related exported protein BatE,Unspecified,Unspecified,1480.4858587941483
+MED134_00850,C1,hypothetical protein,Unspecified,Unspecified,1465.1042773599047
+MED134_07169,C2,hypothetical protein,Unspecified,Unspecified,1464.6372218134766
+MED134_14036,C3,hypothetical protein,Unspecified,Unspecified,1454.1458679215975
+MED134_10540,C1,crossover junction endodeoxyribonuclease RuvC,['03440 Homologous recombination [PATH:dok03440]'],['09124 Replication and repair'],1453.7603631379616
+MED134_01640,C1,hypothetical protein,Unspecified,Unspecified,1451.515529418571
+MED134_05679,C0,short chain dehydrogenase,Unspecified,Unspecified,1444.9734806226104
+MED134_13261,C3,hypothetical protein,Unspecified,Unspecified,1433.9618558513112
+MED134_05604,C3,hypothetical protein,Unspecified,Unspecified,1427.1454208311802
+MED134_02350,C3,potassium uptake protein TrkA,Unspecified,Unspecified,1423.7287290110455
+MED134_05564,C2,hypothetical protein,Unspecified,Unspecified,1416.1894851254801
+MED134_04144,C0,hypothetical protein,Unspecified,Unspecified,1414.17437620489
+MED134_12811,C0,sterol desaturase,Unspecified,Unspecified,1413.0347508436125
+MED134_03999,C0,penicillin binding protein transpeptidase,Unspecified,Unspecified,1411.7100466156462
+MED134_06609,C0,hypothetical protein,Unspecified,Unspecified,1410.5753613557483
+MED134_05169,C1,hypothetical protein,Unspecified,Unspecified,1408.784694876702
+MED134_11941,C4,acetylornithine deacetylase,['00220 Arginine biosynthesis [PATH:dok00220]'],['09105 Amino acid metabolism'],1407.1068686405104
+MED134_08681,C1,lycopene beta cyclase,['00906 Carotenoid biosynthesis [PATH:dok00906]'],['09109 Metabolism of terpenoids and polyketides'],1406.9262100001301
+MED134_08356,C1,hypothetical protein,Unspecified,Unspecified,1405.595261906058
+MED134_05579,C2,malate dehydrogenase (quinone),"['00020 Citrate cycle (TCA cycle) [PATH:dok00020]', '00620 Pyruvate metabolism [PATH:dok00620]']","['09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism']",1404.5029937981342
+MED134_02980,C1,Holliday junction resolvase-like protein,Unspecified,Unspecified,1401.058316206554
+MED134_13656,C3,glycosyl transferase family 2,Unspecified,Unspecified,1399.827564917361
+MED134_10121,C4,hypothetical protein,Unspecified,Unspecified,1396.931980966894
+MED134_08801,C3,hypothetical protein,Unspecified,Unspecified,1393.647683904643
+MED134_06429,C0,"oligo-1,6-glucosidase","['00052 Galactose metabolism [PATH:dok00052]', '00500 Starch and sucrose metabolism [PATH:dok00500]']","['09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism']",1392.5324208886784
+MED134_12231,C0,hypothetical protein,Unspecified,Unspecified,1384.4440766105727
+MED134_07631,C2,OmpA family protein,"['02030 Bacterial chemotaxis [PATH:dok02030]', '02040 Flagellar assembly [PATH:dok02040]']","['09142 Cell motility', '09142 Cell motility']",1383.2039725490067
+MED134_02095,C1,hypothetical protein,Unspecified,Unspecified,1381.9472905441785
+MED134_10860,C1,hypothetical protein,Unspecified,Unspecified,1376.9218183160342
+MED134_05914,C1,hypothetical protein,Unspecified,Unspecified,1371.431118863713
+MED134_02825,C4,peptide-methionine (R)-S-oxide reductase,Unspecified,Unspecified,1368.4914659864621
+MED134_13501,C0,peptidase family M23,Unspecified,Unspecified,1363.9021473514513
+MED134_13741,C1,hypothetical protein,Unspecified,Unspecified,1355.7727542167222
+MED134_14106,C2,hypothetical protein,Unspecified,Unspecified,1344.4299141784754
+MED134_13151,C0,hypothetical protein,['02024 Quorum sensing [PATH:dok02024]'],['09145 Cellular community - prokaryotes'],1344.0224973862928
+MED134_14612,C1,hypothetical protein,Unspecified,Unspecified,1342.7867944397692
+MED134_11916,C4,N-acetyl-gamma-glutamyl-phosphate reductase,['00220 Arginine biosynthesis [PATH:dok00220]'],['09105 Amino acid metabolism'],1334.11536546554
+MED134_12146,C0,hypothetical protein,Unspecified,Unspecified,1332.0115719298515
+MED134_07019,C3,hypothetical protein,Unspecified,Unspecified,1329.586623026112
+MED134_06409,C2,hypothetical protein,Unspecified,Unspecified,1328.5965489177195
+MED134_07986,C0,TonB dependent/ligand-gated channel,Unspecified,Unspecified,1326.943130577058
+MED134_08811,C0,hypothetical protein,Unspecified,Unspecified,1326.8915372867252
+MED134_12216,C0,acetyltransferase (GNAT) family protein,Unspecified,Unspecified,1318.576471208098
+MED134_14441,C1,hypothetical protein,Unspecified,Unspecified,1316.5416066715322
+MED134_10436,C0,hypothetical protein,Unspecified,Unspecified,1315.2905289275877
+MED134_08336,C4,D-3-phosphoglycerate dehydrogenase,"['00680 Methane metabolism [PATH:dok00680]', '00260 Glycine, serine and threonine metabolism [PATH:dok00260]', '00270 Cysteine and methionine metabolism [PATH:dok00270]']","['09102 Energy metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism']",1312.5431528836098
+MED134_02925,C0,hypothetical protein,Unspecified,Unspecified,1308.7419586517794
+MED134_11936,C4,acetylglutamate kinase,['00220 Arginine biosynthesis [PATH:dok00220]'],['09105 Amino acid metabolism'],1303.6163006436639
+MED134_14572,C3,pirin-related protein,Unspecified,Unspecified,1303.3659812663366
+MED134_09666,C4,hypothetical protein,Unspecified,Unspecified,1300.3241701685445
+MED134_06634,C1,phage integrase family protein,Unspecified,Unspecified,1288.2718069743723
+MED134_07219,C3,hypothetical protein,Unspecified,Unspecified,1287.047815790379
+MED134_13811,C3,glycosyl transferase family 2,Unspecified,Unspecified,1280.1186093590845
+MED134_13676,C3,hypothetical protein,Unspecified,Unspecified,1277.422716878929
+MED134_13971,C4,acetyltransferase (GNAT) family protein,Unspecified,Unspecified,1272.5474177236365
+MED134_13421,C1,small-conductance mechanosensitive channel,Unspecified,Unspecified,1271.9511000327593
+MED134_11075,C2,hypothetical protein,Unspecified,Unspecified,1268.9861990918284
+MED134_12241,C0,hypothetical protein,Unspecified,Unspecified,1268.4933344376464
+MED134_00215,C0,hypothetical protein,Unspecified,Unspecified,1266.7041026706424
+MED134_11871,C2,hypothetical protein,Unspecified,Unspecified,1265.2346859556153
+MED134_00290,C0,hypothetical protein,Unspecified,Unspecified,1254.2772677684197
+MED134_11250,C1,lipid A biosynthesis domain protein,Unspecified,Unspecified,1252.5341603563738
+MED134_04629,C3,hypothetical protein,Unspecified,Unspecified,1248.9819475903014
+MED134_03794,C0,acyl-CoA thioester hydrolase,Unspecified,Unspecified,1247.4876002984824
+MED134_05544,C1,hypothetical protein,Unspecified,Unspecified,1241.5944691700115
+MED134_06974,C0,hypothetical protein,Unspecified,Unspecified,1241.0209057988302
+MED134_01295,C1,hypothetical protein,Unspecified,Unspecified,1228.1387164403325
+MED134_00670,C4,iron-sulfur cluster-binding protein,Unspecified,Unspecified,1227.3363477034181
+MED134_09746,C0,hypothetical protein,Unspecified,Unspecified,1216.7539353713762
+MED134_10081,C3,aerotolerance-related exported protein BatC,Unspecified,Unspecified,1216.3341761796055
+MED134_00030,C3,3-deoxy-D-manno-octulosonic-acid transferase,['00540 Lipopolysaccharide biosynthesis [PATH:dok00540]'],['09107 Glycan biosynthesis and metabolism'],1209.3196822333987
+MED134_13731,C3,"ABC transporter, permease protein",['02024 Quorum sensing [PATH:dok02024]'],['09145 Cellular community - prokaryotes'],1207.723787265305
+MED134_02995,C2,MazG protein,Unspecified,Unspecified,1205.4543108009048
+MED134_00275,C2,hypothetical protein,Unspecified,Unspecified,1202.2901300961553
+MED134_07309,C1,hypothetical protein,Unspecified,Unspecified,1198.2923999265813
+MED134_10366,C4,A/G-specific adenine glycosylase,['03410 Base excision repair [PATH:dok03410]'],['09124 Replication and repair'],1197.6550467310922
+MED134_07149,C1,hypothetical protein,Unspecified,Unspecified,1193.0395356458293
+MED134_12931,C1,hypothetical protein,Unspecified,Unspecified,1191.8424452179863
+MED134_00415,C1,hypothetical protein,Unspecified,Unspecified,1181.88739799117
+MED134_14061,C1,ZIP zinc transporter,Unspecified,Unspecified,1179.9810471206283
+MED134_05834,C4,cAMP-binding protein,Unspecified,Unspecified,1178.2967749728975
+MED134_04004,C2,diaminopimelate decarboxylase,"['00300 Lysine biosynthesis [PATH:dok00300]', '00470 D-Amino acid metabolism [PATH:dok00470]']","['09105 Amino acid metabolism', '09106 Metabolism of other amino acids']",1178.2857912527543
+MED134_00545,C2,hypothetical protein,Unspecified,Unspecified,1176.835517915984
+MED134_10356,C4,hypothetical protein,Unspecified,Unspecified,1171.9224761320397
+MED134_08686,C0,"2-haloalkanoic acid dehalogenase, type II","['00625 Chloroalkane and chloroalkene degradation [PATH:dok00625]', '00361 Chlorocyclohexane and chlorobenzene degradation [PATH:dok00361]']","['09111 Xenobiotics biodegradation and metabolism', '09111 Xenobiotics biodegradation and metabolism']",1168.8241146049636
+MED134_09571,C0,hypothetical protein,Unspecified,Unspecified,1167.9429649939702
+MED134_09401,C3,glycosyl transferase group 1,Unspecified,Unspecified,1160.6561987540472
+MED134_03264,C0,hypothetical protein,Unspecified,Unspecified,1158.1010571338552
+MED134_11190,C2,TonB dependent/ligand-gated channel,Unspecified,Unspecified,1152.6984927415022
+MED134_12101,C0,hypothetical protein,Unspecified,Unspecified,1148.2382546146557
+MED134_06604,C1,major facilitator superfamily permease,Unspecified,Unspecified,1146.0936103813729
+MED134_08226,C1,hypothetical protein,Unspecified,Unspecified,1138.607010013693
+MED134_08711,C4,prolyl oligopeptidase family protein,Unspecified,Unspecified,1135.5060250927654
+MED134_13666,C3,glycosyl transferase group 1,Unspecified,Unspecified,1134.0916372270585
+MED134_08831,C4,hypothetical protein,Unspecified,Unspecified,1133.979213318974
+MED134_02875,C3,hypothetical protein,Unspecified,Unspecified,1133.4821014864083
+MED134_03799,C0,hypothetical protein,Unspecified,Unspecified,1124.6751332134227
+MED134_10825,C1,HI0933-like protein,Unspecified,Unspecified,1123.6119378204562
+MED134_05794,C4,hypothetical protein,Unspecified,Unspecified,1122.0840384184664
+MED134_11921,C4,pyrroline-5-carboxylate reductase,['00330 Arginine and proline metabolism [PATH:dok00330]'],['09105 Amino acid metabolism'],1121.7065624326697
+MED134_14607,C4,hypothetical protein,Unspecified,Unspecified,1120.2739608276288
+MED134_05589,C0,erythromycin esterase,Unspecified,Unspecified,1119.634249565574
+MED134_08856,C0,hypothetical protein,Unspecified,Unspecified,1119.0959237155928
+MED134_14076,C1,hypothetical protein,Unspecified,Unspecified,1118.4782488336964
+MED134_11291,C1,hypothetical protein,Unspecified,Unspecified,1110.0728700482905
+MED134_07876,C1,two-component system response regulator,Unspecified,Unspecified,1108.6411888103926
+MED134_12791,C0,hypothetical protein,Unspecified,Unspecified,1108.1056763605925
+MED134_13506,C0,haloacid dehalogenase-like hydrolase,Unspecified,Unspecified,1106.4239312020964
+MED134_05144,C0,hypothetical protein,Unspecified,Unspecified,1100.5897986677246
+MED134_11776,C3,D-cysteine desulfhydrase family protein,['00270 Cysteine and methionine metabolism [PATH:dok00270]'],['09105 Amino acid metabolism'],1100.1040719657728
+MED134_00730,C0,glycosyl transferase family 2,Unspecified,Unspecified,1096.5475327186357
+MED134_03954,C1,CrcB-like protein,Unspecified,Unspecified,1087.9804303265505
+MED134_02430,C4,hypothetical protein,Unspecified,Unspecified,1086.1904643339913
+MED134_15830,C0,putative membrane protein,Unspecified,Unspecified,1085.353271192053
+MED134_05884,C0,hypothetical protein,Unspecified,Unspecified,1081.398706025879
+MED134_16155,C4,hypothetical protein,Unspecified,Unspecified,1078.7977129170536
+MED134_01040,C0,rod shape-determining protein RodA,Unspecified,Unspecified,1074.6441613761117
+MED134_06049,C0,acyltransferase family protein,Unspecified,Unspecified,1072.722930800258
+MED134_06274,C1,dienelactone hydrolase family protein,"['00364 Fluorobenzoate degradation [PATH:dok00364]', '00361 Chlorocyclohexane and chlorobenzene degradation [PATH:dok00361]', '00623 Toluene degradation [PATH:dok00623]']","['09111 Xenobiotics biodegradation and metabolism', '09111 Xenobiotics biodegradation and metabolism', '09111 Xenobiotics biodegradation and metabolism']",1071.9322780692098
+MED134_10640,C2,"transcription regulator, GntR family",Unspecified,Unspecified,1071.7343760721483
+MED134_01125,C2,heavy metal transporter,Unspecified,Unspecified,1068.2596025588082
+MED134_02535,C0,Mn2+ and Fe2+ transporter of the NRAMP family,Unspecified,Unspecified,1060.5472850896354
+MED134_13456,C1,hypothetical protein,Unspecified,Unspecified,1058.3520764401005
+MED134_08346,C4,hypothetical protein,Unspecified,Unspecified,1054.971244033642
+MED134_10545,C1,"oxygen-independent coproporphyrinogen III oxidase, putative",Unspecified,Unspecified,1043.2766607794906
+MED134_14271,C3,short chain dehydrogenase,"['00061 Fatty acid biosynthesis [PATH:dok00061]', '00780 Biotin metabolism [PATH:dok00780]']","['09103 Lipid metabolism', '09108 Metabolism of cofactors and vitamins']",1041.634903296647
+MED134_10006,C0,chloramphenicol acetyltransferase,Unspecified,Unspecified,1041.5445569906651
+MED134_10041,C1,hypothetical protein,Unspecified,Unspecified,1039.6833317304965
+MED134_07896,C3,glyoxalase/bleomycin resistance protein/dioxygenase superfamily protein,Unspecified,Unspecified,1036.742235128696
+MED134_01095,C0,hypothetical protein,Unspecified,Unspecified,1035.9613143134102
+MED134_09406,C3,putative colanic acid biosynthesis acetyltransferase WcaF,['00543 Exopolysaccharide biosynthesis [PATH:dok00543]'],['09107 Glycan biosynthesis and metabolism'],1034.622366245197
+MED134_03294,C0,LysE type translocator,Unspecified,Unspecified,1032.6368692787373
+MED134_05039,C1,Sir2 family protein,['00760 Nicotinate and nicotinamide metabolism [PATH:dok00760]'],['09108 Metabolism of cofactors and vitamins'],1025.3117801294402
+MED134_10625,C0,2-dehydro-3-deoxygluconokinase,['00030 Pentose phosphate pathway [PATH:dok00030]'],['09101 Carbohydrate metabolism'],1017.5133326019687
+MED134_05239,C0,hypothetical protein,Unspecified,Unspecified,1016.9573332973566
+MED134_10630,C0,short chain dehydrogenase,Unspecified,Unspecified,1016.5169521364007
+MED134_03259,C0,hypothetical protein,Unspecified,Unspecified,1016.027087766076
+MED134_01120,C2,hypothetical protein,Unspecified,Unspecified,1012.4919444077482
+MED134_01920,C3,endonuclease/exonuclease/phosphatase family protein,Unspecified,Unspecified,1011.7660991139329
+MED134_07079,C2,McrBC 5-methylcytosine restriction system component,Unspecified,Unspecified,1010.2441337505873
+MED134_13041,C3,SpoU rRNA methylase family protein,Unspecified,Unspecified,1007.7830730673454
+MED134_06989,C0,hypothetical protein,Unspecified,Unspecified,1004.5392387941885
+MED134_06284,C4,major facilitator superfamily permease,Unspecified,Unspecified,1003.5514369971322
+MED134_04534,C1,GntP family permease,Unspecified,Unspecified,1002.9070225251974
+MED134_05769,C4,hypothetical protein,Unspecified,Unspecified,1000.9347966471498
+MED134_04034,C0,amidohydrolase family protein,Unspecified,Unspecified,1000.8843290641844
+MED134_11661,C2,"transcription regulator, TetR family",Unspecified,Unspecified,1000.7835743865844
+MED134_08706,C3,HD superfamily phosphohydrolase,Unspecified,Unspecified,998.0824027986738
+MED134_03274,C0,short chain dehydrogenase,Unspecified,Unspecified,996.9004435452462
+MED134_15124,C1,hypothetical protein,Unspecified,Unspecified,996.776093027705
+MED134_10316,C1,"transcription regulator, AsnC family",Unspecified,Unspecified,994.3786935037782
+MED134_12251,C3,peptidase family S51,Unspecified,Unspecified,994.3137267935213
+MED134_13031,C0,hypothetical protein,Unspecified,Unspecified,991.7253483023837
+MED134_03244,C3,hypothetical protein,Unspecified,Unspecified,988.516982928532
+MED134_10226,C0,peptide-methionine (S)-S-oxide reductase,Unspecified,Unspecified,983.0752994196469
+MED134_10326,C3,hypothetical protein,Unspecified,Unspecified,982.2604028228911
+MED134_03000,C2,hypothetical protein,Unspecified,Unspecified,981.8521296675608
+MED134_03444,C2,hypothetical protein,Unspecified,Unspecified,977.5284882586487
+MED134_06504,C2,hypothetical protein,Unspecified,Unspecified,973.8509397588039
+MED134_06464,C2,amidohydrolase family protein,Unspecified,Unspecified,973.1565377658467
+MED134_07154,C1,haloacid dehalogenase-like hydrolase,['00540 Lipopolysaccharide biosynthesis [PATH:dok00540]'],['09107 Glycan biosynthesis and metabolism'],972.5502268046475
+MED134_01270,C4,SpoU rRNA methylase family protein,Unspecified,Unspecified,971.7666438751858
+MED134_05149,C3,hypothetical protein,Unspecified,Unspecified,967.4529835415024
+MED134_10221,C3,hypothetical protein,Unspecified,Unspecified,964.0925974844348
+MED134_12856,C0,hypothetical protein,Unspecified,Unspecified,962.3877358433078
+MED134_06619,C1,FecR protein,['02020 Two-component system [PATH:dok02020]'],['09132 Signal transduction'],957.9673266449663
+MED134_05844,C0,hypothetical protein,Unspecified,Unspecified,956.2811704744872
+MED134_08411,C3,general secretion pathway protein F,Unspecified,Unspecified,955.3876795673107
+MED134_05234,C3,hypothetical protein,Unspecified,Unspecified,954.6442675841312
+MED134_07756,C1,endonuclease/exonuclease/phosphatase family protein,Unspecified,Unspecified,946.9138942353065
+MED134_08221,C4,MarC family integral membrane protein,Unspecified,Unspecified,941.0254414468291
+MED134_05424,C0,DJ-1/PfpI family protein,Unspecified,Unspecified,938.8911420435185
+MED134_06254,C1,dihydrouridine synthase,Unspecified,Unspecified,935.5352711300861
+MED134_04584,C1,hypothetical protein,Unspecified,Unspecified,934.2261748040279
+MED134_06249,C3,zinc-binding dehydrogenase,Unspecified,Unspecified,933.8136312271315
+MED134_04214,C4,acyl-CoA thioester hydrolase,Unspecified,Unspecified,931.8380868523537
+MED134_09976,C3,hypothetical protein,Unspecified,Unspecified,931.7447797133202
+MED134_08806,C0,"potassium uptake protein, TrkH family",Unspecified,Unspecified,928.4344228484823
+MED134_07044,C0,hypothetical protein,Unspecified,Unspecified,926.8066656758924
+MED134_05814,C4,chaperone protein DnaJ,Unspecified,Unspecified,923.5501460911719
+MED134_01370,C3,hypothetical protein,Unspecified,Unspecified,919.8587764622011
+MED134_04509,C2,aldehyde dehydrogenase family protein,"['00650 Butanoate metabolism [PATH:dok00650]', '00250 Alanine, aspartate and glutamate metabolism [PATH:dok00250]', '00310 Lysine degradation [PATH:dok00310]', '00350 Tyrosine metabolism [PATH:dok00350]', '00760 Nicotinate and nicotinamide metabolism [PATH:dok00760]']","['09101 Carbohydrate metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09108 Metabolism of cofactors and vitamins']",918.8686167078486
+MED134_15348,C3,transcriptional regulator,Unspecified,Unspecified,916.8260151136205
+MED134_05419,C4,zinc carboxypeptidase,Unspecified,Unspecified,915.0863295629408
+MED134_12291,C4,MarC family integral membrane protein,Unspecified,Unspecified,912.1769820545677
+MED134_09431,C3,endonuclease/exonuclease/phosphatase family protein,Unspecified,Unspecified,907.4136486793752
+MED134_02145,C0,dephospho-CoA kinase,['00770 Pantothenate and CoA biosynthesis [PATH:dok00770]'],['09108 Metabolism of cofactors and vitamins'],906.4308415557036
+MED134_08851,C0,beta-lactamase family protein,Unspecified,Unspecified,904.799225282566
+MED134_09231,C1,hypothetical protein,Unspecified,Unspecified,903.3205304621983
+MED134_15306,C0,hypothetical protein,Unspecified,Unspecified,902.9519268548327
+MED134_07339,C0,hypothetical protein,Unspecified,Unspecified,901.5105776130579
+MED134_01080,C3,hypothetical protein,Unspecified,Unspecified,900.008030476087
+MED134_05874,C0,hypothetical protein,Unspecified,Unspecified,892.1541482213594
+MED134_14532,C4,hypothetical protein,Unspecified,Unspecified,891.3234175128606
+MED134_03075,C4,hypothetical protein,Unspecified,Unspecified,890.7435162425295
+MED134_03534,C0,"transcription regulator, AraC family",Unspecified,Unspecified,887.1546960498462
+MED134_11215,C1,cytidine/deoxycytidylate deaminase family protein,Unspecified,Unspecified,887.0258893991177
+MED134_07314,C1,2OG-Fe(II) oxygenase superfamily protein,Unspecified,Unspecified,885.6175893781322
+MED134_05244,C0,hypothetical protein,Unspecified,Unspecified,884.8532239065767
+MED134_03969,C0,hypothetical protein,Unspecified,Unspecified,884.3778037860907
+MED134_14436,C1,hypothetical protein,Unspecified,Unspecified,883.4244308874647
+MED134_06364,C4,CDP-alcohol phosphatidyltransferase,Unspecified,Unspecified,880.0703356799086
+MED134_05134,C0,hemolysin-III related protein,Unspecified,Unspecified,878.2364756030718
+MED134_10046,C3,colicin V production protein,Unspecified,Unspecified,876.599237058489
+MED134_09186,C1,ribonuclease P protein component,Unspecified,Unspecified,876.2718284245695
+MED134_12166,C2,hypothetical protein,Unspecified,Unspecified,875.9865990107356
+MED134_04384,C4,haloacid dehalogenase-like hydrolase,"['00625 Chloroalkane and chloroalkene degradation [PATH:dok00625]', '00361 Chlorocyclohexane and chlorobenzene degradation [PATH:dok00361]']","['09111 Xenobiotics biodegradation and metabolism', '09111 Xenobiotics biodegradation and metabolism']",873.6889339423602
+MED134_00380,C1,hypothetical protein,Unspecified,Unspecified,873.3598078234181
+MED134_13816,C0,hypothetical protein,Unspecified,Unspecified,871.0206687019943
+MED134_13661,C0,serine O-acetyltransferase,"['00920 Sulfur metabolism [PATH:dok00920]', '00270 Cysteine and methionine metabolism [PATH:dok00270]', '00543 Exopolysaccharide biosynthesis [PATH:dok00543]']","['09102 Energy metabolism', '09105 Amino acid metabolism', '09107 Glycan biosynthesis and metabolism']",870.3120125074354
+MED134_06564,C1,hypothetical protein,Unspecified,Unspecified,869.5423457217755
+MED134_00965,C0,cellulase (glycosyl hydrolase family 5),"['00500 Starch and sucrose metabolism [PATH:dok00500]', '02020 Two-component system [PATH:dok02020]']","['09101 Carbohydrate metabolism', '09132 Signal transduction']",866.5112715350117
+MED134_13356,C0,"sodium/hydrogen exchanger, NhaP family",Unspecified,Unspecified,866.1411524614059
+MED134_04399,C1,hypothetical protein,Unspecified,Unspecified,851.3237576481854
+MED134_02465,C4,hypothetical protein,Unspecified,Unspecified,850.5352101746169
+MED134_00270,C1,hypothetical protein,Unspecified,Unspecified,848.9041943583086
+MED134_01700,C1,D-tyrosyl-tRNA(Tyr) deacylase,Unspecified,Unspecified,845.7092456386362
+MED134_12211,C0,D-alanyl-D-alanine carboxypeptidase,Unspecified,Unspecified,844.9290840991347
+MED134_13536,C1,O-methyltransferase family protein,Unspecified,Unspecified,843.2175894557774
+MED134_01660,C0,hypothetical protein,Unspecified,Unspecified,842.3962046489148
+MED134_02310,C0,hypothetical protein,Unspecified,Unspecified,837.0915193496421
+MED134_09381,C3,polysaccharide biosynthesis protein,Unspecified,Unspecified,832.116607526484
+MED134_03664,C2,alpha/beta hydrolase,Unspecified,Unspecified,831.4245228829134
+MED134_07049,C3,hypothetical protein,Unspecified,Unspecified,831.2779005769821
+MED134_16709,C0,helix-turn-helix domain protein,Unspecified,Unspecified,824.1518662791655
+MED134_03234,C0,RDD family protein,Unspecified,Unspecified,823.5172739816585
+MED134_04389,C1,DJ-1/PfpI family protein,Unspecified,Unspecified,813.0320491561122
+MED134_04294,C0,hypothetical protein,Unspecified,Unspecified,809.4139054627683
+MED134_03539,C2,hypothetical protein,Unspecified,Unspecified,807.0468273795715
+MED134_06904,C0,phage integrase family protein,Unspecified,Unspecified,805.0716059145369
+MED134_10635,C2,hexuranate transporter,Unspecified,Unspecified,801.5547150491392
+MED134_10740,C1,two-component system response regulator,Unspecified,Unspecified,798.6880471208481
+MED134_12806,C0,"transcription regulator, Crp family",Unspecified,Unspecified,789.6322763491233
+MED134_06484,C4,hypothetical protein,Unspecified,Unspecified,787.649739038374
+MED134_06434,C0,LysE type translocator,Unspecified,Unspecified,784.9176343018178
+MED134_09756,C2,"leucyl, phenylalanyl-tRNA-protein transferase",Unspecified,Unspecified,782.0540666909552
+MED134_08861,C3,3'-5' exonuclease,Unspecified,Unspecified,775.3445954444487
+MED134_09886,C4,peptide chain release factor,Unspecified,Unspecified,774.1508689253037
+MED134_08156,C0,putative amidophosphoribosyl-transferase,Unspecified,Unspecified,773.2117419216152
+MED134_03744,C1,hypothetical protein,Unspecified,Unspecified,770.8887875648657
+MED134_03759,C0,hypothetical protein,Unspecified,Unspecified,769.3291776444069
+MED134_11421,C1,putative iron-sulfur cluster-binding protein,Unspecified,Unspecified,768.6132637637896
+MED134_13486,C2,"RNA polymerase sigma factor, sigma-70 family",Unspecified,Unspecified,768.4465294597878
+MED134_06169,C4,hypothetical protein,['00770 Pantothenate and CoA biosynthesis [PATH:dok00770]'],['09108 Metabolism of cofactors and vitamins'],763.1371783959767
+MED134_03829,C2,hypothetical protein,Unspecified,Unspecified,763.0751453755315
+MED134_09461,C1,hypothetical protein,Unspecified,Unspecified,762.5771432442461
+MED134_04709,C1,methyltransferase,Unspecified,Unspecified,761.5154183922888
+MED134_05849,C0,hypothetical protein,Unspecified,Unspecified,759.6966241982809
+MED134_03100,C0,hypothetical protein,Unspecified,Unspecified,758.4862991026688
+MED134_05249,C0,hypothetical protein,Unspecified,Unspecified,754.2797805064401
+MED134_14086,C3,hypothetical protein,Unspecified,Unspecified,754.0739559032595
+MED134_00560,C0,asparaginase,['00511 Other glycan degradation [PATH:dok00511]'],['09107 Glycan biosynthesis and metabolism'],753.8576483075561
+MED134_12171,C0,glycosyl transferase group 1,Unspecified,Unspecified,745.9845383359377
+MED134_00035,C0,hypothetical protein,Unspecified,Unspecified,744.0501560625078
+MED134_01540,C2,hypothetical protein,Unspecified,Unspecified,742.2210934137506
+MED134_13956,C0,hypothetical protein,Unspecified,Unspecified,741.6427384459066
+MED134_02025,C0,hypothetical protein,Unspecified,Unspecified,741.3397760504628
+MED134_07039,C3,hypothetical protein,Unspecified,Unspecified,740.7242641797828
+MED134_06204,C1,hypothetical protein,Unspecified,Unspecified,738.3870815635285
+MED134_04219,C4,nitroreductase family protein,Unspecified,Unspecified,736.2357619466702
+MED134_07516,C1,LysE type translocator,Unspecified,Unspecified,732.1394053850432
+MED134_05689,C4,hypothetical protein,Unspecified,Unspecified,731.685805725777
+MED134_10381,C1,RecX family protein,Unspecified,Unspecified,730.1378228632544
+MED134_03599,C1,hypothetical protein,Unspecified,Unspecified,727.88635076775
+MED134_03254,C0,hypothetical protein,Unspecified,Unspecified,727.6363610214783
+MED134_03214,C4,hypothetical protein,Unspecified,Unspecified,727.0957624376233
+MED134_14632,C2,"transcription regulator, AraC family",Unspecified,Unspecified,726.2091316915182
+MED134_00875,C0,competence protein,Unspecified,Unspecified,724.5295091204753
+MED134_01305,C0,GH3 auxin-responsive promoter,Unspecified,Unspecified,724.0870319688846
+MED134_05019,C0,hypothetical protein,Unspecified,Unspecified,722.1716728314127
+MED134_10695,C1,hypothetical protein,Unspecified,Unspecified,721.6871082015323
+MED134_03204,C0,acetyltransferase (GNAT) family protein,Unspecified,Unspecified,718.1247650561841
+MED134_05174,C0,ATP-dependent Clp protease,Unspecified,Unspecified,716.8727562613083
+MED134_05494,C3,hypothetical protein,Unspecified,Unspecified,713.4984961373993
+MED134_02555,C0,hypothetical protein,Unspecified,Unspecified,712.4138482763748
+MED134_10935,C0,hypothetical protein,Unspecified,Unspecified,710.8574232596975
+MED134_12581,C3,transcription regulator,Unspecified,Unspecified,705.8553892859596
+MED134_05744,C0,hypothetical protein,Unspecified,Unspecified,705.2585767611599
+MED134_12976,C4,hypothetical protein,Unspecified,Unspecified,704.868510453711
+MED134_01875,C1,hypothetical protein,Unspecified,Unspecified,703.315036833751
+MED134_13036,C3,hypothetical protein,Unspecified,Unspecified,700.032775930883
+MED134_02345,C0,hypothetical protein,Unspecified,Unspecified,694.3741566795156
+MED134_06814,C3,oxidoreductase family protein,['00920 Sulfur metabolism [PATH:dok00920]'],['09102 Energy metabolism'],694.1675219521876
+MED134_05824,C2,hypothetical protein,Unspecified,Unspecified,685.4139480491995
+MED134_11876,C2,hypothetical protein,Unspecified,Unspecified,681.9364034840481
+MED134_00220,C0,complex I intermediate-associated protein 30 (CIA30),Unspecified,Unspecified,681.0209293609944
+MED134_02550,C0,allophanate hydrolase subunit 2,Unspecified,Unspecified,679.6867072950809
+MED134_00190,C0,two-component system sensor histidine kinase,Unspecified,Unspecified,679.4991257379652
+MED134_03804,C0,hypothetical protein,Unspecified,Unspecified,675.5344710074299
+MED134_14627,C0,alpha-acetolactate decarboxylase,Unspecified,Unspecified,665.030227862281
+MED134_11861,C0,ribonuclease HII,['03030 DNA replication [PATH:dok03030]'],['09124 Replication and repair'],662.9553166994642
+MED134_13951,C0,thioesterase superfamily protein,Unspecified,Unspecified,658.627260488589
+MED134_03554,C2,hypothetical protein,Unspecified,Unspecified,658.565954261066
+MED134_01030,C1,hypothetical protein,Unspecified,Unspecified,655.3357742270061
+MED134_10585,C1,DNA polymerase IV,Unspecified,Unspecified,653.5196260727282
+MED134_04969,C1,hypothetical protein,Unspecified,Unspecified,653.0045336994568
+MED134_05459,C0,hypothetical protein,Unspecified,Unspecified,652.3865014726011
+MED134_00200,C0,hypothetical protein,Unspecified,Unspecified,650.8413800506817
+MED134_02540,C0,LamB/YcsF family protein,['00480 Glutathione metabolism [PATH:dok00480]'],['09106 Metabolism of other amino acids'],650.5613722112055
+MED134_00350,C3,"two-component system response regulator, LytR/AlgR family",Unspecified,Unspecified,650.5192186285401
+MED134_05524,C4,hypothetical protein,Unspecified,Unspecified,648.3566412277702
+MED134_02620,C2,universal stress protein UspA,Unspecified,Unspecified,646.1728933603366
+MED134_04974,C1,hypothetical protein,Unspecified,Unspecified,643.2938044491523
+MED134_04344,C0,hypothetical protein,Unspecified,Unspecified,636.9699926505134
+MED134_01290,C1,hypothetical protein,Unspecified,Unspecified,636.5577529867141
+MED134_08671,C2,hypothetical protein,Unspecified,Unspecified,635.7285779931077
+MED134_07034,C3,hypothetical protein,Unspecified,Unspecified,634.1405356850664
+MED134_02865,C4,large-conductance mechanosensitive channel,Unspecified,Unspecified,633.9508227509142
+MED134_05159,C3,hypothetical protein,Unspecified,Unspecified,633.1539281084387
+MED134_15422,C2,hypothetical protein,Unspecified,Unspecified,632.5797777122443
+MED134_06849,C4,"transcription regulator, AraC family",Unspecified,Unspecified,629.6226899039891
+MED134_09841,C2,CBS domain protein,Unspecified,Unspecified,628.5629307739355
+MED134_08211,C1,peptidase family M20/M25/M40,Unspecified,Unspecified,624.6933180106034
+MED134_00575,C4,copper homeostasis protein CutC,Unspecified,Unspecified,619.8198640304834
+MED134_00205,C0,hypothetical protein,Unspecified,Unspecified,619.1498830278208
+MED134_01615,C0,acetyltransferase (GNAT) family,Unspecified,Unspecified,619.1310510397177
+MED134_07069,C2,hypothetical protein,Unspecified,Unspecified,616.2546741215397
+MED134_11195,C2,hypothetical protein,Unspecified,Unspecified,615.8274705077986
+MED134_00660,C0,hypothetical protein,Unspecified,Unspecified,612.832269017769
+MED134_14542,C2,endonuclease I,Unspecified,Unspecified,611.8176529571431
+MED134_08626,C3,transcription regulator,Unspecified,Unspecified,611.4643175153867
+MED134_00425,C0,hypothetical protein,Unspecified,Unspecified,610.7743340624877
+MED134_00185,C2,two-component system response regulator,['02020 Two-component system [PATH:dok02020]'],['09132 Signal transduction'],610.7544323671866
+MED134_03040,C3,hypothetical protein,Unspecified,Unspecified,604.8082913808139
+MED134_01175,C3,hypothetical protein,Unspecified,Unspecified,600.8426774804313
+MED134_14246,C1,SnoaL-like polyketide cyclase,Unspecified,Unspecified,600.2296788126442
+MED134_07229,C0,hypothetical protein,Unspecified,Unspecified,597.9661886990812
+MED134_10735,C1,hypothetical protein,Unspecified,Unspecified,596.3073359994912
+MED134_06189,C0,adenylate kinase,"['00230 Purine metabolism [PATH:dok00230]', '00730 Thiamine metabolism [PATH:dok00730]']","['09104 Nucleotide metabolism', '09108 Metabolism of cofactors and vitamins']",595.461775289041
+MED134_14056,C1,hypothetical protein,Unspecified,Unspecified,594.4849380889652
+MED134_08326,C1,hypothetical protein,Unspecified,Unspecified,592.9153879223632
+MED134_13301,C0,hypothetical protein,Unspecified,Unspecified,587.0823564907032
+MED134_09286,C0,fatty acid desaturase,['00071 Fatty acid degradation [PATH:dok00071]'],['09103 Lipid metabolism'],585.9994396075163
+MED134_02895,C4,"RNA polymerase sigma factor, sigma-70 family",Unspecified,Unspecified,585.6902336585449
+MED134_08561,C4,metallo-beta-lactamase superfamily protein,Unspecified,Unspecified,583.0633279559607
+MED134_01865,C4,hypothetical protein,Unspecified,Unspecified,578.8196213887018
+MED134_10830,C1,hypothetical protein,Unspecified,Unspecified,561.9621608420771
+MED134_05629,C0,Co/Zn/Cd efflux protein,Unspecified,Unspecified,559.3175312955814
+MED134_05859,C0,hypothetical protein,Unspecified,Unspecified,557.0949585781063
+MED134_05504,C2,hypothetical protein,Unspecified,Unspecified,551.2306555188504
+MED134_13156,C3,hypothetical protein,Unspecified,Unspecified,546.7065275671812
+MED134_08341,C4,hypothetical protein,Unspecified,Unspecified,544.2911405670304
+MED134_07551,C1,hypothetical protein,Unspecified,Unspecified,544.2619973052783
+MED134_06279,C4,hypothetical protein,Unspecified,Unspecified,543.3438054854962
+MED134_04444,C3,"transcriptional regulator, LytR/AlgR family",Unspecified,Unspecified,541.2855566044543
+MED134_05909,C0,carbon-nitrogen hydrolase,Unspecified,Unspecified,539.9342107647274
+MED134_13181,C2,hypothetical protein,Unspecified,Unspecified,539.2759197492203
+MED134_03974,C0,hypothetical protein,Unspecified,Unspecified,539.1536672271365
+MED134_11536,C2,hypothetical protein,Unspecified,Unspecified,538.4022037680472
+MED134_03644,C0,glyoxalase/bleomycin resistance protein/dioxygenase superfamily protein,Unspecified,Unspecified,528.7302450234647
+MED134_08621,C0,beta-lactamase family protein,Unspecified,Unspecified,524.2947735253822
+MED134_05899,C0,deoxyhypusine synthase,Unspecified,Unspecified,522.6718528933412
+MED134_10620,C0,2-dehydro-3-deoxyphosphogluconate aldolase / 4-hydroxy-2-oxoglutarate aldolase,"['00030 Pentose phosphate pathway [PATH:dok00030]', '00630 Glyoxylate and dicarboxylate metabolism [PATH:dok00630]']","['09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism']",521.2448875949472
+MED134_09641,C0,hypothetical protein,Unspecified,Unspecified,516.6418033450387
+MED134_05724,C4,major facilitator superfamily permease,Unspecified,Unspecified,513.2232234851144
+MED134_05894,C0,arginase family protein,['00330 Arginine and proline metabolism [PATH:dok00330]'],['09105 Amino acid metabolism'],512.5510388619837
+MED134_05484,C0,hypothetical protein,Unspecified,Unspecified,509.7885310366468
+MED134_11596,C4,small-conductance mechanosensitive channel,Unspecified,Unspecified,506.66633451579173
+MED134_04039,C0,hypothetical protein,Unspecified,Unspecified,502.9584333479972
+MED134_05869,C3,"transcription regulator, AraC family",Unspecified,Unspecified,500.2287026694125
+MED134_03309,C3,DNA binding helix-turn helix protein,Unspecified,Unspecified,500.09246756345635
+MED134_01580,C1,NUDIX hydrolase,Unspecified,Unspecified,497.7970463931251
+MED134_03219,C0,hypothetical protein,Unspecified,Unspecified,494.28381261344873
+MED134_02545,C0,allophanate hydrolase subunit 1,Unspecified,Unspecified,494.22687623192553
+MED134_17085,C1,23S rRNA-intervening sequence protein,Unspecified,Unspecified,490.7941001582796
+MED134_08496,C0,hypothetical protein,Unspecified,Unspecified,488.8024685621432
+MED134_14416,C0,hypothetical protein,Unspecified,Unspecified,487.96949623273815
+MED134_05889,C0,Orn/DAP/Arg decarboxylase,['00330 Arginine and proline metabolism [PATH:dok00330]'],['09105 Amino acid metabolism'],485.15890896009176
+MED134_00080,C1,protein of unknown function (DUF427),Unspecified,Unspecified,483.6813068406876
+MED134_12256,C4,hypothetical protein,Unspecified,Unspecified,481.80382309869265
+MED134_04149,C0,hypothetical protein,Unspecified,Unspecified,481.5679719914391
+MED134_05429,C4,cAMP-binding protein,Unspecified,Unspecified,478.6815914754577
+MED134_15304,C0,putative membrane protein,Unspecified,Unspecified,477.2050297215262
+MED134_06514,C2,hypothetical protein,Unspecified,Unspecified,476.6644701092802
+MED134_06509,C0,thioredoxin family protein,Unspecified,Unspecified,474.53412711468604
+MED134_10281,C4,hypothetical protein,Unspecified,Unspecified,473.94279561302676
+MED134_06909,C0,hypothetical protein,Unspecified,Unspecified,469.90466181608076
+MED134_01780,C2,isocitrate lyase,['00630 Glyoxylate and dicarboxylate metabolism [PATH:dok00630]'],['09101 Carbohydrate metabolism'],469.5824724035721
+MED134_09256,C4,hypothetical protein,Unspecified,Unspecified,469.4447108897447
+MED134_14597,C0,two-component system sensor histidine kinase,Unspecified,Unspecified,469.0486352385912
+MED134_07089,C0,sensor of blue-light using FAD,Unspecified,Unspecified,461.0833717155032
+MED134_14286,C2,MIP family channel protein,Unspecified,Unspecified,460.34092908459445
+MED134_12761,C0,hypothetical protein,Unspecified,Unspecified,458.4323915679961
+MED134_14547,C0,endonuclease/exonuclease/phosphatase family protein,Unspecified,Unspecified,457.1353468896236
+MED134_09806,C4,major facilitator superfamily protein,Unspecified,Unspecified,457.0922731333212
+MED134_08501,C0,transcription regulator,Unspecified,Unspecified,456.50144321284694
+MED134_03529,C2,ThiJ/PfpI family protein,Unspecified,Unspecified,456.0668099915107
+MED134_14672,C2,"transcription regulator, AraC family",Unspecified,Unspecified,452.089112056845
+MED134_04044,C0,HSP20-like chaperone,Unspecified,Unspecified,450.0937009993563
+MED134_06194,C2,hypothetical protein,Unspecified,Unspecified,446.40203474299426
+MED134_03269,C2,hypothetical protein,Unspecified,Unspecified,444.3561518535623
+MED134_05634,C0,hypothetical protein,Unspecified,Unspecified,440.14267001115815
+MED134_07234,C0,hypothetical protein,Unspecified,Unspecified,437.6486807747988
+MED134_04394,C4,multidrug resistance protein,Unspecified,Unspecified,436.36159204989656
+MED134_05569,C0,hypothetical protein,Unspecified,Unspecified,434.4191998934824
+MED134_04269,C3,hypothetical protein,Unspecified,Unspecified,432.62914390966296
+MED134_09261,C4,hypothetical protein,Unspecified,Unspecified,427.139739801302
+MED134_06044,C0,ferritin-like protein,Unspecified,Unspecified,426.95495487094064
+MED134_10386,C4,hypothetical protein,Unspecified,Unspecified,421.75067434415416
+MED134_06779,C0,hypothetical protein,Unspecified,Unspecified,421.4076207830549
+MED134_13351,C3,ZIP zinc transporter family protein,Unspecified,Unspecified,420.51171369862965
+MED134_06839,C0,hypothetical protein,Unspecified,Unspecified,419.8982218833993
+MED134_05819,C2,hypothetical protein,Unspecified,Unspecified,419.75974244767133
+MED134_06864,C0,short chain dehydrogenase,Unspecified,Unspecified,417.72787058701806
+MED134_05499,C0,hypothetical protein,Unspecified,Unspecified,416.86400232668933
+MED134_01100,C0,hypothetical protein,Unspecified,Unspecified,415.2869879599235
+MED134_02735,C0,cytochrome c oxidase accessory protein CcoG,Unspecified,Unspecified,413.46828196029116
+MED134_11301,C4,hypothetical protein,Unspecified,Unspecified,409.83409159947234
+MED134_11831,C2,hypothetical protein,Unspecified,Unspecified,406.34684767418787
+MED134_07871,C0,"transcription regulator, AraC family",Unspecified,Unspecified,402.4578731472246
+MED134_14682,C0,cytochrome c peroxidase,Unspecified,Unspecified,400.57376725079405
+MED134_07481,C1,hypothetical protein,Unspecified,Unspecified,392.28738249160256
+MED134_01035,C0,hypothetical protein,Unspecified,Unspecified,388.95276823382926
+MED134_14582,C0,hypothetical protein,Unspecified,Unspecified,381.13675224108346
+MED134_13491,C2,hypothetical protein,Unspecified,Unspecified,378.2420190548497
+MED134_10565,C1,adenylate cyclase family protein,['00230 Purine metabolism [PATH:dok00230]'],['09104 Nucleotide metabolism'],373.33315083938834
+MED134_06819,C3,hypothetical protein,Unspecified,Unspecified,372.8532058906004
+MED134_00725,C0,HTH-type transcriptional regulator,Unspecified,Unspecified,371.34116249565614
+MED134_01785,C0,aminotransferase class-V,"['00630 Glyoxylate and dicarboxylate metabolism [PATH:dok00630]', '00680 Methane metabolism [PATH:dok00680]', '00250 Alanine, aspartate and glutamate metabolism [PATH:dok00250]', '00260 Glycine, serine and threonine metabolism [PATH:dok00260]']","['09101 Carbohydrate metabolism', '09102 Energy metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism']",365.47002066739486
+MED134_15354,C3,Rossmann-like alpha/beta/alpha sandwich fold protein,Unspecified,Unspecified,364.80330074039114
+MED134_13346,C0,hypothetical protein,Unspecified,Unspecified,364.4310505178771
+MED134_00470,C0,hypothetical protein,Unspecified,Unspecified,363.59923993297787
+MED134_04624,C2,hypothetical protein,Unspecified,Unspecified,363.03609236191403
+MED134_13006,C2,beta-lactamase family protein,Unspecified,Unspecified,360.8847139863958
+MED134_13496,C2,hypothetical protein,Unspecified,Unspecified,357.91092452665544
+MED134_05614,C0,hypothetical protein,Unspecified,Unspecified,357.90585260730063
+MED134_08041,C0,hypothetical protein,Unspecified,Unspecified,353.2878839343848
+MED134_03654,C3,"bacterial regulatory protein, TetR family",Unspecified,Unspecified,352.1374130019263
+MED134_00160,C0,hypothetical protein,Unspecified,Unspecified,350.5233325456227
+MED134_05469,C4,"RNA polymerase sigma factor, sigma-70 family",Unspecified,Unspecified,348.0874666760978
+MED134_00155,C1,AhpC/TSA family protein,Unspecified,Unspecified,343.8651740833541
+MED134_04494,C0,ArsC family protein,Unspecified,Unspecified,340.84069558809813
+MED134_11816,C4,"transcription regulator, AraC family",Unspecified,Unspecified,340.25584491696975
+MED134_07274,C0,hypothetical protein,Unspecified,Unspecified,340.1916626163612
+MED134_15309,C3,hypothetical protein,Unspecified,Unspecified,337.4546130392837
+MED134_15094,C1,hypothetical protein,Unspecified,Unspecified,337.14108140512815
+MED134_08046,C0,hypothetical protein,Unspecified,Unspecified,334.6027626754744
+MED134_00475,C0,hypothetical protein,Unspecified,Unspecified,333.1570877229539
+MED134_03899,C4,hypothetical protein,Unspecified,Unspecified,330.150310469353
+MED134_06869,C2,hypothetical protein,Unspecified,Unspecified,328.97385415616696
+MED134_11341,C0,universal stress protein UspA,Unspecified,Unspecified,326.32778470423847
+MED134_00465,C0,hypothetical protein,Unspecified,Unspecified,325.8227213763506
+MED134_00705,C4,hypothetical protein,Unspecified,Unspecified,324.0577417354733
+MED134_14637,C4,hypothetical protein,Unspecified,Unspecified,320.00896831576983
+MED134_06469,C2,hypothetical protein,Unspecified,Unspecified,319.34880429116436
+MED134_07199,C0,hypothetical protein,Unspecified,Unspecified,318.796135736323
+MED134_11826,C2,transglutaminase-like superfamily protein,Unspecified,Unspecified,316.0861016807547
+MED134_14622,C0,hypothetical protein,Unspecified,Unspecified,312.5570147657306
+MED134_05204,C0,penicillinase repressor,['01501 beta-Lactam resistance [PATH:dok01501]'],['09175 Drug resistance: antimicrobial'],303.4562394235062
+MED134_01575,C4,hypothetical protein,Unspecified,Unspecified,301.58155866172393
+MED134_06919,C2,virulence-associated protein E,Unspecified,Unspecified,300.5479517717893
+MED134_07319,C4,hypothetical protein,Unspecified,Unspecified,299.04071304887896
+MED134_08506,C0,hypothetical protein,Unspecified,Unspecified,298.89701793093275
+MED134_03384,C0,calcineurin-like phosphoesterase,Unspecified,Unspecified,297.984477932926
+MED134_08656,C0,hypothetical protein,Unspecified,Unspecified,294.93701842676523
+MED134_04489,C4,nitroreductase family protein,Unspecified,Unspecified,293.68924644428876
+MED134_02665,C0,universal stress protein UspA,Unspecified,Unspecified,291.36085395342275
+MED134_00195,C2,hypothetical protein,Unspecified,Unspecified,287.2361969270138
+MED134_13446,C0,hypothetical protein,Unspecified,Unspecified,285.2808205531441
+MED134_14677,C0,sulfatase,Unspecified,Unspecified,285.0521996683598
+MED134_08651,C0,"RNA polymerase sigma factor, sigma-70 family",Unspecified,Unspecified,283.5329416936782
+MED134_01375,C0,hypothetical protein,Unspecified,Unspecified,281.51778591389586
+MED134_02755,C2,coproporphyrinogen dehydrogenase,['00860 Porphyrin metabolism [PATH:dok00860]'],['09108 Metabolism of cofactors and vitamins'],281.19444295707126
+MED134_08511,C0,relaxase/mobilization protein,Unspecified,Unspecified,278.18135448353826
+MED134_08846,C2,methylated DNA-protein cysteine methyltransferase,Unspecified,Unspecified,276.7078859761358
+MED134_10595,C2,hypothetical protein,Unspecified,Unspecified,272.5815391850792
+MED134_02945,C2,hypothetical protein,Unspecified,Unspecified,270.56509007192096
+MED134_08641,C3,hypothetical protein,Unspecified,Unspecified,269.7129928848344
+MED134_01300,C0,hypothetical protein,Unspecified,Unspecified,264.7132902604113
+MED134_09171,C0,UmuC protein,Unspecified,Unspecified,258.9725933765511
+MED134_14301,C0,hypothetical protein,Unspecified,Unspecified,255.08518255006004
+MED134_06529,C2,glyoxalase/bleomycin resistance protein/dioxygenase superfamily protein,Unspecified,Unspecified,250.3560227945831
+MED134_14306,C2,hypothetical protein,Unspecified,Unspecified,250.11273805799027
+MED134_02495,C4,hypothetical protein,Unspecified,Unspecified,249.32880991581337
+MED134_04699,C3,OmpA family protein,Unspecified,Unspecified,248.97091255448126
+MED134_06859,C0,hypothetical protein,Unspecified,Unspecified,248.9370231348536
+MED134_06934,C2,mobilization protein,Unspecified,Unspecified,246.57861054372893
+MED134_07059,C0,hypothetical protein,Unspecified,Unspecified,242.69962512959182
+MED134_01775,C0,malate synthase,"['00620 Pyruvate metabolism [PATH:dok00620]', '00630 Glyoxylate and dicarboxylate metabolism [PATH:dok00630]']","['09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism']",241.21537281822543
+MED134_04499,C0,sigma 54 modulation protein / S30EA ribosomal protein,Unspecified,Unspecified,236.5207796404603
+MED134_14617,C0,hypothetical protein,Unspecified,Unspecified,234.7211550420368
+MED134_06944,C2,ParA family protein,Unspecified,Unspecified,232.5439295246244
+MED134_08521,C0,hypothetical protein,Unspecified,Unspecified,230.36099250718473
+MED134_07279,C0,DNA binding helix-turn helix protein,Unspecified,Unspecified,228.8509891091714
+MED134_14537,C2,hypothetical protein,Unspecified,Unspecified,227.90169458248272
+MED134_07224,C0,TonB dependent/ligand-gated channel,Unspecified,Unspecified,227.7897470545777
+MED134_03834,C0,hypothetical protein,Unspecified,Unspecified,226.3949172799841
+MED134_08661,C3,hypothetical protein,['00920 Sulfur metabolism [PATH:dok00920]'],['09102 Energy metabolism'],226.0810351592869
+MED134_06939,C2,hypothetical protein,Unspecified,Unspecified,225.63896276573294
+MED134_05904,C0,hypothetical protein,Unspecified,Unspecified,223.70328294117922
+MED134_05804,C4,hypothetical protein,Unspecified,Unspecified,219.98966448240645
+MED134_15440,C2,putative membrane protein,Unspecified,Unspecified,219.33816038582182
+MED134_02690,C2,universal stress protein UspA,Unspecified,Unspecified,214.04707133615912
+MED134_16708,C0,hypothetical protein,Unspecified,Unspecified,211.83532841647212
+MED134_01570,C4,MepB protein,Unspecified,Unspecified,210.93391193395763
+MED134_00445,C0,hypothetical protein,Unspecified,Unspecified,209.925410266707
+MED134_06524,C0,transcriptional regulator,Unspecified,Unspecified,209.1107555338927
+MED134_00700,C0,hypothetical protein,Unspecified,Unspecified,208.61325236188713
+MED134_11135,C0,aspartate kinase,"['00260 Glycine, serine and threonine metabolism [PATH:dok00260]', '00270 Cysteine and methionine metabolism [PATH:dok00270]', '00300 Lysine biosynthesis [PATH:dok00300]', '00261 Monobactam biosynthesis [PATH:dok00261]']","['09105 Amino acid metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09110 Biosynthesis of other secondary metabolites']",206.92097259453215
+MED134_02705,C0,"cation transport P-type ATPase, E1-E2 family",Unspecified,Unspecified,201.91637666230716
+MED134_13161,C0,hypothetical protein,Unspecified,Unspecified,201.57954636693898
+MED134_07511,C3,hypothetical protein,Unspecified,Unspecified,200.94511814763453
+MED134_14722,C0,hypothetical protein,Unspecified,Unspecified,199.96437020754547
+MED134_12846,C0,hypothetical protein,Unspecified,Unspecified,198.206689417
+MED134_09761,C0,hypothetical protein,Unspecified,Unspecified,196.1088809310495
+MED134_15822,C0,hypothetical protein,Unspecified,Unspecified,193.4440323083909
+MED134_08866,C0,gliding motility protein GldL,Unspecified,Unspecified,191.16485059905318
+MED134_07239,C0,hypothetical protein,Unspecified,Unspecified,185.90501994088314
+MED134_09606,C2,hypothetical protein,Unspecified,Unspecified,183.53902923803162
+MED134_05754,C0,hypothetical protein,Unspecified,Unspecified,182.30694605861618
+MED134_10985,C2,hypothetical protein,Unspecified,Unspecified,180.91099757249842
+MED134_06834,C0,TonB dependent/ligand-gated channel,Unspecified,Unspecified,179.03216935043548
+MED134_06924,C2,DNA primase,Unspecified,Unspecified,175.14254309148058
+MED134_02810,C0,hypothetical protein,Unspecified,Unspecified,171.75360459089512
+MED134_02720,C0,cytochrome cbb3 oxidase subunit I/III,"['00190 Oxidative phosphorylation [PATH:dok00190]', '02020 Two-component system [PATH:dok02020]']","['09102 Energy metabolism', '09132 Signal transduction']",166.07834927340303
+MED134_03604,C0,PAP2 superfamily protein,Unspecified,Unspecified,166.04180592105234
+MED134_12851,C0,hypothetical protein,Unspecified,Unspecified,163.1528071110376
+MED134_03174,C0,Cys/Met metabolism PLP-dependent enzyme,"['00270 Cysteine and methionine metabolism [PATH:dok00270]', '00450 Selenocompound metabolism [PATH:dok00450]']","['09105 Amino acid metabolism', '09106 Metabolism of other amino acids']",157.69219236426622
+MED134_06424,C2,hypothetical protein,Unspecified,Unspecified,157.60994544019917
+MED134_04504,C0,small-conductance mechanosensitive channel,Unspecified,Unspecified,152.4652138356908
+MED134_08051,C0,transcription regulator,Unspecified,Unspecified,143.9219284787314
+MED134_01020,C2,DNA polymerase IV,Unspecified,Unspecified,142.38919840915594
+MED134_14281,C2,hypothetical protein,Unspecified,Unspecified,136.8790493669787
+MED134_06949,C2,hypothetical protein,Unspecified,Unspecified,135.88798912556234
+MED134_16706,C0,hypothetical protein,Unspecified,Unspecified,134.89743718624024
+MED134_07099,C0,hypothetical protein,Unspecified,Unspecified,123.53796612938294
+MED134_08631,C0,hypothetical protein,Unspecified,Unspecified,120.30827070783863
+MED134_13291,C0,cytochrome c peroxidase,Unspecified,Unspecified,115.35105070365623
+MED134_11175,C4,hypothetical protein,Unspecified,Unspecified,114.24956951681088
+MED134_02640,C0,universal stress protein UspA,Unspecified,Unspecified,113.81228359304362
+MED134_10710,C2,hypothetical protein,Unspecified,Unspecified,104.21745729742338
+MED134_06689,C0,hypothetical protein,Unspecified,Unspecified,101.37380539679437
+MED134_06809,C3,hypothetical protein,Unspecified,Unspecified,99.75609614252116
+MED134_13696,C2,hypothetical protein,Unspecified,Unspecified,98.48418724581526
+MED134_10705,C2,hypothetical protein,Unspecified,Unspecified,98.44146965436991
+MED134_10725,C2,hypothetical protein,Unspecified,Unspecified,97.49244632480007
+MED134_07626,C2,hypothetical protein,Unspecified,Unspecified,95.74051880211161
+MED134_10715,C0,SCO2/SenC family protein,Unspecified,Unspecified,94.43116719899037
+MED134_02680,C0,universal stress protein UspA,Unspecified,Unspecified,93.46336818381545
+MED134_02485,C2,DNA topoisomerase I,Unspecified,Unspecified,88.34855323283358
+MED134_02685,C0,universal stress protein UspA,Unspecified,Unspecified,88.33075612454466
+MED134_12826,C0,hypothetical protein,Unspecified,Unspecified,83.42297182739068
+MED134_17141,C0,hypothetical protein,Unspecified,Unspecified,79.95029333300994
+MED134_13296,C2,hypothetical protein,Unspecified,Unspecified,79.40149370212252
+MED134_01625,C4,hypothetical protein,Unspecified,Unspecified,71.45673553589108
+MED134_02745,C0,hypothetical protein,Unspecified,Unspecified,70.17712496984534
+MED134_02695,C2,hypothetical protein,Unspecified,Unspecified,69.87522178825796
+MED134_02730,C0,"cytochrome c oxidase, cbb3-type, subunit III","['00190 Oxidative phosphorylation [PATH:dok00190]', '02020 Two-component system [PATH:dok02020]']","['09102 Energy metabolism', '09132 Signal transduction']",65.25316013411577
+MED134_02670,C0,universal stress protein UspA,Unspecified,Unspecified,62.11130825622931
+MED134_00330,C2,hypothetical protein,Unspecified,Unspecified,60.827334369868474
+MED134_02700,C2,hypothetical protein,Unspecified,Unspecified,56.51116666370764
+MED134_02675,C0,universal stress protein UspA,Unspecified,Unspecified,56.44910700086808
+MED134_02740,C2,hypothetical protein,Unspecified,Unspecified,55.59596518758576
+MED134_03774,C0,calcineurin-like phosphoesterase,Unspecified,Unspecified,54.01026736948087
+MED134_13901,C0,hypothetical protein,Unspecified,Unspecified,53.91344264480716
+MED134_02630,C0,hypothetical protein,Unspecified,Unspecified,53.726639613165275
+MED134_06994,C0,hypothetical protein,Unspecified,Unspecified,42.107797178518396
