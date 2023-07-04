@@ -1,0 +1,77 @@
+LOCUS       NZ_CP033238          2658139 bp    DNA     circular CON 10-MAR-2023
+DEFINITION  Saccharolobus solfataricus strain SULM chromosome, complete genome.
+ACCESSION   NZ_CP033238
+VERSION     NZ_CP033238.1
+DBLINK      BioProject: PRJNA224116
+            BioSample: SAMN05896746
+            Assembly: GCF_003852155.1
+KEYWORDS    RefSeq.
+SOURCE      Saccharolobus solfataricus
+  ORGANISM  Saccharolobus solfataricus
+            Archaea; Thermoproteota; Thermoprotei; Sulfolobales; Sulfolobaceae;
+            Saccharolobus.
+REFERENCE   1  (bases 1 to 2658139)
+  AUTHORS   Payne,S., McCarthy,S., Johnson,T., North,E. and Blum,P.
+  TITLE     Nonmutational mechanism of inheritance in the Archaeon Sulfolobus
+            solfataricus
+  JOURNAL   Proc Natl Acad Sci U S A 115 (48), 12271-12276 (2018)
+   PUBMED   30425171
+REFERENCE   2  (bases 1 to 2658139)
+  AUTHORS   Payne,S., McCarthy,S., Johnson,T., North,E. and Blum,P.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (22-OCT-2018) Biological Sciences, University of
+            Nebraska-Lincoln, 1901 Vine St., Lincoln, NE 68588, USA
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            CP033238.1.
+            The annotation was added by the NCBI Prokaryotic Genome Annotation
+            Pipeline (PGAP). Information about PGAP can be found here:
+            https://www.ncbi.nlm.nih.gov/genome/annotation_prok/
+            Bacteria and source DNA available from Paul Blum Lab.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Date             :: 01-AUG-2018
+            Assembly Method           :: BCFtools Consensus v. 1.9
+            Genome Representation     :: Full
+            Expected Final Version    :: Yes
+            Reference-guided Assembly :: CP011057.1
+            Genome Coverage           :: 500.0x
+            Sequencing Technology     :: Illumina HiSeq
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider               :: NCBI RefSeq
+            Annotation Date                   :: 03/09/2023 02:02:23
+            Annotation Pipeline               :: NCBI Prokaryotic Genome
+                                                 Annotation Pipeline (PGAP)
+            Annotation Method                 :: Best-placed reference protein
+                                                 set; GeneMarkS-2+
+            Annotation Software revision      :: 6.4
+            Features Annotated                :: Gene; CDS; rRNA; tRNA; ncRNA
+            Genes (total)                     :: 2,922
+            CDSs (total)                      :: 2,871
+            Genes (coding)                    :: 2,633
+            CDSs (with protein)               :: 2,633
+            Genes (RNA)                       :: 51
+            rRNAs                             :: 1, 1, 1 (5S, 16S, 23S)
+            complete rRNAs                    :: 1, 1, 1 (5S, 16S, 23S)
+            tRNAs                             :: 46
+            ncRNAs                            :: 2
+            Pseudo Genes (total)              :: 238
+            CDSs (without protein)            :: 238
+            Pseudo Genes (ambiguous residues) :: 0 of 238
+            Pseudo Genes (frameshifted)       :: 109 of 238
+            Pseudo Genes (incomplete)         :: 175 of 238
+            Pseudo Genes (internal stop)      :: 45 of 238
+            Pseudo Genes (multiple problems)  :: 75 of 238
+            CRISPR Arrays                     :: 4
+            ##Genome-Annotation-Data-END##
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..2658139
+                     /organism="Saccharolobus solfataricus"
+                     /mol_type="genomic DNA"
+                     /strain="SULM"
+                     /db_xref="taxon:2287"
+CONTIG      join(CP033238.1:1..2658139)
+//
+
