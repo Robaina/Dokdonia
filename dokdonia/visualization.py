@@ -13,7 +13,7 @@ def extractKoPathwayName(Ko_str):
     return re.sub("\[.*?\]", "", Ko_str).strip()
 
 
-def plotClusters(pdata, clusters, outfile: str = None):
+def plotClusters(pdata, clusters, outfile: str = None, figsize: tuple = (15, 18)):
     n_rows = int(np.ceil(len(clusters) / 2))
     fig, axes = plt.subplots(nrows=n_rows, ncols=2)
     plt.subplots_adjust(hspace=0.3)
@@ -27,7 +27,7 @@ def plotClusters(pdata, clusters, outfile: str = None):
         cluster = clusters[cluster_id]
         pdata[pdata.index.isin(cluster)].transpose().plot(
             legend=False,
-            figsize=(15, 18),
+            figsize=figsize,
             title=f"{cluster_id}, size={len(cluster)}",
             ax=axis,
             color="#9a9a9a",

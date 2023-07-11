@@ -113,7 +113,7 @@ MED134_00360,C0,ApbE family protein,Unspecified,Unspecified,2250.3135206385896
 MED134_05209,C0,peptidase family M20/M25/M40,Unspecified,Unspecified,2246.3444150035784
 MED134_03409,C0,hypothetical protein,Unspecified,Unspecified,2231.6983456582802
 MED134_06359,C0,hypothetical protein,Unspecified,Unspecified,2214.964640494009
-MED134_08166,C0,carbon-nitrogen hydrolase,Unspecified,Unspecified,2208.025079459614
+MED134_08166,C0,carbon-nitrogen hydrolase,"['00250 Alanine, aspartate and glutamate metabolism [PATH:dok00250]']",['09105 Amino acid metabolism'],2208.025079459614
 MED134_07611,C0,Asp/Glu/hydantoin racemase,['00470 D-Amino acid metabolism [PATH:dok00470]'],['09106 Metabolism of other amino acids'],2203.4945605435505
 MED134_14311,C0,cytochrome oxidase assembly protein,"['00190 Oxidative phosphorylation [PATH:dok00190]', '00860 Porphyrin metabolism [PATH:dok00860]', '02020 Two-component system [PATH:dok02020]']","['09102 Energy metabolism', '09108 Metabolism of cofactors and vitamins', '09132 Signal transduction']",2168.752773749109
 MED134_01415,C0,biotin/lipoate A/B protein ligase family protein,['00780 Biotin metabolism [PATH:dok00780]'],['09108 Metabolism of cofactors and vitamins'],2135.2311963775983

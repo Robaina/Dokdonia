@@ -55,7 +55,7 @@ MED134_03874,C2,papain family cysteine protease,Unspecified,Unspecified,0.089457
 MED134_08536,C2,hypothetical protein,Unspecified,Unspecified,0.08918361968468175
 MED134_12771,C2,DPS family protein,Unspecified,Unspecified,0.08816581298441843
 MED134_02030,C2,hypothetical protein,Unspecified,Unspecified,0.08394532039714445
-MED134_08166,C2,carbon-nitrogen hydrolase,Unspecified,Unspecified,0.08373671829618554
+MED134_08166,C2,carbon-nitrogen hydrolase,"['00250 Alanine, aspartate and glutamate metabolism [PATH:dok00250]']",['09105 Amino acid metabolism'],0.08373671829618554
 MED134_00360,C2,ApbE family protein,Unspecified,Unspecified,0.08271189359495737
 MED134_02940,C2,transglutaminase-like superfamily protein,Unspecified,Unspecified,0.08217813072973436
 MED134_13916,C2,tetrapyrrole (corrin/porphyrin) methylase family protein,Unspecified,Unspecified,0.08207137815668976

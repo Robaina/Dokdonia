@@ -648,7 +648,7 @@ MED134_02030,C2,hypothetical protein,Unspecified,Unspecified,0.08394532039714445
 MED134_12751,C1,Yqey-like protein,Unspecified,Unspecified,0.08393859379852306
 MED134_09736,C0,tRNA pseudouridine synthase B,Unspecified,Unspecified,0.08392868880675333
 MED134_06684,C0,putative zinc-transporting P-type ATPase,Unspecified,Unspecified,0.08377040267257017
-MED134_08166,C2,carbon-nitrogen hydrolase,Unspecified,Unspecified,0.08373671829618554
+MED134_08166,C2,carbon-nitrogen hydrolase,"['00250 Alanine, aspartate and glutamate metabolism [PATH:dok00250]']",['09105 Amino acid metabolism'],0.08373671829618554
 MED134_04379,C0,ArsC family protein,Unspecified,Unspecified,0.08351655918387922
 MED134_04854,C1,SPFH/band 7 family protein,Unspecified,Unspecified,0.08350606154679403
 MED134_07741,C0,hypothetical protein,Unspecified,Unspecified,0.08349263904988864

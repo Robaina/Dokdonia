@@ -501,7 +501,7 @@ MED134_00360,C0,ApbE family protein,Unspecified,Unspecified,2250.3135206385896
 MED134_05209,C0,peptidase family M20/M25/M40,Unspecified,Unspecified,2246.3444150035784
 MED134_03409,C0,hypothetical protein,Unspecified,Unspecified,2231.6983456582802
 MED134_06359,C0,hypothetical protein,Unspecified,Unspecified,2214.964640494009
-MED134_08166,C0,carbon-nitrogen hydrolase,Unspecified,Unspecified,2208.025079459614
+MED134_08166,C0,carbon-nitrogen hydrolase,"['00250 Alanine, aspartate and glutamate metabolism [PATH:dok00250]']",['09105 Amino acid metabolism'],2208.025079459614
 MED134_07611,C0,Asp/Glu/hydantoin racemase,['00470 D-Amino acid metabolism [PATH:dok00470]'],['09106 Metabolism of other amino acids'],2203.4945605435505
 MED134_10755,C1,sugar transporter,Unspecified,Unspecified,2198.181479013225
 MED134_01240,C3,outer membrane efflux protein,"['03070 Bacterial secretion system [PATH:dok03070]', '02020 Two-component system [PATH:dok02020]', '01501 beta-Lactam resistance [PATH:dok01501]', '01503 Cationic antimicrobial peptide (CAMP) resistance [PATH:dok01503]']","['09131 Membrane transport', '09132 Signal transduction', '09175 Drug resistance: antimicrobial', '09175 Drug resistance: antimicrobial']",2194.310843276773

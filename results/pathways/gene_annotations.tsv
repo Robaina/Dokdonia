@@ -1596,7 +1596,7 @@ MED134_08146	glyS	glycyl-tRNA synthetase	00970 Aminoacyl-tRNA biosynthesis [PATH
 MED134_08151	unspecified	hypothetical protein	unspecified
 MED134_08156	unspecified	putative amidophosphoribosyl-transferase	unspecified
 MED134_08161	unspecified	hypothetical protein	unspecified
-MED134_08166	unspecified	carbon-nitrogen hydrolase	unspecified
+MED134_08166	unspecified	carbon-nitrogen hydrolase	00250 Alanine, aspartate and glutamate metabolism [PATH:dok00250]
 MED134_08171	unspecified	putative nucleotidyltransferase DUF294	unspecified
 MED134_08176	unspecified	exonuclease	03030 DNA replication [PATH:dok03030],03430 Mismatch repair [PATH:dok03430],03440 Homologous recombination [PATH:dok03440]
 MED134_08181	unspecified	haloacid dehalogenase-like hydrolase	unspecified
