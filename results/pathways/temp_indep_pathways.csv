@@ -285,7 +285,7 @@ MED134_04919,hypothetical protein,Unspecified,Unspecified,3396.9885468446278
 MED134_08086,aspartate 1-decarboxylase,"['00410 beta-Alanine metabolism [PATH:dok00410]', '00770 Pantothenate and CoA biosynthesis [PATH:dok00770]']","['09106 Metabolism of other amino acids', '09108 Metabolism of cofactors and vitamins']",3394.2761953247445
 MED134_09591,hypothetical protein,Unspecified,Unspecified,3371.352078407172
 MED134_11756,hypothetical protein,Unspecified,Unspecified,3358.446202644534
-MED134_08741,two-component system sensor histidine kinase,['02020 Two-component system [PATH:dok02020]'],['09132 Signal transduction'],3346.025955577864
+MED134_08741,two-component system sensor histidine kinase,Unspecified,Unspecified,3346.025955577864
 MED134_07369,6-pyruvoyl tetrahydropterin synthase,['00790 Folate biosynthesis [PATH:dok00790]'],['09108 Metabolism of cofactors and vitamins'],3334.840684676866
 MED134_11866,hypothetical protein,Unspecified,Unspecified,3330.8074419821864
 MED134_00895,stationary-phase survival acid phosphatase,"['00230 Purine metabolism [PATH:dok00230]', '00240 Pyrimidine metabolism [PATH:dok00240]', '00760 Nicotinate and nicotinamide metabolism [PATH:dok00760]']","['09104 Nucleotide metabolism', '09104 Nucleotide metabolism', '09108 Metabolism of cofactors and vitamins']",3321.7038433330245

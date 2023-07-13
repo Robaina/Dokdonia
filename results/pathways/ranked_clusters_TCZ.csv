@@ -481,7 +481,7 @@ MED134_05314,C0,two-component system sensor histidine kinase,Unspecified,Unspeci
 MED134_09876,C1,NAD dependent epimerase/dehydratase family protein,Unspecified,Unspecified,0.11464246023255358
 MED134_02760,C1,hypothetical protein,Unspecified,Unspecified,0.11458208829563928
 MED134_12096,C0,hypothetical protein,Unspecified,Unspecified,0.11415177792857864
-MED134_13431,C1,"two component, sigma54 specific, transcriptional regulator",['02020 Two-component system [PATH:dok02020]'],['09132 Signal transduction'],0.11406392881697672
+MED134_13431,C1,"two component, sigma54 specific, transcriptional regulator",Unspecified,Unspecified,0.11406392881697672
 MED134_04784,C0,"transcription regulator, AraC family",Unspecified,Unspecified,0.11380280817297109
 MED134_12711,C0,phospho-N-acetylmuramoyl-pentapeptide- transferase,"['00550 Peptidoglycan biosynthesis [PATH:dok00550]', '01502 Vancomycin resistance [PATH:dok01502]']","['09107 Glycan biosynthesis and metabolism', '09175 Drug resistance: antimicrobial']",0.11365234731623608
 MED134_09516,C1,hypothetical protein,Unspecified,Unspecified,0.1134954835274599
@@ -535,7 +535,7 @@ MED134_06419,C1,PyrR bifunctional protein,['00240 Pyrimidine metabolism [PATH:do
 MED134_02170,C1,exonuclease family protein,"['03030 DNA replication [PATH:dok03030]', '03430 Mismatch repair [PATH:dok03430]', '03440 Homologous recombination [PATH:dok03440]']","['09124 Replication and repair', '09124 Replication and repair', '09124 Replication and repair']",0.10074218428891775
 MED134_11651,C0,phenylalanine-4-hydroxylase,"['00360 Phenylalanine metabolism [PATH:dok00360]', '00400 Phenylalanine, tyrosine and tryptophan biosynthesis [PATH:dok00400]', '00790 Folate biosynthesis [PATH:dok00790]']","['09105 Amino acid metabolism', '09105 Amino acid metabolism', '09108 Metabolism of cofactors and vitamins']",0.10073488035091636
 MED134_00600,C0,dihydrouridine synthase (Dus),Unspecified,Unspecified,0.10016373526234232
-MED134_08741,C1,two-component system sensor histidine kinase,['02020 Two-component system [PATH:dok02020]'],['09132 Signal transduction'],0.09992877691866593
+MED134_08741,C1,two-component system sensor histidine kinase,Unspecified,Unspecified,0.09992877691866593
 MED134_11481,C1,hypothetical protein,Unspecified,Unspecified,0.09983200515806166
 MED134_03449,C2,transglycosylase SLT,Unspecified,Unspecified,0.09972481719677749
 MED134_10945,C0,tRNA (guanine-N7-)-methyltransferase,Unspecified,Unspecified,0.09952898408830972

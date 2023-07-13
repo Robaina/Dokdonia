@@ -1705,7 +1705,7 @@ MED134_08716	susC29	TonB dependent/ligand-gated channel	unspecified
 MED134_08721	susC31	TonB dependent/ligand-gated channel	unspecified
 MED134_08726	unspecified	putative dehydrogenase	unspecified
 MED134_08736	unspecified	enoyl-CoA hydratase/isomerase family protein	00650 Butanoate metabolism [PATH:dok00650]
-MED134_08741	unspecified	two-component system sensor histidine kinase	02020 Two-component system [PATH:dok02020]
+MED134_08741	unspecified	two-component system sensor histidine kinase	unspecified
 MED134_08746	unspecified	hypothetical protein	00860 Porphyrin metabolism [PATH:dok00860]
 MED134_08751	unspecified	hypothetical protein	unspecified
 MED134_08756	unspecified	hypothetical protein	unspecified
@@ -2612,7 +2612,7 @@ MED134_13411	cysA3	sulfate/thiosulfate import ATP-binding protein CysA	unspecifi
 MED134_13416	unspecified	ABC transporter, permease protein	unspecified
 MED134_13421	mscS9	small-conductance mechanosensitive channel	unspecified
 MED134_13426	unspecified	hypothetical protein	unspecified
-MED134_13431	unspecified	two component, sigma54 specific, transcriptional regulator	02020 Two-component system [PATH:dok02020]
+MED134_13431	unspecified	two component, sigma54 specific, transcriptional regulator	unspecified
 MED134_13436	unspecified	polyphosphate kinase 2	unspecified
 MED134_13441	unspecified	peptidase family M28	unspecified
 MED134_13446	unspecified	hypothetical protein	unspecified

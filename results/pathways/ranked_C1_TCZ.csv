@@ -154,7 +154,7 @@ MED134_01145,C1,preprotein translocase SecG subunit,"['03060 Protein export [PAT
 MED134_02150,C1,two-component system sensor histidine kinase,['02020 Two-component system [PATH:dok02020]'],['09132 Signal transduction'],0.11548086296239418
 MED134_09876,C1,NAD dependent epimerase/dehydratase family protein,Unspecified,Unspecified,0.11464246023255358
 MED134_02760,C1,hypothetical protein,Unspecified,Unspecified,0.11458208829563928
-MED134_13431,C1,"two component, sigma54 specific, transcriptional regulator",['02020 Two-component system [PATH:dok02020]'],['09132 Signal transduction'],0.11406392881697672
+MED134_13431,C1,"two component, sigma54 specific, transcriptional regulator",Unspecified,Unspecified,0.11406392881697672
 MED134_09516,C1,hypothetical protein,Unspecified,Unspecified,0.1134954835274599
 MED134_08036,C1,M61 glycyl aminopeptidase,Unspecified,Unspecified,0.11273443293417278
 MED134_04549,C1,MoxR-like ATPase,Unspecified,Unspecified,0.11121291829487133
@@ -164,7 +164,7 @@ MED134_03080,C1,SsrA-binding protein,Unspecified,Unspecified,0.10154513201630373
 MED134_04054,C1,acetylornithine/succinyldiaminopimelateaminotran sferase,"['00300 Lysine biosynthesis [PATH:dok00300]', '00220 Arginine biosynthesis [PATH:dok00220]']","['09105 Amino acid metabolism', '09105 Amino acid metabolism']",0.1011275824166241
 MED134_06419,C1,PyrR bifunctional protein,['00240 Pyrimidine metabolism [PATH:dok00240]'],['09104 Nucleotide metabolism'],0.1008171299833218
 MED134_02170,C1,exonuclease family protein,"['03030 DNA replication [PATH:dok03030]', '03430 Mismatch repair [PATH:dok03430]', '03440 Homologous recombination [PATH:dok03440]']","['09124 Replication and repair', '09124 Replication and repair', '09124 Replication and repair']",0.10074218428891775
-MED134_08741,C1,two-component system sensor histidine kinase,['02020 Two-component system [PATH:dok02020]'],['09132 Signal transduction'],0.09992877691866593
+MED134_08741,C1,two-component system sensor histidine kinase,Unspecified,Unspecified,0.09992877691866593
 MED134_11481,C1,hypothetical protein,Unspecified,Unspecified,0.09983200515806166
 MED134_00955,C1,"ABC transporter, ATP-binding protein",Unspecified,Unspecified,0.0994335831515157
 MED134_05919,C1,hypothetical protein,Unspecified,Unspecified,0.09906700894995392
