@@ -264,7 +264,7 @@ MED134_06559,peptidylprolyl isomerase,Unspecified,Unspecified,3704.755877560982
 MED134_04569,hypothetical protein,Unspecified,Unspecified,3677.1218862574997
 MED134_04909,alpha/beta hydrolase,Unspecified,Unspecified,3672.492623714038
 MED134_13991,2-succinyl-5-enolpyruvyl-6-hydroxy-3- cyclohexene-1-carboxylate synthase,['00130 Ubiquinone and other terpenoid-quinone biosynthesis [PATH:dok00130]'],['09108 Metabolism of cofactors and vitamins'],3665.935205032569
-MED134_06774,"two-component system response regulator, LytR/AlgR family",['02020 Two-component system [PATH:dok02020]'],['09132 Signal transduction'],3663.444562194908
+MED134_06774,"two-component system response regulator, LytR/AlgR family",Unspecified,Unspecified,3663.444562194908
 MED134_01440,phosphatidylserine decarboxylase,['00564 Glycerophospholipid metabolism [PATH:dok00564]'],['09103 Lipid metabolism'],3648.0130860898635
 MED134_08436,hypothetical protein,Unspecified,Unspecified,3634.588132012159
 MED134_03314,glyceraldehyde-3-phosphate dehydrogenase A,['00010 Glycolysis / Gluconeogenesis [PATH:dok00010]'],['09101 Carbohydrate metabolism'],3632.143938219314
