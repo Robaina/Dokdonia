@@ -1,0 +1,42 @@
+gene_id,cluster,product,subsystem,system,value
+MED134_12071,C2,pyruvate dehydrogenase E2 component (dihydrolipoamide acetyltransferase),"['00010 Glycolysis / Gluconeogenesis [PATH:dok00010]', '00020 Citrate cycle (TCA cycle) [PATH:dok00020]', '00620 Pyruvate metabolism [PATH:dok00620]', '00785 Lipoic acid metabolism [PATH:dok00785]']","['09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09108 Metabolism of cofactors and vitamins']",0.9958093518746532
+MED134_14687,C2,hypothetical protein,Unspecified,Unspecified,0.9612482267895568
+MED134_12066,C2,"pyruvate dehydrogenase E1 component, alpha subunit","['00010 Glycolysis / Gluconeogenesis [PATH:dok00010]', '00020 Citrate cycle (TCA cycle) [PATH:dok00020]', '00620 Pyruvate metabolism [PATH:dok00620]', '00785 Lipoic acid metabolism [PATH:dok00785]']","['09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09108 Metabolism of cofactors and vitamins']",0.5851018274017574
+MED134_16485,C2,OmpA family protein,Unspecified,Unspecified,0.3083868330112452
+MED134_00935,C2,MotA/TolQ/ExbB proton channel family protein,Unspecified,Unspecified,0.2244785748166185
+MED134_08056,C2,"ATP synthase, delta/epsilon subunit",['00190 Oxidative phosphorylation [PATH:dok00190]'],['09102 Energy metabolism'],0.2226459982759808
+MED134_01970,C2,pyridine nucleotide-disulfide oxidoreductase,['00450 Selenocompound metabolism [PATH:dok00450]'],['09106 Metabolism of other amino acids'],0.2106104395440125
+MED134_06089,C2,phosphoenolpyruvate carboxylase,"['00620 Pyruvate metabolism [PATH:dok00620]', '00680 Methane metabolism [PATH:dok00680]']","['09101 Carbohydrate metabolism', '09102 Energy metabolism']",0.1976847709307192
+MED134_05984,C2,hypothetical protein,Unspecified,Unspecified,0.158182261893926
+MED134_16486,C2,hypothetical protein,Unspecified,Unspecified,0.1400261089915888
+MED134_10001,C2,aspartate-semialdehyde dehydrogenase,"['00260 Glycine, serine and threonine metabolism [PATH:dok00260]', '00270 Cysteine and methionine metabolism [PATH:dok00270]', '00300 Lysine biosynthesis [PATH:dok00300]', '00261 Monobactam biosynthesis [PATH:dok00261]']","['09105 Amino acid metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09110 Biosynthesis of other secondary metabolites']",0.1334918383148027
+MED134_07571,C2,pyridoxine 5'-phosphate synthase,['00750 Vitamin B6 metabolism [PATH:dok00750]'],['09108 Metabolism of cofactors and vitamins'],0.1070065485106249
+MED134_07531,C2,OmpA family protein,Unspecified,Unspecified,0.1038489030577884
+MED134_14236,C2,6-phosphogluconolactonase,['00030 Pentose phosphate pathway [PATH:dok00030]'],['09101 Carbohydrate metabolism'],0.0993372051920711
+MED134_05829,C2,drug/metabolite permease,Unspecified,Unspecified,0.0741013198063361
+MED134_02135,C2,glycosyl transferase family 2,Unspecified,Unspecified,0.0716794570046205
+MED134_08606,C2,hypothetical protein,Unspecified,Unspecified,0.0582189638453581
+MED134_11431,C2,major facilitator superfamily permease,Unspecified,Unspecified,0.0536230006064268
+MED134_04719,C2,short chain dehydrogenase,['00061 Fatty acid biosynthesis [PATH:dok00061]'],['09103 Lipid metabolism'],0.05316406856385
+MED134_02490,C2,sodium:alanine symporter family protein,Unspecified,Unspecified,0.0472274036594659
+MED134_07471,C2,CotH protein,Unspecified,Unspecified,0.0471118797444894
+MED134_08761,C2,multidrug resistance protein,Unspecified,Unspecified,0.0467362764789266
+MED134_03005,C2,hypothetical protein,Unspecified,Unspecified,0.0457290392874392
+MED134_04724,C2,3-hydroxymyristoyl/3-hydroxydecanoyl-(acyl carrier protein) dehydratase,"['00061 Fatty acid biosynthesis [PATH:dok00061]', '00780 Biotin metabolism [PATH:dok00780]']","['09103 Lipid metabolism', '09108 Metabolism of cofactors and vitamins']",0.0428636937855374
+MED134_06059,C2,hypothetical protein,Unspecified,Unspecified,0.0383301023861566
+MED134_06139,C2,hypothetical protein,Unspecified,Unspecified,0.0381803945830884
+MED134_02625,C2,patatin-like phospholipase,Unspecified,Unspecified,0.0379263826484471
+MED134_04984,C2,OsmC-like protein,Unspecified,Unspecified,0.0372281563570112
+MED134_08601,C2,hypothetical protein,Unspecified,Unspecified,0.0349050639103237
+MED134_10510,C2,BlaR1 peptidase M56,['01501 beta-Lactam resistance [PATH:dok01501]'],['09175 Drug resistance: antimicrobial'],0.0315133595627664
+MED134_12286,C2,hypothetical protein,Unspecified,Unspecified,0.0274413690665028
+MED134_08766,C2,hypothetical protein,Unspecified,Unspecified,0.0254839361825894
+MED134_03904,C2,hypothetical protein,Unspecified,Unspecified,0.0250775319470322
+MED134_09801,C2,peptidoglycan-associated lipoprotein,Unspecified,Unspecified,0.0198659788296592
+MED134_00695,C2,hypothetical protein,Unspecified,Unspecified,0.0142835583306375
+MED134_11821,C2,beta-lactamase family protein,Unspecified,Unspecified,0.0131957299218392
+MED134_09796,C2,hypothetical protein,Unspecified,Unspecified,0.012218186366094
+MED134_14727,C2,hypothetical protein,Unspecified,Unspecified,0.0087150927817069
+MED134_04794,C2,hypothetical protein,Unspecified,Unspecified,0.0079129295276145
+MED134_14647,C2,short chain dehydrogenase,Unspecified,Unspecified,0.0068860601464769
+MED134_10730,C2,hypothetical protein,Unspecified,Unspecified,0.0031287773804576

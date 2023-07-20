@@ -1,0 +1,35 @@
+gene_id,cluster,product,subsystem,system,value
+MED134_00405,C1,branched-chain amino acid aminotransferase,"['00270 Cysteine and methionine metabolism [PATH:dok00270]', '00280 Valine, leucine and isoleucine degradation [PATH:dok00280]', '00290 Valine, leucine and isoleucine biosynthesis [PATH:dok00290]', '00770 Pantothenate and CoA biosynthesis [PATH:dok00770]']","['09105 Amino acid metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09108 Metabolism of cofactors and vitamins']",0.3710550462999844
+MED134_12676,C1,GTPase of unknown function,Unspecified,Unspecified,0.0902486252519062
+MED134_07996,C1,two-component system response regulator,Unspecified,Unspecified,0.088330479489543
+MED134_04009,C1,ATP-dependent protease La (LON),Unspecified,Unspecified,0.0705314610646517
+MED134_09616,C1,acyl-CoA thioester hydrolase,Unspecified,Unspecified,0.0639550453427219
+MED134_14502,C1,endonuclease/exonuclease/phosphatase family protein,Unspecified,Unspecified,0.0627918634648346
+MED134_12671,C1,hypothetical protein,Unspecified,Unspecified,0.0601682111063849
+MED134_03189,C1,hypothetical protein,Unspecified,Unspecified,0.0577296347860697
+MED134_06199,C1,hypothetical protein,['01501 beta-Lactam resistance [PATH:dok01501]'],['09175 Drug resistance: antimicrobial'],0.0501524557570844
+MED134_12881,C1,PAP2 superfamily protein,"['00550 Peptidoglycan biosynthesis [PATH:dok00550]', '00552 Teichoic acid biosynthesis [PATH:dok00552]']","['09107 Glycan biosynthesis and metabolism', '09107 Glycan biosynthesis and metabolism']",0.0491915856589524
+MED134_09041,C1,hypothetical protein,Unspecified,Unspecified,0.0490319073169749
+MED134_01955,C1,hypothetical protein,Unspecified,Unspecified,0.047163286771105
+MED134_03569,C1,Fe3+-binding periplasmic protein,Unspecified,Unspecified,0.0453484930293467
+MED134_05554,C1,zinc-binding alcohol dehydrogenase family protein,"['00010 Glycolysis / Gluconeogenesis [PATH:dok00010]', '00620 Pyruvate metabolism [PATH:dok00620]', '00561 Glycerolipid metabolism [PATH:dok00561]']","['09101 Carbohydrate metabolism', '09101 Carbohydrate metabolism', '09103 Lipid metabolism']",0.0349934934440204
+MED134_08951,C1,alpha/beta hydrolase,Unspecified,Unspecified,0.034498713676862
+MED134_05549,C1,NADH:flavin oxidoreductase/NADH oxidase family protein,['00633 Nitrotoluene degradation [PATH:dok00633]'],['09111 Xenobiotics biodegradation and metabolism'],0.0298601559238292
+MED134_07991,C1,two-component system response regulator,Unspecified,Unspecified,0.0297199163356171
+MED134_00180,C1,bacterial-like globin,Unspecified,Unspecified,0.0270732080376051
+MED134_01260,C1,SpoU rRNA methylase family protein,Unspecified,Unspecified,0.0254117469498485
+MED134_01110,C1,hypothetical protein,Unspecified,Unspecified,0.0244363727321881
+MED134_10910,C1,hypothetical protein,Unspecified,Unspecified,0.021358974171152
+MED134_11085,C1,cytochrome c peroxidase,Unspecified,Unspecified,0.0207264999165337
+MED134_00740,C1,hypothetical protein,Unspecified,Unspecified,0.0177947910467608
+MED134_07951,C1,two-component system sensor histidine kinase/response regulator,Unspecified,Unspecified,0.0167597938109748
+MED134_11090,C1,hypothetical protein,Unspecified,Unspecified,0.0166805313311826
+MED134_01015,C1,DNA polymerase III alpha subunit,Unspecified,Unspecified,0.0165502146801577
+MED134_01275,C1,hypothetical protein,Unspecified,Unspecified,0.0136759917497555
+MED134_06694,C1,universal stress protein UspA,Unspecified,Unspecified,0.0122458226778856
+MED134_00735,C1,hypothetical protein,Unspecified,Unspecified,0.0111163511490657
+MED134_06519,C1,"transcriptional regulator, CAP family","['02020 Two-component system [PATH:dok02020]', '02024 Quorum sensing [PATH:dok02024]']","['09132 Signal transduction', '09145 Cellular community - prokaryotes']",0.0110838103069913
+MED134_07941,C1,hypothetical protein,Unspecified,Unspecified,0.0048407285989272
+MED134_06854,C1,zinc-binding dehydrogenase,Unspecified,Unspecified,0.0041589358385149
+MED134_06929,C1,hypothetical protein,Unspecified,Unspecified,0.003777168777532
+MED134_00325,C1,OmpA family protein,Unspecified,Unspecified,0.0032473219719683
