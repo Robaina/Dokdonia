@@ -17,3 +17,4 @@ dependencies:
     - pandas
     - clust
     - ipykernel
+    - poetry

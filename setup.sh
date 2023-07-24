@@ -22,4 +22,10 @@ cd ..
 echo "Deleting diffepr repo"
 rm -fr diffexpr
 
+# Install Dokdonia's package
+echo "Installing Dokdonia"
+poetry build
+pip install dist/dokdonia*.whl
+rm -fr dist
+
 echo "All done!"

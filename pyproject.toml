@@ -1,0 +1,27 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "dokdonia"
+version = "1.0.0"
+description = "Tools to analyze Dokdonia MED134 expression data"
+license = "Apache-2.0"
+authors = ["Semidán Robaina Estévez <srobaina@ull.edu.es>"]
+maintainers = ["Semidán Robaina Estévez <srobaina@ull.edu.es>"]
+readme = "README.md"
+homepage = "https://github.com/robaina/Dokdonia"
+repository = "https://github.com/robaina/Dokdonia"
+documentation = "https://github.com/robaina/Dokdonia"
+keywords = ["dokdonia", "deseq2", "transcriptome", "temperature acclimation"]
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Natural Language :: English"
+]
+packages = [
+    { include = "dokdonia", from = "src" },
+]
+[tool.poetry.dependencies]
+python = "^3.9"
