@@ -17,6 +17,7 @@
 *.vcf
 *.summary
 *.tmp
+dists/*
 /paperss/*
 /iplot_imgs
 /ipywidgets_New
