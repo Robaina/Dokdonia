@@ -35,3 +35,4 @@ notess/*
 notebookss/*
 paper_figuress/*
 src/dokdonia/old_codes/*
+.ipynb_checkpoints/*
