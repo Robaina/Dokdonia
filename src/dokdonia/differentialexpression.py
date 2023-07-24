@@ -23,7 +23,6 @@ def getAverageStandardRatio(IS_counts, standards_data):
     for cond_id in conditions:
         st_ratios = []
         for st_id in IS:
-
             st_copies = standards_data[
                 (standards_data["Sample ID"] == cond_id)
                 & (standards_data["Standard"] == st_id)

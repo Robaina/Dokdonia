@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 
 
-def saveToPickleFile(python_object, path_to_file="object.pkl"):
+def save_to_pickle_file(python_object, path_to_file="object.pkl"):
     """
     Save python object to pickle file
     """
@@ -17,7 +17,7 @@ def saveToPickleFile(python_object, path_to_file="object.pkl"):
     out_file.close()
 
 
-def readFromPickleFile(path_to_file="object.pkl"):
+def read_from_pickle_file(path_to_file="object.pkl"):
     """
     Load python object from pickle file.
     Returns python object.
