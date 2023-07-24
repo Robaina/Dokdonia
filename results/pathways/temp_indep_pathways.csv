@@ -651,7 +651,7 @@ MED134_06299,hypothetical protein,Unspecified,Unspecified,1025.0265182024348
 MED134_13476,hypothetical protein,Unspecified,Unspecified,1019.2682387728544
 MED134_13841,glycosyl transferase group 1,Unspecified,Unspecified,1013.674824491678
 MED134_01085,hypothetical protein,Unspecified,Unspecified,1004.177089190369
-MED134_10510,BlaR1 peptidase M56,['01501 beta-Lactam resistance [PATH:dok01501]'],['09175 Drug resistance: antimicrobial'],998.0672973042776
+MED134_10510,BlaR1 peptidase M56,Unspecified,Unspecified,998.0672973042776
 MED134_04729,3-oxoacyl-[acyl-carrier-protein] synthase II,"['00061 Fatty acid biosynthesis [PATH:dok00061]', '00780 Biotin metabolism [PATH:dok00780]']","['09103 Lipid metabolism', '09108 Metabolism of cofactors and vitamins']",995.1631395407751
 MED134_06754,hypothetical protein,Unspecified,Unspecified,981.9493088783566
 MED134_03179,"transcription regulator, AsnC family",Unspecified,Unspecified,980.1017991704854

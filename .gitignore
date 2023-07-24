@@ -17,7 +17,7 @@
 *.vcf
 *.summary
 *.tmp
-/Papers
+/paperss/*
 /iplot_imgs
 /ipywidgets_New
 results/old_results/*
@@ -31,3 +31,4 @@ paper_figures/*
 data/old_data/*
 data/genome/annotations/*
 notess/*
+notebookss/*
