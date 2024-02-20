@@ -429,7 +429,7 @@ MED134_05219	susC7	TonB dependent/ligand-gated channel	unspecified
 MED134_05214	susD1	outer membrane protein	unspecified
 MED134_05209	unspecified	peptidase family M20/M25/M40	unspecified
 MED134_05204	unspecified	penicillinase repressor	01501 beta-Lactam resistance [PATH:dok01501]
-MED134_05199	unspecified	BlaR1 peptidase M56	unspecified
+MED134_05199	unspecified	BlaR1 peptidase M56	01501 beta-Lactam resistance [PATH:dok01501]
 MED134_05194	unspecified	hypothetical protein	unspecified
 MED134_05184	unspecified	hypothetical protein	unspecified
 MED134_05174	unspecified	ATP-dependent Clp protease	unspecified
@@ -701,7 +701,7 @@ MED134_03844	msbA	lipid A export ATP-binding/permease protein MsbA	02010 ABC tra
 MED134_03839	unspecified	hypothetical protein	unspecified
 MED134_03834	unspecified	hypothetical protein	unspecified
 MED134_03829	unspecified	hypothetical protein	unspecified
-MED134_03824	unspecified	glycosyl hydrolase family 20	00520 Amino sugar and nucleotide sugar metabolism [PATH:dok00520],00511 Other glycan degradation [PATH:dok00511]
+MED134_03824	unspecified	glycosyl hydrolase family 20	00520 Amino sugar and nucleotide sugar metabolism [PATH:dok00520],00600 Sphingolipid metabolism [PATH:dok00600],00511 Other glycan degradation [PATH:dok00511]
 MED134_03819	unspecified	S-adenosylmethionine-dependentmethyltransferase	unspecified
 MED134_03814	vanX	D-ala-D-ala dipeptidase	02020 Two-component system [PATH:dok02020],01502 Vancomycin resistance [PATH:dok01502]
 MED134_03809	unspecified	hypothetical protein	unspecified
@@ -983,7 +983,7 @@ MED134_02385	tuf	translation elongation factor Tu	unspecified
 MED134_02380	unspecified	sigma-54 modulation protein	unspecified
 MED134_02375	unspecified	phage integrase family protein	unspecified
 MED134_02370	rpsU	30S ribosomal protein S21	03010 Ribosome [PATH:dok03010]
-MED134_02365	unspecified	acyl-CoA dehydrogenase	00071 Fatty acid degradation [PATH:dok00071],00280 Valine, leucine and isoleucine degradation [PATH:dok00280]
+MED134_02365	unspecified	acyl-CoA dehydrogenase	unspecified
 MED134_02360	unspecified	hypothetical protein	unspecified
 MED134_02355	dagA	sodium:alanine symporter family protein	unspecified
 MED134_02350	unspecified	potassium uptake protein TrkA	unspecified
@@ -1085,7 +1085,7 @@ MED134_01865	unspecified	hypothetical protein	unspecified
 MED134_01860	unspecified	hypothetical protein	unspecified
 MED134_01855	unspecified	transcriptional regulator	unspecified
 MED134_01850	unspecified	hypothetical protein	unspecified
-MED134_01845	unspecified	pyridine nucleotide-disulfide oxidoreductase	00450 Selenocompound metabolism [PATH:dok00450]
+MED134_01845	unspecified	pyridine nucleotide-disulfide oxidoreductase	unspecified
 MED134_01840	trkH	potassium uptake protein TrkH	unspecified
 MED134_01835	trkA	potassium uptake protein	unspecified
 MED134_16114	ubiE	Demethylmenaquinone methyltransferase	00130 Ubiquinone and other terpenoid-quinone biosynthesis [PATH:dok00130]
@@ -1202,7 +1202,7 @@ MED134_16227	unspecified	hypothetical protein	unspecified
 MED134_01240	tolC	outer membrane efflux protein	03070 Bacterial secretion system [PATH:dok03070],02020 Two-component system [PATH:dok02020],01501 beta-Lactam resistance [PATH:dok01501],01503 Cationic antimicrobial peptide (CAMP) resistance [PATH:dok01503]
 MED134_01235	unspecified	hypothetical protein	unspecified
 MED134_01230	unspecified	putative copper/silver resistance-related permease	unspecified
-MED134_01225	unspecified	efflux transporter, RND family, MFP subunit	01501 beta-Lactam resistance [PATH:dok01501],01503 Cationic antimicrobial peptide (CAMP) resistance [PATH:dok01503]
+MED134_01225	unspecified	efflux transporter, RND family, MFP subunit	unspecified
 MED134_01220	unspecified	ABC transporter, ATP-binding protein	unspecified
 MED134_01215	unspecified	hypothetical protein	unspecified
 MED134_01210	unspecified	FAD dependent oxidoreductase	unspecified
@@ -1454,7 +1454,7 @@ MED134_07431	mutS3	DNA mismatch repair protein MutS	03430 Mismatch repair [PATH:
 MED134_07436	susC19	TonB dependent/ligand-gated channel	unspecified
 MED134_07441	susD3	outer membrane protein	unspecified
 MED134_07446	unspecified	putative copper/silver resistance-related permease	unspecified
-MED134_07451	unspecified	efflux transporter, RND family, MFP subunit	01501 beta-Lactam resistance [PATH:dok01501],01503 Cationic antimicrobial peptide (CAMP) resistance [PATH:dok01503]
+MED134_07451	unspecified	efflux transporter, RND family, MFP subunit	unspecified
 MED134_07456	unspecified	outer membrane efflux protein	03070 Bacterial secretion system [PATH:dok03070],02020 Two-component system [PATH:dok02020],01501 beta-Lactam resistance [PATH:dok01501],01503 Cationic antimicrobial peptide (CAMP) resistance [PATH:dok01503]
 MED134_07461	unspecified	transcription regulator, TetR family	unspecified
 MED134_07466	unspecified	polyprenyl synthetase	00900 Terpenoid backbone biosynthesis [PATH:dok00900]
@@ -2044,15 +2044,15 @@ MED134_10490	unspecified	hypothetical protein	unspecified
 MED134_10495	unspecified	OmpA family protein	unspecified
 MED134_10500	unspecified	hypothetical protein	unspecified
 MED134_10505	unspecified	penicillinase repressor	01501 beta-Lactam resistance [PATH:dok01501]
-MED134_10510	unspecified	BlaR1 peptidase M56	unspecified
-MED134_10515	unspecified	BlaR1 peptidase M56	unspecified
+MED134_10510	unspecified	BlaR1 peptidase M56	01501 beta-Lactam resistance [PATH:dok01501]
+MED134_10515	unspecified	BlaR1 peptidase M56	01501 beta-Lactam resistance [PATH:dok01501]
 MED134_10520	unspecified	hypothetical protein	unspecified
 MED134_10525	unspecified	hypothetical protein	unspecified
 MED134_10530	unspecified	glycosyl transferase family 2	unspecified
 MED134_10535	unspecified	hypothetical protein	unspecified
 MED134_10540	ruvC	crossover junction endodeoxyribonuclease RuvC	03440 Homologous recombination [PATH:dok03440]
 MED134_10545	hemN3	oxygen-independent coproporphyrinogen III oxidase, putative	unspecified
-MED134_10550	unspecified	hypothetical protein	00630 Glyoxylate and dicarboxylate metabolism [PATH:dok00630],00380 Tryptophan metabolism [PATH:dok00380]
+MED134_10550	unspecified	hypothetical protein	unspecified
 MED134_10555	unspecified	hypothetical protein	unspecified
 MED134_10560	unspecified	hypothetical protein	unspecified
 MED134_10565	unspecified	adenylate cyclase family protein	00230 Purine metabolism [PATH:dok00230]
@@ -2063,7 +2063,7 @@ MED134_10585	dinP3	DNA polymerase IV	unspecified
 MED134_10590	unspecified	hypothetical protein	unspecified
 MED134_10595	unspecified	hypothetical protein	unspecified
 MED134_10600	mscS3	small-conductance mechanosensitive channel	unspecified
-MED134_10605	unspecified	BlaR1 peptidase M56	unspecified
+MED134_10605	unspecified	BlaR1 peptidase M56	01501 beta-Lactam resistance [PATH:dok01501]
 MED134_10610	unspecified	penicillinase repressor	01501 beta-Lactam resistance [PATH:dok01501]
 MED134_10615	unspecified	peptidase family M20/M25/M40	unspecified
 MED134_10620	eda	2-dehydro-3-deoxyphosphogluconate aldolase / 4-hydroxy-2-oxoglutarate aldolase	00030 Pentose phosphate pathway [PATH:dok00030],00630 Glyoxylate and dicarboxylate metabolism [PATH:dok00630]
@@ -2075,7 +2075,7 @@ MED134_10645	unspecified	alginate lyase	unspecified
 MED134_10650	unspecified	hypothetical protein	unspecified
 MED134_10655	susD5	outer membrane protein	unspecified
 MED134_10660	susC39	TonB dependent/ligand-gated channel	unspecified
-MED134_10665	unspecified	hypothetical protein	unspecified
+MED134_10665	unspecified	hypothetical protein	00040 Pentose and glucuronate interconversions [PATH:dok00040]
 MED134_10670	unspecified	heparinase II/III-like protein	unspecified
 MED134_10675	unspecified	heparinase II/III-like protein	unspecified
 MED134_10680	unspecified	alginate lyase precursor	00051 Fructose and mannose metabolism [PATH:dok00051]
@@ -2281,7 +2281,7 @@ MED134_11701	paaD	phenylacetic acid degradation protein PaaD	00360 Phenylalanine
 MED134_11706	pcaF	beta-ketoadipyl CoA thiolase	00362 Benzoate degradation [PATH:dok00362]
 MED134_11711	unspecified	short chain dehydrogenase	unspecified
 MED134_11716	paaN	phenylacetic acid degradation protein paaN	00360 Phenylalanine metabolism [PATH:dok00360]
-MED134_11721	unspecified	enoyl-CoA hydratase/isomerase family protein	00280 Valine, leucine and isoleucine degradation [PATH:dok00280]
+MED134_11721	unspecified	enoyl-CoA hydratase/isomerase family protein	unspecified
 MED134_11726	unspecified	hypothetical protein	unspecified
 MED134_11731	paaY	phenylacetic acid degradation protein PaaY	unspecified
 MED134_11736	unspecified	transcription regulator, AsnC family	unspecified

@@ -405,7 +405,7 @@ MED134_07521,C1,hypothetical protein,Unspecified,Unspecified,2952.4036121315785
 MED134_04049,C0,"excinuclease ABC, B subunit",['03420 Nucleotide excision repair [PATH:dok03420]'],['09124 Replication and repair'],2952.392171185508
 MED134_12356,C4,rhomboid family protein,Unspecified,Unspecified,2932.0806745017317
 MED134_04079,C3,DNA recombination protein RmuC,Unspecified,Unspecified,2929.1919496573832
-MED134_07451,C4,"efflux transporter, RND family, MFP subunit","['01501 beta-Lactam resistance [PATH:dok01501]', '01503 Cationic antimicrobial peptide (CAMP) resistance [PATH:dok01503]']","['09175 Drug resistance: antimicrobial', '09175 Drug resistance: antimicrobial']",2921.351790826263
+MED134_07451,C4,"efflux transporter, RND family, MFP subunit",Unspecified,Unspecified,2921.351790826263
 MED134_03489,C4,glutamate-ammonia ligase,"['00630 Glyoxylate and dicarboxylate metabolism [PATH:dok00630]', '00910 Nitrogen metabolism [PATH:dok00910]', '00250 Alanine, aspartate and glutamate metabolism [PATH:dok00250]', '00220 Arginine biosynthesis [PATH:dok00220]', '02020 Two-component system [PATH:dok02020]']","['09101 Carbohydrate metabolism', '09102 Energy metabolism', '09105 Amino acid metabolism', '09105 Amino acid metabolism', '09132 Signal transduction']",2914.979173217688
 MED134_12226,C3,hypothetical protein,Unspecified,Unspecified,2911.3482002382925
 MED134_02235,C0,hypothetical protein,Unspecified,Unspecified,2905.3078288698803
